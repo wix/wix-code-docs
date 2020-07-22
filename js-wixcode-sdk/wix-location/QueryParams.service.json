@@ -1,7 +1,8 @@
 { "name": "QueryParams",
   "memberOf": "wix-location",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 205,
       "filename": "location.es6" },
@@ -63,7 +64,8 @@
         "extra":
           {  } },
       { "name": "remove",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "toRemove",

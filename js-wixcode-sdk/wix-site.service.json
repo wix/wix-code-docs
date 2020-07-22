@@ -104,8 +104,7 @@
         "extra":
           {  } },
       { "name": "language",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "string",
@@ -169,7 +168,8 @@
         "extra":
           {  } },
       { "name": "revision",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "string",
