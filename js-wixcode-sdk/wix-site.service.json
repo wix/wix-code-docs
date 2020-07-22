@@ -104,7 +104,8 @@
         "extra":
           {  } },
       { "name": "language",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "string",
