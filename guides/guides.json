@@ -39,6 +39,11 @@
           "isMdFile": true
         },
         {
+          "name": "Error Handling",
+          "url": "./overview-errors.md",
+          "isMdFile": true
+        },
+        {
           "name": "Submit to the Corvid Wishlist",
           "url": "./wishlist.md",
           "isMdFile": true
