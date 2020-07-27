@@ -272,6 +272,50 @@
                       " *  }",
                       " */" ],
                   "extra":
+                    {  } },
+                { "title": "An event when a form is submitted",
+                  "body":
+                    [ "// Place this code in the events.js file",
+                      "// of your site's Backend section.",
+                      "",
+                      "export function wixCrm_onFormSubmit(event) {",
+                      "  let formName = event.formName;",
+                      "}",
+                      "",
+                      "/*  Full event object:",
+                      " *  {",
+                      " *    \"contactId\": \"f2cb00b5-9286-4d35-b41b-367d6fec43ce\",",
+                      " *    \"formName\": \"Feedback Form\",",
+                      " *    \"submissionTime\": \"2019-03-24T12:58:20.617Z\",",
+                      " *    \"submissionData\": [",
+                      " *      {",
+                      " *        \"fieldName\": \"First Name\",",
+                      " *        \"fieldValue\": \"John\"",
+                      " *      },",
+                      " *      {",
+                      " *        \"fieldName\": \"Last Name\",",
+                      " *        \"fieldValue\": \"Doe\"",
+                      " *      },",
+                      " *      {",
+                      " *        \"fieldName\": \"Email\",",
+                      " *        \"fieldValue\": \"john.doe@somedomain.com\"",
+                      " *      }",
+                      " *    ],",
+                      " *    \"attachments\": [",
+                      " *      {",
+                      " *        \"name\": \"flowers.jpg\",",
+                      " *        \"type\": \"IMAGE\",",
+                      " *        \"url\": \"wix:image://v1/68d3a9_1de7529c444b4c9eb38401f8efe0cad2.jpg/flowers.jpg#originWidth=1970&originHeight=112\"",
+                      " *       },",
+                      " *      {",
+                      " *        \"name\": \"SampleVideo_1280x720_10mb.mp4\",",
+                      " *        \"type\": \"VIDEO\",",
+                      " *        \"url\": \"wix:video://v1/80c05f_be1c421575e34915ad257571c4055ee4/SampleVideo_1280x720_10mb.mp4\"",
+                      " *      }",
+                      " *    ]",
+                      " *  }",
+                      " */" ],
+                  "extra":
                     {  } } ],
             "extra":
               {  } },
@@ -527,7 +571,8 @@
               "doc": "URL of the attachment." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "FormField",
         "locations":
           [ { "lineno": 64,
@@ -592,7 +637,8 @@
               "doc": "Value of the field." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "FormSubmitEvent",
         "locations":
           [ { "lineno": 51,
@@ -672,6 +718,7 @@
               "doc": "The Wix Form's attachments." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }
