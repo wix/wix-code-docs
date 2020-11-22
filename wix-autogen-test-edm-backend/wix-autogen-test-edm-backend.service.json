@@ -1,0 +1,356 @@
+{ "name": "wix-autogen-test-edm-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "api",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-autogen-test-edm-backend.api",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "calc",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-autogen-test-edm-backend.calc",
+        "locations":
+          [ { "lineno": 21,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations":
+    [ { "name": "echo",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "Object" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 31,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "summary": "Echos the received query filter-tree",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function echo() {",
+                      "  let findOptions = {",
+                      "    stringify: true",
+                      "  };",
+                      "",
+                      "  return wixAutogenTestEdmBackend",
+                      "    .echo()",
+                      "    .eq(\"key\", \"value\")",
+                      "    .find(findOptions)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "notes":
+              [ "This function returns a query object (https://www.wix.com/corvid/reference/wix-data/wixdataquery/introduction), and the find() method returns the final response",
+                "The find() method takes an object of type 'wix-autogen-test-edm-backend~EchoRequest'" ] } },
+      { "name": "filterByQuery",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "string" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 53,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "summary": "Filter the 1 to 10 by query",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function filterByQuery() {",
+                      "  return wixAutogenTestEdmBackend",
+                      "    .filterByQuery()",
+                      "    .eq(\"key\", \"value\")",
+                      "    .find()",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "notes":
+              [ "This function returns a query object (https://www.wix.com/corvid/reference/wix-data/wixdataquery/introduction), and the find() method returns the final response" ] } },
+      { "name": "getDoubleValuesList",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "getDoubleValuesListRequest",
+              "type": "wix-autogen-test-edm-backend.GetDoubleValuesListRequest" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.GetDoubleValuesListResult" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 63,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "summary": "Non query double values list method",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function getDoubleValuesList() {",
+                      "  let getDoubleValuesListRequest = {",
+                      "    numbers: [42]",
+                      "  };",
+                      "",
+                      "  return wixAutogenTestEdmBackend",
+                      "    .getDoubleValuesList(getDoubleValuesListRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "getList",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "getListRequest",
+              "type": "wix-autogen-test-edm-backend.GetListRequest" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.GetListResult" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 73,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "summary": "Non query list method",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function getList() {",
+                      "  let getListRequest = {",
+                      "    numbers: [42]",
+                      "  };",
+                      "",
+                      "  return wixAutogenTestEdmBackend",
+                      "    .getList(getListRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "myEcho",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "Object" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 42,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "summary": "Echos the received query filter-tree",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function myEcho() {",
+                      "  let findOptions = {",
+                      "    stringify: true",
+                      "  };",
+                      "",
+                      "  return wixAutogenTestEdmBackend",
+                      "    .myEcho()",
+                      "    .eq(\"key\", \"value\")",
+                      "    .find(findOptions)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "notes":
+              [ "This function returns a query object (https://www.wix.com/corvid/reference/wix-data/wixdataquery/introduction), and the find() method returns the final response",
+                "The find() method takes an object of type 'wix-autogen-test-edm-backend~EchoRequest'" ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "EchoRequest",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "stringify",
+              "type": "boolean",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetDoubleValuesListRequest",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] },
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetDoubleValuesListResult",
+        "locations":
+          [ { "lineno": 13,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] },
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetListRequest",
+        "locations":
+          [ { "lineno": 19,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] },
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetListResult",
+        "locations":
+          [ { "lineno": 25,
+              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] },
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

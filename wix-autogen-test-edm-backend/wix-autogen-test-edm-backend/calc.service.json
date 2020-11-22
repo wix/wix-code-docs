@@ -1,0 +1,304 @@
+{ "name": "calc",
+  "memberOf": "wix-autogen-test-edm-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 17,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "addNumbers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "number1",
+              "type": "number",
+              "doc": "First argument" },
+            { "name": "number2",
+              "type": "number",
+              "doc": "Second argument" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "number" ] },
+            "doc": "Fulfilled - The result of the operation" },
+        "locations":
+          [ { "lineno": 36,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "summary": "Adds two operands",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { calc } from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function addNumbers() {",
+                      "  let number1 = 42;",
+                      "  let number2 = 42;",
+                      "",
+                      "  return calc",
+                      "    .addNumbers(number1, number2)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "divide",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "divideRequest",
+              "type": "wix-autogen-test-edm-backend.calc.DivideRequest" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.calc.DivideResult" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 47,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "summary": "Divides two operands",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { calc } from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function divide() {",
+                      "  let divideRequest = {",
+                      "    a: 42,",
+                      "    b: 42",
+                      "  };",
+                      "",
+                      "  return calc",
+                      "    .divide(divideRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "multiply",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "multiplyRequest",
+              "type": "Object" },
+            { "name": "multiplyRequest.a",
+              "type": "number",
+              "doc": "Multiplied" },
+            { "name": "multiplyRequest.b",
+              "type": "number",
+              "doc": "Multiplier" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.calc.MultiplyResult" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 57,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "summary": "Multplies two operands",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { calc } from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function multiply() {",
+                      "  let multiplyRequest = {",
+                      "    a: 42,",
+                      "    b: 42",
+                      "  };",
+                      "",
+                      "  return calc",
+                      "    .multiply(multiplyRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "subtract",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "subtractRequest",
+              "type": "wix-autogen-test-edm-backend.calc.SubtractRequest" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.calc.SubtractResult" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 69,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "summary": "Subtracts two operands",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { calc } from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function subtract() {",
+                      "  let subtractRequest = {",
+                      "    a: 42,",
+                      "    b: 42",
+                      "  };",
+                      "",
+                      "  return calc",
+                      "    .subtract(subtractRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "DivideRequest",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "a",
+              "type": "number",
+              "doc": "Number" },
+            { "name": "b",
+              "type": "number",
+              "doc": "Divider" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "DivideResult",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "isValidOperation",
+              "type": "boolean",
+              "doc": "Return false if one of the operands was illegal for the operation",
+              "optional": true },
+            { "name": "result",
+              "type": "number",
+              "doc": "The result of the operation",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "MultiplyResult",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "isValidOperation",
+              "type": "boolean",
+              "doc": "Return false if one of the operands was illegal for the operation",
+              "optional": true },
+            { "name": "result",
+              "type": "number",
+              "doc": "The result of the operation",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SubtractRequest",
+        "locations":
+          [ { "lineno": 22,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "a",
+              "type": "number",
+              "doc": "Number" },
+            { "name": "b",
+              "type": "number",
+              "doc": "Another number" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SubtractResult",
+        "locations":
+          [ { "lineno": 29,
+              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "isValidOperation",
+              "type": "boolean",
+              "doc": "Return false if one of the operands was illegal for the operation",
+              "optional": true },
+            { "name": "result",
+              "type": "number",
+              "doc": "The result of the operation",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

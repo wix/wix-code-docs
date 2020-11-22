@@ -1,0 +1,262 @@
+{ "name": "api",
+  "memberOf": "wix-autogen-test-edm-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 5,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "someAlias",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "someRequest",
+              "type": "wix-autogen-test-edm-backend.api.SomeRequest",
+              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nViverra nam libero justo laoreet sit amet cursus. Scelerisque eu ultrices vitae auctor." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.api.SomeResult" ] },
+            "doc": "Fulfilled - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nSed risus ultricies tristique nulla aliquet enim tortor at.\nEu ultrices vitae auctor eu augue ut lectus arcu." },
+        "locations":
+          [ { "lineno": 64,
+              "filename": "com.wixpress.cloud.edm_autogen.SomeInternalAlphaTestService.js" } ],
+        "docs":
+          { "summary": "some public method for testing edm-generator.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { api } from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function someAlias() {",
+                      "  let someRequest = {",
+                      "    aString: \"a string\",",
+                      "    someObjects: [",
+                      "      {",
+                      "        name: \"a string\",",
+                      "        description: \"a string\"",
+                      "      }",
+                      "    ],",
+                      "    someDate: new Date()",
+                      "  };",
+                      "",
+                      "  return api",
+                      "    .someAlias(someRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "someEmptyPublicGaMethod",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 42,
+              "filename": "com.wixpress.cloud.edm_autogen.SomeInternalAlphaTestService.js" } ],
+        "docs":
+          { "summary": "some public method that receives an empty request and returns an empty response object",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { api } from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function someEmptyPublicGaMethod() {",
+                      "  return api",
+                      "    .someEmptyPublicGaMethod()",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "somePublicGaMethod123",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "someRequest",
+              "type": "wix-autogen-test-edm-backend.api.SomeRequest",
+              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nViverra nam libero justo laoreet sit amet cursus. Scelerisque eu ultrices vitae auctor." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.api.SomeResponse" ] },
+            "doc": "Fulfilled - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nSed risus ultricies tristique nulla aliquet enim tortor at.\nEu ultrices vitae auctor eu augue ut lectus arcu." },
+        "locations":
+          [ { "lineno": 51,
+              "filename": "com.wixpress.cloud.edm_autogen.SomeInternalAlphaTestService.js" } ],
+        "docs":
+          { "summary": "some public method for testing edm-generator.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { api } from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function somePublicGaMethod123() {",
+                      "  let someRequest = {",
+                      "    aString: \"a string\",",
+                      "    someObjects: [",
+                      "      {",
+                      "        name: \"a string\",",
+                      "        description: \"a string\"",
+                      "      }",
+                      "    ],",
+                      "    someDate: new Date()",
+                      "  };",
+                      "",
+                      "  return api",
+                      "    .somePublicGaMethod123(someRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "SomeObject",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com.wixpress.cloud.edm_autogen.SomeInternalAlphaTestService.js" } ],
+        "docs":
+          { "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "description",
+              "type": "string",
+              "doc": "The description",
+              "optional": true },
+            { "name": "name",
+              "type": "string",
+              "doc": "The name",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SomeRequest",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "com.wixpress.cloud.edm_autogen.SomeInternalAlphaTestService.js" } ],
+        "docs":
+          { "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description":
+              [ "Viverra nam libero justo laoreet sit amet cursus. Scelerisque eu ultrices vitae auctor." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "aString",
+              "type": "string",
+              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+              "optional": true },
+            { "name": "someDate",
+              "type": "Date",
+              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "optional": true },
+            { "name": "someObjects",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-autogen-test-edm-backend.api.SomeObject" ] },
+              "doc": "This is a repeated object",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SomeResponse",
+        "locations":
+          [ { "lineno": 21,
+              "filename": "com.wixpress.cloud.edm_autogen.SomeInternalAlphaTestService.js" } ],
+        "docs":
+          { "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description":
+              [ "Sed risus ultricies tristique nulla aliquet enim tortor at.",
+                "Eu ultrices vitae auctor eu augue ut lectus arcu." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Some id to return (read-only, cannot be set in code)" },
+            { "name": "date",
+              "type": "Date",
+              "doc": "Some date to return (read-only, cannot be set in code)" },
+            { "name": "dateCopy",
+              "type": "Date",
+              "doc": "Some date to return (read-only, cannot be set in code)" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SomeResult",
+        "locations":
+          [ { "lineno": 32,
+              "filename": "com.wixpress.cloud.edm_autogen.SomeInternalAlphaTestService.js" } ],
+        "docs":
+          { "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description":
+              [ "Sed risus ultricies tristique nulla aliquet enim tortor at.",
+                "Eu ultrices vitae auctor eu augue ut lectus arcu." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "someDate",
+              "type": "Date",
+              "doc": "Some date to return",
+              "optional": true },
+            { "name": "someId",
+              "type": "string",
+              "doc": "Some id to return",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
