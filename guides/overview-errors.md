@@ -6,11 +6,14 @@ What can we say, sh*t happens!  (JUST KIDDING, THIS IS A TEST)
 
 ### Types of Errors
 
-#### HTTP/RPC Errors
+
+#### HTTP Errors
 4xx Client errors... fix your mistake
 5xx Server Errors... contact support
 
-#### Corvid Server Errors
+These break into application errors, validation errors... 
+
+#### Corvid Server Errors (or can these also be called "domain errors?")
 
 
 #### Javascript Errors 
@@ -26,23 +29,50 @@ My wish list!
  “description”: “<long text>”, 
  “severity”: “error”|“warning”|“info”,
  “type”: “validation”|“application”|“system”|“server”|“js”,
- “validationIssue”: “Invalid Email”  \\ If “type” is “validation”
- “application” : “Bookings”|“Stores”|“Editor Elements”|”General” … 
+ “validationIssue”: “Invalid Email”  \\ If “type” is “validation”,
+ “application” : “Bookings”|“Stores”|“Editor Elements”|”General”,
+ "infoURL" : <link to docs>
 }
 
-
-
 ### Where You See Them
+
+Corvid console and Browser Developer Tools
+
 ### How to Catch Them in Your Code
 
-## Standard Codes
+You can handle errors by adding a `catch()` in your code, such as at the end of a then() chain. 
+The `catch()` receives the error.
 
-| Code   | Text              | Message                                       |
+    import wixData from 'wix-data';
+
+    $w.onReady( function () {
+      wixData.query("myCollection")
+        .find()
+        .then(results => $w("#myTable").rows = results.items)
+        .catch(error => {
+            // handle your error here
+            switch(expression) {
+              case x:
+                  // code block
+                  break;
+              case y:
+                  // code block
+                  break;
+              default:
+                  // code block
+         }
+        } );
+    } );
+
+
+## Handling Standard HTTP Error Codes
+
+| Status Code | Text              | Message                                       |
 | ------ | -----------------------  | ---------------------------------------------- |
 | 200  | OK                       | Success! |
 | 400  | Bad Request              | One or more parameters is incorrect, missing, or did not pass validation for some other reason. |
-| 401  | Unauthorized             | The system was not able to authenticate you.|
-| 403  | Forbidden                | You are authenticated but you do not have permissions. |
+| 401  | Unauthorized             | The system was not able to authenticate.|
+| 403  | Forbidden                | Authenticated succeeded but the correct permissions are lacking. |
 | 404  | Not Found                | The entity is not found or does not exist. |
 | 409  | Conflict                 | The entity already exists. |
 | 429  | Too Many Requests        | Resource usage was exhausted. |
@@ -52,7 +82,13 @@ My wish list!
 | 504  | Gateway Timeout          | The API did not respond in a timely manner. Try again later. |
 
 
-## API-specific Errors
+
+## Handling JavaScript Errors
+
+Explaining JavaScript errors is out of scope --- see <link>.
+
+
+## Handling Corvid Server (API-specific) Errors
 
 In addition to standard errors available to all APIs, some APIs will issue their own errors. 
 
