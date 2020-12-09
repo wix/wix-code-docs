@@ -36,7 +36,13 @@ My wish list!
 
 ### Where You See Errors
 
-Corvid console and Browser Developer Tools
+* **Corvid Developer Console**
+
+When writing code in Corvid, you'll want to preview your site quite often. Previewing runs your code and allows you to check that it's working as expected. In preview, the Developer Console shows at the bottom of the screen. The console displays information that's useful for fixing mistakes in your code, such as errors, logs, and other messages.
+
+* **Browser Developer Tools**
+
+Even after your code is published, you can check your site for Corvid-issued errors using your browser's development tools, such as [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open) or [FireFox](https://developer.mozilla.org/en-US/docs/Tools). 
 
 ### How to Catch Errors in Your Code
 
@@ -116,6 +122,4 @@ In addition to standard errors available to all APIs, some APIs will issue their
 
 See the return values for each API. 
 
-![alt_text](../media/gettingStarted2.png)
-
-
+![alt_text](../media/error-table.png)
