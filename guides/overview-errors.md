@@ -17,6 +17,18 @@ What can we say, sh*t happens!  (JUST KIDDING, THIS IS A TEST)
 
 ### What Info Do You Get
 
+My wish list! 
+
+{
+ "code": "402",
+ “text”: “Payment Required”, 
+ "message": “<short text>”,
+ “description”: “<long text>”, 
+ “severity”: “error”|“warning”|“info”,
+ “type”: “validation”|“application”|“system”|“server”|“js”,
+ “validationIssue”: “Invalid Email”  \\ If “type” is “validation”
+ “application” : “Bookings”|“Stores”|“Editor Elements”|”General” … 
+}
 
 
 
@@ -27,8 +39,8 @@ What can we say, sh*t happens!  (JUST KIDDING, THIS IS A TEST)
 
 | Code   | Text              | Message                                       |
 | ------ | -----------------------  | ---------------------------------------------- |
-| `200`  | OK                       | Success! |
-| "400"  | Bad Request              | One or more parameters is incorrect, missing, or did not pass validation for some other reason. |
+| 200  | OK                       | Success! |
+| 400  | Bad Request              | One or more parameters is incorrect, missing, or did not pass validation for some other reason. |
 | 401  | Unauthorized             | The system was not able to authenticate you.|
 | 403  | Forbidden                | You are authenticated but you do not have permissions. |
 | 404  | Not Found                | The entity is not found or does not exist. |
