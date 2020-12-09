@@ -3,8 +3,7 @@
   "mixes":
     [ "$w.Element",
       "$w.HiddenCollapsedMixin" ],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 19,
       "filename": "VideoBox.es6" },

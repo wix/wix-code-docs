@@ -3,8 +3,7 @@
   "mixes":
     [ "$w.Element",
       "$w.HiddenCollapsedMixin" ],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 6,
       "filename": "HiddenCollapsedElement.es6" },

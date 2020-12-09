@@ -661,7 +661,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 137,
+          [ { "lineno": 158,
               "filename": "ValidatableMixin.es6" } ],
         "docs":
           { "summary": "Function that runs when custom validation is checked.",

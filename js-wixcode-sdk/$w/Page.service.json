@@ -4,8 +4,7 @@
     [ "$w.Element",
       "$w.ClickableMixin",
       "$w.ContainableMixin" ],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 7,
       "filename": "Page.es6" },

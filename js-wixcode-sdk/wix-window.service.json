@@ -175,7 +175,7 @@
         "set": false,
         "type": "wix-window.Multilingual",
         "locations":
-          [ { "lineno": 1223,
+          [ { "lineno": 1230,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "The Multilingual API is used when working with the languages in a multilingual site.",
@@ -203,7 +203,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 1423,
+          [ { "lineno": 1387,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets the HTTP referrer header field.",
@@ -405,8 +405,7 @@
         "extra":
           {  } },
       { "name": "getCurrentGeolocation",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -508,7 +507,8 @@
         "extra":
           {  } },
       { "name": "openLightbox",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "name",
@@ -623,8 +623,8 @@
                       "    \"pageSend2\": $w('#pageSend2').value",
                       "  })",
                       "  .then( (data) => {",
-                      "    $w('#pageReceive1').text = data.lightboxSend1;",
-                      "    $w('#pageReceive2').text = data.lightboxSend2;",
+                      "    $w('#pageReceive1').text = data.lightBoxSend1;",
+                      "    $w('#pageReceive2').text = data.lightBoxSend2;",
                       "  } );",
                       "}",
                       "",

@@ -581,7 +581,7 @@
               "doc": "`true` if the element's value does not match its pattern validation." },
             { "name": "tooLong",
               "type": "boolean",
-              "doc": "`true` if the length of the element's value exceeds its [`maxlength`]($w.TextInputMixin.html#maxLength) property." },
+              "doc": "`true` if the length of the element's value exceeds its [`maxLength`]($w.TextInputMixin.html#maxLength) property." },
             { "name": "tooShort",
               "type": "boolean",
               "doc": "`true` if the length of the element's value is smaller than its `minlength` property." },

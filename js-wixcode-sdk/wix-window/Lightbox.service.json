@@ -1,7 +1,8 @@
 { "name": "Lightbox",
   "memberOf": "wix-window",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 262,
       "filename": "window.es6" },
@@ -35,7 +36,8 @@
   "properties": [],
   "operations":
     [ { "name": "close",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "data",
@@ -96,8 +98,8 @@
                       "    \"pageSend2\": $w('#pageSend2').value",
                       "  })",
                       "  .then( (data) => {",
-                      "    $w('#pageReceive1').text = data.lightboxSend1;",
-                      "    $w('#pageReceive2').text = data.lightboxSend2;",
+                      "    $w('#pageReceive1').text = data.lightBoxSend1;",
+                      "    $w('#pageReceive2').text = data.lightBoxSend2;",
                       "  } );",
                       "}",
                       "",
@@ -127,7 +129,8 @@
         "extra":
           {  } },
       { "name": "getContext",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -179,8 +182,8 @@
                       "    \"pageSend2\": $w('#pageSend2').value",
                       "  })",
                       "  .then( (data) => {",
-                      "    $w('#pageReceive1').text = data.lightboxSend1;",
-                      "    $w('#pageReceive2').text = data.lightboxSend2;",
+                      "    $w('#pageReceive1').text = data.lightBoxSend1;",
+                      "    $w('#pageReceive2').text = data.lightBoxSend2;",
                       "  } );",
                       "}",
                       "",

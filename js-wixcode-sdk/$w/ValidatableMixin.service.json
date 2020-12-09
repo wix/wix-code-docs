@@ -1,8 +1,7 @@
 { "name": "ValidatableMixin",
   "memberOf": "$w",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 4,
       "filename": "ValidatableMixin.es6" },
@@ -320,7 +319,6 @@
               "doc": "`true` if the element's value\n cannot be converted to a value." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
