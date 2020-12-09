@@ -11,7 +11,9 @@ see the information provided, you will feel confident that you can develop your 
 
 Build in as much preemptive error handling as possible in your code to give your site visitors as smooth an experience as possible.
 
-# Understanding the Error Object
+## Understanding the Error Object
+
+When an error occurs, Corvid returns an object with the following information. 
 
 | Key | Sample Values             | Description                                       |
 | ------ | -----------------------  | ---------------------------------------------- |
@@ -21,7 +23,7 @@ Build in as much preemptive error handling as possible in your code to give your
 | severity | error, warning, info...  | Indication of how critical it is that the error be handled in your code. |
 | type  | validation, application, system, server, javascript  | The type of error. The type helps you determine how to respond to the issue. For example, validation issues can often be solved by requesting appropriate values, while system errors usually require support.|
 | validationIssue | An invalid email address was entered.  | For validation-type errors, more information that can help recover from the error. |
-| application | Bookings, Stores, Editor ELements...  | The source of the error. For sites with multiple add-ins, this helps narrow down the source of the error. |
+| application | Bookings, Stores, Editor Elements...  | The source of the error. For sites with multiple add-ins, this helps narrow down the source of the error. |
 | infoURL| [Corvid Reference](https://www.wix.com/corvid/reference/api-overview)...  | Links to this Corvid Reference or other sources of information that can help you handle the error. |
 
 
@@ -38,9 +40,10 @@ Build in as much preemptive error handling as possible in your code to give your
       "infoURL" : <link to docs>
     }
 
-    > **Note:** More-detailed descriptions for errors are provided in this [Corvid Reference](https://www.wix.com/corvid/reference/api-overview) under the API functions that return them. The `infoURL` can contain a direct link to these descriptions.
 
-### Where Will Errors Appear?
+> **Note:** More-detailed descriptions for errors are provided in this [Corvid Reference](https://www.wix.com/corvid/reference/api-overview) under the API functions that return them. The `infoURL` can contain a direct link to these descriptions.
+
+## Where Will Errors Appear?
 
 Look for errors in the following places.
 
@@ -56,7 +59,7 @@ Look for errors in the following places.
 
      *Are there any? Need info.*
 
-### Catching Errors in Your Code
+## Catching Errors in Your Code
 
 You can handle errors by adding a `catch()` in your code. The `catch()` receives the error.
 
@@ -105,7 +108,9 @@ Another way is to use [`try` and `catch()`](https://support.wix.com/en/article/c
         }
     });
 
-## Standard HTTP Error Codes
+## Standard HTTP Errors
+
+These error codes are common to all Corvid functions. 
 
 | Status Code | Text              | Message                                       |
 | ------ | -----------------------  | ---------------------------------------------- |
