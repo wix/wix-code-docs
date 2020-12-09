@@ -1,32 +1,36 @@
 # Error Handling
 
-What can we say, sh*t happens!  (JUST KIDDING, THIS IS A TEST)
+What can we say, errors happen! Let's discuss how your Corvid code can anticipate and handle errors that are returned. 
 
-## About Corvid Errors
+Errors can come from a number of sources, such as standard HTTP errors, JavaScript errors, and vertical-specific errors issued by the server. 
 
-### Types of Errors
+Some errors that you encounter will be application errors, some errors will be validation errors... 
+
+To help you plan for errors and understand why they happened when they did, the Corvid error object provides the relevant details. Once you
+see the information provided, you will feel confident that you can develop your code accordingly. 
+
+Build in as much preemptive error handling as possible in your code to give your site visitors as smooth an experience as possible.
+
+# Understanding the Error Object
+
+| Key | Sample Values             | Description                                       |
+| ------ | -----------------------  | ---------------------------------------------- |
+| code | 4xx, 5xx... | Numbers representing [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), such as 400, 404.... |
+| text | Not Found, Forbidden... | Text of the [HTTP status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). |
+| message | Cannot create the item because it already exists. | A description that appears in the console describing the error briefly and suggestions for the Corvid user to mitigate the issue. |
+| severity | error, warning, info...  | Indication of how critical it is that the error be handled in your code. |
+| type  | validation, application, system, server, javascript  | The type of error. The type helps you determine how to respond to the issue. For example, validation issues can often be solved by requesting appropriate values, while system errors usually require support.|
+| validationIssue | An invalid email address was entered.  | For validation-type errors, more information that can help recover from the error. |
+| application | Bookings, Stores, Editor ELements...  | The source of the error. For sites with multiple add-ins, this helps narrow down the source of the error. |
+| infoURL| [Corvid Reference](https://www.wix.com/corvid/reference/api-overview)...  | Links to this Corvid Reference or other sources of information that can help you handle the error. |
 
 
-#### HTTP Errors
-4xx Client errors... fix your mistake
-5xx Server Errors... contact support
-
-These break into application errors, validation errors... 
-
-#### Corvid Server Errors (or can these also be called "domain errors?")
-
-
-#### Javascript Errors 
-
-### The Error Object
-
-My wish list! 
+**Sample JSON Error Object**
 
     {
       "code": "402",
       “text”: “Payment Required”, 
       "message": “<short text>”,
-      “description”: “<long text>”, 
       “severity”: “error”|“warning”|“info”,
       “type”: “validation”|“application”|“system”|“server”|“javascript”,
       “validationIssue”: “Invalid Email”  \\ If “type” is “validation”,
@@ -34,17 +38,25 @@ My wish list!
       "infoURL" : <link to docs>
     }
 
-### Where You See Errors
+    > **Note:** More-detailed descriptions for errors are provided in this [Corvid Reference](https://www.wix.com/corvid/reference/api-overview) under the API functions that return them. The `infoURL` can contain a direct link to these descriptions.
 
-* **Corvid Developer Console**
+### Where Will Errors Appear?
 
-When writing code in Corvid, you'll want to preview your site quite often. Previewing runs your code and allows you to check that it's working as expected. In preview, the Developer Console shows at the bottom of the screen. The console displays information that's useful for fixing mistakes in your code, such as errors, logs, and other messages.
+Look for errors in the following places.
 
-* **Browser Developer Tools**
+*    **Corvid Developer Console**
 
-Even after your code is published, you can check your site for Corvid-issued errors using your browser's development tools, such as [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open) or [FireFox](https://developer.mozilla.org/en-US/docs/Tools). 
+     When writing code in Corvid, you'll want to preview your site quite often. Previewing runs your code and allows you to check that it's working as expected. In preview, the Developer Console shows at the bottom of the screen. The console displays information that's useful for fixing mistakes in your code, such as errors, logs, and other messages.
 
-### How to Catch Errors in Your Code
+*    **Browser Developer Tools**
+
+     Even after your code is published, you can check your site for Corvid-issued errors using your browser's development tools, such as [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open) or [FireFox](https://developer.mozilla.org/en-US/docs/Tools). 
+
+*    **Logs**
+
+     *Are there any? Need info.*
+
+### Catching Errors in Your Code
 
 You can handle errors by adding a `catch()` in your code. The `catch()` receives the error.
 
@@ -93,7 +105,7 @@ Another way is to use [`try` and `catch()`](https://support.wix.com/en/article/c
         }
     });
 
-## Handling Standard HTTP Error Codes
+## Standard HTTP Error Codes
 
 | Status Code | Text              | Message                                       |
 | ------ | -----------------------  | ---------------------------------------------- |
@@ -110,16 +122,15 @@ Another way is to use [`try` and `catch()`](https://support.wix.com/en/article/c
 | 504  | Gateway Timeout          | The API did not respond in a timely manner. Try again later. |
 
 
-
-## Handling JavaScript Errors
+## JavaScript Errors
 
 Your code might return errors native to JavaScript. [Learn more](https://www.w3schools.com/jsref/jsref_obj_error.asp) about handling these types of errors.
 
 
 ## Handling Corvid Server (API-specific) Errors
 
-In addition to standard errors available to all APIs, some APIs will issue their own errors. 
+*Not sure what to call these.*
 
-See the return values for each API. 
+In addition to standard HTTP errors common to all API functions, some APIs might issue additional errors. These errors are described in this  [Corvid Reference](https://www.wix.com/corvid/reference/api-overview) under each API function's return value.  
 
 ![alt_text](../media/error-table.png)
