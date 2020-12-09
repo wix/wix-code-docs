@@ -41,7 +41,7 @@ When an error occurs, Corvid returns an object with the following information.
     }
 
 
-> **Note:** More-detailed descriptions for errors are provided in this [Corvid Reference](https://www.wix.com/corvid/reference/api-overview) under the API functions that return them. The `infoURL` can contain a direct link to these descriptions.
+> **Note:** More detailed descriptions for errors are provided in this [Corvid Reference](https://www.wix.com/corvid/reference/api-overview) under the API functions that return them. The `infoURL` property can contain a direct link to these descriptions.
 
 ## Where Will Errors Appear?
 
