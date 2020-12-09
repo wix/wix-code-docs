@@ -18,39 +18,39 @@ These break into application errors, validation errors...
 
 #### Javascript Errors 
 
-### What Info Do You Get
+### The Error Object
 
 My wish list! 
 
-{
- "code": "402",
- “text”: “Payment Required”, 
- "message": “<short text>”,
- “description”: “<long text>”, 
- “severity”: “error”|“warning”|“info”,
- “type”: “validation”|“application”|“system”|“server”|“js”,
- “validationIssue”: “Invalid Email”  \\ If “type” is “validation”,
- “application” : “Bookings”|“Stores”|“Editor Elements”|”General”,
- "infoURL" : <link to docs>
-}
+    {
+      "code": "402",
+      “text”: “Payment Required”, 
+      "message": “<short text>”,
+      “description”: “<long text>”, 
+      “severity”: “error”|“warning”|“info”,
+      “type”: “validation”|“application”|“system”|“server”|“javascript”,
+      “validationIssue”: “Invalid Email”  \\ If “type” is “validation”,
+      “application” : “Bookings”|“Stores”|“Editor Elements”|”General”,
+      "infoURL" : <link to docs>
+    }
 
-### Where You See Them
+### Where You See Errors
 
 Corvid console and Browser Developer Tools
 
-### How to Catch Them in Your Code
+### How to Catch Errors in Your Code
 
-You can handle errors by adding a `catch()` in your code, such as at the end of a then() chain. 
-The `catch()` receives the error.
+You can handle errors by adding a `catch()` in your code. The `catch()` receives the error.
+
+One way is to check for errors using `catch()` at the end of a [`then()`](https://support.wix.com/en/article/corvid-working-with-promises#error-handling483) chain. 
 
     import wixData from 'wix-data';
-
     $w.onReady( function () {
       wixData.query("myCollection")
         .find()
         .then(results => $w("#myTable").rows = results.items)
         .catch(error => {
-            // handle your error here
+            // handle your errors here
             switch(expression) {
               case x:
                   // code block
@@ -60,10 +60,32 @@ The `catch()` receives the error.
                   break;
               default:
                   // code block
-         }
+            }
         } );
     } );
 
+Another way is to use [`try` and `catch()`](https://support.wix.com/en/article/corvid-working-with-promises#error-handling) statements. 
+
+    import wixData from 'wix-data';
+    $w.onReady( async function () { 
+      try {
+          const results = await wixData.query("myCollection").find(); 
+          $w("#table1").rows = results.items;
+      }
+      catch(error) {
+           // handle the errors here
+           switch(expression) {
+              case x:
+                  // code block
+                  break;
+              case y:
+                  // code block
+                  break;
+              default:
+                  // code block
+            }
+        }
+    });
 
 ## Handling Standard HTTP Error Codes
 
@@ -85,7 +107,7 @@ The `catch()` receives the error.
 
 ## Handling JavaScript Errors
 
-Explaining JavaScript errors is out of scope --- see <link>.
+Your code might return errors native to JavaScript. [Learn more](https://www.w3schools.com/jsref/jsref_obj_error.asp) about handling these types of errors.
 
 
 ## Handling Corvid Server (API-specific) Errors
