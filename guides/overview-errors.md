@@ -59,6 +59,10 @@ Look for errors in the following places.
 
      *Are there any? Need info.*
 
+*    **Returned Values from Functions**
+
+     *Write this up*
+
 ## Catching Errors in Your Code
 
 You can handle errors by adding a `catch()` in your code. The `catch()` receives the error.
