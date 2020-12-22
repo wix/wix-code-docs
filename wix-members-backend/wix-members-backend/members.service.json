@@ -2,7 +2,7 @@
   "memberOf": "wix-members-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 24,
       "filename": "index.js" },
@@ -323,10 +323,11 @@
               "optional": true },
             { "name": "title",
               "type": "string",
-              "doc": "Member title. For example: 'Amazing blog writer', 'HR Manager at Wix.com'.",
+              "doc": "Member title. Used as a headline, for example: 'Amazing blog writer', 'HR Manager at Wix.com'.",
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }

@@ -1,7 +1,7 @@
 { "name": "wix-members-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -213,9 +213,10 @@
               "doc": "Cover picture, which is used as a background picture in members profile page.\n\nCover positioning can be altered by manipulating values of `cover.offset_x` and `cover.offset_y`.\nWhen left empty, the values default to `0`." },
             { "name": "title",
               "type": "string",
-              "doc": "Member title" } ],
+              "doc": "Member title. Used as a headline, for example: 'Amazing blog writer', 'HR Manager at Wix.com'." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }
