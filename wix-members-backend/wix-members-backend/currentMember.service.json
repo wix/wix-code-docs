@@ -1,0 +1,157 @@
+{ "name": "currentMember",
+  "memberOf": "wix-members-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 5,
+      "filename": "index.js" },
+  "docs":
+    { "description":
+        [ "The Current Member API contains functionality for working with [Wix Members area](https://support.wix.com/en/article/about-members-area) from backend code.",
+          "",
+          "To use the Current Member API, import `{ currentMember }` from the `wix-members-backend` module:",
+          "",
+          "   ```javascript",
+          "   import { currentMember } from 'wix-members-backend';",
+          "   ```" ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getMember",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "fieldSet",
+              "type": "string",
+              "doc": "One of:\n + `\"PUBLIC\"` - returns: ID and profile object (status, privacyStatus and activityStatus will return with UNKNOWN values).\n + `\"FULL\"` - returns: ID, status, contact and profile objects, privacy_status, activity_status, created_date, and updated_date." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_GetMyMember_getMember.js" } ],
+        "docs":
+          { "summary": "Return caller member information.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { currentMember } from \"wix-members-backend\";",
+                      "",
+                      "export function getMember() {",
+                      "  let fieldSet = \"PUBLIC\";",
+                      "",
+                      "  return currentMember",
+                      "    .getMember(fieldSet)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "makeProfilePrivate",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_LeaveCommunity_makeProfilePrivate.js" } ],
+        "docs":
+          { "summary": "Makes current logged in member not part of the community.",
+            "description":
+              [ "Changes member profile to private.",
+                "",
+                "After this action, logged in member will not be able to be social in page.",
+                "For example: member will not be visible in all members page and site visitors, other members will not be able to see his/her profile",
+                "",
+                "Returns full member entity with updated privacy_status." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { currentMember } from \"wix-members-backend\";",
+                      "",
+                      "export function makeProfilePrivate() {",
+                      "  return currentMember",
+                      "    .makeProfilePrivate()",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "makeProfilePublic",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_JoinCommunity_makeProfilePublic.js" } ],
+        "docs":
+          { "summary": "Makes currently logged in member part of the community.",
+            "description":
+              [ "Changes member profile to public.",
+                "",
+                "After this action, logged in member will be able to be social in page.",
+                "For example: member will be visible in all members page and site visitors, other members will be able to see his/her profile",
+                "",
+                "Returns full member entity with updated privacy_status." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { currentMember } from \"wix-members-backend\";",
+                      "",
+                      "export function makeProfilePublic() {",
+                      "  return currentMember",
+                      "    .makeProfilePublic()",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

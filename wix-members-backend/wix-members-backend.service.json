@@ -1,0 +1,221 @@
+{ "name": "wix-members-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "currentMember",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-members-backend.currentMember",
+        "locations":
+          [ { "lineno": 16,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "members",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-members-backend.members",
+        "locations":
+          [ { "lineno": 35,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Address",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Address entity",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "street",
+              "type": "string",
+              "doc": "Street" },
+            { "name": "city",
+              "type": "string",
+              "doc": "City" },
+            { "name": "region",
+              "type": "string",
+              "doc": "Region" },
+            { "name": "country",
+              "type": "string",
+              "doc": "Country" },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "Postal code" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Contact",
+        "locations":
+          [ { "lineno": 12,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Contact.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactId",
+              "type": "string",
+              "doc": "Unique identifier of contact" },
+            { "name": "firstName",
+              "type": "string",
+              "doc": "First name of the contact" },
+            { "name": "lastName",
+              "type": "string",
+              "doc": "Last name of the contact" },
+            { "name": "phones",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "A list of phones related to the contact" },
+            { "name": "emails",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "A list of emails related to the contact" },
+            { "name": "addresses",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-members-backend.Address" ] },
+              "doc": "A list of addresses related to the contact" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Image",
+        "locations":
+          [ { "lineno": 40,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Photo picture, which is used as a profile picture.",
+            "description":
+              [ "Fields `photo.offset_x` and `photo.offset_y` are **not** respected." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "WixMedia image ID" },
+            { "name": "url",
+              "type": "string",
+              "doc": "URL of image" },
+            { "name": "height",
+              "type": "number",
+              "doc": "Original image width" },
+            { "name": "width",
+              "type": "number",
+              "doc": "Original image height" },
+            { "name": "offsetX",
+              "type": "number",
+              "doc": "Offset on X axis" },
+            { "name": "offsetY",
+              "type": "number",
+              "doc": "Offset on Y axis" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Member",
+        "locations":
+          [ { "lineno": 54,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Member ID." },
+            { "name": "loginEmail",
+              "type": "string",
+              "doc": "Login email." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Member site access status. There are 5 options:\n\nOne of:\n + `\"UNKNOWN\"` - Caller has no permission or not requested to read this value.\n + `\"PENDING\"` - Member created and is waiting for approval by site owner.\n + `\"APPROVED\"` - Member can login to the site.\n + `\"BLOCKED\"` -  Member cannot login to the site.\n + `\"OFFLINE\"` - Member cannot login to the site." },
+            { "name": "contact",
+              "type": "wix-members-backend.Contact",
+              "doc": "Contact." },
+            { "name": "profile",
+              "type": "wix-members-backend.Profile",
+              "doc": "Profile." },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Member privacy status. There are 3 options:\n\nOne of:\n + `\"UNKNOWN\"` - Caller has no permission or has not requested to read this value.\n + `\"PRIVATE\"` - Member becomes hidden to the site visitors and other site members. Member is returned only to site owners and apps with MEMBERS.MEMBER_READ_PRIVATE permission.\n + `\"PUBLIC\"` - Member is visible to the site visitors, other site members, owners and apps." },
+            { "name": "activityStatus",
+              "type": "string",
+              "doc": "Member activity status.\n\nOne of:\n + `\"UNKNOWN\"` - The caller has no permission or has not requested to read this value.\n + `\"ACTIVE\"` - This member can post in the forum and add comments in the blog.\n + `\"MUTED\"` - This member can't post in the forum or add comments in the blog." },
+            { "name": "createdDate",
+              "type": "Date",
+              "doc": "Member created timestamp." },
+            { "name": "updatedDate",
+              "type": "Date",
+              "doc": "Last member updated timestamp." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Profile",
+        "locations":
+          [ { "lineno": 24,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Profile.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nickname",
+              "type": "string",
+              "doc": "Nickname" },
+            { "name": "slug",
+              "type": "string",
+              "doc": "Human readable member identifier" },
+            { "name": "profilePhoto",
+              "type": "wix-members-backend.Image",
+              "doc": "Photo picture, which is used as a profile picture.\n\nFields `photo.offset_x` and `photo.offset_y` are **not** respected." },
+            { "name": "coverPhoto",
+              "type": "wix-members-backend.Image",
+              "doc": "Cover picture, which is used as a background picture in members profile page.\n\nCover positioning can be altered by manipulating values of `cover.offset_x` and `cover.offset_y`.\nWhen left empty, the values default to `0`." },
+            { "name": "title",
+              "type": "string",
+              "doc": "Member title" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

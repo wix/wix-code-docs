@@ -1,0 +1,332 @@
+{ "name": "members",
+  "memberOf": "wix-members-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 24,
+      "filename": "index.js" },
+  "docs":
+    { "description":
+        [ "The Members API contains functionality for working with [Wix Members area](https://support.wix.com/en/article/about-members-area) from backend code.",
+          "",
+          "To use the Members API, import `{ members }` from the `wix-members-backend` module:",
+          "",
+          "   ```javascript",
+          "   import { members } from 'wix-members-backend';",
+          "   ```" ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "deleteMemberAddresses",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_DeleteMemberAddresses_deleteMemberAddresses.js" } ],
+        "docs":
+          { "summary": "Deletes a member's addresses.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-members-backend\";",
+                      "",
+                      "export function deleteMemberAddresses() {",
+                      "  let id = \"a string\";",
+                      "",
+                      "  return members",
+                      "    .deleteMemberAddresses(id)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "deleteMemberEmails",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_DeleteMemberEmails_deleteMemberEmails.js" } ],
+        "docs":
+          { "summary": "Deletes a member's email addresses.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-members-backend\";",
+                      "",
+                      "export function deleteMemberEmails() {",
+                      "  let id = \"a string\";",
+                      "",
+                      "  return members",
+                      "    .deleteMemberEmails(id)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "deleteMemberPhones",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_DeleteMemberPhones_deleteMemberPhones.js" } ],
+        "docs":
+          { "summary": "Deletes a member's phone numbers.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-members-backend\";",
+                      "",
+                      "export function deleteMemberPhones() {",
+                      "  let id = \"a string\";",
+                      "",
+                      "  return members",
+                      "    .deleteMemberPhones(id)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateMember",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Member ID." },
+            { "name": "member",
+              "type": "wix-members-backend.members.MemberInfo" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.Member" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 34,
+              "filename": "com_wixpress_members_api_Members_UpdateMember_updateMember.js" } ],
+        "docs":
+          { "summary": "Updates a member.",
+            "description":
+              [ "To clear a field, send the param with an empty \"\" value.",
+                "Supported fields:",
+                "- contact: firstName, lastName, phones, emails, addresses.",
+                "- profile: nickname, profilePhoto, coverPhoto, title.",
+                "",
+                "Note: To clear contact.phones, contact.emails, contact.addresses - use the [DeleteMemberPhones](), [DeleteMemberEmails]() or [DeleteMemberAddresses]() endpoints." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-members-backend\";",
+                      "",
+                      "export function updateMember() {",
+                      "  let id = \"a string\";",
+                      "  let member = {",
+                      "    contact: {",
+                      "      firstName: \"a string\",",
+                      "      lastName: \"a string\",",
+                      "      phones: [\"a string\"],",
+                      "      emails: [\"a string\"],",
+                      "      addresses: [",
+                      "        {",
+                      "          street: \"a string\",",
+                      "          city: \"a string\",",
+                      "          region: \"a string\",",
+                      "          country: \"a string\",",
+                      "          postalCode: \"a string\"",
+                      "        }",
+                      "      ]",
+                      "    },",
+                      "    profile: {",
+                      "      nickname: \"a string\",",
+                      "      profilePhoto: {",
+                      "        _id: \"a string\",",
+                      "        url: \"a string\",",
+                      "        height: 42,",
+                      "        width: 42,",
+                      "        offsetX: 42,",
+                      "        offsetY: 42",
+                      "      },",
+                      "      coverPhoto: {",
+                      "        _id: \"a string\",",
+                      "        url: \"a string\",",
+                      "        height: 42,",
+                      "        width: 42,",
+                      "        offsetX: 42,",
+                      "        offsetY: 42",
+                      "      },",
+                      "      title: \"a string\"",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return members",
+                      "    .updateMember(id, member)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "ContactInfo",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_UpdateMember_updateMember.js" } ],
+        "docs":
+          { "summary": "Contact info.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "firstName",
+              "type": "string",
+              "doc": "First name of the contact",
+              "optional": true },
+            { "name": "lastName",
+              "type": "string",
+              "doc": "Last name of the contact",
+              "optional": true },
+            { "name": "phones",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "A list of phones related to the contact",
+              "optional": true },
+            { "name": "emails",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "A list of emails related to the contact",
+              "optional": true },
+            { "name": "addresses",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-members-backend.Address" ] },
+              "doc": "A list of addresses related to the contact",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "MemberInfo",
+        "locations":
+          [ { "lineno": 12,
+              "filename": "com_wixpress_members_api_Members_UpdateMember_updateMember.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contact",
+              "type": "wix-members-backend.members.ContactInfo",
+              "doc": "Contact info.",
+              "optional": true },
+            { "name": "profile",
+              "type": "wix-members-backend.members.ProfileInfo",
+              "doc": "Profile info.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ProfileInfo",
+        "locations":
+          [ { "lineno": 19,
+              "filename": "com_wixpress_members_api_Members_UpdateMember_updateMember.js" } ],
+        "docs":
+          { "summary": "Profile info.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nickname",
+              "type": "string",
+              "doc": "Nickname",
+              "optional": true },
+            { "name": "profilePhoto",
+              "type": "wix-members-backend.Image",
+              "doc": "Photo picture, which is used as a profile picture.\n\nFields `photo.offset_x` and `photo.offset_y` are **not** respected.",
+              "optional": true },
+            { "name": "coverPhoto",
+              "type": "wix-members-backend.Image",
+              "doc": "Cover picture, which is used as a background picture in members profile page.\n\nCover positioning can be altered by manipulating values of `cover.offset_x` and `cover.offset_y`.\nWhen left empty, the values default to `0`.",
+              "optional": true },
+            { "name": "title",
+              "type": "string",
+              "doc": "Member title. For example: 'Amazing blog writer', 'HR Manager at Wix.com'.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
