@@ -1,0 +1,26 @@
+{ "name": "Cart",
+  "memberOf": "wix-site-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 16,
+      "filename": "stores.js" },
+  "docs":
+    { "summary": "CART CART CART",
+      "description":
+        [ "To use the Cart API, import `wixStories` from the `wix-stores` module:",
+          "",
+          "   ```javascript",
+          "   import wixStories from 'wix-stores';",
+          "   ```" ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }
