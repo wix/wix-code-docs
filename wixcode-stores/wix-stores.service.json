@@ -2016,7 +2016,7 @@
         "labels": [] },
       { "name": "customItem",
         "locations":
-          [ { "lineno": 297,
+          [ { "lineno": 312,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing a custom item to be added to the cart.",
