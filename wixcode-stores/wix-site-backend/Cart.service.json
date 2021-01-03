@@ -2,7 +2,7 @@
   "memberOf": "wix-site-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "removed" ],
   "location":
     { "lineno": 16,
       "filename": "stores.js" },
