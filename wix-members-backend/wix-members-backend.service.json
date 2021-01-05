@@ -1,7 +1,6 @@
 { "name": "wix-members-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -216,7 +215,6 @@
               "doc": "Member title. Used as a headline, for example: 'Amazing blog writer', 'HR Manager at Wix.com'." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

@@ -21,7 +21,50 @@
         {  } },
   "properties": [],
   "operations":
-    [ { "name": "deleteMemberAddresses",
+    [ { "name": "deleteMember",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_DeleteMember_deleteMember.js" } ],
+        "docs":
+          { "summary": "Deletes a member.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-members-backend\";",
+                      "",
+                      "export function deleteMember() {",
+                      "  let id = \"a string\";",
+                      "",
+                      "  return members",
+                      "    .deleteMember(id)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "deleteMemberAddresses",
         "labels": [],
         "nameParams": [],
         "params":
@@ -144,6 +187,56 @@
               {  } },
         "extra":
           {  } },
+      { "name": "getMember",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string" },
+            { "name": "fieldSet",
+              "type": "string",
+              "doc": "One of:\n + `\"PUBLIC\"`\n + `\"FULL\"`" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-members-backend.members.Member" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_members_api_Members_GetMember_getMember.js" } ],
+        "docs":
+          { "summary": "Retrieves a member's information, given the provided fieldSet.",
+            "description":
+              [ "- PUBLIC fieldSet returns: ID and profile object (status, privacyStatus and activityStatus will return with UNKNOWN values).",
+                "- FULL fieldSet returns: ID, status, contact object, profile object, privacyStatus, activityStatus, createdDate and updatedDate." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { members } from \"wix-members-backend\";",
+                      "",
+                      "export function getMember() {",
+                      "  let id = \"a string\";",
+                      "  let fieldSet = \"PUBLIC\";",
+                      "",
+                      "  return members",
+                      "    .getMember(id, fieldSet)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
       { "name": "updateMember",
         "labels": [],
         "nameParams": [],
@@ -327,7 +420,6 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
