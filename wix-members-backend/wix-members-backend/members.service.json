@@ -22,8 +22,7 @@
   "properties": [],
   "operations":
     [ { "name": "deleteMember",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -189,7 +188,7 @@
           {  } },
       { "name": "getMember",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -201,7 +200,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-members-backend.members.Member" ] },
+                  [ "wix-members-backend.Member" ] },
             "doc": "" },
         "locations":
           [ { "lineno": 1,
