@@ -1,0 +1,127 @@
+{ "name": "wix-some-edm",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "echo",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "wix-some-edm.WixSomeQueryBuilder_6078281615",
+            "doc": "Contains functionality for refining a some query.\nThe `WixSomeQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the some query functions,\nrefine the query by chaining `WixSomeQueryBuilder` functions, and then execute the\nquery by chaining *one* of the following functions: [`find()`](#find), `distinct()`](#distinct), or [`count()`](#count).\n\nFor example, the following code queries...:\n\n```javascript\nimport wixSomeBackend from 'wix-some-backend';\n\nwixSomeBackend.querySome()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 434,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_echo.js" } ],
+        "docs":
+          { "summary": "Echos the received query filter-tree",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Cursors_3337235656",
+        "locations":
+          [ { "lineno": 416,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_echo.js" } ],
+        "docs":
+          { "summary": "Cursors to navigate through result pages. Returned if cursor paging was used",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "next",
+              "type": "string",
+              "doc": "Cursor pointing to next result page" },
+            { "name": "prev",
+              "type": "string",
+              "doc": "Cursor pointing to previous result page" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "EchoResult_5634339341",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_echo.js" } ],
+        "docs":
+          { "summary": "Returns the items that match the query.",
+            "description":
+              [ "The current page of items retrieved by the query.",
+                "",
+                "The page size is defined by the [`limit()`](wix-some-edm.WixSomeQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions.",
+                "",
+                "When no items match the query, the `items` array is empty." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "items",
+              "type": "Object" },
+            { "name": "pagingMetadata",
+              "type": "wix-some-edm.PagingMetadataV2_5481679798" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PagingMetadataV2_5481679798",
+        "locations":
+          [ { "lineno": 424,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_echo.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "count",
+              "type": "number",
+              "doc": "The number of items returned in this response" },
+            { "name": "offset",
+              "type": "number",
+              "doc": "The offset which was requested. Returned if offset paging was used" },
+            { "name": "total",
+              "type": "number",
+              "doc": "The total number of items that match the query. Returned if offset paging was used and 'too_many_to_count' flag is not set" },
+            { "name": "tooManyToCount",
+              "type": "boolean",
+              "doc": "A flag that indicates the server failed to calculate 'total' field" },
+            { "name": "cursors",
+              "type": "wix-some-edm.Cursors_3337235656",
+              "doc": "Cursors to navigate through result pages. Returned if cursor paging was used" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryOptions_2576758187",
+        "locations":
+          [ { "lineno": 17,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_echo.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "stringify",
+              "type": "boolean",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
