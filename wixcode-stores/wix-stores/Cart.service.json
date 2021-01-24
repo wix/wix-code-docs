@@ -22,7 +22,7 @@
   "operations":
     [ { "name": "updateLineItemQuantity",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "cartLineItemId",
@@ -131,7 +131,7 @@
                       "*       \"id\": 1",
                       "*     },",
                       "*     {",
-                      "*       \"quantity\": 1,",
+                      "*       \"quantity\": 10,",
                       "*       \"price\": 25,",
                       "*       \"name\": \"Another product\",",
                       "*       \"productId\": \"1a2d7e83-4bef-31d5-09e1-3326ee271c09\",",
