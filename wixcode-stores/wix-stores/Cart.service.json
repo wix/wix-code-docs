@@ -44,7 +44,7 @@
           { "summary": "Updates the quantity of a specified line item in the cart.",
             "description":
               [ "The `updateLineItemQuantity()` function returns a Promise that resolves to the current",
-                " site visitor's shopping cart when the specified line item's quantity have been updated.",
+                " site visitor's shopping cart when the specified line item's quantity has been updated.",
                 "",
                 "> **Note:** When [editing a site as a contributor](https://support.wix.com/en/article/information-for-site-contributors), `updateLineItemQuantity()` will only work when viewing the live site." ],
             "links": [],
