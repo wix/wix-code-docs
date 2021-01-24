@@ -38,7 +38,7 @@
                   [ "wix-stores-backend.Cart" ] },
             "doc": "Fulfilled - The updated cart." },
         "locations":
-          [ { "lineno": 282,
+          [ { "lineno": 293,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Adds custom items to the cart.",
@@ -169,7 +169,7 @@
                   [ "wix-stores-backend.Cart" ] },
             "doc": "Fulfilled - The retrieved cart." },
         "locations":
-          [ { "lineno": 248,
+          [ { "lineno": 259,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Gets the current site visitor's shopping cart.",
@@ -317,7 +317,7 @@
                   [ "wix-stores.ProductOptionsAvailability" ] },
             "doc": "Fulfilled - The availability information of the product." },
         "locations":
-          [ { "lineno": 88,
+          [ { "lineno": 99,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Gets the availability of a product based on the specified option choices.",
@@ -510,7 +510,7 @@
                         [ "wix-stores.VariantItem" ] } ] },
             "doc": "Fulfilled - The variants with the specified choices." },
         "locations":
-          [ { "lineno": 191,
+          [ { "lineno": 202,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Gets a product's available variants based on the specified product ID and either option choices or variant IDs.",
@@ -666,7 +666,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 206,
+          [ { "lineno": 217,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An event handler that is triggered when items are added or removed from a shopping cart.",
@@ -816,7 +816,7 @@
                   [ "wix-stores-backend.Cart" ] },
             "doc": "Fulfilled - The updated cart." },
         "locations":
-          [ { "lineno": 262,
+          [ { "lineno": 273,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Removes a specified product from the cart.",
@@ -1095,7 +1095,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 222,
+          [ { "lineno": 233,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Function that runs when a cart changes.",
@@ -1170,7 +1170,7 @@
   "messages":
     [ { "name": "MediaItem",
         "locations":
-          [ { "lineno": 228,
+          [ { "lineno": 239,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing a media item.",
@@ -1211,7 +1211,7 @@
         "labels": [] },
       { "name": "PagingOptions",
         "locations":
-          [ { "lineno": 148,
+          [ { "lineno": 159,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing paging options.",
@@ -1234,7 +1234,7 @@
         "labels": [] },
       { "name": "ProductChoices",
         "locations":
-          [ { "lineno": 135,
+          [ { "lineno": 146,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing a product variant's option choices.",
@@ -1318,7 +1318,7 @@
         "labels": [] },
       { "name": "ProductOption",
         "locations":
-          [ { "lineno": 62,
+          [ { "lineno": 73,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing an option for a store product.",
@@ -1345,7 +1345,7 @@
         "labels": [] },
       { "name": "ProductOptions",
         "locations":
-          [ { "lineno": 50,
+          [ { "lineno": 61,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing all the available options for a store product, such as \"Size\" or \"Color\".",
@@ -1365,7 +1365,7 @@
         "labels": [] },
       { "name": "ProductOptionsAvailability",
         "locations":
-          [ { "lineno": 17,
+          [ { "lineno": 28,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object returned by the `getProductOptionsAvailability()` function representing the availability of a product.",
@@ -1460,7 +1460,7 @@
         "labels": [] },
       { "name": "ProductOptionsAvailabilitySelectedVariant",
         "locations":
-          [ { "lineno": 72,
+          [ { "lineno": 83,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing the product variant selected using the `getProductOptionsAvailability()` function.",
@@ -1583,7 +1583,7 @@
         "labels": [] },
       { "name": "ProductOptionsChoice",
         "locations":
-          [ { "lineno": 30,
+          [ { "lineno": 41,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing an options choice for a store product, such as choice \"Small\" for the option \"Size.\"",
@@ -1615,7 +1615,7 @@
         "labels": [] },
       { "name": "ProductOptionsChoiceMedia",
         "locations":
-          [ { "lineno": 42,
+          [ { "lineno": 53,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing the choice media.",
@@ -1636,7 +1636,7 @@
         "labels": [] },
       { "name": "ProductVariantOptions",
         "locations":
-          [ { "lineno": 125,
+          [ { "lineno": 136,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing the selection of specific variants of a product. Use only one of\n `choices` or `variantIds`.",
@@ -1728,7 +1728,7 @@
         "labels": [] },
       { "name": "VariantInfo",
         "locations":
-          [ { "lineno": 176,
+          [ { "lineno": 187,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object containing variant information to use when creating or updating variants.",
@@ -1833,7 +1833,7 @@
         "labels": [] },
       { "name": "VariantItem",
         "locations":
-          [ { "lineno": 161,
+          [ { "lineno": 173,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing a product variant item.",
@@ -1923,7 +1923,7 @@
         "labels": [] },
       { "name": "Variants",
         "locations":
-          [ { "lineno": 151,
+          [ { "lineno": 163,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing product variants.",
@@ -2016,7 +2016,7 @@
         "labels": [] },
       { "name": "customItem",
         "locations":
-          [ { "lineno": 297,
+          [ { "lineno": 308,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "An object representing a custom item to be added to the cart.",
