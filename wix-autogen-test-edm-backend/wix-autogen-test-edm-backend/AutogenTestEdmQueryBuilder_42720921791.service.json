@@ -1,0 +1,868 @@
+{ "name": "AutogenTestEdmQueryBuilder_42720921791",
+  "memberOf": "wix-autogen-test-edm-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 21,
+      "filename": "shared.js" },
+  "docs":
+    { "summary": "Contains functionality for refining a autogenTestEdm query.",
+      "description":
+        [ "The `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control",
+          "which results a query returns.",
+          "",
+          "Typically, you build a query using any of the autogenTestEdm query functions,",
+          "refine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the",
+          "query by chaining the [`find()`](#find) function.",
+          "",
+          "For example, the following code queries...:",
+          "",
+          "```javascript",
+          "import wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';",
+          "",
+          "wixAutogenTestEdmBackend.queryAutogenTestEdm()",
+          ".eq(\"<property1>\", \"<value1>\")",
+          ".ascending(\"<property2>\")",
+          ".limit(5)",
+          ".find()",
+          ".then( (results) => {",
+          "console.log(results.items);",
+          "} );",
+          "```" ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "and",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "query",
+              "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+              "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 639,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Adds an `and` condition to the query.",
+            "description":
+              [ "The `and()` function adds an `and` condition to a `AutogenTestEdmQueryBuilder`.",
+                "A query with an `and` returns all the items that match the query",
+                "as defined up to the `and` function and also match the query or",
+                "filter passed to the `and` function.",
+                "",
+                "Note that when chaining multiple `AutogenTestEdmQueryBuilder` functions to a query an `add` condition is assumed.",
+                "In such cases, you do not need to add a call to the `and()` function.",
+                "For example, this query returns results where status is active **and** age is",
+                "greater than 25.",
+                "",
+                "```javascript",
+                "wixAutogenTestEdmBackend.queryAutogenTestEdm()",
+                ".eq(\"status\", \"active\")",
+                ".gt(\"age\", 25);",
+                "```",
+                "",
+                "The `and()` function is needed when performing compound queries. For",
+                "example, the final query in this set of queries returns results where status",
+                "is either pending or rejected **and** age is either less than 25 or greater than 65.",
+                "",
+                "```javascript",
+                "let statusQuery = wixAutogenTestEdmBackend.queryAutogenTestEdm()",
+                ".eq(\"status\", \"pending\")",
+                ".or(",
+                "wixAutogenTestEdmBackend.queryAutogenTestEdm()",
+                ".eq(\"status\", \"rejected\")",
+                ");",
+                "",
+                "let ageQuery = wixAutogenTestEdmBackend.queryAutogenTestEdm()",
+                ".lt(\"age\", 25)",
+                ".or(",
+                "wixAutogenTestEdmBackend.queryAutogenTestEdm()",
+                ".gt(\"age\", 65)",
+                ");",
+                "",
+                "let statusAndAgeQuery = statusQuery.and(ageQuery);",
+                "```",
+                "",
+                "The `and()` function is designed to work with 2 or more queries or filters.",
+                "If you use it on its own, it will return all the items in a collection." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "ascending",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The properties used in the sort.",
+              "spread": true } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 842,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Adds a sort to a query, sorting by the specified properties in ascending order.",
+            "description":
+              [ "The `ascending()` function refines a `AutogenTestEdmQueryBuilder` to sort in ascending order of",
+                "the specified properties. If you specify more than one property,",
+                "`ascending()` sorts the results in ascending order by each property in the",
+                "order they are listed.",
+                "",
+                "You can sort the following types:",
+                "",
+                "+ Number: Sorts numerically.",
+                "+ Date: Sorts by date and time.",
+                "+ String: Sorts lexicographically, so `\"abc\"` comes after `\"XYZ\"`.",
+                "",
+                "If a property contains a number as a String, that value will be sorted",
+                "alphabetically and not numerically. Items that do not have a value for the",
+                "specified sort property are ranked lowest." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "between",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "rangeStart",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." },
+            { "name": "rangeEnd",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 312,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is within a specified range.",
+            "description":
+              [ "The `between()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property is greater than or equal",
+                "to `rangeStart` and less than `rangeEnd`.",
+                "",
+                "It only matches values of the same type. For example, a number value stored",
+                "as a String type does not match the same number stored as a Number type.",
+                "",
+                "If a property contains a number as a String, that value will be compared",
+                "alphabetically and not numerically. Items that do not have a value for the",
+                "specified property are ranked lowest.",
+                "",
+                "The following types of properties can be compared:",
+                "",
+                "+ Number: Compares numerically.",
+                "+ Date: Compares JavaScript Date objects.",
+                "+ String: Compares lexicographically, so",
+                "+ `\"A\"` and `\"M\"` are between `\"A\"` and `\"Z\"`, but `\"a\"`, `\"m\"`, `\"z\"` and `\"Z\"` are not.",
+                "+ `\"A\"`, `\"M\"`, `\"Z\"`, and `\"a\"` are between `\"A\"` and `\"z\"`, but `\"z\"` is not." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "contains",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type": "string",
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 499,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value contains a specified string.",
+            "description":
+              [ "The `contains()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property contains the specified string.",
+                "Matching with `contains()` is not case sensitive, so `\"TEXT\"` does contain `\"text\"`.",
+                "",
+                "You can only use `contains()` with a property whose value is a String." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "descending",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The properties used in the sort.",
+              "spread": true } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 885,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Adds a sort to a query, sorting by the specified properties in descending order.",
+            "description":
+              [ "The `descending()` function refines a `AutogenTestEdmQueryBuilder` to sort in descending order of",
+                "the specified properties. If you specify more than one property,",
+                "`descending()` sorts the results in descending order by each property in the",
+                "order they are listed.",
+                "",
+                "You can sort the following types:",
+                "",
+                "+ Number: Sorts numerically.",
+                "+ Date: Sorts by date and time.",
+                "+ String: Sorts lexicographically, so `\"abc\"` comes before `\"XYZ\"`.",
+                "",
+                "If a property contains a number as a String, that value will be sorted",
+                "alphabetically and not numerically. Items that do not have a value for the",
+                "specified sort property are ranked lowest." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "endsWith",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type": "string",
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 464,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value ends with a specified string.",
+            "description":
+              [ "The `endsWith()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property ends with a specified string.",
+                "Matching with `endsWith()` is not case sensitive, so `\"TEXT\"` ends with `\"text\"`.",
+                "",
+                "You can only use `endsWith()` with a property whose value is a String." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "eq",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type": "*",
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 48,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value equals the specified value.",
+            "description":
+              [ "The `eq()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property equals the specified `value`.",
+                "",
+                "It only matches values of the same type. For example, a number value stored",
+                "as a String type does not match the same number stored as a Number type.",
+                "",
+                "Matching strings with `eq()` is case sensitive, so `\"text\"` is not equal to `\"Text\"`.",
+                "",
+                "If the value of the `propertyName` property is an Array, `eq()` includes items",
+                "in which any of the elements of the Array match the specified `value`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "find",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "options",
+              "type": "wix-autogen-test-edm-backend.QueryOptions_2579605236",
+              "doc": "The `options` parameter is an optional parameter that can be used when calling the query [`find()`](#find) function." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.AutogenTestEdmQueryResult_61726317249" ] },
+            "doc": "Fulfilled - The results of a autogenTestEdm query, containing the retrieved items.\nWhen you execute a query with the [`find()`](wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder.html#find)\nfunction, it returns a Promise that resolves to a `AutogenTestEdmQueryResult` object.\nThis object contains the items that match the query, information about the\nquery itself, and functions for paging through the query results." },
+        "locations":
+          [ { "lineno": 1002,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Returns the items that match the query.",
+            "description":
+              [ "The `find()` function returns a Promise that resolves to the results found",
+                "by the query and some information about the results. The Promise is",
+                "rejected if `find()` is called with incorrect permissions or if any of the",
+                "functions used to refine the query are invalid." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "ge",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 173,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is greater than or equal to the specified value.",
+            "description":
+              [ "The `ge()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property is greater than or equal to the specified `value`.",
+                "",
+                "It only matches values of the same type. For example, a number value stored",
+                "as a String type does not match the same number stored as a Number type.",
+                "",
+                "If a property contains a number as a String, that value will be compared",
+                "alphabetically and not numerically. Items that do not have a value for the",
+                "specified property are ranked lowest.",
+                "",
+                "The following types of properties can be compared:",
+                "",
+                "+ Number: Compares numerically.",
+                "+ Date: Compares JavaScript Date objects.",
+                "+ String: Compares lexicographically,",
+                "`\"abc\"` is greater than or equal to `\"ABC\"` (because of the greater than),",
+                "but `\"ABC\"` is not greater than or equal to `\"abc\"`" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "gt",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 128,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is greater than the specified value.",
+            "description":
+              [ "The `gt()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property is greater than the specified `value`.",
+                "",
+                "It only matches values of the same type. For example, a number value stored",
+                "as a String type does not match the same number stored as a Number type.",
+                "",
+                "If a property contains a number as a String, that value will be compared",
+                "alphabetically and not numerically. Items that do not have a value for the",
+                "specified property are ranked lowest.",
+                "",
+                "The following types of properties can be compared:",
+                "",
+                "+ Number: Compares numerically.",
+                "+ Date: Compares JavaScript Date objects.",
+                "+ String: Compares lexicographically, so `\"text\"` is greater than `\"Text\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "hasAll",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "values",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 569,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value contains all of the specified values.",
+            "description":
+              [ "The `hasAll()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the values of the array of the specified property equal all of",
+                "the specified values.",
+                "",
+                "Matching with `hasAll()` is case sensitive, so `\"text\"` is not equal to `\"Text\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "hasSome",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "values",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 534,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value contains any of the specified values.",
+            "description":
+              [ "The `hasSome()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where any of the values of the array of the specified property equal any of",
+                "the specified values.",
+                "",
+                "Matching with `hasSome()` is case sensitive, so `\"text\"` is not equal to `\"Text\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "in",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ { "name": "Array",
+                    "typeParams":
+                      [ "string" ] },
+                  { "name": "Array",
+                    "typeParams":
+                      [ "number" ] } ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 604,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value equals any of the specified values.",
+            "description":
+              [ "The `in()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match documents where the value of the specified field equals any of",
+                "the specified values.",
+                "",
+                "Matching with `in()` is case sensitive, so `\"text\"` is not equal to `\"Text\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "isEmpty",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 361,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property does not exist or does not have any value.",
+            "description":
+              [ "The `isEmpty()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property is `null` or `undefined` or the property does not exist.",
+                "",
+                "If the property contains any value at all for a given item, including the",
+                "empty string or an invalid value, that item will match the query." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "isNotEmpty",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 395,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property has any value.",
+            "description":
+              [ "The `isNotEmpty()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property is not `null` or `undefined`.",
+                "",
+                "If the property contains any value at all for a given item, including the",
+                "empty string or an invalid value, that item will match the query." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "le",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 265,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is less than or equal to the specified value.",
+            "description":
+              [ "The `le()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property is less than or equal to the specified `value`.",
+                "",
+                "It only matches values of the same type. For example, a number value stored",
+                "as a String type does not match the same number stored as a Number type.",
+                "",
+                "If a property contains a number as a String, that value will be compared",
+                "alphabetically and not numerically. Items that do not have a value for the",
+                "specified property are ranked lowest.",
+                "",
+                "The following types of properties can be compared:",
+                "",
+                "+ Number: Compares numerically.",
+                "+ Date: Compares JavaScript Date objects.",
+                "+ String: Compares lexicographically,",
+                "so `\"ABC\"` is less than or equal to `\"abc\"` (because of the less than),",
+                "but `\"abc\"` is not less than or equal to `\"ABC\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "limit",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "limit",
+              "type": "string",
+              "doc": "limit The number of items to return, which is also the [`pageSize`](wix-autogen-test-edm-backend.AutogenTestEdmQueryResult.html#pageSize) of the results object." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 928,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Limits the number of items the query returns.",
+            "description":
+              [ "The `limit()` function defines the number of results a query returns in each",
+                "page. Only one page of results is retrieved at a time. The [`next()`](wix-autogen-test-edm-backend.AutogenTestEdmQueryResult.html#next)",
+                "and [`prev()`](wix-autogen-test-edm-backend.AutogenTestEdmQueryResult.html#prev) functions are used to",
+                "navigate the pages of a query result.",
+                "",
+                "By default, `limit` is set to `50`.",
+                "",
+                "The maximum value that `limit()` can accept is `1000`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "lt",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 220,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is less than the specified value.",
+            "description":
+              [ "The `lt()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property is less than the specified `value`.",
+                "",
+                "It only matches values of the same type. For example, a number value stored",
+                "as a String type does not match the same number stored as a Number type.",
+                "",
+                "If a property contains a number as a String, that value will be compared",
+                "alphabetically and not numerically. Items that do not have a value for the",
+                "specified property are ranked lowest.",
+                "",
+                "The following types of properties can be compared:",
+                "",
+                "+ Number: Compares numerically.",
+                "+ Date: Compares JavaScript Date objects.",
+                "+ String: Compares lexicographically, so `\"Text\"` is less than `\"text\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "ne",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type": "*",
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 88,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value does not equal the specified value.",
+            "description":
+              [ "The `ne()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property does not equal the specified `value`.",
+                "",
+                "It only matches values of the same type. For example, a number value stored",
+                "as a String type does not match the same number stored as a Number type.",
+                "",
+                "Matching strings with `ne()` is case sensitive, so `\"text\"` is not equal to `\"Text\"`.",
+                "",
+                "If the value of the `propertyName` property is an Array, `ne()` includes items",
+                "in which none of the elements of the Array match the specified `value`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "not",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "query",
+              "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+              "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 786,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Adds an `not` condition to the query.",
+            "description":
+              [ "The `not()` function adds a `not` condition to a `AutogenTestEdmQueryBuilder`. A query",
+                "with a `not` returns all the items that match the query as defined up to",
+                "the `not` function,  but don't match the query passed to the `not` function.",
+                "",
+                "If the query only contains a `not()` function, it returns all the items",
+                "that don't match the query defined by the `not` method." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "or",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "query",
+              "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+              "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 729,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Adds an `or` condition to the query.",
+            "description":
+              [ "The `or()` function adds an inclusive `or` condition to a `AutogenTestEdmQueryBuilder`. A query",
+                "with an `or` returns all the items that match the query as defined up to",
+                "the `or` function, the items that match the query passed to the `or`",
+                "function, and the items that match both.",
+                "",
+                "The `or()` function is designed to work with 2 or more queries.",
+                "If you use it on its own, it will return all the items in a collection." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "skip",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "skip",
+              "type": "string",
+              "doc": "The number of items to skip in the query results before returning the results." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 965,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Sets the number of items to skip before returning query results.",
+            "description":
+              [ "The `skip()` function defines the number of results to skip in the query",
+                "results before returning new query results.",
+                "",
+                "For example, if you query a collection and 50 items match your query, but",
+                "you set `skip` to 10, the results returned will skip the first 10 items",
+                "that match and return the 11th through 50th items.",
+                "",
+                "By default, `skip` is set to 0." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "startsWith",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type": "string",
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 429,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value starts with a specified string.",
+            "description":
+              [ "The `startsWith()` function refines a `AutogenTestEdmQueryBuilder` to only",
+                "match items where the value of the specified property starts with a specified string.",
+                "Matching with `startsWith()` is not case sensitive, so `\"TEXT\"` starts with `\"text\"`.",
+                "",
+                "You can only use `startsWith()` with a property whose value is a String." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

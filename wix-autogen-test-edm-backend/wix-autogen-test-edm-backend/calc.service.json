@@ -2,7 +2,7 @@
   "memberOf": "wix-autogen-test-edm-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 17,
       "filename": "index.js" },
@@ -30,8 +30,8 @@
                   [ "number" ] },
             "doc": "Fulfilled - The result of the operation" },
         "locations":
-          [ { "lineno": 36,
-              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Add_addNumbers.js" } ],
         "docs":
           { "summary": "Adds two operands",
             "links": [],
@@ -60,20 +60,21 @@
         "extra":
           {  } },
       { "name": "divide",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "divideRequest",
-              "type": "wix-autogen-test-edm-backend.calc.DivideRequest" } ],
+              "type": "wix-autogen-test-edm-backend.calc.DivideRequest_2393878956" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-autogen-test-edm-backend.calc.DivideResult" ] },
+                  [ "wix-autogen-test-edm-backend.calc.DivideResult_1908906567" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 47,
-              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+          [ { "lineno": 15,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Divide_divide.js" } ],
         "docs":
           { "summary": "Divides two operands",
             "links": [],
@@ -104,26 +105,21 @@
         "extra":
           {  } },
       { "name": "multiply",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "multiplyRequest",
-              "type": "Object" },
-            { "name": "multiplyRequest.a",
-              "type": "number",
-              "doc": "Multiplied" },
-            { "name": "multiplyRequest.b",
-              "type": "number",
-              "doc": "Multiplier" } ],
+              "type": "wix-autogen-test-edm-backend.calc.MultiplyRequest_3694398561" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-autogen-test-edm-backend.calc.MultiplyResult" ] },
+                  [ "wix-autogen-test-edm-backend.calc.MultiplyResult_4542471772" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 57,
-              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+          [ { "lineno": 15,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Multiply_multiply.js" } ],
         "docs":
           { "summary": "Multplies two operands",
             "links": [],
@@ -154,20 +150,21 @@
         "extra":
           {  } },
       { "name": "subtract",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "subtractRequest",
-              "type": "wix-autogen-test-edm-backend.calc.SubtractRequest" } ],
+              "type": "wix-autogen-test-edm-backend.calc.SubtractRequest_1411983729" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-autogen-test-edm-backend.calc.SubtractResult" ] },
+                  [ "wix-autogen-test-edm-backend.calc.SubtractResult_2282887532" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 69,
-              "filename": "com.wixpress.cloud.edm_autogen.CalculatorService.js" } ],
+          [ { "lineno": 15,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Subtract_subtract.js" } ],
         "docs":
           { "summary": "Subtracts two operands",
             "links": [],
@@ -217,7 +214,28 @@
               "doc": "Divider" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "DivideRequest_2393878956",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Divide_divide.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "a",
+              "type": "number",
+              "doc": "Number" },
+            { "name": "b",
+              "type": "number",
+              "doc": "Divider" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "DivideResult",
         "locations":
           [ { "lineno": 8,
@@ -238,7 +256,48 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "DivideResult_1908906567",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Divide_divide.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "result",
+              "type": "number",
+              "doc": "The result of the operation" },
+            { "name": "isValidOperation",
+              "type": "boolean",
+              "doc": "Return false if one of the operands was illegal for the operation" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "MultiplyRequest_3694398561",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Multiply_multiply.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "a",
+              "type": "number",
+              "doc": "Multiplied" },
+            { "name": "b",
+              "type": "number",
+              "doc": "Multiplier" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "MultiplyResult",
         "locations":
           [ { "lineno": 15,
@@ -259,7 +318,28 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "MultiplyResult_4542471772",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Multiply_multiply.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "result",
+              "type": "number",
+              "doc": "The result of the operation" },
+            { "name": "isValidOperation",
+              "type": "boolean",
+              "doc": "Return false if one of the operands was illegal for the operation" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "SubtractRequest",
         "locations":
           [ { "lineno": 22,
@@ -278,7 +358,28 @@
               "doc": "Another number" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "SubtractRequest_1411983729",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Subtract_subtract.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "a",
+              "type": "number",
+              "doc": "Number" },
+            { "name": "b",
+              "type": "number",
+              "doc": "Another number" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "SubtractResult",
         "locations":
           [ { "lineno": 29,
@@ -299,6 +400,27 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] },
+      { "name": "SubtractResult_2282887532",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_cloud_edm_autogen_CalculatorService_Subtract_subtract.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "result",
+              "type": "number",
+              "doc": "The result of the operation" },
+            { "name": "isValidOperation",
+              "type": "boolean",
+              "doc": "Return false if one of the operands was illegal for the operation" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] } ],
   "extra":
     {  } }

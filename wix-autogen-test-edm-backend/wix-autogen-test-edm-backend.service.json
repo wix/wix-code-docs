@@ -1,7 +1,7 @@
 { "name": "wix-autogen-test-edm-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -43,18 +43,16 @@
           {  } } ],
   "operations":
     [ { "name": "echo",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "Object" ] },
-            "doc": "" },
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
         "locations":
-          [ { "lineno": 31,
-              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_echo.js" } ],
         "docs":
           { "summary": "Echos the received query filter-tree",
             "links": [],
@@ -64,14 +62,15 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function echo() {",
-                      "  let findOptions = {",
-                      "    stringify: true",
+                      "  let options = {",
+                      "    stringify: true,",
+                      "    suppressAuth: true",
                       "  };",
                       "",
                       "  return wixAutogenTestEdmBackend",
                       "    .echo()",
                       "    .eq(\"key\", \"value\")",
-                      "    .find(findOptions)",
+                      "    .find(options)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -84,22 +83,18 @@
             "extra":
               {  } },
         "extra":
-          { "notes":
-              [ "This function returns a query object (https://www.wix.com/corvid/reference/wix-data/wixdataquery/introduction), and the find() method returns the final response",
-                "The find() method takes an object of type 'wix-autogen-test-edm-backend~EchoRequest'" ] } },
+          {  } },
       { "name": "filterByQuery",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "string" ] },
-            "doc": "" },
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
         "locations":
-          [ { "lineno": 53,
-              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_FilterByQuery_filterByQuery.js" } ],
         "docs":
           { "summary": "Filter the 1 to 10 by query",
             "links": [],
@@ -109,10 +104,15 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function filterByQuery() {",
+                      "  let options = {",
+                      "    stringify: true,",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
                       "  return wixAutogenTestEdmBackend",
                       "    .filterByQuery()",
                       "    .eq(\"key\", \"value\")",
-                      "    .find()",
+                      "    .find(options)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -125,23 +125,23 @@
             "extra":
               {  } },
         "extra":
-          { "notes":
-              [ "This function returns a query object (https://www.wix.com/corvid/reference/wix-data/wixdataquery/introduction), and the find() method returns the final response" ] } },
+          {  } },
       { "name": "getDoubleValuesList",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "getDoubleValuesListRequest",
-              "type": "wix-autogen-test-edm-backend.GetDoubleValuesListRequest" } ],
+              "type": "wix-autogen-test-edm-backend.GetDoubleValuesListRequest_3475218513" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-autogen-test-edm-backend.GetDoubleValuesListResult" ] },
+                  [ "wix-autogen-test-edm-backend.GetDoubleValuesListResult_115728472" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 63,
-              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+          [ { "lineno": 13,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_GetDoubleValuesList_getDoubleValuesList.js" } ],
         "docs":
           { "summary": "Non query double values list method",
             "links": [],
@@ -171,20 +171,21 @@
         "extra":
           {  } },
       { "name": "getList",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "getListRequest",
-              "type": "wix-autogen-test-edm-backend.GetListRequest" } ],
+              "type": "wix-autogen-test-edm-backend.GetListRequest_1174323838" } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-autogen-test-edm-backend.GetListResult" ] },
+                  [ "wix-autogen-test-edm-backend.GetListResult_1802437579" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 73,
-              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+          [ { "lineno": 13,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_GetList_getList.js" } ],
         "docs":
           { "summary": "Non query list method",
             "links": [],
@@ -214,18 +215,16 @@
         "extra":
           {  } },
       { "name": "myEcho",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "Object" ] },
-            "doc": "" },
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
         "locations":
-          [ { "lineno": 42,
-              "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_myEcho.js" } ],
         "docs":
           { "summary": "Echos the received query filter-tree",
             "links": [],
@@ -235,14 +234,15 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function myEcho() {",
-                      "  let findOptions = {",
-                      "    stringify: true",
+                      "  let options = {",
+                      "    stringify: true,",
+                      "    suppressAuth: true",
                       "  };",
                       "",
                       "  return wixAutogenTestEdmBackend",
                       "    .myEcho()",
                       "    .eq(\"key\", \"value\")",
-                      "    .find(findOptions)",
+                      "    .find(options)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -255,12 +255,157 @@
             "extra":
               {  } },
         "extra":
-          { "notes":
-              [ "This function returns a query object (https://www.wix.com/corvid/reference/wix-data/wixdataquery/introduction), and the find() method returns the final response",
-                "The find() method takes an object of type 'wix-autogen-test-edm-backend~EchoRequest'" ] } } ],
+          {  } },
+      { "name": "queryCursorIntegers",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "queryCursorIntegersRequest",
+              "type": "wix-autogen-test-edm-backend.QueryCursorIntegersRequest_29434090199" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-autogen-test-edm-backend.QueryCursorIntegersResult_7156457850" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 71,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function queryCursorIntegers() {",
+                      "  let queryCursorIntegersRequest = {",
+                      "    query: {",
+                      "      filter: {",
+                      "        someKey: \"some-value\"",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"a string\"],",
+                      "      pagingMethod: {",
+                      "        paging: {",
+                      "          limit: 42,",
+                      "          offset: 42",
+                      "        }",
+                      "      }",
+                      "    },",
+                      "    returnNegative: true",
+                      "  };",
+                      "",
+                      "  return wixAutogenTestEdmBackend",
+                      "    .queryCursorIntegers(queryCursorIntegersRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "queryIntegers",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryPagedIntegers_queryIntegers.js" } ],
+        "docs":
+          { "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
+                      "",
+                      "export function queryIntegers() {",
+                      "  let options = {",
+                      "    stringify: true,",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixAutogenTestEdmBackend",
+                      "    .queryIntegers()",
+                      "    .eq(\"key\", \"value\")",
+                      "    .find(options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "EchoRequest",
+    [ { "name": "CursorPaging_3235073023",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "summary": "Cursor pointing to page of results. Can't be used together with 'paging'. 'cursorPaging.cursor' can not be used together with 'filter' or 'sort'",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "The number of items to load",
+              "optional": true },
+            { "name": "cursor",
+              "type": "string",
+              "doc": "Cursor returned in last query response. Should not be provided on first page request",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Cursors_3337235656",
+        "locations":
+          [ { "lineno": 23,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "summary": "Cursors to navigate through result pages. Returned if cursor paging was used",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "next",
+              "type": "string",
+              "doc": "Cursor pointing to next result page" },
+            { "name": "prev",
+              "type": "string",
+              "doc": "Cursor pointing to previous result page" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "EchoRequest",
         "locations":
           [ { "lineno": 1,
               "filename": "com.wixpress.cloud.edm_autogen.QueryService.js" } ],
@@ -275,7 +420,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "GetDoubleValuesListRequest",
         "locations":
           [ { "lineno": 7,
@@ -294,7 +440,28 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "GetDoubleValuesListRequest_3475218513",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_GetDoubleValuesList_getDoubleValuesList.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] },
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "GetDoubleValuesListResult",
         "locations":
           [ { "lineno": 13,
@@ -313,7 +480,27 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "GetDoubleValuesListResult_115728472",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_GetDoubleValuesList_getDoubleValuesList.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] } } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "GetListRequest",
         "locations":
           [ { "lineno": 19,
@@ -332,7 +519,28 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "GetListRequest_1174323838",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_GetList_getList.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] },
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "GetListResult",
         "locations":
           [ { "lineno": 25,
@@ -351,6 +559,269 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] },
+      { "name": "GetListResult_1802437579",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_GetList_getList.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] } } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "PagingMetadataV2_5481679798",
+        "locations":
+          [ { "lineno": 39,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "count",
+              "type": "number",
+              "doc": "The number of items returned in this response" },
+            { "name": "offset",
+              "type": "number",
+              "doc": "The offset which was requested. Returned if offset paging was used" },
+            { "name": "total",
+              "type": "number",
+              "doc": "The total number of items that match the query. Returned if offset paging was used and 'too_many_to_count' flag is not set" },
+            { "name": "tooManyToCount",
+              "type": "boolean",
+              "doc": "A flag that indicates the server failed to calculate 'total' field" },
+            { "name": "cursors",
+              "type": "wix-autogen-test-edm-backend.Cursors_3337235656",
+              "doc": "Cursors to navigate through result pages. Returned if cursor paging was used" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Paging_1617727965",
+        "locations":
+          [ { "lineno": 31,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "summary": "Pointer to page of results using offset. Can not be used together with 'cursorPaging'",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "The number of items to load",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "doc": "number of items to skip in the current sort order",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "QueryCursorIntegersRequest_29434090199",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "query",
+              "type": "wix-autogen-test-edm-backend.QueryV2_25356650774",
+              "optional": true },
+            { "name": "returnNegative",
+              "type": "boolean",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "QueryCursorIntegersResult_7156457850",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "numbers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] } },
+            { "name": "pagingMetadata",
+              "type": "wix-autogen-test-edm-backend.PagingMetadataV2_5481679798" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "QueryOptions_2579605236",
+        "locations":
+          [ { "lineno": 1191,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The `options` parameter is an optional parameter that can be used when calling the query [`find()`](#find) function.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "stringify",
+              "type": "boolean",
+              "optional": true },
+            { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "QueryV2_25356650774",
+        "locations":
+          [ { "lineno": 49,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "filter",
+              "type": "Object",
+              "doc": "A filter object. See documentation [here](https://bo.wix.com/wix-docs/rnd/platformization-guidelines/api-query-language#platformization-guidelines_api-query-language_defining-in-protobuf)",
+              "optional": true },
+            { "name": "sort",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-autogen-test-edm-backend.Sorting_7874645153" ] },
+              "doc": "Sort object in the form [{\"fieldName\":\"sortField1\"},{\"fieldName\":\"sortField2\",\"direction\":\"DESC\"}]",
+              "optional": true },
+            { "name": "fields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Projection on the result object - list of specific field names to return. If fieldsets are also specified, return the union of fieldsets and fields",
+              "optional": true },
+            { "name": "fieldsets",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Projection on the result object - list of named projections. E.g. \"basic\" will return id and name fields. Specifying multiple fieldsets will return the union of fields from all. Specifying fieldsets and fields will also return the union of fields.",
+              "optional": true },
+            { "name": "paging",
+              "type": "wix-autogen-test-edm-backend.Paging_1617727965",
+              "doc": "Pointer to page of results using offset. Can not be used together with 'cursorPaging'",
+              "optional": true },
+            { "name": "cursorPaging",
+              "type": "wix-autogen-test-edm-backend.CursorPaging_3235073023",
+              "doc": "Cursor pointing to page of results. Can't be used together with 'paging'. 'cursorPaging.cursor' can not be used together with 'filter' or 'sort'",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "pagingMethod",
+                  "members":
+                    [ "cursorPaging",
+                      "paging" ] } ] },
+        "labels":
+          [ "new" ] },
+      { "name": "SomeObject_3313144838",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "The name",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "The description",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "SomeRequest_10635452527",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description":
+              [ "Viverra nam libero justo laoreet sit amet cursus. Scelerisque eu ultrices vitae auctor." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "aString",
+              "type": "string",
+              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+              "optional": true },
+            { "name": "someObjects",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-autogen-test-edm-backend.SomeObject_3313144838" ] },
+              "doc": "This is a repeated object",
+              "optional": true },
+            { "name": "someDate",
+              "type": "Date",
+              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Sorting_7874645153",
+        "locations":
+          [ { "lineno": 61,
+              "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryCursorIntegers_queryCursorIntegers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "fieldName",
+              "type": "string",
+              "doc": "Name of the field to sort by",
+              "optional": true },
+            { "name": "order",
+              "type": "string",
+              "doc": "Sort order (ASC/DESC). Defaults to ASC\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] } ],
   "extra":
     {  } }
