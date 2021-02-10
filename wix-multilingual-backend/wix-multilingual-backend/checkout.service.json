@@ -1,8 +1,7 @@
 { "name": "checkout",
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "activate",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -117,8 +115,7 @@
         "extra":
           {  } },
       { "name": "deactivate",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -168,8 +165,7 @@
         "extra":
           {  } },
       { "name": "list",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "limit",
@@ -217,8 +213,7 @@
         "extra":
           {  } },
       { "name": "remove",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -270,8 +265,7 @@
         "extra":
           {  } },
       { "name": "setDefault",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -324,8 +318,7 @@
         "extra":
           {  } },
       { "name": "update",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
