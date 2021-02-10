@@ -1,8 +1,7 @@
 { "name": "checkout",
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
