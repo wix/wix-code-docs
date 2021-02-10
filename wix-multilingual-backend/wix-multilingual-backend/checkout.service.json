@@ -1,0 +1,116 @@
+{ "name": "checkout",
+  "memberOf": "wix-multilingual-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 5,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "setDefault",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "setDefaultRequest",
+              "type": "wix-multilingual-backend.checkout.SetDefaultRequest_233378051094" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 270,
+              "filename": "com_wixpress_multilingual_api_Locales_SetDefault_setDefault.js" } ],
+        "docs":
+          { "summary": "Sets a locale as the default locale.",
+            "description":
+              [ "The current default locale will be marked a regular locale.",
+                "Only active locales can become default." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { checkout } from \"wix-multilingual-backend\";",
+                      "",
+                      "export function setDefault() {",
+                      "  const setDefaultRequest = {",
+                      "    locale: {",
+                      "      _id: \"a string\",",
+                      "      status: \"UNDEFINED_STATUS\",",
+                      "      flag: \"UNDEFINED_FLAG_CODE\",",
+                      "      format: \"a string\"",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return checkout",
+                      "    .setDefault(setDefaultRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Locale_228825651589",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_multilingual_api_Locales_SetDefault_setDefault.js" } ],
+        "docs":
+          { "summary": "The Locale",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "The Locale ID, has format of IETF BCP 47 language tag" },
+            { "name": "status",
+              "type": "string",
+              "doc": "The Locale status\nOne of:\n + `\"UNDEFINED_STATUS\"`\n + `\"INACTIVE\"`\n + `\"ACTIVE\"`\n + `\"DEFAULT\"`",
+              "optional": true },
+            { "name": "flag",
+              "type": "string",
+              "doc": "Flag code\nOne of:\n + `\"UNDEFINED_FLAG_CODE\"`\n + `\"AFG\"`\n + `\"AGO\"`\n + `\"AIA\"`\n + `\"ALA\"`\n + `\"ALB\"`\n + `\"AND\"`\n + `\"ARE\"`\n + `\"ARG\"`\n + `\"ARM\"`\n + `\"ASM\"`\n + `\"ATF\"`\n + `\"ATG\"`\n + `\"AUS\"`\n + `\"AUT\"`\n + `\"AZE\"`\n + `\"BDI\"`\n + `\"BEL\"`\n + `\"BEN\"`\n + `\"BES\"`\n + `\"BFA\"`\n + `\"BGD\"`\n + `\"BGR\"`\n + `\"BHR\"`\n + `\"BHS\"`\n + `\"BIH\"`\n + `\"BLM\"`\n + `\"BLR\"`\n + `\"BLZ\"`\n + `\"BMU\"`\n + `\"BOL\"`\n + `\"BRA\"`\n + `\"BRB\"`\n + `\"BRN\"`\n + `\"BRT\"`\n + `\"BTN\"`\n + `\"BWA\"`\n + `\"CAF\"`\n + `\"CAN\"`\n + `\"CAT\"`\n + `\"CHE\"`\n + `\"CHL\"`\n + `\"CHN\"`\n + `\"CIV\"`\n + `\"CMR\"`\n + `\"COD\"`\n + `\"COG\"`\n + `\"COL\"`\n + `\"COM\"`\n + `\"COR\"`\n + `\"CPV\"`\n + `\"CRI\"`\n + `\"CUB\"`\n + `\"CUW\"`\n + `\"CYM\"`\n + `\"CZE\"`\n + `\"DEU\"`\n + `\"DJI\"`\n + `\"DMA\"`\n + `\"DNK\"`\n + `\"DOM\"`\n + `\"DZA\"`\n + `\"ECU\"`\n + `\"EGY\"`\n + `\"ERI\"`\n + `\"ESP\"`\n + `\"EST\"`\n + `\"ETH\"`\n + `\"EUR\"`\n + `\"EUS\"`\n + `\"FIN\"`\n + `\"FJI\"`\n + `\"FLK\"`\n + `\"FRA\"`\n + `\"FRO\"`\n + `\"FSM\"`\n + `\"GAB\"`\n + `\"GBR\"`\n + `\"GEO\"`\n + `\"GGY\"`\n + `\"GHA\"`\n + `\"GIB\"`\n + `\"GIN\"`\n + `\"GLG\"`\n + `\"GLO\"`\n + `\"GLP\"`\n + `\"GMB\"`\n + `\"GNB\"`\n + `\"GNQ\"`\n + `\"GRC\"`\n + `\"GRD\"`\n + `\"GRL\"`\n + `\"GTM\"`\n + `\"GUM\"`\n + `\"GUY\"`\n + `\"HKG\"`\n + `\"HND\"`\n + `\"HRV\"`\n + `\"HTI\"`\n + `\"HUN\"`\n + `\"IDN\"`\n + `\"IMN\"`\n + `\"IND\"`\n + `\"IOT\"`\n + `\"IRL\"`\n + `\"IRN\"`\n + `\"IRQ\"`\n + `\"ISL\"`\n + `\"ISR\"`\n + `\"ITA\"`\n + `\"JAM\"`\n + `\"JEY\"`\n + `\"JOR\"`\n + `\"JPN\"`\n + `\"KAZ\"`\n + `\"KEN\"`\n + `\"KGZ\"`\n + `\"KHM\"`\n + `\"KIR\"`\n + `\"KNA\"`\n + `\"KOR\"`\n + `\"KUR\"`\n + `\"KWT\"`\n + `\"LAO\"`\n + `\"LBN\"`\n + `\"LBR\"`\n + `\"LBY\"`\n + `\"LCA\"`\n + `\"LIE\"`\n + `\"LKA\"`\n + `\"LSO\"`\n + `\"LTU\"`\n + `\"LUX\"`\n + `\"LVA\"`\n + `\"MAC\"`\n + `\"MAF\"`\n + `\"MAR\"`\n + `\"MCO\"`\n + `\"MDA\"`\n + `\"MDG\"`\n + `\"MDV\"`\n + `\"MEX\"`\n + `\"MHL\"`\n + `\"MKD\"`\n + `\"MLI\"`\n + `\"MLT\"`\n + `\"MMR\"`\n + `\"MNE\"`\n + `\"MNG\"`\n + `\"MNP\"`\n + `\"MOZ\"`\n + `\"MRT\"`\n + `\"MSR\"`\n + `\"MTQ\"`\n + `\"MWI\"`\n + `\"MYS\"`\n + `\"MYT\"`\n + `\"NAM\"`\n + `\"NCL\"`\n + `\"NER\"`\n + `\"NFK\"`\n + `\"NGA\"`\n + `\"NIC\"`\n + `\"NIU\"`\n + `\"NLD\"`\n + `\"NOR\"`\n + `\"NPL\"`\n + `\"NRU\"`\n + `\"NZL\"`\n + `\"OMN\"`\n + `\"PAK\"`\n + `\"PAN\"`\n + `\"PCN\"`\n + `\"PER\"`\n + `\"PHL\"`\n + `\"PLW\"`\n + `\"PNG\"`\n + `\"POL\"`\n + `\"PRI\"`\n + `\"PRK\"`\n + `\"PRT\"`\n + `\"PRY\"`\n + `\"PSE\"`\n + `\"PYF\"`\n + `\"QAT\"`\n + `\"REU\"`\n + `\"ROU\"`\n + `\"RUS\"`\n + `\"RWA\"`\n + `\"SAU\"`\n + `\"SDN\"`\n + `\"SEN\"`\n + `\"SGP\"`\n + `\"SGS\"`\n + `\"SHN\"`\n + `\"SJM\"`\n + `\"SLB\"`\n + `\"SLE\"`\n + `\"SLV\"`\n + `\"SMR\"`\n + `\"SOM\"`\n + `\"SPM\"`\n + `\"SRB\"`\n + `\"SSD\"`\n + `\"STP\"`\n + `\"SUR\"`\n + `\"SVK\"`\n + `\"SVN\"`\n + `\"SWE\"`\n + `\"SWZ\"`\n + `\"SXM\"`\n + `\"SYC\"`\n + `\"SYR\"`\n + `\"TCA\"`\n + `\"TCD\"`\n + `\"TGO\"`\n + `\"THA\"`\n + `\"TJK\"`\n + `\"TKL\"`\n + `\"TKM\"`\n + `\"TLS\"`\n + `\"TON\"`\n + `\"TTO\"`\n + `\"TUN\"`\n + `\"TUR\"`\n + `\"TUV\"`\n + `\"TWN\"`\n + `\"TZA\"`\n + `\"UGA\"`\n + `\"UKR\"`\n + `\"URY\"`\n + `\"USA\"`\n + `\"UZB\"`\n + `\"VAT\"`\n + `\"VCT\"`\n + `\"VEN\"`\n + `\"VGB\"`\n + `\"VIR\"`\n + `\"VLC\"`\n + `\"VNM\"`\n + `\"VUT\"`\n + `\"WLF\"`\n + `\"WLS\"`\n + `\"YEM\"`\n + `\"ZAF\"`\n + `\"ZMB\"`\n + `\"ZWE\"`",
+              "optional": true },
+            { "name": "format",
+              "type": "string",
+              "doc": "Date and numbers formatting",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SetDefaultRequest_233378051094",
+        "locations":
+          [ { "lineno": 264,
+              "filename": "com_wixpress_multilingual_api_Locales_SetDefault_setDefault.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "locale",
+              "type": "wix-multilingual-backend.checkout.Locale_228825651589",
+              "doc": "The Locale",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

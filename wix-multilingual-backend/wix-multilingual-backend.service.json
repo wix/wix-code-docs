@@ -1,0 +1,33 @@
+{ "name": "wix-multilingual-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "checkout",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-multilingual-backend.checkout",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }
