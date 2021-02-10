@@ -31,7 +31,7 @@
   "messages":
     [ { "name": "Locale_227900549199",
         "locations":
-          [ { "lineno": 8,
+          [ { "lineno": 1,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "The Locale",
@@ -102,10 +102,10 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] },
+          [ "removed" ] },
       { "name": "Locale_792377915733",
         "locations":
-          [ { "lineno": 270,
+          [ { "lineno": 263,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contains all the Locale's information",
