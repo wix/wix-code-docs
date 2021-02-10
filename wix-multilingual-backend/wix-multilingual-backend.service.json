@@ -1,6 +1,7 @@
 { "name": "wix-multilingual-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -30,7 +31,7 @@
   "messages":
     [ { "name": "Locale_227900549199",
         "locations":
-          [ { "lineno": 1,
+          [ { "lineno": 8,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "The Locale",
@@ -84,9 +85,27 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "Locale_258157691",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The Locale",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "The Locale ID, has format of IETF BCP 47 language tag" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Locale_792377915733",
         "locations":
-          [ { "lineno": 263,
+          [ { "lineno": 270,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contains all the Locale's information",
