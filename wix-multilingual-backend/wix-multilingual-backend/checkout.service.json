@@ -1,8 +1,7 @@
 { "name": "checkout",
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "activate",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "activateLocaleRequest",
@@ -63,8 +61,7 @@
         "extra":
           {  } },
       { "name": "create",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "createLocaleRequest",
@@ -116,8 +113,7 @@
         "extra":
           {  } },
       { "name": "deactivate",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "deactivateLocaleRequest",
@@ -165,8 +161,7 @@
         "extra":
           {  } },
       { "name": "list",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listLocalesRequest",
@@ -212,8 +207,7 @@
         "extra":
           {  } },
       { "name": "remove",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "removeLocaleRequest",
@@ -314,8 +308,7 @@
         "extra":
           {  } },
       { "name": "update",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "updateLocaleRequest",
@@ -380,8 +373,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CreateLocaleRequest_789230093865",
         "locations":
           [ { "lineno": 1,
@@ -415,8 +407,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CreateLocaleResult_793493076235",
         "locations":
           [ { "lineno": 887,
@@ -432,8 +423,7 @@
               "doc": "Contains all the Locale's information" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "DeactivateLocaleRequest_231422629285",
         "locations":
           [ { "lineno": 1,
@@ -450,8 +440,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ListLocalesRequest_649175084",
         "locations":
           [ { "lineno": 1,
@@ -467,8 +456,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ListLocalesResult_793868839908",
         "locations":
           [ { "lineno": 7,
@@ -487,8 +475,7 @@
               "doc": "All the site's locales" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Locale_228825651589",
         "locations":
           [ { "lineno": 1,
@@ -539,8 +526,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RemoveLocaleRequest_229696270901",
         "locations":
           [ { "lineno": 1,
@@ -557,8 +543,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SetDefaultRequest_233378051094",
         "locations":
           [ { "lineno": 1,
@@ -575,8 +560,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "UpdateLocaleRequest_229770058330",
         "locations":
           [ { "lineno": 1,
@@ -593,7 +577,6 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
