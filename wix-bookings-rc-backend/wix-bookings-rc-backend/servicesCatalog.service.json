@@ -1,0 +1,455 @@
+{ "name": "servicesCatalog",
+  "memberOf": "wix-bookings-rc-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 137,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getServiceDetails",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "serviceId",
+              "type": "string",
+              "doc": "Service ID." },
+            { "name": "serviceFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Field names to return in response (leave empty to get all fields)." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-backend.GetServiceResult_437744162521" ] },
+            "doc": "Fulfilled - A full catalog detailed response containing all the information related to a service." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_Get_getServiceDetails.js" } ],
+        "docs":
+          { "summary": "Retrieves a service, including all its data.",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data, the Read Bookings - Including Participants or the Manage Bookings permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { servicesCatalog } from \"wix-bookings-rc-backend\";",
+                      "",
+                      "export function getServiceDetails() {",
+                      "  const serviceId = \"a string\";",
+                      "  const serviceFields = [\"a string\"];",
+                      "",
+                      "  return servicesCatalog",
+                      "    .getServiceDetails(serviceId, serviceFields)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listByResourceSlug",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listServicesBySlugRequest",
+              "type": "wix-bookings-rc-backend.ListServicesBySlugRequest_28829455335" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-backend.servicesCatalog.ListServicesResult_452897658747" ] },
+            "doc": "Fulfilled - A list of catalog service response." },
+        "locations":
+          [ { "lineno": 12,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_ListByResourceSlug_listByResourceSlug.js" } ],
+        "docs":
+          { "summary": "Retrieves a service, including all its data, by resource slug.",
+            "description":
+              [ "Default paging: \"query { paging { offset { value: 0 } limit { value: 25 } } }\"",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data, the Read Bookings - Including Participants or the Manage Bookings permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { servicesCatalog } from \"wix-bookings-rc-backend\";",
+                      "",
+                      "export function listByResourceSlug() {",
+                      "  const listServicesBySlugRequest = {",
+                      "    slug: \"a string\",",
+                      "    query: {",
+                      "      filter: {",
+                      "        kind: {",
+                      "          nullValue: \"NULL_VALUE\"",
+                      "        }",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      paging: {",
+                      "        limit: 42,",
+                      "        offset: 42",
+                      "      },",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"a string\"]",
+                      "    },",
+                      "    includeDeleted: true",
+                      "  };",
+                      "",
+                      "  return servicesCatalog",
+                      "    .listByResourceSlug(listServicesBySlugRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listServicesByCategorySlug",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listServicesBySlugRequest",
+              "type": "wix-bookings-rc-backend.ListServicesBySlugRequest_28829455335" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-backend.ListServicesResult_453513441437" ] },
+            "doc": "Fulfilled - A list of catalog service response." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_ListByCategorySlug_listServicesByCategorySlug.js" } ],
+        "docs":
+          { "summary": "Retrieves a service, including all its data, by category slug.",
+            "description":
+              [ "Default paging: \"query { paging { offset { value: 0 } limit { value: 25 } } }\"",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data, the Read Bookings - Including Participants or the Manage Bookings permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { servicesCatalog } from \"wix-bookings-rc-backend\";",
+                      "",
+                      "export function listServicesByCategorySlug() {",
+                      "  const listServicesBySlugRequest = {",
+                      "    slug: \"a string\",",
+                      "    query: {",
+                      "      filter: {",
+                      "        kind: {",
+                      "          nullValue: \"NULL_VALUE\"",
+                      "        }",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      paging: {",
+                      "        limit: 42,",
+                      "        offset: 42",
+                      "      },",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"a string\"]",
+                      "    },",
+                      "    includeDeleted: true",
+                      "  };",
+                      "",
+                      "  return servicesCatalog",
+                      "    .listServicesByCategorySlug(listServicesBySlugRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listServicesByResourceSlug",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listServicesBySlugRequest",
+              "type": "wix-bookings-rc-backend.ListServicesBySlugRequest_28829455335" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-backend.ListServicesResult_453513441437" ] },
+            "doc": "Fulfilled - A list of catalog service response." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_ListByCategorySlug_listServicesByResourceSlug.js" } ],
+        "docs":
+          { "summary": "Retrieves a service, including all its data, by category slug.",
+            "description":
+              [ "Default paging: \"query { paging { offset { value: 0 } limit { value: 25 } } }\"",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data, the Read Bookings - Including Participants or the Manage Bookings permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { servicesCatalog } from \"wix-bookings-rc-backend\";",
+                      "",
+                      "export function listServicesByResourceSlug() {",
+                      "  const listServicesBySlugRequest = {",
+                      "    slug: \"a string\",",
+                      "    query: {",
+                      "      filter: {",
+                      "        kind: {",
+                      "          nullValue: \"NULL_VALUE\"",
+                      "        }",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      paging: {",
+                      "        limit: 42,",
+                      "        offset: 42",
+                      "      },",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"a string\"]",
+                      "    },",
+                      "    includeDeleted: true",
+                      "  };",
+                      "",
+                      "  return servicesCatalog",
+                      "    .listServicesByResourceSlug(listServicesBySlugRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "query",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "queryServicesRequest",
+              "type": "wix-bookings-rc-backend.servicesCatalog.QueryServicesRequest_26560827571" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-backend.servicesCatalog.QueryServicesResult_452910525559" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 18,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_Query_query.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of services, given the provided filtering.",
+            "description":
+              [ "Returns a list of enriched services; Based on the invoker permissions and the request query.",
+                "Query object support:",
+                "- **filter**: supports",
+                "- `service.id` - query for a specific service.",
+                "Example: ```\"filter { string_value: \"{ \"service.id\": \"46ce4cd4-46ff-4aa7-9cc0-02fd4f0f3209\" }\" }\"```.",
+                "- `category.id` - query for all services that belongs to the category.",
+                "Example: ```\"filter { string_value: \"{ \"category.id\": \"55ce4cd4-46ff-4aa7-9cc0-01fd4f0f3209\" }\" }\"```.",
+                "- `service.info.name` - query for all services with given name.",
+                "Example: ```\"filter { string_value: \"{ \"service.info.name\": \"haircut\" }\" }\"```.",
+                "- `service.info.tagLine` - query for all services with given tag line.",
+                "Example: ```\"filter { string_value: \"{ \"service.info.tagLine\": \"short haircut\" }\" }\"```.",
+                "- `service.policy.isBookOnlineAllowed` - query for all services that can be booked online.",
+                "Example: ```\"filter { string_value: \"{ \"service.policy.isBookOnlineAllowed\": true }\" }\"```.",
+                "- `category.name` - query for all services that belongs to categories with given name.",
+                "Example: ```\"filter { string_value: \"{ \"categoty.name\": \"hair services\" }\" }\"```.",
+                "- `service.customProperties.tag` - query for all services that has given tag.",
+                "Example: ```\"filter { string_value: \"{ \"service.customProperties.tag\": \"hair services\" }\" }\"```.",
+                "- `service.paymentOptions.wixPayOnline` - query for all services that can be payed Online with Wix Pay.",
+                "Example: ```\"filter { string_value: \"{ \"service.paymentOptions.wixPayOnline\": true }\" }\"```.",
+                "- `service.paymentOptions.wixPayInPerson` - query for all services that be payed Offline with Wix Pay..",
+                "Example: ```\"filter { string_value: \"{ \"service.paymentOptions.wixPayInPerson\": true }\" }\"```.",
+                "- `service.paymentOptions.wixPaidPlan` - query for all services that can be booked using a paid plan.",
+                "Example: ```\"filter { string_value: \"{ \"service.paymentOptions.wixPaidPlan\": true }\" }\"```.",
+                "- `service.paymentOptions.custom` - query for all services that has a custom payment method.",
+                "Example: ```\"filter { string_value: \"{ \"service.paymentOptions.custom\": true }\" }\"```.",
+                "- `slugs.name` - query for service with given slug.",
+                "Example: ```\"filter { string_value: \"{ \"slugs.name\": \"woman-hair-cut\" }\" }\"```.",
+                "- `schedules.tags` - query for all services that has a schedule with given tag and status `CREATED`.",
+                "Example: ```\"filter { string_value: \"{ \"schedules.tags\": \"Group\" }\" }\"```.",
+                "- `resources.id` - query for all services that are given by a given resource, taking into account only ACTIVE status service schedule.",
+                "Example: ```\"filter { string_value: \"{ \"resources.id\": \"46ce4cd4-46ff-4aa7-9cc0-02fd4f0f3209\" }\" }\"```.",
+                "- `service.policy.bookingsApprovalPolicy.isBusinessApprovalRequired` - query for all services that require business approval.",
+                "Example: ```\"filter { string_value: \"{ \"service.policy.bookingsApprovalPolicy.isBusinessApprovalRequired\": true }\" }\"```.",
+                "- `service.schedules.availability.locations.businessLocation.ids` - Not supported. Query for all services that have at least one of the specified locations.",
+                "Example: ```\"filter { string_value: \"{ \"service.schedules.availability.locations.businessLocation.ids\": [\"66a2674c-9267-4600-826e-f463957b9446\", \"66a2674c-9267-4600-826e-f463957b9447\"] }\" }\"```.",
+                "- **paging**: Supported. Limit Example: \"query { paging { limit { value: 10 } } }\". Offset Example: \"query { paging { offset { value: 10 } } }\". Default paging: \"query { paging { offset { value: 0 } limit { value: 25 } } }\"",
+                "- **fieldsets**: not supported.",
+                "- **fields**: any projection is supported.",
+                "Example: query { fields [\"service.id\", \"service.status\", \"service.info.name\"] }",
+                "**Important**:",
+                "Calling List without any filter, will return all non deleted services.",
+                "- All results are for one specific business, resolved from the request context.",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data, the Read Bookings - Including Participants or the Manage Bookings permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { servicesCatalog } from \"wix-bookings-rc-backend\";",
+                      "",
+                      "export function query() {",
+                      "  const queryServicesRequest = {",
+                      "    query: {",
+                      "      filter: {",
+                      "        someKey: \"some-value\"",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"a string\"],",
+                      "      pagingMethod: {",
+                      "        paging: {",
+                      "          limit: 42,",
+                      "          offset: 42",
+                      "        }",
+                      "      }",
+                      "    },",
+                      "    includeDeleted: true",
+                      "  };",
+                      "",
+                      "  return servicesCatalog",
+                      "    .query(queryServicesRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "ListServicesResult_452897658747",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_ListByResourceSlug_listByResourceSlug.js" } ],
+        "docs":
+          { "summary": "A list of catalog service response.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "services",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-rc-backend.GetServiceResult_437744162521" ] } },
+            { "name": "pagingMetadata",
+              "type": "wix-bookings-rc-backend.PagingMetadataV2_5481679798" },
+            { "name": "responseType",
+              "type": "string",
+              "doc": "One of:\n + `\"CONSISTENT\"`\n + `\"EVENTUALLY_CONSISTENT\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryServicesRequest_26560827571",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_Query_query.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "query",
+              "type": "wix-bookings-rc-backend.QueryV2_25356650774",
+              "doc": "Default paging - limit: 25, offset: 0",
+              "optional": true },
+            { "name": "includeDeleted",
+              "type": "boolean",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryServicesResult_452910525559",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_Query_query.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "services",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-rc-backend.GetServiceResult_437744162521" ] } },
+            { "name": "pagingMetadata",
+              "type": "wix-bookings-rc-backend.PagingMetadataV2_5481679798" },
+            { "name": "responseType",
+              "type": "string",
+              "doc": "One of:\n + `\"CONSISTENT\"`\n + `\"EVENTUALLY_CONSISTENT\"`" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
