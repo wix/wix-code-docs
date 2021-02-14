@@ -1,8 +1,7 @@
 { "name": "bookings",
   "memberOf": "wix-bookings-rc-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -2095,8 +2094,7 @@
               "doc": "Date and time when the booking was created." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListBookingEntry_4_214013506906",
         "locations":
           [ { "lineno": 32,
@@ -2144,8 +2142,7 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListBookingEntry_5_80274924233",
         "locations":
           [ { "lineno": 48,
@@ -2206,8 +2203,7 @@
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListBookingEntry_6_39065163446",
         "locations":
           [ { "lineno": 81,
@@ -2311,8 +2307,7 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "MarkAsPaidResponse_4_79349558965",
         "locations":
           [ { "lineno": 48,
@@ -2373,8 +2368,7 @@
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "MarkAsPaidResponse_5_38139798178",
         "locations":
           [ { "lineno": 81,
@@ -2473,8 +2467,7 @@
               "doc": "Date and time when the booking was created." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "QueryOptions_583539044",
         "locations":
           [ { "lineno": 1287,
@@ -2544,8 +2537,7 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "SetAttendanceResponse_4_78884635925",
         "locations":
           [ { "lineno": 56,
@@ -2606,8 +2598,7 @@
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "SetAttendanceResponse_5_37674875138",
         "locations":
           [ { "lineno": 89,
@@ -2706,8 +2697,7 @@
               "doc": "Date and time when the booking was created." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "UpdateCustomerInfoResponse_3_214260019870",
         "locations":
           [ { "lineno": 57,
@@ -2755,8 +2745,7 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "UpdateCustomerInfoResponse_4_80398180715",
         "locations":
           [ { "lineno": 73,
@@ -2817,8 +2806,7 @@
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "UpdateCustomerInfoResponse_5_39188419928",
         "locations":
           [ { "lineno": 106,
@@ -2917,7 +2905,6 @@
               "doc": "Date and time when the booking was created." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
