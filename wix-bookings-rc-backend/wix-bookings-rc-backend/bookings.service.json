@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-rc-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -2067,8 +2067,7 @@
               "type": "string",
               "doc": "The booking ID." },
             { "name": "bookedEntity",
-              "type": "wix-bookings-rc-backend.BookedEntity_203589619014",
-              "doc": "An object describing the entity that was booked." },
+              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_4_214013506906" },
             { "name": "bookedResources",
               "type":
                 { "name": "Array",
@@ -2076,11 +2075,9 @@
                     [ "wix-bookings-rc-backend.BookedResource_4406140954" ] },
               "doc": "A list of booked resources. Currently, only one is supported. The booked resource would be the staff-member giving the session." },
             { "name": "formInfo",
-              "type": "wix-bookings-rc-backend.FormInfo_94654372795",
-              "doc": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service." },
+              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_6_116349503963" },
             { "name": "paymentDetails",
-              "type": "wix-bookings-rc-backend.PaymentDetails_78189603749",
-              "doc": "Payment Details." },
+              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_5_80274924233" },
             { "name": "status",
               "type": "string",
               "doc": "+ `PENDING_CHECKOUT` The booking is waiting to be checked out.\n + `CONFIRMED` The booking has beed approved by the owner.\n + `CANCELED` The booking has been cancelled.\n + `PENDING` The booking has been created.\n + `PENDING_APPROVAL` The booking is waiting for the owner to approve or decline.\n + `DECLINED` The booking was declined by the owner.\nOne of:\n + `\"UNDEFINED\"`\n + `\"PENDING_CHECKOUT\"`\n + `\"CONFIRMED\"`\n + `\"CANCELED\"`\n + `\"PENDING\"`\n + `\"PENDING_APPROVAL\"`\n + `\"DECLINED\"`" },
@@ -2095,16 +2092,11 @@
               "doc": "An object describing the platform and application that made the booking." },
             { "name": "_createdDate",
               "type": "Date",
-              "doc": "Date and time when the booking was created." },
-            { "name": "bookedEntity",
-              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_4_214013506906" },
-            { "name": "paymentDetails",
-              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_5_80274924233" },
-            { "name": "formInfo",
-              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_6_116349503963" } ],
+              "doc": "Date and time when the booking was created." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListBookingEntry_4_214013506906",
         "locations":
           [ { "lineno": 32,
@@ -2133,8 +2125,7 @@
               "type": "string",
               "doc": "The session title at the time of booking." },
             { "name": "location",
-              "type": "wix-bookings-rc-backend.Location_156608614652",
-              "doc": "The location of the session." },
+              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_6_39065163446" },
             { "name": "rate",
               "type": "wix-bookings-rc-backend.Rate_14116319874",
               "doc": "The price options offered to book this session at the time of booking." },
@@ -2146,16 +2137,15 @@
               "doc": "A list of tags for the booking." },
             { "name": "onlineConference",
               "type": "wix-bookings-rc-backend.OnlineConference_11442990117",
-              "doc": "Online conference information." },
-            { "name": "location",
-              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_6_39065163446" } ],
+              "doc": "Online conference information." } ],
         "extra":
           { "oneOfGroups":
               [ { "name": "type",
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListBookingEntry_5_80274924233",
         "locations":
           [ { "lineno": 48,
@@ -2201,8 +2191,7 @@
               {  } },
         "members":
           [ { "name": "contactDetails",
-              "type": "wix-bookings-rc-backend.ContactDetails_73425347487",
-              "doc": "The contact details of the user making the booking." },
+              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_8_59873133517" },
             { "name": "paymentSelection",
               "type":
                 { "name": "Array",
@@ -2214,12 +2203,11 @@
                 { "name": "Array",
                   "typeParams":
                     [ "wix-bookings-rc-backend.FormInfo_CustomFormField_10170446978" ] },
-              "doc": "Additional custom fields submitted with the form." },
-            { "name": "contactDetails",
-              "type": "wix-bookings-rc-backend.bookings.ListBookingEntry_8_59873133517" } ],
+              "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListBookingEntry_6_39065163446",
         "locations":
           [ { "lineno": 81,
@@ -2304,8 +2292,7 @@
               "type": "string",
               "doc": "The session title at the time of booking." },
             { "name": "location",
-              "type": "wix-bookings-rc-backend.Location_156608614652",
-              "doc": "The location of the session." },
+              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_5_38139798178" },
             { "name": "rate",
               "type": "wix-bookings-rc-backend.Rate_14116319874",
               "doc": "The price options offered to book this session at the time of booking." },
@@ -2317,16 +2304,15 @@
               "doc": "A list of tags for the booking." },
             { "name": "onlineConference",
               "type": "wix-bookings-rc-backend.OnlineConference_11442990117",
-              "doc": "Online conference information." },
-            { "name": "location",
-              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_5_38139798178" } ],
+              "doc": "Online conference information." } ],
         "extra":
           { "oneOfGroups":
               [ { "name": "type",
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "MarkAsPaidResponse_4_79349558965",
         "locations":
           [ { "lineno": 48,
@@ -2372,8 +2358,7 @@
               {  } },
         "members":
           [ { "name": "contactDetails",
-              "type": "wix-bookings-rc-backend.ContactDetails_73425347487",
-              "doc": "The contact details of the user making the booking." },
+              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_7_58947768249" },
             { "name": "paymentSelection",
               "type":
                 { "name": "Array",
@@ -2385,12 +2370,11 @@
                 { "name": "Array",
                   "typeParams":
                     [ "wix-bookings-rc-backend.FormInfo_CustomFormField_10170446978" ] },
-              "doc": "Additional custom fields submitted with the form." },
-            { "name": "contactDetails",
-              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_7_58947768249" } ],
+              "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "MarkAsPaidResponse_5_38139798178",
         "locations":
           [ { "lineno": 81,
@@ -2461,8 +2445,7 @@
               "type": "string",
               "doc": "The booking ID." },
             { "name": "bookedEntity",
-              "type": "wix-bookings-rc-backend.BookedEntity_203589619014",
-              "doc": "An object describing the entity that was booked." },
+              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_3_212162776370" },
             { "name": "bookedResources",
               "type":
                 { "name": "Array",
@@ -2470,11 +2453,9 @@
                     [ "wix-bookings-rc-backend.BookedResource_4406140954" ] },
               "doc": "A list of booked resources. Currently, only one is supported. The booked resource would be the staff-member giving the session." },
             { "name": "formInfo",
-              "type": "wix-bookings-rc-backend.FormInfo_94654372795",
-              "doc": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service." },
+              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_5_114498773427" },
             { "name": "paymentDetails",
-              "type": "wix-bookings-rc-backend.PaymentDetails_78189603749",
-              "doc": "Payment Details." },
+              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_4_79349558965" },
             { "name": "status",
               "type": "string",
               "doc": "+ `PENDING_CHECKOUT` The booking is waiting to be checked out.\n + `CONFIRMED` The booking has beed approved by the owner.\n + `CANCELED` The booking has been cancelled.\n + `PENDING` The booking has been created.\n + `PENDING_APPROVAL` The booking is waiting for the owner to approve or decline.\n + `DECLINED` The booking was declined by the owner.\nOne of:\n + `\"UNDEFINED\"`\n + `\"PENDING_CHECKOUT\"`\n + `\"CONFIRMED\"`\n + `\"CANCELED\"`\n + `\"PENDING\"`\n + `\"PENDING_APPROVAL\"`\n + `\"DECLINED\"`" },
@@ -2489,16 +2470,11 @@
               "doc": "An object describing the platform and application that made the booking." },
             { "name": "_createdDate",
               "type": "Date",
-              "doc": "Date and time when the booking was created." },
-            { "name": "bookedEntity",
-              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_3_212162776370" },
-            { "name": "paymentDetails",
-              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_4_79349558965" },
-            { "name": "formInfo",
-              "type": "wix-bookings-rc-backend.bookings.MarkAsPaidResponse_5_114498773427" } ],
+              "doc": "Date and time when the booking was created." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "QueryOptions_583539044",
         "locations":
           [ { "lineno": 1287,
@@ -2549,8 +2525,7 @@
               "type": "string",
               "doc": "The session title at the time of booking." },
             { "name": "location",
-              "type": "wix-bookings-rc-backend.Location_156608614652",
-              "doc": "The location of the session." },
+              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_5_37674875138" },
             { "name": "rate",
               "type": "wix-bookings-rc-backend.Rate_14116319874",
               "doc": "The price options offered to book this session at the time of booking." },
@@ -2562,16 +2537,15 @@
               "doc": "A list of tags for the booking." },
             { "name": "onlineConference",
               "type": "wix-bookings-rc-backend.OnlineConference_11442990117",
-              "doc": "Online conference information." },
-            { "name": "location",
-              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_5_37674875138" } ],
+              "doc": "Online conference information." } ],
         "extra":
           { "oneOfGroups":
               [ { "name": "type",
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "SetAttendanceResponse_4_78884635925",
         "locations":
           [ { "lineno": 56,
@@ -2617,8 +2591,7 @@
               {  } },
         "members":
           [ { "name": "contactDetails",
-              "type": "wix-bookings-rc-backend.ContactDetails_73425347487",
-              "doc": "The contact details of the user making the booking." },
+              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_7_58482845209" },
             { "name": "paymentSelection",
               "type":
                 { "name": "Array",
@@ -2630,12 +2603,11 @@
                 { "name": "Array",
                   "typeParams":
                     [ "wix-bookings-rc-backend.FormInfo_CustomFormField_10170446978" ] },
-              "doc": "Additional custom fields submitted with the form." },
-            { "name": "contactDetails",
-              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_7_58482845209" } ],
+              "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "SetAttendanceResponse_5_37674875138",
         "locations":
           [ { "lineno": 89,
@@ -2706,8 +2678,7 @@
               "type": "string",
               "doc": "The booking ID." },
             { "name": "bookedEntity",
-              "type": "wix-bookings-rc-backend.BookedEntity_203589619014",
-              "doc": "An object describing the entity that was booked." },
+              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_3_211232930290" },
             { "name": "bookedResources",
               "type":
                 { "name": "Array",
@@ -2715,11 +2686,9 @@
                     [ "wix-bookings-rc-backend.BookedResource_4406140954" ] },
               "doc": "A list of booked resources. Currently, only one is supported. The booked resource would be the staff-member giving the session." },
             { "name": "formInfo",
-              "type": "wix-bookings-rc-backend.FormInfo_94654372795",
-              "doc": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service." },
+              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_5_113568927347" },
             { "name": "paymentDetails",
-              "type": "wix-bookings-rc-backend.PaymentDetails_78189603749",
-              "doc": "Payment Details." },
+              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_4_78884635925" },
             { "name": "status",
               "type": "string",
               "doc": "+ `PENDING_CHECKOUT` The booking is waiting to be checked out.\n + `CONFIRMED` The booking has beed approved by the owner.\n + `CANCELED` The booking has been cancelled.\n + `PENDING` The booking has been created.\n + `PENDING_APPROVAL` The booking is waiting for the owner to approve or decline.\n + `DECLINED` The booking was declined by the owner.\nOne of:\n + `\"UNDEFINED\"`\n + `\"PENDING_CHECKOUT\"`\n + `\"CONFIRMED\"`\n + `\"CANCELED\"`\n + `\"PENDING\"`\n + `\"PENDING_APPROVAL\"`\n + `\"DECLINED\"`" },
@@ -2734,16 +2703,11 @@
               "doc": "An object describing the platform and application that made the booking." },
             { "name": "_createdDate",
               "type": "Date",
-              "doc": "Date and time when the booking was created." },
-            { "name": "bookedEntity",
-              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_3_211232930290" },
-            { "name": "paymentDetails",
-              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_4_78884635925" },
-            { "name": "formInfo",
-              "type": "wix-bookings-rc-backend.bookings.SetAttendanceResponse_5_113568927347" } ],
+              "doc": "Date and time when the booking was created." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "UpdateCustomerInfoResponse_3_214260019870",
         "locations":
           [ { "lineno": 57,
@@ -2772,8 +2736,7 @@
               "type": "string",
               "doc": "The session title at the time of booking." },
             { "name": "location",
-              "type": "wix-bookings-rc-backend.Location_156608614652",
-              "doc": "The location of the session." },
+              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_5_39188419928" },
             { "name": "rate",
               "type": "wix-bookings-rc-backend.Rate_14116319874",
               "doc": "The price options offered to book this session at the time of booking." },
@@ -2785,16 +2748,15 @@
               "doc": "A list of tags for the booking." },
             { "name": "onlineConference",
               "type": "wix-bookings-rc-backend.OnlineConference_11442990117",
-              "doc": "Online conference information." },
-            { "name": "location",
-              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_5_39188419928" } ],
+              "doc": "Online conference information." } ],
         "extra":
           { "oneOfGroups":
               [ { "name": "type",
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "UpdateCustomerInfoResponse_4_80398180715",
         "locations":
           [ { "lineno": 73,
@@ -2840,8 +2802,7 @@
               {  } },
         "members":
           [ { "name": "contactDetails",
-              "type": "wix-bookings-rc-backend.ContactDetails_73425347487",
-              "doc": "The contact details of the user making the booking." },
+              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_7_59996389999" },
             { "name": "paymentSelection",
               "type":
                 { "name": "Array",
@@ -2853,12 +2814,11 @@
                 { "name": "Array",
                   "typeParams":
                     [ "wix-bookings-rc-backend.FormInfo_CustomFormField_10170446978" ] },
-              "doc": "Additional custom fields submitted with the form." },
-            { "name": "contactDetails",
-              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_7_59996389999" } ],
+              "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "UpdateCustomerInfoResponse_5_39188419928",
         "locations":
           [ { "lineno": 106,
@@ -2929,8 +2889,7 @@
               "type": "string",
               "doc": "The booking ID." },
             { "name": "bookedEntity",
-              "type": "wix-bookings-rc-backend.BookedEntity_203589619014",
-              "doc": "An object describing the entity that was booked." },
+              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_3_214260019870" },
             { "name": "bookedResources",
               "type":
                 { "name": "Array",
@@ -2938,11 +2897,9 @@
                     [ "wix-bookings-rc-backend.BookedResource_4406140954" ] },
               "doc": "A list of booked resources. Currently, only one is supported. The booked resource would be the staff-member giving the session." },
             { "name": "formInfo",
-              "type": "wix-bookings-rc-backend.FormInfo_94654372795",
-              "doc": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service." },
+              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_5_116596016927" },
             { "name": "paymentDetails",
-              "type": "wix-bookings-rc-backend.PaymentDetails_78189603749",
-              "doc": "Payment Details." },
+              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_4_80398180715" },
             { "name": "status",
               "type": "string",
               "doc": "+ `PENDING_CHECKOUT` The booking is waiting to be checked out.\n + `CONFIRMED` The booking has beed approved by the owner.\n + `CANCELED` The booking has been cancelled.\n + `PENDING` The booking has been created.\n + `PENDING_APPROVAL` The booking is waiting for the owner to approve or decline.\n + `DECLINED` The booking was declined by the owner.\nOne of:\n + `\"UNDEFINED\"`\n + `\"PENDING_CHECKOUT\"`\n + `\"CONFIRMED\"`\n + `\"CANCELED\"`\n + `\"PENDING\"`\n + `\"PENDING_APPROVAL\"`\n + `\"DECLINED\"`" },
@@ -2957,15 +2914,10 @@
               "doc": "An object describing the platform and application that made the booking." },
             { "name": "_createdDate",
               "type": "Date",
-              "doc": "Date and time when the booking was created." },
-            { "name": "bookedEntity",
-              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_3_214260019870" },
-            { "name": "paymentDetails",
-              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_4_80398180715" },
-            { "name": "formInfo",
-              "type": "wix-bookings-rc-backend.bookings.UpdateCustomerInfoResponse_5_116596016927" } ],
+              "doc": "Date and time when the booking was created." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }

@@ -1,8 +1,7 @@
 { "name": "BookingsRcQueryBuilder_11532942839",
   "memberOf": "wix-bookings-rc-backend.resources",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_List_queryResources.js" },

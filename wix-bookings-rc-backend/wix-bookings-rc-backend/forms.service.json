@@ -1,8 +1,7 @@
 { "name": "forms",
   "memberOf": "wix-bookings-rc-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 113,
       "filename": "index.js" },

@@ -1,8 +1,7 @@
 { "name": "calendar",
   "memberOf": "wix-bookings-rc-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 41,
       "filename": "index.js" },

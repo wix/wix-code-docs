@@ -1,8 +1,7 @@
 { "name": "BookingsRcQueryBuilder_9381294311",
   "memberOf": "wix-bookings-rc-backend.schedules",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" },

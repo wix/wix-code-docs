@@ -1,8 +1,7 @@
 { "name": "waitingList",
   "memberOf": "wix-bookings-rc-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 29,
       "filename": "index.js" },

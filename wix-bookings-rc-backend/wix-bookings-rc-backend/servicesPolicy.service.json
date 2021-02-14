@@ -1,8 +1,7 @@
 { "name": "servicesPolicy",
   "memberOf": "wix-bookings-rc-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 125,
       "filename": "index.js" },

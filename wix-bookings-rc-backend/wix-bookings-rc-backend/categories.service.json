@@ -1,8 +1,7 @@
 { "name": "categories",
   "memberOf": "wix-bookings-rc-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 101,
       "filename": "index.js" },

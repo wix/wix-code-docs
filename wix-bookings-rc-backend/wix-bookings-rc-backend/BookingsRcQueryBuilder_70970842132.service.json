@@ -1,8 +1,7 @@
 { "name": "BookingsRcQueryBuilder_70970842132",
   "memberOf": "wix-bookings-rc-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 1631,
       "filename": "shared.js" },

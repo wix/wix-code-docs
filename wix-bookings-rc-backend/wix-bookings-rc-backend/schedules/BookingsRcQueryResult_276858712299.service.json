@@ -1,8 +1,7 @@
 { "name": "BookingsRcQueryResult_276858712299",
   "memberOf": "wix-bookings-rc-backend.schedules",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 998,
       "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" },
