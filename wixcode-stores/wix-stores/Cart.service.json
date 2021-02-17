@@ -9,10 +9,10 @@
   "docs":
     { "summary": "The wix-stores.cart module contains functionality for working with your\n site's cart from client-side code.",
       "description":
-        [ "To use the Cart API, import `wixStories` from the `wix-stores` module:",
+        [ "To use the Cart API, import `wixStores` from the `wix-stores` module:",
           "",
           "   ```javascript",
-          "   import wixStories from 'wix-stores';",
+          "   import wixStores from 'wix-stores';",
           "   ```" ],
       "links": [],
       "examples": [],
@@ -21,8 +21,7 @@
   "properties": [],
   "operations":
     [ { "name": "updateLineItemQuantity",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "cartLineItemId",
