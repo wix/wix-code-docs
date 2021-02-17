@@ -56,7 +56,7 @@
                 " specify the size that should be added to the cart. If the product you are adding to the",
                 " cart has options, you must specify which options should be chosen.",
                 "",
-                " You can see a product's option information from the`productOptions` field in the **Stores/Product** collection.",
+                " You can see a product's option information in the `productOptions` field in the **Stores/Products** collection.",
                 "",
                 " You can use the [`getProductOptionsAvailability()`](wix-stores.html#getProductOptionsAvailability)",
                 " to determine if an item with specific options is available for purchase." ],
@@ -283,8 +283,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "AddToCartOptions",
         "locations":
           [ { "lineno": 355,
@@ -304,8 +303,7 @@
               "doc": "Custom custom\n text fields to use when adding the product to the cart." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "CustomTextField",
         "locations":
           [ { "lineno": 365,
@@ -325,7 +323,6 @@
               "doc": "Custom text field value." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
