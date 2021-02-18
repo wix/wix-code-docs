@@ -1,8 +1,7 @@
 { "name": "AutogenTestEdmQueryResult_61726317249",
   "memberOf": "wix-autogen-test-edm-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 1019,
       "filename": "shared.js" },

@@ -49,7 +49,7 @@
         "params": [],
         "ret":
           { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
-            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
         "locations":
           [ { "lineno": 1,
               "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_echo.js" } ],
@@ -62,9 +62,8 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function echo() {",
-                      "  let options = {",
-                      "    stringify: true,",
-                      "    suppressAuth: true",
+                      "  const options = {",
+                      "    stringify: true",
                       "  };",
                       "",
                       "  return wixAutogenTestEdmBackend",
@@ -91,7 +90,7 @@
         "params": [],
         "ret":
           { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
-            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
         "locations":
           [ { "lineno": 1,
               "filename": "com_wixpress_cloud_edm_autogen_QueryService_FilterByQuery_filterByQuery.js" } ],
@@ -104,9 +103,8 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function filterByQuery() {",
-                      "  let options = {",
-                      "    stringify: true,",
-                      "    suppressAuth: true",
+                      "  const options = {",
+                      "    stringify: true",
                       "  };",
                       "",
                       "  return wixAutogenTestEdmBackend",
@@ -151,7 +149,7 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function getDoubleValuesList() {",
-                      "  let getDoubleValuesListRequest = {",
+                      "  const getDoubleValuesListRequest = {",
                       "    numbers: [42]",
                       "  };",
                       "",
@@ -195,7 +193,7 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function getList() {",
-                      "  let getListRequest = {",
+                      "  const getListRequest = {",
                       "    numbers: [42]",
                       "  };",
                       "",
@@ -221,7 +219,7 @@
         "params": [],
         "ret":
           { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
-            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
         "locations":
           [ { "lineno": 1,
               "filename": "com_wixpress_cloud_edm_autogen_QueryService_Echo_myEcho.js" } ],
@@ -234,9 +232,8 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function myEcho() {",
-                      "  let options = {",
-                      "    stringify: true,",
-                      "    suppressAuth: true",
+                      "  const options = {",
+                      "    stringify: true",
                       "  };",
                       "",
                       "  return wixAutogenTestEdmBackend",
@@ -258,7 +255,7 @@
           {  } },
       { "name": "queryCursorIntegers",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "queryCursorIntegersRequest",
@@ -280,7 +277,7 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function queryCursorIntegers() {",
-                      "  let queryCursorIntegersRequest = {",
+                      "  const queryCursorIntegersRequest = {",
                       "    query: {",
                       "      filter: {",
                       "        someKey: \"some-value\"",
@@ -320,12 +317,12 @@
           {  } },
       { "name": "queryIntegers",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
           { "type": "wix-autogen-test-edm-backend.AutogenTestEdmQueryBuilder_42720921791",
-            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n    .eq(\"<property1>\", \"<value1>\")\n    .ascending(\"<property2>\")\n    .limit(5)\n    .find()\n    .then( (results) => {\n      console.log(results.items);\n    } );\n```" },
+            "doc": "Contains functionality for refining a autogenTestEdm query.\nThe `AutogenTestEdmQueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the autogenTestEdm query functions,\nrefine the query by chaining `AutogenTestEdmQueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixAutogenTestEdmBackend from 'wix-autogenTestEdm-backend';\n\nwixAutogenTestEdmBackend.queryAutogenTestEdm()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
         "locations":
           [ { "lineno": 1,
               "filename": "com_wixpress_cloud_edm_autogen_QueryService_QueryPagedIntegers_queryIntegers.js" } ],
@@ -337,9 +334,8 @@
                     [ "import wixAutogenTestEdmBackend from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function queryIntegers() {",
-                      "  let options = {",
-                      "    stringify: true,",
-                      "    suppressAuth: true",
+                      "  const options = {",
+                      "    stringify: true",
                       "  };",
                       "",
                       "  return wixAutogenTestEdmBackend",
@@ -382,8 +378,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Cursors_3337235656",
         "locations":
           [ { "lineno": 23,
@@ -403,8 +398,7 @@
               "doc": "Cursor pointing to previous result page" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "EchoRequest",
         "locations":
           [ { "lineno": 1,
@@ -460,8 +454,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "GetDoubleValuesListResult",
         "locations":
           [ { "lineno": 13,
@@ -499,8 +492,7 @@
                     [ "number" ] } } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "GetListRequest",
         "locations":
           [ { "lineno": 19,
@@ -539,8 +531,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "GetListResult",
         "locations":
           [ { "lineno": 25,
@@ -578,8 +569,7 @@
                     [ "number" ] } } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PagingMetadataV2_5481679798",
         "locations":
           [ { "lineno": 39,
@@ -607,8 +597,7 @@
               "doc": "Cursors to navigate through result pages. Returned if cursor paging was used" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Paging_1617727965",
         "locations":
           [ { "lineno": 31,
@@ -630,8 +619,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "QueryCursorIntegersRequest_29434090199",
         "locations":
           [ { "lineno": 1,
@@ -650,8 +638,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "QueryCursorIntegersResult_7156457850",
         "locations":
           [ { "lineno": 8,
@@ -671,8 +658,7 @@
               "type": "wix-autogen-test-edm-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "QueryOptions_2579605236",
         "locations":
           [ { "lineno": 1191,
@@ -690,6 +676,24 @@
             { "name": "suppressAuth",
               "type": "boolean",
               "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "QueryOptions_3062032041",
+        "locations":
+          [ { "lineno": 1191,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The `options` parameter is an optional parameter that can be used when calling the query [`find()`](#find) function.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "stringify",
+              "type": "boolean",
               "optional": true } ],
         "extra":
           {  },
@@ -744,8 +748,7 @@
                   "members":
                     [ "cursorPaging",
                       "paging" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SomeObject_3313144838",
         "locations":
           [ { "lineno": 1,
@@ -767,8 +770,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SomeRequest_10635452527",
         "locations":
           [ { "lineno": 9,
@@ -799,8 +801,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Sorting_7874645153",
         "locations":
           [ { "lineno": 61,
@@ -821,7 +822,6 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

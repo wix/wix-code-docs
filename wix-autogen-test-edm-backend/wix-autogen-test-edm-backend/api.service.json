@@ -20,7 +20,10 @@
         "params":
           [ { "name": "someRequest",
               "type": "wix-autogen-test-edm-backend.SomeRequest_10635452527",
-              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nViverra nam libero justo laoreet sit amet cursus. Scelerisque eu ultrices vitae auctor." } ],
+              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nViverra nam libero justo laoreet sit amet cursus. Scelerisque eu ultrices vitae auctor." },
+            { "name": "options",
+              "type": "wix-autogen-test-edm-backend.api.Options_936495653",
+              "doc": "Authorization options." } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -28,7 +31,7 @@
                   [ "wix-autogen-test-edm-backend.api.SomeResult_5668850014" ] },
             "doc": "Fulfilled - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nSed risus ultricies tristique nulla aliquet enim tortor at.\nEu ultrices vitae auctor eu augue ut lectus arcu." },
         "locations":
-          [ { "lineno": 11,
+          [ { "lineno": 18,
               "filename": "com_wixpress_cloud_edm_autogen_SomeInternalAlphaTestService_SomePublicGaMethod_someAlias.js" } ],
         "docs":
           { "summary": "some public method for testing edm-generator.",
@@ -39,7 +42,7 @@
                     [ "import { api } from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function someAlias() {",
-                      "  let someRequest = {",
+                      "  const someRequest = {",
                       "    aString: \"a string\",",
                       "    someObjects: [",
                       "      {",
@@ -49,9 +52,12 @@
                       "    ],",
                       "    someDate: new Date()",
                       "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
                       "",
                       "  return api",
-                      "    .someAlias(someRequest)",
+                      "    .someAlias(someRequest, options)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -103,8 +109,7 @@
         "extra":
           {  } },
       { "name": "someMethodThatThrows",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -147,10 +152,7 @@
         "params":
           [ { "name": "someRequest",
               "type": "wix-autogen-test-edm-backend.SomeRequest_10635452527",
-              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nViverra nam libero justo laoreet sit amet cursus. Scelerisque eu ultrices vitae auctor." },
-            { "name": "authOptions",
-              "type": "wix-autogen-test-edm-backend.api.AuthOptions_572741725",
-              "doc": "authorization options" } ],
+              "doc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nViverra nam libero justo laoreet sit amet cursus. Scelerisque eu ultrices vitae auctor." } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -158,7 +160,7 @@
                   [ "wix-autogen-test-edm-backend.api.SomeResult_9583421789" ] },
             "doc": "Fulfilled - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nSed risus ultricies tristique nulla aliquet enim tortor at.\nEu ultrices vitae auctor eu augue ut lectus arcu." },
         "locations":
-          [ { "lineno": 19,
+          [ { "lineno": 12,
               "filename": "com_wixpress_cloud_edm_autogen_SomeInternalAlphaTestService_SomePublicGaMethod_somePublicGaMethod123.js" } ],
         "docs":
           { "summary": "some public method for testing edm-generator.",
@@ -169,7 +171,7 @@
                     [ "import { api } from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function somePublicGaMethod123() {",
-                      "  let someRequest = {",
+                      "  const someRequest = {",
                       "    aString: \"a string\",",
                       "    someObjects: [",
                       "      {",
@@ -179,12 +181,9 @@
                       "    ],",
                       "    someDate: new Date()",
                       "  };",
-                      "  let authOptions = {",
-                      "    suppressAuth: true",
-                      "  };",
                       "",
                       "  return api",
-                      "    .somePublicGaMethod123(someRequest, authOptions)",
+                      "    .somePublicGaMethod123(someRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -206,6 +205,25 @@
               "filename": "com_wixpress_cloud_edm_autogen_SomeInternalAlphaTestService_SomePublicGaMethod_somePublicGaMethod123.js" } ],
         "docs":
           { "summary": "authorization options",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "Options_936495653",
+        "locations":
+          [ { "lineno": 11,
+              "filename": "com_wixpress_cloud_edm_autogen_SomeInternalAlphaTestService_SomePublicGaMethod_someAlias.js" } ],
+        "docs":
+          { "summary": "Authorization options.",
             "links": [],
             "examples": [],
             "extra":
@@ -349,8 +367,7 @@
               "doc": "Some date to return" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SomeResult_9583421789",
         "locations":
           [ { "lineno": 1,
@@ -376,7 +393,6 @@
               "doc": "Some date to return" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

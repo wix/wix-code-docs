@@ -14,7 +14,8 @@
   "properties": [],
   "operations":
     [ { "name": "addNumbers",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "number1",
@@ -41,8 +42,8 @@
                     [ "import { calc } from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function addNumbers() {",
-                      "  let number1 = 42;",
-                      "  let number2 = 42;",
+                      "  const number1 = 42;",
+                      "  const number2 = 42;",
                       "",
                       "  return calc",
                       "    .addNumbers(number1, number2)",
@@ -84,7 +85,7 @@
                     [ "import { calc } from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function divide() {",
-                      "  let divideRequest = {",
+                      "  const divideRequest = {",
                       "    a: 42,",
                       "    b: 42",
                       "  };",
@@ -129,7 +130,7 @@
                     [ "import { calc } from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function multiply() {",
-                      "  let multiplyRequest = {",
+                      "  const multiplyRequest = {",
                       "    a: 42,",
                       "    b: 42",
                       "  };",
@@ -174,7 +175,7 @@
                     [ "import { calc } from \"wix-autogen-test-edm-backend\";",
                       "",
                       "export function subtract() {",
-                      "  let subtractRequest = {",
+                      "  const subtractRequest = {",
                       "    a: 42,",
                       "    b: 42",
                       "  };",
@@ -234,8 +235,7 @@
               "doc": "Divider" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "DivideResult",
         "locations":
           [ { "lineno": 8,
@@ -276,8 +276,7 @@
               "doc": "Return false if one of the operands was illegal for the operation" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "MultiplyRequest_3694398561",
         "locations":
           [ { "lineno": 1,
@@ -296,8 +295,7 @@
               "doc": "Multiplier" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "MultiplyResult",
         "locations":
           [ { "lineno": 15,
@@ -338,8 +336,7 @@
               "doc": "Return false if one of the operands was illegal for the operation" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SubtractRequest",
         "locations":
           [ { "lineno": 22,
@@ -378,8 +375,7 @@
               "doc": "Another number" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SubtractResult",
         "locations":
           [ { "lineno": 29,
@@ -420,7 +416,6 @@
               "doc": "Return false if one of the operands was illegal for the operation" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
