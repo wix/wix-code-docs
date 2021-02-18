@@ -35,8 +35,8 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "void" ] },
-            "doc": "Fulfilled - When the products have been added to the cart." },
+                  [ "wix-stores-backend.Cart" ] },
+            "doc": "Fulfilled - The updated cart with added products." },
         "locations":
           [ { "lineno": 317,
               "filename": "stores.js" } ],
