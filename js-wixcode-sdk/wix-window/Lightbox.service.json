@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 262,
-      "filename": "window.es6" },
+    { "lineno": 195,
+      "filename": "window.js" },
   "docs":
     { "summary": "A [lightbox](https://support.wix.com/en/article/about-lightboxes) pops up on your site to grab your visitor's attention.",
       "description":
@@ -45,8 +45,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 76,
-              "filename": "window.es6" } ],
+          [ { "lineno": 55,
+              "filename": "window.js" } ],
         "docs":
           { "summary": "Closes the lightbox.",
             "description":
@@ -134,8 +134,8 @@
           { "type": "Object",
             "doc": "The data object that was passed to the lightbox." },
         "locations":
-          [ { "lineno": 33,
-              "filename": "window.es6" } ],
+          [ { "lineno": 15,
+              "filename": "window.js" } ],
         "docs":
           { "summary": "Returns the data object that was passed to a lightbox.",
             "description":

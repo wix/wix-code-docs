@@ -4,8 +4,8 @@
     [ "$w.Event" ],
   "labels": [],
   "location":
-    { "lineno": 9,
-      "filename": "IconMouseInEvent.es6" },
+    { "lineno": 7,
+      "filename": "IconMouseInEvent.js" },
   "docs":
     { "summary": "Event that is fired when a user hovers over a star on a ratings input component.",
       "links": [],
@@ -19,8 +19,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 24,
-              "filename": "IconMouseInEvent.es6" } ],
+          [ { "lineno": 14,
+              "filename": "IconMouseInEvent.js" } ],
         "docs":
           { "summary": "Gets the display label that corresponds to the icon that the mouse entered.",
             "links": [],
@@ -43,8 +43,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 35,
-              "filename": "IconMouseInEvent.es6" } ],
+          [ { "lineno": 25,
+              "filename": "IconMouseInEvent.js" } ],
         "docs":
           { "summary": "Gets the value (1-5) that corresponds to the icon that the mouse entered.",
             "links": [],

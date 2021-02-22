@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 4,
-      "filename": "ValidatableMixin.es6" },
+    { "lineno": 1,
+      "filename": "ValidatableMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that can be validated.",
       "description":
@@ -60,8 +60,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 55,
-              "filename": "ValidatableMixin.es6" } ],
+          [ { "lineno": 51,
+              "filename": "ValidatableMixin.js" } ],
         "docs":
           { "summary": "Indicates if an input element's value is valid.",
             "description":
@@ -91,8 +91,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 81,
-              "filename": "ValidatableMixin.es6" } ],
+          [ { "lineno": 72,
+              "filename": "ValidatableMixin.js" } ],
         "docs":
           { "summary": "Gets a message indicating why the element is invalid, or an\n empty string if the message is valid.",
             "description":
@@ -117,8 +117,8 @@
         "set": false,
         "type": "$w.ValidatableMixin.ValidityState",
         "locations":
-          [ { "lineno": 139,
-              "filename": "ValidatableMixin.es6" } ],
+          [ { "lineno": 125,
+              "filename": "ValidatableMixin.js" } ],
         "docs":
           { "summary": "Gets a ValidityState object that contains\n detailed information about the validity states of the element.",
             "links":
@@ -157,8 +157,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 165,
-              "filename": "ValidatableMixin.es6" } ],
+          [ { "lineno": 146,
+              "filename": "ValidatableMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the element's validation is checked.",
             "description":
@@ -195,8 +195,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 215,
-              "filename": "ValidatableMixin.es6" } ],
+          [ { "lineno": 183,
+              "filename": "ValidatableMixin.js" } ],
         "docs":
           { "summary": "Resets the element's visual validity indication.",
             "description":
@@ -230,8 +230,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 196,
-              "filename": "ValidatableMixin.es6" } ],
+          [ { "lineno": 170,
+              "filename": "ValidatableMixin.js" } ],
         "docs":
           { "summary": "Updates the element's visual validity indication based on its current validity state.",
             "description":
@@ -253,8 +253,8 @@
   "messages":
     [ { "name": "ValidityState",
         "locations":
-          [ { "lineno": 104,
-              "filename": "ValidatableMixin.es6" } ],
+          [ { "lineno": 90,
+              "filename": "ValidatableMixin.js" } ],
         "docs":
           { "summary": "Contains detailed information about the validity states of an element.",
             "links":

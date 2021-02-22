@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 7,
-      "filename": "CollapsedMixin.es6" },
+    { "lineno": 1,
+      "filename": "CollapsedMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that can be collapsed.",
       "description":
@@ -41,8 +41,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 75,
-              "filename": "CollapsedMixin.es6" } ],
+          [ { "lineno": 56,
+              "filename": "CollapsedMixin.js" } ],
         "docs":
           { "summary": "Indicates if the element is collapsed or expanded.",
             "description":
@@ -115,8 +115,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the element's `collapsed` property has been set to `true`." },
         "locations":
-          [ { "lineno": 38,
-              "filename": "CollapsedMixin.es6" } ],
+          [ { "lineno": 31,
+              "filename": "CollapsedMixin.js" } ],
         "docs":
           { "summary": "Collapses the element and sets its `collapsed` property to `true`.",
             "description":
@@ -171,8 +171,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the element's `collapsed` property has been set to `false`." },
         "locations":
-          [ { "lineno": 133,
-              "filename": "CollapsedMixin.es6" } ],
+          [ { "lineno": 107,
+              "filename": "CollapsedMixin.js" } ],
         "docs":
           { "summary": "Expands the element and sets its `collapsed` property to `false`.",
             "description":

@@ -5,8 +5,8 @@
       "$w.HiddenCollapsedMixin" ],
   "labels": [],
   "location":
-    { "lineno": 10,
-      "filename": "GoogleMap.es6" },
+    { "lineno": 1,
+      "filename": "GoogleMap.js" },
   "docs":
     { "summary": "A [Google Map element](https://www.wix.com/support/html5/article/adding-google-maps)\n that allows you to display a given location.",
       "links": [],
@@ -20,10 +20,10 @@
         "set": true,
         "type": "$w.GoogleMap.MapLocation",
         "locations":
-          [ { "lineno": 36,
-              "filename": "GoogleMap.es6" },
-            { "lineno": 74,
-              "filename": "GoogleMap.es6" } ],
+          [ { "lineno": 26,
+              "filename": "GoogleMap.js" },
+            { "lineno": 32,
+              "filename": "GoogleMap.js" } ],
         "docs":
           { "summary": "Sets or gets the location information of a map's marked location.",
             "description":
@@ -61,8 +61,8 @@
   "messages":
     [ { "name": "MapLocation",
         "locations":
-          [ { "lineno": 24,
-              "filename": "GoogleMap.es6" } ],
+          [ { "lineno": 14,
+              "filename": "GoogleMap.js" } ],
         "docs":
           { "summary": "An object used by the `location` property that\n contains the attributes of a marked map location.",
             "links":

@@ -4,8 +4,8 @@
     [ "$w.Event" ],
   "labels": [],
   "location":
-    { "lineno": 30,
-      "filename": "GalleryItemChangedEvent.es6" },
+    { "lineno": 11,
+      "filename": "GalleryItemChangedEvent.js" },
   "docs":
     { "summary": "Event that is fired when a gallery moves to a new image.",
       "links": [],
@@ -21,8 +21,8 @@
           [ "$w.Gallery.ImageItem",
             "$w.Gallery.VideoItem" ],
         "locations":
-          [ { "lineno": 45,
-              "filename": "GalleryItemChangedEvent.es6" } ],
+          [ { "lineno": 18,
+              "filename": "GalleryItemChangedEvent.js" } ],
         "docs":
           { "summary": "Gets the gallery item.",
             "links": [],
@@ -48,8 +48,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 57,
-              "filename": "GalleryItemChangedEvent.es6" } ],
+          [ { "lineno": 30,
+              "filename": "GalleryItemChangedEvent.js" } ],
         "docs":
           { "summary": "Gets the gallery item's index.",
             "links": [],

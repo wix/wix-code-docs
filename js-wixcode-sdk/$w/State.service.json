@@ -6,8 +6,8 @@
       "$w.ContainableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 5,
-      "filename": "State.es6" },
+    { "lineno": 1,
+      "filename": "State.js" },
   "docs":
     { "summary": "A `State` from a [`MultiStateBox`]($w.MultiStateBox.html) that can contain other elements.",
       "links": [],
@@ -21,8 +21,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 17,
-              "filename": "State.es6" } ],
+          [ { "lineno": 13,
+              "filename": "State.js" } ],
         "docs":
           { "summary": "Gets the state's ID.",
             "description":

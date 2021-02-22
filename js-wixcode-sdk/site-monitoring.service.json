@@ -3,7 +3,7 @@
   "labels": [],
   "location":
     { "lineno": 1,
-      "filename": "siteMonitoring.es6" },
+      "filename": "siteMonitoring.js" },
   "docs":
     { "summary": "JSON representation of Wix site events for exposure to external site monitoring tools.",
       "description":

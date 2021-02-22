@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 11,
-      "filename": "HiddenMixin.es6" },
+    { "lineno": 1,
+      "filename": "HiddenMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that can be hidden.",
       "description":
@@ -41,8 +41,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 148,
-              "filename": "HiddenMixin.es6" } ],
+          [ { "lineno": 83,
+              "filename": "HiddenMixin.js" } ],
         "docs":
           { "summary": "Indicates if the element is visible or hidden.",
             "description":
@@ -113,8 +113,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 295,
-              "filename": "HiddenMixin.es6" } ],
+          [ { "lineno": 187,
+              "filename": "HiddenMixin.js" } ],
         "docs":
           { "summary": "Indicates if the element is actually visible.",
             "description":
@@ -189,8 +189,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the effect is complete and the element's `hidden` property has been set to `true`." },
         "locations":
-          [ { "lineno": 61,
-              "filename": "HiddenMixin.es6" } ],
+          [ { "lineno": 31,
+              "filename": "HiddenMixin.js" } ],
         "docs":
           { "summary": "Hides the element and sets its `hidden` property\n to `true`, using an effect if specified.",
             "description":
@@ -305,8 +305,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the effect is complete and the element's `hidden` property has been set to `false`." },
         "locations":
-          [ { "lineno": 207,
-              "filename": "HiddenMixin.es6" } ],
+          [ { "lineno": 136,
+              "filename": "HiddenMixin.js" } ],
         "docs":
           { "summary": "Shows the element and sets its `hidden` property\n to `false`, using an effect if specified.",
             "description":

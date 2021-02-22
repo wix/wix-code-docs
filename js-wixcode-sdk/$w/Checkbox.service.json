@@ -11,8 +11,8 @@
       "$w.CheckedMixin" ],
   "labels": [],
   "location":
-    { "lineno": 15,
-      "filename": "Checkbox.es6" },
+    { "lineno": 1,
+      "filename": "Checkbox.js" },
   "docs":
     { "summary": "Checkboxes are used for a single binary choice.",
       "links": [],
@@ -26,10 +26,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 103,
-              "filename": "Checkbox.es6" },
-            { "lineno": 125,
-              "filename": "Checkbox.es6" } ],
+          [ { "lineno": 55,
+              "filename": "Checkbox.js" },
+            { "lineno": 77,
+              "filename": "Checkbox.js" } ],
         "docs":
           { "summary": "Sets or gets whether a checkbox is checked.",
             "description":
@@ -77,10 +77,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 132,
-              "filename": "Checkbox.es6" },
-            { "lineno": 154,
-              "filename": "Checkbox.es6" } ],
+          [ { "lineno": 83,
+              "filename": "Checkbox.js" },
+            { "lineno": 105,
+              "filename": "Checkbox.js" } ],
         "docs":
           { "summary": "Gets or sets if a checkbox is required to be checked.",
             "description":
@@ -113,8 +113,8 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 161,
-              "filename": "Checkbox.es6" } ],
+          [ { "lineno": 111,
+              "filename": "Checkbox.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the checkbox's styles.",
             "description":
@@ -151,10 +151,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 34,
-              "filename": "Checkbox.es6" },
-            { "lineno": 69,
-              "filename": "Checkbox.es6" } ],
+          [ { "lineno": 19,
+              "filename": "Checkbox.js" },
+            { "lineno": 49,
+              "filename": "Checkbox.js" } ],
         "docs":
           { "summary": "Sets or gets a checkbox's value.",
             "description":

@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 6,
-      "filename": "ValueMixin.es6" },
+    { "lineno": 1,
+      "filename": "ValueMixin.js" },
   "docs":
     { "summary": "Adds the value property to elements.",
       "description":
@@ -40,10 +40,10 @@
         "set": true,
         "type": "*",
         "locations":
-          [ { "lineno": 87,
-              "filename": "ValueMixin.es6" },
-            { "lineno": 118,
-              "filename": "ValueMixin.es6" } ],
+          [ { "lineno": 65,
+              "filename": "ValueMixin.js" },
+            { "lineno": 91,
+              "filename": "ValueMixin.js" } ],
         "docs":
           { "summary": "Sets or gets an element's value.",
             "description":
@@ -90,8 +90,8 @@
           { "type": "$w.Element",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 35,
-              "filename": "ValueMixin.es6" } ],
+          [ { "lineno": 30,
+              "filename": "ValueMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when an input element's value\n is changed.",
             "description":

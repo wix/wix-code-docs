@@ -8,8 +8,8 @@
       "$w.ContainableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 77,
-      "filename": "Slideshow.es6" },
+    { "lineno": 1,
+      "filename": "Slideshow.js" },
   "docs":
     { "summary": "Slideshows are playable containers for slides.",
       "description":
@@ -26,8 +26,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 256,
-              "filename": "Slideshow.es6" } ],
+          [ { "lineno": 113,
+              "filename": "Slideshow.js" } ],
         "docs":
           { "summary": "Gets the index of the slideshow's current slide.",
             "description":
@@ -51,8 +51,8 @@
         "set": false,
         "type": "$w.Slide",
         "locations":
-          [ { "lineno": 148,
-              "filename": "Slideshow.es6" } ],
+          [ { "lineno": 54,
+              "filename": "Slideshow.js" } ],
         "docs":
           { "summary": "Gets the slideshow's current slide.",
             "links":
@@ -75,10 +75,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 278,
-              "filename": "Slideshow.es6" },
-            { "lineno": 306,
-              "filename": "Slideshow.es6" } ],
+          [ { "lineno": 130,
+              "filename": "Slideshow.js" },
+            { "lineno": 153,
+              "filename": "Slideshow.js" } ],
         "docs":
           { "summary": "Sets or gets whether a slideshow's navigation buttons are shown.",
             "description":
@@ -117,10 +117,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 328,
-              "filename": "Slideshow.es6" },
-            { "lineno": 356,
-              "filename": "Slideshow.es6" } ],
+          [ { "lineno": 159,
+              "filename": "Slideshow.js" },
+            { "lineno": 182,
+              "filename": "Slideshow.js" } ],
         "docs":
           { "summary": "Set or returns whether a slideshow's slide buttons are shown.",
             "description":
@@ -162,8 +162,8 @@
             "typeParams":
               [ "$w.Slide" ] },
         "locations":
-          [ { "lineno": 231,
-              "filename": "Slideshow.es6" } ],
+          [ { "lineno": 96,
+              "filename": "Slideshow.js" } ],
         "docs":
           { "summary": "Gets a list of all the slides contained in the slideshow.",
             "description":
@@ -205,8 +205,8 @@
                   [ "$w.Slide" ] },
             "doc": "Fulfilled - The slide that the slideshow changed to." },
         "locations":
-          [ { "lineno": 174,
-              "filename": "Slideshow.es6" } ],
+          [ { "lineno": 68,
+              "filename": "Slideshow.js" } ],
         "docs":
           { "summary": "Change the slideshow's current slide to a specific slide or index.",
             "description":
@@ -257,8 +257,8 @@
           { "type": "$w.Slideshow",
             "doc": "The slideshow on which the event is now registered." },
         "locations":
-          [ { "lineno": 99,
-              "filename": "Slideshow.es6" } ],
+          [ { "lineno": 22,
+              "filename": "Slideshow.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the slideshow moves to a new slide.",
             "description":

@@ -10,8 +10,8 @@
       "$w.RequiredMixin" ],
   "labels": [],
   "location":
-    { "lineno": 18,
-      "filename": "DropDown.es6" },
+    { "lineno": 1,
+      "filename": "DropDown.js" },
   "docs":
     { "summary": "Dropdowns are used for selecting one of a number of options.",
       "description":
@@ -35,10 +35,10 @@
               [ "$w.Dropdown.Option" ] },
         "defaultValue": "An empty array",
         "locations":
-          [ { "lineno": 51,
-              "filename": "DropDown.es6" },
-            { "lineno": 89,
-              "filename": "DropDown.es6" } ],
+          [ { "lineno": 33,
+              "filename": "DropDown.js" },
+            { "lineno": 66,
+              "filename": "DropDown.js" } ],
         "docs":
           { "summary": "Sets or gets the options in a dropdown.",
             "description":
@@ -93,10 +93,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 142,
-              "filename": "DropDown.es6" },
-            { "lineno": 167,
-              "filename": "DropDown.es6" } ],
+          [ { "lineno": 72,
+              "filename": "DropDown.js" },
+            { "lineno": 91,
+              "filename": "DropDown.js" } ],
         "docs":
           { "summary": "Sets or gets the dropdown's placeholder text.",
             "description":
@@ -125,10 +125,10 @@
         "set": true,
         "type": "number",
         "locations":
-          [ { "lineno": 200,
-              "filename": "DropDown.es6" },
-            { "lineno": 230,
-              "filename": "DropDown.es6" } ],
+          [ { "lineno": 97,
+              "filename": "DropDown.js" },
+            { "lineno": 124,
+              "filename": "DropDown.js" } ],
         "docs":
           { "summary": "Sets or gets the index of the selected option.",
             "description":
@@ -165,8 +165,8 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 330,
-              "filename": "DropDown.es6" } ],
+          [ { "lineno": 163,
+              "filename": "DropDown.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the dropdown's styles.",
             "description":
@@ -204,10 +204,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 264,
-              "filename": "DropDown.es6" },
-            { "lineno": 298,
-              "filename": "DropDown.es6" } ],
+          [ { "lineno": 130,
+              "filename": "DropDown.js" },
+            { "lineno": 157,
+              "filename": "DropDown.js" } ],
         "docs":
           { "summary": "Sets or gets an element's value.\n> **Notes:**\n> + Changing a dropdown's `value` in code does not trigger an `onChange` event.\n>\n>\n> + If an element is connected to a dataset, setting the element's `value`\n in code does not set the value of the connected field in the dataset.\n That means if you use the dataset to perform a submit, the value changed\n in code is not reflected in the submitted item.\n>\n>\n> + To submit the new value using a dataset, set the field's value using the\n [`setFieldValue()`](wix-dataset.html#setFieldValue) function before\n performing the submit.",
             "links": [],
@@ -231,8 +231,8 @@
   "messages":
     [ { "name": "Option",
         "locations":
-          [ { "lineno": 42,
-              "filename": "DropDown.es6" } ],
+          [ { "lineno": 24,
+              "filename": "DropDown.js" } ],
         "docs":
           { "summary": "An object used by the `options` property that contains the attributes of a dropdown list item.",
             "links":

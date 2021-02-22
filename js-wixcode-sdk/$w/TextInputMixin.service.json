@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 6,
-      "filename": "TextInputMixin.es6" },
+    { "lineno": 1,
+      "filename": "TextInputMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that accept text as input.",
       "description":
@@ -40,10 +40,10 @@
         "set": true,
         "type": "number",
         "locations":
-          [ { "lineno": 89,
-              "filename": "TextInputMixin.es6" },
-            { "lineno": 123,
-              "filename": "TextInputMixin.es6" } ],
+          [ { "lineno": 54,
+              "filename": "TextInputMixin.js" },
+            { "lineno": 82,
+              "filename": "TextInputMixin.js" } ],
         "docs":
           { "summary": "Sets or gets the maximum number of characters that can be entered.",
             "description":
@@ -87,10 +87,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 35,
-              "filename": "TextInputMixin.es6" },
-            { "lineno": 61,
-              "filename": "TextInputMixin.es6" } ],
+          [ { "lineno": 30,
+              "filename": "TextInputMixin.js" },
+            { "lineno": 48,
+              "filename": "TextInputMixin.js" } ],
         "docs":
           { "summary": "Sets or gets the element's placeholder text.",
             "description":
@@ -125,8 +125,8 @@
           { "type": "$w.Element",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 204,
-              "filename": "TextInputMixin.es6" } ],
+          [ { "lineno": 126,
+              "filename": "TextInputMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the input element receives\ninput.",
             "description":
@@ -166,8 +166,8 @@
           { "type": "$w.Element",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 149,
-              "filename": "TextInputMixin.es6" } ],
+          [ { "lineno": 88,
+              "filename": "TextInputMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the cursor is inside the\n input element and a key is pressed.",
             "description":

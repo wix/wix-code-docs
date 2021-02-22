@@ -5,8 +5,8 @@
       "$w.HiddenCollapsedMixin" ],
   "labels": [],
   "location":
-    { "lineno": 10,
-      "filename": "AccountNavBar.es6" },
+    { "lineno": 1,
+      "filename": "AccountNavBar.js" },
   "docs":
     { "summary": "The menu in a user profile.",
       "links": [],

@@ -6,8 +6,8 @@
       "$w.ValueMixin" ],
   "labels": [],
   "location":
-    { "lineno": 6,
-      "filename": "FormElement.es6" },
+    { "lineno": 1,
+      "filename": "FormElement.js" },
   "docs":
     { "summary": "Provides functionality related to user input elements.",
       "description":

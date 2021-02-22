@@ -5,8 +5,8 @@
       "$w.StyleMixin" ],
   "labels": [],
   "location":
-    { "lineno": 10,
-      "filename": "QuickActionBar.es6" },
+    { "lineno": 1,
+      "filename": "QuickActionBar.js" },
   "docs":
     { "summary": "A [quick action bar](https://support.wix.com/en/article/adding-and-setting-up-the-quick-action-bar-on-your-mobile-site)\n helps your visitors contact you instantly from their mobile devices.",
       "description":
@@ -22,10 +22,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 74,
-              "filename": "QuickActionBar.es6" },
-            { "lineno": 102,
-              "filename": "QuickActionBar.es6" } ],
+          [ { "lineno": 40,
+              "filename": "QuickActionBar.js" },
+            { "lineno": 63,
+              "filename": "QuickActionBar.js" } ],
         "docs":
           { "summary": "Sets or gets a quick action bar's alignment.",
             "description":
@@ -59,10 +59,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 122,
-              "filename": "QuickActionBar.es6" },
-            { "lineno": 146,
-              "filename": "QuickActionBar.es6" } ],
+          [ { "lineno": 69,
+              "filename": "QuickActionBar.js" },
+            { "lineno": 89,
+              "filename": "QuickActionBar.js" } ],
         "docs":
           { "summary": "Sets or gets a quick action bar's color scheme.",
             "description":
@@ -93,10 +93,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 171,
-              "filename": "QuickActionBar.es6" },
-            { "lineno": 195,
-              "filename": "QuickActionBar.es6" } ],
+          [ { "lineno": 95,
+              "filename": "QuickActionBar.js" },
+            { "lineno": 115,
+              "filename": "QuickActionBar.js" } ],
         "docs":
           { "summary": "Sets or gets whether a quick action bar's color scheme is inverted.",
             "description":
@@ -128,10 +128,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 31,
-              "filename": "QuickActionBar.es6" },
-            { "lineno": 54,
-              "filename": "QuickActionBar.es6" } ],
+          [ { "lineno": 16,
+              "filename": "QuickActionBar.js" },
+            { "lineno": 34,
+              "filename": "QuickActionBar.js" } ],
         "docs":
           { "summary": "Sets or gets whether a quick action bar's labels are shown.",
             "description":
@@ -167,8 +167,8 @@
           { "type": "$w.QuickActionBar",
             "doc": "The quick action bar that triggered the event." },
         "locations":
-          [ { "lineno": 222,
-              "filename": "QuickActionBar.es6" } ],
+          [ { "lineno": 121,
+              "filename": "QuickActionBar.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when an item in a quick action bar is\n clicked.\n\n> **Deprecation note:** The $w parameter of event handlers is being deprecated. To get\n a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function\n and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see\n [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers).",
             "links": [],

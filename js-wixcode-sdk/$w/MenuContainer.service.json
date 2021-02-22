@@ -4,8 +4,8 @@
     [ "$w.Element" ],
   "labels": [],
   "location":
-    { "lineno": 4,
-      "filename": "MenuContainer.es6" },
+    { "lineno": 1,
+      "filename": "MenuContainer.js" },
   "docs":
     { "summary": "A menu container is a container that holds the elements in a\n mobile menu.",
       "description":
@@ -29,8 +29,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the mobile menu has finished closing." },
         "locations":
-          [ { "lineno": 44,
-              "filename": "MenuContainer.es6" } ],
+          [ { "lineno": 31,
+              "filename": "MenuContainer.js" } ],
         "docs":
           { "summary": "Closes a mobile menu.",
             "description":
@@ -67,8 +67,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the mobile menu has finished opening." },
         "locations":
-          [ { "lineno": 21,
-              "filename": "MenuContainer.es6" } ],
+          [ { "lineno": 17,
+              "filename": "MenuContainer.js" } ],
         "docs":
           { "summary": "Opens a mobile menu.",
             "description":

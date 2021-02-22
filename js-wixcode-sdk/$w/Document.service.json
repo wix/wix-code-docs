@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 51,
-      "filename": "document.es6" },
+    { "lineno": 30,
+      "filename": "document.js" },
   "docs":
     { "summary": "A complete web page, which consists of a Header, Page, and Footer.",
       "description":
@@ -20,8 +20,8 @@
         "set": false,
         "type": "$w.Document.BackgroundOptions",
         "locations":
-          [ { "lineno": 69,
-              "filename": "document.es6" } ],
+          [ { "lineno": 39,
+              "filename": "document.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the document's background, such as its image or video source.",
             "links": [],
@@ -57,8 +57,8 @@
             "typeParams":
               [ "$w.Node" ] },
         "locations":
-          [ { "lineno": 86,
-              "filename": "document.es6" } ],
+          [ { "lineno": 51,
+              "filename": "document.js" } ],
         "docs":
           { "summary": "Gets the document's Header, Page, and Footer.",
             "links":
@@ -85,8 +85,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 127,
-              "filename": "document.es6" } ],
+          [ { "lineno": 64,
+              "filename": "document.js" } ],
         "docs":
           { "summary": "Gets the document's type.",
             "description":
@@ -107,8 +107,8 @@
   "messages":
     [ { "name": "BackgroundOptions",
         "locations":
-          [ { "lineno": 22,
-              "filename": "document.es6" } ],
+          [ { "lineno": 1,
+              "filename": "document.js" } ],
         "docs":
           { "summary": "An object used by the `background` property that contains the background options.",
             "links":

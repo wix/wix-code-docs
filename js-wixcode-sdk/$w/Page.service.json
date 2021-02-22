@@ -6,8 +6,8 @@
       "$w.ContainableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 7,
-      "filename": "Page.es6" },
+    { "lineno": 1,
+      "filename": "Page.js" },
   "docs":
     { "summary": "A page is a web page that can contain other elements.",
       "description":
@@ -38,8 +38,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 39,
-              "filename": "Page.es6" } ],
+          [ { "lineno": 31,
+              "filename": "Page.js" } ],
         "docs":
           { "summary": "Gets the page's [SEO description](https://support.wix.com/en/article/adding-seo-page-titles-and-descriptions-meta-tags).",
             "description":
@@ -69,8 +69,8 @@
             "typeParams":
               [ "string" ] },
         "locations":
-          [ { "lineno": 63,
-              "filename": "Page.es6" } ],
+          [ { "lineno": 49,
+              "filename": "Page.js" } ],
         "docs":
           { "summary": "Gets the page's keywords.",
             "description":
@@ -96,8 +96,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 86,
-              "filename": "Page.es6" } ],
+          [ { "lineno": 66,
+              "filename": "Page.js" } ],
         "docs":
           { "summary": "Gets the page's title.",
             "description":
@@ -131,8 +131,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 116,
-              "filename": "Page.es6" } ],
+          [ { "lineno": 90,
+              "filename": "Page.js" } ],
         "docs":
           { "summary": "Indicates if the page is included in the site's menu.",
             "description":

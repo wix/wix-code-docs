@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 4,
-      "filename": "FocusMixin.es6" },
+    { "lineno": 1,
+      "filename": "FocusMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that can set and lose focus.",
       "description":
@@ -50,8 +50,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 67,
-              "filename": "FocusMixin.es6" } ],
+          [ { "lineno": 57,
+              "filename": "FocusMixin.js" } ],
         "docs":
           { "summary": "Removes focus from the element.",
             "description":
@@ -88,8 +88,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 42,
-              "filename": "FocusMixin.es6" } ],
+          [ { "lineno": 38,
+              "filename": "FocusMixin.js" } ],
         "docs":
           { "summary": "Places focus on the element.",
             "description":
@@ -126,8 +126,8 @@
           { "type": "$w.Element",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 143,
-              "filename": "FocusMixin.es6" } ],
+          [ { "lineno": 110,
+              "filename": "FocusMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the element loses focus.",
             "description":
@@ -171,8 +171,8 @@
           { "type": "$w.Element",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 96,
-              "filename": "FocusMixin.es6" } ],
+          [ { "lineno": 80,
+              "filename": "FocusMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the element receives focus.",
             "description":

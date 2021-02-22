@@ -5,8 +5,8 @@
       "$w.HiddenCollapsedMixin" ],
   "labels": [],
   "location":
-    { "lineno": 10,
-      "filename": "Menu.es6" },
+    { "lineno": 1,
+      "filename": "Menu.js" },
   "docs":
     { "summary": "A site menu.",
       "links": [],

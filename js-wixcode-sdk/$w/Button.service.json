@@ -10,8 +10,8 @@
       "$w.LabelMixin" ],
   "labels": [],
   "location":
-    { "lineno": 10,
-      "filename": "Button.es6" },
+    { "lineno": 1,
+      "filename": "Button.js" },
   "docs":
     { "summary": "A text button or an icon button.",
       "links": [],
@@ -26,10 +26,10 @@
         "type": "string",
         "defaultValue": "Empty string",
         "locations":
-          [ { "lineno": 72,
-              "filename": "Button.es6" },
-            { "lineno": 87,
-              "filename": "Button.es6" } ],
+          [ { "lineno": 56,
+              "filename": "Button.js" },
+            { "lineno": 71,
+              "filename": "Button.js" } ],
         "docs":
           { "summary": "Sets or gets the label of a text button.",
             "links": [],
@@ -55,10 +55,10 @@
         "type": "string",
         "defaultValue": "An empty string",
         "locations":
-          [ { "lineno": 93,
-              "filename": "Button.es6" },
-            { "lineno": 142,
-              "filename": "Button.es6" } ],
+          [ { "lineno": 77,
+              "filename": "Button.js" },
+            { "lineno": 126,
+              "filename": "Button.js" } ],
         "docs":
           { "summary": "Sets or gets the button's link.",
             "description":
@@ -138,8 +138,8 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 39,
-              "filename": "Button.es6" } ],
+          [ { "lineno": 23,
+              "filename": "Button.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the button's styles.",
             "description":

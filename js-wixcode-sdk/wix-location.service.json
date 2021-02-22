@@ -2,8 +2,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 12,
-      "filename": "location.es6" },
+    { "lineno": 1,
+      "filename": "location.js" },
   "docs":
     { "summary": "The wix-location module contains functionality for getting information\n about the URL of the current page and for navigating to other pages.",
       "description":
@@ -67,8 +67,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 297,
-              "filename": "location.es6" } ],
+          [ { "lineno": 217,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Gets the base URL of the current page.",
             "description":
@@ -106,8 +106,8 @@
             "typeParams":
               [ "string" ] },
         "locations":
-          [ { "lineno": 165,
-              "filename": "location.es6" } ],
+          [ { "lineno": 117,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Gets the path of the current page's URL.",
             "description":
@@ -137,8 +137,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 137,
-              "filename": "location.es6" } ],
+          [ { "lineno": 93,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Gets the prefix of a dynamic page's or router page's URL.",
             "description":
@@ -175,8 +175,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 117,
-              "filename": "location.es6" } ],
+          [ { "lineno": 77,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Gets the protocol of the current page's URL.",
             "description":
@@ -206,8 +206,8 @@
         "set": false,
         "type": "Object",
         "locations":
-          [ { "lineno": 185,
-              "filename": "location.es6" } ],
+          [ { "lineno": 133,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Gets an object that represents the query segment of the current page's URL.",
             "description":
@@ -237,8 +237,8 @@
         "set": false,
         "type": "wix-location.QueryParams",
         "locations":
-          [ { "lineno": 210,
-              "filename": "location.es6" } ],
+          [ { "lineno": 154,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Gets an object used to manage the query segment of the current page's URL.",
             "links": [],
@@ -286,8 +286,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 74,
-              "filename": "location.es6" } ],
+          [ { "lineno": 58,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Gets the full URL of the current page.",
             "description":
@@ -327,8 +327,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 426,
-              "filename": "location.es6" } ],
+          [ { "lineno": 312,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when an application page's URL changes.",
             "description":
@@ -373,8 +373,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 320,
-              "filename": "location.es6" } ],
+          [ { "lineno": 236,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Directs the browser to navigate to the specified URL.",
             "description":
@@ -497,8 +497,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 420,
-              "filename": "location.es6" } ],
+          [ { "lineno": 306,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Handles location change events.",
             "links": [],
@@ -510,8 +510,8 @@
   "messages":
     [ { "name": "Location",
         "locations":
-          [ { "lineno": 413,
-              "filename": "location.es6" } ],
+          [ { "lineno": 299,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "An object containing information about a location.",
             "links": [],
@@ -574,8 +574,8 @@
           [ "removed" ] },
       { "name": "QueryObject",
         "locations":
-          [ { "lineno": 244,
-              "filename": "location.es6" } ],
+          [ { "lineno": 187,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Set of key-value pairs for query parameters and their values.",
             "links": [],

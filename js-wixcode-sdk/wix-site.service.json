@@ -2,8 +2,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 11,
-      "filename": "site.es6" },
+    { "lineno": 1,
+      "filename": "site.js" },
   "docs":
     { "summary": "The wix-site module contains functionality for obtaining information about your site and its pages.",
       "description":
@@ -25,8 +25,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 216,
-              "filename": "site.es6" } ],
+          [ { "lineno": 158,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Gets a code representing the site's currency.",
             "description":
@@ -58,8 +58,8 @@
           [ "wix-site.StructurePage",
             "wix-site.StructureLightbox" ],
         "locations":
-          [ { "lineno": 144,
-              "filename": "site.es6" } ],
+          [ { "lineno": 113,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Gets information about the current page or lightbox.",
             "links":
@@ -109,8 +109,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 195,
-              "filename": "site.es6" } ],
+          [ { "lineno": 140,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Gets a code representing the site's language.",
             "description":
@@ -142,8 +142,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 176,
-              "filename": "site.es6" } ],
+          [ { "lineno": 124,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Gets the site's regional settings.",
             "description":
@@ -173,8 +173,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 254,
-              "filename": "site.es6" } ],
+          [ { "lineno": 190,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Gets the site revision ID.",
             "description":
@@ -214,8 +214,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 235,
-              "filename": "site.es6" } ],
+          [ { "lineno": 174,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Gets the site's timezone.",
             "description":
@@ -248,8 +248,8 @@
           { "type": "wix-site.SiteStructure",
             "doc": "An object that contains information about the site's pages, prefixes, and lightboxes." },
         "locations":
-          [ { "lineno": 127,
-              "filename": "site.es6" } ],
+          [ { "lineno": 99,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Returns information about the site's pages, prefixes, and lightboxes.",
             "description":
@@ -417,8 +417,8 @@
           { "type": "wix-site.PrefetchResult",
             "doc": "Results of a prefetch." },
         "locations":
-          [ { "lineno": 319,
-              "filename": "site.es6" } ],
+          [ { "lineno": 252,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Optimizes resource fetching of pages and lightboxes in the site so they will load faster.",
             "description":
@@ -499,8 +499,8 @@
                         [ "wix-router.WixRouterSitemapEntry" ] } ] },
             "doc": "Fulfilled - A list of sitemap entries.\nRejected - The error that caused the rejection." },
         "locations":
-          [ { "lineno": 98,
-              "filename": "site.es6" } ],
+          [ { "lineno": 81,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "Returns the sitemap for a router or dynamic page prefix.",
             "description":
@@ -571,8 +571,8 @@
   "messages":
     [ { "name": "PrefetchItems",
         "locations":
-          [ { "lineno": 282,
-              "filename": "site.es6" } ],
+          [ { "lineno": 215,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "An object that contains information about which pages and lightboxes to\n prefetch resources for.",
             "links":
@@ -620,8 +620,8 @@
         "labels": [] },
       { "name": "PrefetchResult",
         "locations":
-          [ { "lineno": 299,
-              "filename": "site.es6" } ],
+          [ { "lineno": 232,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "An object that is returned from a prefetch request.",
             "links":
@@ -665,8 +665,8 @@
         "labels": [] },
       { "name": "PrefetchResultError",
         "locations":
-          [ { "lineno": 309,
-              "filename": "site.es6" } ],
+          [ { "lineno": 242,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "An object that is returned when a resource prefetch is unsuccessful.",
             "links":
@@ -716,8 +716,8 @@
         "labels": [] },
       { "name": "Prefix",
         "locations":
-          [ { "lineno": 55,
-              "filename": "site.es6" } ],
+          [ { "lineno": 45,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "An object that contains information about the site's prefixes.",
             "links":
@@ -807,8 +807,8 @@
         "labels": [] },
       { "name": "SiteStructure",
         "locations":
-          [ { "lineno": 24,
-              "filename": "site.es6" } ],
+          [ { "lineno": 14,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "An object that contains information about the site's pages, prefixes, and lightboxes.",
             "links":
@@ -984,8 +984,8 @@
         "labels": [] },
       { "name": "StructureLightbox",
         "locations":
-          [ { "lineno": 78,
-              "filename": "site.es6" } ],
+          [ { "lineno": 68,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "An object that contains information about a lightbox on the site.",
             "links":
@@ -1040,8 +1040,8 @@
         "labels": [] },
       { "name": "StructurePage",
         "locations":
-          [ { "lineno": 38,
-              "filename": "site.es6" } ],
+          [ { "lineno": 28,
+              "filename": "site.js" } ],
         "docs":
           { "summary": "An object that contains information about a page on the site.",
             "links":

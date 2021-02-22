@@ -8,8 +8,8 @@
       "$w.ContainableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 7,
-      "filename": "Column.es6" },
+    { "lineno": 1,
+      "filename": "Column.js" },
   "docs":
     { "summary": "A `Column` is a component part of a `ColumnStrip`.",
       "links": [],

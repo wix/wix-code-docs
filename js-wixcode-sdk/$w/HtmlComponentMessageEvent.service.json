@@ -4,8 +4,8 @@
     [ "$w.Event" ],
   "labels": [],
   "location":
-    { "lineno": 14,
-      "filename": "HtmlComponentMessageEvent.es6" },
+    { "lineno": 11,
+      "filename": "HtmlComponentMessageEvent.js" },
   "docs":
     { "summary": "Event that is fired when the code in an HtmlComponent sends a message.",
       "links": [],
@@ -19,8 +19,8 @@
         "set": false,
         "type": "*",
         "locations":
-          [ { "lineno": 26,
-              "filename": "HtmlComponentMessageEvent.es6" } ],
+          [ { "lineno": 18,
+              "filename": "HtmlComponentMessageEvent.js" } ],
         "docs":
           { "summary": "Gets the event data.",
             "links": [],

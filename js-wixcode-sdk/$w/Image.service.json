@@ -7,8 +7,8 @@
       "$w.ClickableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 8,
-      "filename": "Image.es6" },
+    { "lineno": 1,
+      "filename": "Image.js" },
   "docs":
     { "summary": "Images are images stored in the [Media Manager](https://support.wix.com/en/article/about-the-media-manager)\n or retrieved from an external web location.",
       "description":
@@ -28,10 +28,10 @@
         "type": "string",
         "defaultValue": "An empty string",
         "locations":
-          [ { "lineno": 28,
-              "filename": "Image.es6" },
-            { "lineno": 64,
-              "filename": "Image.es6" } ],
+          [ { "lineno": 21,
+              "filename": "Image.js" },
+            { "lineno": 43,
+              "filename": "Image.js" } ],
         "docs":
           { "summary": "Sets or gets an image's alt text.",
             "description":
@@ -65,10 +65,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 169,
-              "filename": "Image.es6" },
-            { "lineno": 198,
-              "filename": "Image.es6" } ],
+          [ { "lineno": 106,
+              "filename": "Image.js" },
+            { "lineno": 132,
+              "filename": "Image.js" } ],
         "docs":
           { "summary": "Sets or gets the action that occurs when an image is clicked.",
             "description":
@@ -109,10 +109,10 @@
         "type": "string",
         "defaultValue": "\"fill\"",
         "locations":
-          [ { "lineno": 207,
-              "filename": "Image.es6" },
-            { "lineno": 259,
-              "filename": "Image.es6" } ],
+          [ { "lineno": 138,
+              "filename": "Image.js" },
+            { "lineno": 185,
+              "filename": "Image.js" } ],
         "docs":
           { "summary": "Sets or gets how an image is placed inside an image element.",
             "description":
@@ -173,10 +173,10 @@
         "type": "string",
         "defaultValue": "An empty string",
         "locations":
-          [ { "lineno": 118,
-              "filename": "Image.es6" },
-            { "lineno": 153,
-              "filename": "Image.es6" } ],
+          [ { "lineno": 72,
+              "filename": "Image.js" },
+            { "lineno": 100,
+              "filename": "Image.js" } ],
         "docs":
           { "summary": "Sets or gets the file location of the image.",
             "description":
@@ -222,10 +222,10 @@
         "type": "string",
         "defaultValue": "An empty string",
         "locations":
-          [ { "lineno": 80,
-              "filename": "Image.es6" },
-            { "lineno": 102,
-              "filename": "Image.es6" } ],
+          [ { "lineno": 49,
+              "filename": "Image.js" },
+            { "lineno": 66,
+              "filename": "Image.js" } ],
         "docs":
           { "summary": "Sets or gets an image's tooltip.",
             "description":

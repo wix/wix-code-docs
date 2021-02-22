@@ -12,8 +12,8 @@
       "$w.RequiredMixin" ],
   "labels": [],
   "location":
-    { "lineno": 14,
-      "filename": "TextBox.es6" },
+    { "lineno": 1,
+      "filename": "TextBox.js" },
   "docs":
     { "summary": "An input element for capturing large amounts of text.",
       "links": [],
@@ -27,8 +27,8 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 128,
-              "filename": "TextBox.es6" } ],
+          [ { "lineno": 89,
+              "filename": "TextBox.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the text box's styles.",
             "description":
@@ -66,10 +66,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 34,
-              "filename": "TextBox.es6" },
-            { "lineno": 65,
-              "filename": "TextBox.es6" } ],
+          [ { "lineno": 20,
+              "filename": "TextBox.js" },
+            { "lineno": 51,
+              "filename": "TextBox.js" } ],
         "docs":
           { "summary": "Sets or gets a text input's value.",
             "description":
@@ -112,10 +112,10 @@
         "type": "string",
         "defaultValue": "\"soft\"",
         "locations":
-          [ { "lineno": 72,
-              "filename": "TextBox.es6" },
-            { "lineno": 103,
-              "filename": "TextBox.es6" } ],
+          [ { "lineno": 57,
+              "filename": "TextBox.js" },
+            { "lineno": 83,
+              "filename": "TextBox.js" } ],
         "docs":
           { "summary": "Determines if the text contains line breaks when its value is read.",
             "description":

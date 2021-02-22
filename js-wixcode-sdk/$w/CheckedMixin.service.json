@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 7,
-      "filename": "CheckedMixin.es6" },
+    { "lineno": 1,
+      "filename": "CheckedMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that can be checked.",
       "description":
@@ -40,10 +40,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 36,
-              "filename": "CheckedMixin.es6" },
-            { "lineno": 53,
-              "filename": "CheckedMixin.es6" } ],
+          [ { "lineno": 29,
+              "filename": "CheckedMixin.js" },
+            { "lineno": 43,
+              "filename": "CheckedMixin.js" } ],
         "docs":
           { "summary": "Sets or gets whether the element is checked or not.",
             "links": [],

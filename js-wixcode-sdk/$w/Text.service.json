@@ -6,8 +6,8 @@
       "$w.ClickableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 110,
-      "filename": "Text.es6" },
+    { "lineno": 1,
+      "filename": "Text.js" },
   "docs":
     { "summary": "Provides functionality for text elements.",
       "description":
@@ -97,10 +97,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 201,
-              "filename": "Text.es6" },
-            { "lineno": 239,
-              "filename": "Text.es6" } ],
+          [ { "lineno": 92,
+              "filename": "Text.js" },
+            { "lineno": 123,
+              "filename": "Text.js" } ],
         "docs":
           { "summary": "Sets or gets the contents of a text element using standard HTML.",
             "description":
@@ -142,10 +142,10 @@
         "type": "string",
         "defaultValue": "An empty string",
         "locations":
-          [ { "lineno": 263,
-              "filename": "Text.es6" },
-            { "lineno": 309,
-              "filename": "Text.es6" } ],
+          [ { "lineno": 129,
+              "filename": "Text.js" },
+            { "lineno": 157,
+              "filename": "Text.js" } ],
         "docs":
           { "summary": "Sets or gets the plain-text contents of a text element.",
             "description":

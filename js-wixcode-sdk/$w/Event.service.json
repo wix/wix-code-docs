@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 13,
-      "filename": "WixEvent.es6" },
+    { "lineno": 11,
+      "filename": "WixEvent.js" },
   "docs":
     { "summary": "Events are fired when certain actions occur to elements.",
       "description":
@@ -51,8 +51,8 @@
         "set": false,
         "type": "$w.Event.EventContext",
         "locations":
-          [ { "lineno": 89,
-              "filename": "WixEvent.es6" } ],
+          [ { "lineno": 81,
+              "filename": "WixEvent.js" } ],
         "docs":
           { "summary": "Gets the context in which an event was fired.",
             "description":
@@ -95,8 +95,8 @@
         "set": false,
         "type": "$w.Element",
         "locations":
-          [ { "lineno": 59,
-              "filename": "WixEvent.es6" } ],
+          [ { "lineno": 51,
+              "filename": "WixEvent.js" } ],
         "docs":
           { "summary": "Gets the element that the event was fired on.",
             "links": [],
@@ -118,8 +118,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 68,
-              "filename": "WixEvent.es6" } ],
+          [ { "lineno": 60,
+              "filename": "WixEvent.js" } ],
         "docs":
           { "summary": "Gets the type of event that was fired.",
             "links": [],
@@ -140,8 +140,8 @@
   "messages":
     [ { "name": "EventContext",
         "locations":
-          [ { "lineno": 77,
-              "filename": "WixEvent.es6" } ],
+          [ { "lineno": 69,
+              "filename": "WixEvent.js" } ],
         "docs":
           { "summary": "An object that contains information about the context in which an event was fired.",
             "links":

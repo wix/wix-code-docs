@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 8,
-      "filename": "PlayableMixin.es6" },
+    { "lineno": 1,
+      "filename": "PlayableMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that can be played.",
       "description":
@@ -40,8 +40,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 72,
-              "filename": "PlayableMixin.es6" } ],
+          [ { "lineno": 30,
+              "filename": "PlayableMixin.js" } ],
         "docs":
           { "summary": "Indicates if the element is currently playing.",
             "description":
@@ -85,8 +85,8 @@
                   [ "$w.Element" ] },
             "doc": "Fulfilled - The newly displayed image or slide." },
         "locations":
-          [ { "lineno": 270,
-              "filename": "PlayableMixin.es6" } ],
+          [ { "lineno": 171,
+              "filename": "PlayableMixin.js" } ],
         "docs":
           { "summary": "Moves to the next item.",
             "description":
@@ -137,8 +137,8 @@
                 "$w.Slideshow" ],
             "doc": "The gallery or slideshow that triggered the event." },
         "locations":
-          [ { "lineno": 102,
-              "filename": "PlayableMixin.es6" } ],
+          [ { "lineno": 51,
+              "filename": "PlayableMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when playback is paused.",
             "description":
@@ -186,8 +186,8 @@
                 "$w.Slideshow" ],
             "doc": "The gallery or slideshow that triggered the event." },
         "locations":
-          [ { "lineno": 154,
-              "filename": "PlayableMixin.es6" } ],
+          [ { "lineno": 85,
+              "filename": "PlayableMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when playback is started or restarted.",
             "description":
@@ -229,8 +229,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 206,
-              "filename": "PlayableMixin.es6" } ],
+          [ { "lineno": 119,
+              "filename": "PlayableMixin.js" } ],
         "docs":
           { "summary": "Pauses playback.",
             "description":
@@ -277,8 +277,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 238,
-              "filename": "PlayableMixin.es6" } ],
+          [ { "lineno": 145,
+              "filename": "PlayableMixin.js" } ],
         "docs":
           { "summary": "Begins or resumes playback.",
             "description":
@@ -329,8 +329,8 @@
                   [ "$w.Element" ] },
             "doc": "Fulfilled - The newly displayed image or slide." },
         "locations":
-          [ { "lineno": 310,
-              "filename": "PlayableMixin.es6" } ],
+          [ { "lineno": 199,
+              "filename": "PlayableMixin.js" } ],
         "docs":
           { "summary": "Moves to the previous image or slide.",
             "description":

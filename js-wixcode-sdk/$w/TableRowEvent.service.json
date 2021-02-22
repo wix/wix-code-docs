@@ -4,8 +4,8 @@
     [ "$w.Event" ],
   "labels": [],
   "location":
-    { "lineno": 24,
-      "filename": "TableRowEvent.es6" },
+    { "lineno": 11,
+      "filename": "TableRowEvent.js" },
   "docs":
     { "summary": "Event that is fired when a table row is selected.",
       "description":
@@ -25,8 +25,8 @@
         "set": false,
         "type": "Object",
         "locations":
-          [ { "lineno": 57,
-              "filename": "TableRowEvent.es6" } ],
+          [ { "lineno": 36,
+              "filename": "TableRowEvent.js" } ],
         "docs":
           { "summary": "Gets the data for the selected row.",
             "description":
@@ -93,8 +93,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 43,
-              "filename": "TableRowEvent.es6" } ],
+          [ { "lineno": 23,
+              "filename": "TableRowEvent.js" } ],
         "docs":
           { "summary": "Gets the index of the selected row.",
             "description":

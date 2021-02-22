@@ -5,8 +5,8 @@
       "$w.HiddenCollapsedMixin" ],
   "labels": [],
   "location":
-    { "lineno": 6,
-      "filename": "HiddenCollapsedElement.es6" },
+    { "lineno": 1,
+      "filename": "HiddenCollapsedElement.js" },
   "docs":
     { "summary": "Provides functionality for all elements that can be hidden or collapsed.",
       "description":

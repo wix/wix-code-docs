@@ -8,8 +8,8 @@
       "$w.ContainableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 7,
-      "filename": "Container.es6" },
+    { "lineno": 1,
+      "filename": "Container.js" },
   "docs":
     { "summary": "A container for Repeater items.",
       "links": [],

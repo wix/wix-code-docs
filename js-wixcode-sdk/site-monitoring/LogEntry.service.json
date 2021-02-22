@@ -4,7 +4,7 @@
   "labels": [],
   "location":
     { "lineno": 67,
-      "filename": "siteMonitoring.es6" },
+      "filename": "siteMonitoring.js" },
   "docs":
     { "summary": "A single record of a Wix site event in JSON format.",
       "description":
@@ -57,7 +57,7 @@
         "type": "string",
         "locations":
           [ { "lineno": 153,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Unique identifier for the log entry.",
             "description":
@@ -86,7 +86,7 @@
         "type": "site-monitoring.LogEntry.LogEntryJsonPayload",
         "locations":
           [ { "lineno": 211,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Payload of the log entry in JSON format.",
             "links": [],
@@ -115,7 +115,7 @@
         "type": "site-monitoring.LogEntry.LogEntryLabels",
         "locations":
           [ { "lineno": 165,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Additional information about the log entry.",
             "links": [],
@@ -148,7 +148,7 @@
         "type": "site-monitoring.LogEntry.LogEntryOperation",
         "locations":
           [ { "lineno": 175,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Additional information about a potentially long-running operation associated with the log entry.",
             "description":
@@ -215,7 +215,7 @@
         "type": "string",
         "locations":
           [ { "lineno": 123,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Time the log entry was received by site monitoring.",
             "description":
@@ -244,7 +244,7 @@
         "type": "string",
         "locations":
           [ { "lineno": 136,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Severity of the log entry.",
             "description":
@@ -288,7 +288,7 @@
         "type": "site-monitoring.LogEntry.LogEntrySourceLocation",
         "locations":
           [ { "lineno": 196,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Source code location information associated with the log entry.",
             "description":
@@ -336,7 +336,7 @@
         "type": "string",
         "locations":
           [ { "lineno": 111,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Time the site event occurred.",
             "description":
@@ -364,7 +364,7 @@
     [ { "name": "LogEntryJsonPayload",
         "locations":
           [ { "lineno": 255,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Payload of the log entry in JSON format.",
             "links": [],
@@ -394,7 +394,7 @@
       { "name": "LogEntryLabels",
         "locations":
           [ { "lineno": 221,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Additional information about the log entry.",
             "links": [],
@@ -440,7 +440,7 @@
       { "name": "LogEntryOperation",
         "locations":
           [ { "lineno": 236,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Additional information about a potentially long-running operation associated with the log entry.",
             "links": [],
@@ -502,7 +502,7 @@
       { "name": "LogEntrySourceLocation",
         "locations":
           [ { "lineno": 246,
-              "filename": "siteMonitoring.es6" } ],
+              "filename": "siteMonitoring.js" } ],
         "docs":
           { "summary": "Source code location information associated with the log entry. Currently only applicable for backend log entries with the `Corvid` namespace.",
             "links": [],

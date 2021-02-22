@@ -4,8 +4,8 @@
     [ "$w.Event" ],
   "labels": [],
   "location":
-    { "lineno": 24,
-      "filename": "TableCellEvent.es6" },
+    { "lineno": 11,
+      "filename": "TableCellEvent.js" },
   "docs":
     { "summary": "Event that is fired when a table cell is selected.",
       "description":
@@ -25,8 +25,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 58,
-              "filename": "TableCellEvent.es6" } ],
+          [ { "lineno": 36,
+              "filename": "TableCellEvent.js" } ],
         "docs":
           { "summary": "Gets the column ID of the selected cell.",
             "description":
@@ -54,8 +54,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 72,
-              "filename": "TableCellEvent.es6" } ],
+          [ { "lineno": 49,
+              "filename": "TableCellEvent.js" } ],
         "docs":
           { "summary": "Gets the data from the selected cell.",
             "links": [],
@@ -79,8 +79,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 44,
-              "filename": "TableCellEvent.es6" } ],
+          [ { "lineno": 23,
+              "filename": "TableCellEvent.js" } ],
         "docs":
           { "summary": "Gets the row index of the selected cell.",
             "description":

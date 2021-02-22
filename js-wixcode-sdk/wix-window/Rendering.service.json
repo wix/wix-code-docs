@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 284,
-      "filename": "window.es6" },
+    { "lineno": 155,
+      "filename": "window.js" },
   "docs":
     { "summary": "The Rendering API is used to control when code is run as a page is being loaded.",
       "description":
@@ -32,8 +32,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 203,
-              "filename": "window.es6" } ],
+          [ { "lineno": 105,
+              "filename": "window.js" } ],
         "docs":
           { "summary": "Gets the current environment the rendering process is running in.",
             "description":
@@ -83,8 +83,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 188,
-              "filename": "window.es6" } ],
+          [ { "lineno": 93,
+              "filename": "window.js" } ],
         "docs":
           { "summary": "**Deprecated:** Gets the current cycle in the rendering process.",
             "description":
@@ -106,8 +106,8 @@
             "string",
             "Object" ],
         "locations":
-          [ { "lineno": 235,
-              "filename": "window.es6" } ],
+          [ { "lineno": 131,
+              "filename": "window.js" } ],
         "docs":
           { "summary": "**Deprecated:** Gets data sent from server-side code to client-side code.",
             "description":

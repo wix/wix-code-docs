@@ -8,8 +8,8 @@
       "$w.StyleMixin" ],
   "labels": [],
   "location":
-    { "lineno": 8,
-      "filename": "Form.es6" },
+    { "lineno": 1,
+      "filename": "Form.js" },
   "docs":
     { "summary": "A container for the input elements and buttons in a `WixForms` `$w` element.",
       "description":
@@ -34,8 +34,8 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 33,
-              "filename": "Form.es6" } ],
+          [ { "lineno": 25,
+              "filename": "Form.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the styles of the form.",
             "description":

@@ -6,8 +6,8 @@
       "$w.ClickableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 123,
-      "filename": "Table.es6" },
+    { "lineno": 1,
+      "filename": "Table.js" },
   "docs":
     { "summary": "A table for displaying data.",
       "links": [],
@@ -24,10 +24,10 @@
             "typeParams":
               [ "$w.Table.Column" ] },
         "locations":
-          [ { "lineno": 383,
-              "filename": "Table.es6" },
-            { "lineno": 416,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 112,
+              "filename": "Table.js" },
+            { "lineno": 142,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Sets or gets the defining properties of the columns in a table.",
             "description":
@@ -119,10 +119,10 @@
         "set": true,
         "type": "Function",
         "locations":
-          [ { "lineno": 473,
-              "filename": "Table.es6" },
-            { "lineno": 508,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 148,
+              "filename": "Table.js" },
+            { "lineno": 154,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Sets the function that is called when a new page of table data is to be displayed.",
             "description":
@@ -229,10 +229,10 @@
         "set": true,
         "type": "$w.Table.PaginationOptions",
         "locations":
-          [ { "lineno": 298,
-              "filename": "Table.es6" },
-            { "lineno": 319,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 43,
+              "filename": "Table.js" },
+            { "lineno": 61,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Sets or gets the table's pagination options.",
             "description":
@@ -270,10 +270,10 @@
             "typeParams":
               [ "Object" ] },
         "locations":
-          [ { "lineno": 566,
-              "filename": "Table.es6" },
-            { "lineno": 606,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 209,
+              "filename": "Table.js" },
+            { "lineno": 215,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Sets or gets the table's row data.",
             "description":
@@ -479,8 +479,8 @@
           { "type": "$w.Table",
             "doc": "The table that triggered the event." },
         "locations":
-          [ { "lineno": 763,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 343,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when a table cell is selected.",
             "description":
@@ -518,8 +518,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 731,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 324,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the table's data is changed.",
             "description":
@@ -554,8 +554,8 @@
           { "type": "$w.Table",
             "doc": "The table that triggered the event." },
         "locations":
-          [ { "lineno": 798,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 365,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when a table row is selected.",
             "description":
@@ -619,8 +619,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 713,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 317,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Fetches the most current data and updates the table.",
             "links": [],
@@ -644,8 +644,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 834,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 388,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Selects a table row by index.",
             "description":
@@ -675,8 +675,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 868,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 399,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "Updates a the row data of a single row at the specified index.",
             "description":
@@ -706,8 +706,8 @@
   "messages":
     [ { "name": "Column",
         "locations":
-          [ { "lineno": 338,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 67,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "An object used by the `columns` property that\n contains the properties that define a table column. Table columns do not\n store any data.",
             "links":
@@ -828,8 +828,8 @@
         "labels": [] },
       { "name": "PaginationOptions",
         "locations":
-          [ { "lineno": 276,
-              "filename": "Table.es6" } ],
+          [ { "lineno": 21,
+              "filename": "Table.js" } ],
         "docs":
           { "summary": "An object used by the `pagination` property that\ncontains the pagination options which determine if and how the table\nis paginated.",
             "links":

@@ -2,8 +2,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 28,
-      "filename": "Storage.es6" },
+    { "lineno": 1,
+      "filename": "Storage.js" },
   "docs":
     { "summary": "The wix-storage module contains functionality for the persistent\n storage of key/value data in the site visitor's browser.",
       "description":
@@ -53,8 +53,8 @@
         "set": false,
         "type": "wix-storage.Storage",
         "locations":
-          [ { "lineno": 70,
-              "filename": "Storage.es6" } ],
+          [ { "lineno": 43,
+              "filename": "Storage.js" } ],
         "docs":
           { "summary": "Used for local storage of data.",
             "description":
@@ -107,8 +107,8 @@
         "set": false,
         "type": "wix-storage.Storage",
         "locations":
-          [ { "lineno": 82,
-              "filename": "Storage.es6" } ],
+          [ { "lineno": 55,
+              "filename": "Storage.js" } ],
         "docs":
           { "summary": "Used for memory storage of data.",
             "description":
@@ -161,8 +161,8 @@
         "set": false,
         "type": "wix-storage.Storage",
         "locations":
-          [ { "lineno": 94,
-              "filename": "Storage.es6" } ],
+          [ { "lineno": 67,
+              "filename": "Storage.js" } ],
         "docs":
           { "summary": "Used for session storage of data.",
             "description":

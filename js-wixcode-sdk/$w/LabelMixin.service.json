@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 5,
-      "filename": "LabelMixin.es6" },
+    { "lineno": 1,
+      "filename": "LabelMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that have a label.",
       "description":
@@ -41,10 +41,10 @@
         "type": "string",
         "defaultValue": "Empty string",
         "locations":
-          [ { "lineno": 34,
-              "filename": "LabelMixin.es6" },
-            { "lineno": 54,
-              "filename": "LabelMixin.es6" } ],
+          [ { "lineno": 30,
+              "filename": "LabelMixin.js" },
+            { "lineno": 45,
+              "filename": "LabelMixin.js" } ],
         "docs":
           { "summary": "Sets or gets the label of an element.",
             "links": [],

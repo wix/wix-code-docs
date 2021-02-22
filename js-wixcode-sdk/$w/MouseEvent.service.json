@@ -4,8 +4,8 @@
     [ "$w.Event" ],
   "labels": [],
   "location":
-    { "lineno": 14,
-      "filename": "MouseEvent.es6" },
+    { "lineno": 11,
+      "filename": "MouseEvent.js" },
   "docs":
     { "summary": "Event that is fired when the mouse is clicked.",
       "description":
@@ -28,8 +28,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 118,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 99,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Gets the distance in pixels between the mouse pointer and the\n left edge of the browser's viewable area.",
             "description":
@@ -68,8 +68,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 138,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 118,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Gets the distance in pixels between the mouse pointer and the\n top edge of the browser's viewable area.",
             "description":
@@ -108,8 +108,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 158,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 137,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Gets the distance in pixels between the mouse pointer and the\n left edge of the element that triggered this event.",
             "description":
@@ -145,8 +145,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 176,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 154,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Gets the distance in pixels between the mouse pointer and the\n top edge of the element that triggered this event.",
             "description":
@@ -182,8 +182,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 43,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 27,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Gets the distance in pixels between the mouse pointer and the\n left edge of the page.",
             "description":
@@ -221,8 +221,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 61,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 45,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Gets the distance in pixels between the mouse pointer and the\n top edge of the page.",
             "description":
@@ -260,8 +260,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 80,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 63,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Gets the distance in pixels between the mouse pointer and the\n left edge of the screen or screens.",
             "description":
@@ -299,8 +299,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 99,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 81,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Gets the distance in pixels between the mouse pointer and the\n top edge of the screen or screens.",
             "description":

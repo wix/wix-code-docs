@@ -5,8 +5,8 @@
       "$w.HiddenCollapsedMixin" ],
   "labels": [],
   "location":
-    { "lineno": 9,
-      "filename": "Video.es6" },
+    { "lineno": 1,
+      "filename": "Video.js" },
   "docs":
     { "summary": "An element that displays a video.",
       "description":
@@ -23,10 +23,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 25,
-              "filename": "Video.es6" },
-            { "lineno": 50,
-              "filename": "Video.es6" } ],
+          [ { "lineno": 16,
+              "filename": "Video.js" },
+            { "lineno": 22,
+              "filename": "Video.js" } ],
         "docs":
           { "summary": "Sets or gets the URL of the video.",
             "description":

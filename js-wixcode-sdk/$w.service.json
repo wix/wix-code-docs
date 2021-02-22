@@ -2,8 +2,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 28,
-      "filename": "wixCode.es6" },
+    { "lineno": 1,
+      "filename": "wixCode.js" },
   "docs":
     { "summary": "The `$w` namespace contains everything you need in order to work\n with your site's components.",
       "description":
@@ -40,8 +40,8 @@
                     [ "$w.Element" ] } ],
             "doc": "A single selected element or an array of selected elements." },
         "locations":
-          [ { "lineno": 47,
-              "filename": "wixCode.es6" } ],
+          [ { "lineno": 20,
+              "filename": "wixCode.js" } ],
         "docs":
           { "summary": "Selects and returns elements from a page.",
             "description":
@@ -115,8 +115,8 @@
           { "type": "$w.$w",
             "doc": "A selector function for the given context." },
         "locations":
-          [ { "lineno": 147,
-              "filename": "wixCode.es6" } ],
+          [ { "lineno": 119,
+              "filename": "wixCode.js" } ],
         "docs":
           { "summary": "Gets a selector function for a specific context.",
             "description":
@@ -151,8 +151,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 93,
-              "filename": "wixCode.es6" } ],
+          [ { "lineno": 65,
+              "filename": "wixCode.js" } ],
         "docs":
           { "summary": "Sets the function that runs when all the page elements have finished loading.",
             "description":
@@ -284,8 +284,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 3,
-              "filename": "WixEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "WixEvent.js" } ],
         "docs":
           { "description":
               [ "Handles events." ],
@@ -311,8 +311,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 619,
-              "filename": "Repeater.es6" } ],
+          [ { "lineno": 398,
+              "filename": "Repeater.js" } ],
         "docs":
           { "description":
               [ "Runs for items in a repeater." ],
@@ -335,8 +335,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 20,
-              "filename": "GalleryItemChangedEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "GalleryItemChangedEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when a gallery moves to a new image.",
             "links": [],
@@ -358,8 +358,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 3,
-              "filename": "GalleryItemClickedEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "GalleryItemClickedEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when an image in a gallery is clicked.",
             "links": [],
@@ -404,8 +404,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 4,
-              "filename": "HtmlComponentMessageEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "HtmlComponentMessageEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when the code in an HtmlComponent sends a message.",
             "links": [],
@@ -427,8 +427,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 7,
-              "filename": "HtmlComponent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "HtmlComponent.js" } ],
         "docs":
           { "description":
               [ "Handles events fired when a message is received from an HTML",
@@ -449,8 +449,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 3,
-              "filename": "IconMouseInEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "IconMouseInEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when a user hovers over a star on the rating component.",
             "links": [],
@@ -475,8 +475,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 464,
-              "filename": "Repeater.es6" } ],
+          [ { "lineno": 291,
+              "filename": "Repeater.js" } ],
         "docs":
           { "description":
               [ "Handles repeater item ready events." ],
@@ -496,8 +496,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 574,
-              "filename": "Repeater.es6" } ],
+          [ { "lineno": 371,
+              "filename": "Repeater.js" } ],
         "docs":
           { "description":
               [ "Handles repeater item removed events." ],
@@ -520,8 +520,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 4,
-              "filename": "KeyboardEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "KeyboardEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when the keyboard is pressed.",
             "links": [],
@@ -543,8 +543,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 4,
-              "filename": "MouseEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "MouseEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when the mouse is clicked.",
             "links": [],
@@ -566,8 +566,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 4,
-              "filename": "QuickActionBarItemClickedEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "QuickActionBarItemClickedEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when an item in a quick action bar is clicked.",
             "links": [],
@@ -587,8 +587,8 @@
                     [ "void" ] },
                 "void" ] },
         "locations":
-          [ { "lineno": 85,
-              "filename": "wixCode.es6" } ],
+          [ { "lineno": 58,
+              "filename": "wixCode.js" } ],
         "docs":
           { "summary": "Function that runs when all page elements have finished loading.",
             "links": [],
@@ -610,8 +610,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 14,
-              "filename": "TableCellEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "TableCellEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when a table cell is selected.",
             "links": [],
@@ -633,8 +633,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 14,
-              "filename": "TableRowEvent.es6" } ],
+          [ { "lineno": 1,
+              "filename": "TableRowEvent.js" } ],
         "docs":
           { "summary": "Handles events fired when a table row is selected.",
             "links": [],
@@ -661,8 +661,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 158,
-              "filename": "ValidatableMixin.es6" } ],
+          [ { "lineno": 139,
+              "filename": "ValidatableMixin.js" } ],
         "docs":
           { "summary": "Function that runs when custom validation is checked.",
             "links": [],

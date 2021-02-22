@@ -12,8 +12,8 @@
       "$w.RequiredMixin" ],
   "labels": [],
   "location":
-    { "lineno": 16,
-      "filename": "TextInput.es6" },
+    { "lineno": 1,
+      "filename": "TextInput.js" },
   "docs":
     { "summary": "An input element for capturing small amounts of text.",
       "description":
@@ -30,10 +30,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 215,
-              "filename": "TextInput.es6" },
-            { "lineno": 257,
-              "filename": "TextInput.es6" } ],
+          [ { "lineno": 137,
+              "filename": "TextInput.js" },
+            { "lineno": 172,
+              "filename": "TextInput.js" } ],
         "docs":
           { "summary": "Sets or gets the input type of an Input element.",
             "description":
@@ -78,10 +78,10 @@
         "set": true,
         "type": "number",
         "locations":
-          [ { "lineno": 82,
-              "filename": "TextInput.es6" },
-            { "lineno": 119,
-              "filename": "TextInput.es6" } ],
+          [ { "lineno": 65,
+              "filename": "TextInput.js" },
+            { "lineno": 95,
+              "filename": "TextInput.js" } ],
         "docs":
           { "summary": "Sets or gets the maximum value for a text input element whose\n type is set to **Number**.",
             "description":
@@ -121,10 +121,10 @@
         "set": true,
         "type": "number",
         "locations":
-          [ { "lineno": 149,
-              "filename": "TextInput.es6" },
-            { "lineno": 185,
-              "filename": "TextInput.es6" } ],
+          [ { "lineno": 101,
+              "filename": "TextInput.js" },
+            { "lineno": 131,
+              "filename": "TextInput.js" } ],
         "docs":
           { "summary": "Sets or gets the minimum value for a text input element whose\n type is set to **Number**.",
             "description":
@@ -164,8 +164,8 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 333,
-              "filename": "TextInput.es6" } ],
+          [ { "lineno": 178,
+              "filename": "TextInput.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the text input's styles.",
             "description":
@@ -203,10 +203,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 39,
-              "filename": "TextInput.es6" },
-            { "lineno": 75,
-              "filename": "TextInput.es6" } ],
+          [ { "lineno": 23,
+              "filename": "TextInput.js" },
+            { "lineno": 59,
+              "filename": "TextInput.js" } ],
         "docs":
           { "summary": "Sets or gets a text input's value.",
             "description":

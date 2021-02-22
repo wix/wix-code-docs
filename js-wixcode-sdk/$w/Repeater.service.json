@@ -5,8 +5,8 @@
       "$w.HiddenCollapsedMixin" ],
   "labels": [],
   "location":
-    { "lineno": 110,
-      "filename": "Repeater.es6" },
+    { "lineno": 1,
+      "filename": "Repeater.js" },
   "docs":
     { "summary": "A repeating layout.",
       "description":
@@ -190,10 +190,10 @@
             "typeParams":
               [ "Object" ] },
         "locations":
-          [ { "lineno": 292,
-              "filename": "Repeater.es6" },
-            { "lineno": 400,
-              "filename": "Repeater.es6" } ],
+          [ { "lineno": 182,
+              "filename": "Repeater.js" },
+            { "lineno": 285,
+              "filename": "Repeater.js" } ],
         "docs":
           { "summary": "Sets or gets the repeater data.",
             "description":
@@ -491,8 +491,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 627,
-              "filename": "Repeater.es6" } ],
+          [ { "lineno": 406,
+              "filename": "Repeater.js" } ],
         "docs":
           { "summary": "Runs a function for each repeated item.",
             "description":
@@ -581,8 +581,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 697,
-              "filename": "Repeater.es6" } ],
+          [ { "lineno": 451,
+              "filename": "Repeater.js" } ],
         "docs":
           { "summary": "Runs a function for each repeated item with the given IDs.",
             "description":
@@ -649,8 +649,8 @@
           { "type": "$w.Repeater",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 472,
-              "filename": "Repeater.es6" } ],
+          [ { "lineno": 299,
+              "filename": "Repeater.js" } ],
         "docs":
           { "summary": "Sets the function that runs when a new repeated item is created.",
             "description":
@@ -776,8 +776,8 @@
           { "type": "$w.Repeater",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 580,
-              "filename": "Repeater.es6" } ],
+          [ { "lineno": 377,
+              "filename": "Repeater.js" } ],
         "docs":
           { "summary": "Sets the function that runs when a repeated item is removed.",
             "description":

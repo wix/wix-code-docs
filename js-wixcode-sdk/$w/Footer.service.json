@@ -7,8 +7,8 @@
       "$w.StyleMixin" ],
   "labels": [],
   "location":
-    { "lineno": 7,
-      "filename": "Footer.es6" },
+    { "lineno": 1,
+      "filename": "Footer.js" },
   "docs":
     { "summary": "The footer is the area of your site that appears at the bottom and\n throughout all of your pages.",
       "description":
@@ -38,8 +38,8 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 40,
-              "filename": "Footer.es6" } ],
+          [ { "lineno": 31,
+              "filename": "Footer.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the footer's styles.",
             "description":

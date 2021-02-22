@@ -6,8 +6,8 @@
       "$w.Background" ],
   "labels": [],
   "location":
-    { "lineno": 5,
-      "filename": "MediaBox.es6" },
+    { "lineno": 1,
+      "filename": "MediaBox.js" },
   "docs":
     { "summary": "A container for media items.",
       "links": [],

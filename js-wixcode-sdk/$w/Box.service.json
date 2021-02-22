@@ -8,8 +8,8 @@
       "$w.StyleMixin" ],
   "labels": [],
   "location":
-    { "lineno": 8,
-      "filename": "Box.es6" },
+    { "lineno": 1,
+      "filename": "Box.js" },
   "docs":
     { "summary": "Container [boxes](https://support.wix.com/en/article/container-boxes)\n are used to structure your site.",
       "description":
@@ -30,8 +30,8 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 32,
-              "filename": "Box.es6" } ],
+          [ { "lineno": 25,
+              "filename": "Box.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the box's styles.",
             "description":

@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 4,
-      "filename": "ViewportMixin.es6" },
+    { "lineno": 1,
+      "filename": "ViewportMixin.js" },
   "docs":
     { "summary": "Provides functionality for elements that can be scrolled into and out\n of view.",
       "description":
@@ -51,8 +51,8 @@
           { "type": "$w.Element",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 40,
-              "filename": "ViewportMixin.es6" } ],
+          [ { "lineno": 36,
+              "filename": "ViewportMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when an element is displayed\n in the viewable part of the current window.",
             "description":
@@ -95,8 +95,8 @@
           { "type": "$w.Element",
             "doc": "The element on which the event is now registered." },
         "locations":
-          [ { "lineno": 91,
-              "filename": "ViewportMixin.es6" } ],
+          [ { "lineno": 69,
+              "filename": "ViewportMixin.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when an element is no longer\n displayed in the viewable part of the current window.",
             "description":

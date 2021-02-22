@@ -2,11 +2,10 @@
   "memberOf": "$w",
   "mixes":
     [ "$w.Event" ],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
-    { "lineno": 14,
-      "filename": "KeyboardEvent.es6" },
+    { "lineno": 11,
+      "filename": "KeyboardEvent.js" },
   "docs":
     { "summary": "Event that is fired when the keyboard is pressed.",
       "description":
@@ -23,8 +22,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 51,
-              "filename": "KeyboardEvent.es6" } ],
+          [ { "lineno": 35,
+              "filename": "KeyboardEvent.js" } ],
         "docs":
           { "summary": "Indicates if the Option key on a Mac or Alt key on a PC was pressed.",
             "links": [],
@@ -54,14 +53,13 @@
         "extra":
           {  } },
       { "name": "ctrlKey",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 81,
-              "filename": "KeyboardEvent.es6" } ],
+          [ { "lineno": 63,
+              "filename": "KeyboardEvent.js" } ],
         "docs":
           { "summary": "Indicates if the Control (Ctrl) key was pressed.",
             "links": [],
@@ -96,8 +94,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 96,
-              "filename": "KeyboardEvent.es6" } ],
+          [ { "lineno": 77,
+              "filename": "KeyboardEvent.js" } ],
         "docs":
           { "summary": "Gets a string representation of the key that was pressed.",
             "description":
@@ -147,8 +145,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 36,
-              "filename": "KeyboardEvent.es6" } ],
+          [ { "lineno": 21,
+              "filename": "KeyboardEvent.js" } ],
         "docs":
           { "summary": "Indicates if the ⌘ Command key on a Mac or ⊞ Windows key on a PC was pressed.",
             "links": [],
@@ -178,14 +176,13 @@
         "extra":
           {  } },
       { "name": "shiftKey",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 66,
-              "filename": "KeyboardEvent.es6" } ],
+          [ { "lineno": 49,
+              "filename": "KeyboardEvent.js" } ],
         "docs":
           { "summary": "Indicates if the Shift key was pressed.",
             "links": [],

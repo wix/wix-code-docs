@@ -10,8 +10,8 @@
       "$w.RequiredMixin" ],
   "labels": [],
   "location":
-    { "lineno": 15,
-      "filename": "DatePicker.es6" },
+    { "lineno": 1,
+      "filename": "DatePicker.js" },
   "docs":
     { "summary": "A `DatePicker` is used for entering dates. It lets users populate a\n date field by picking a date using a calendar popup.",
       "links": [],
@@ -28,10 +28,10 @@
             "typeParams":
               [ "Date" ] },
         "locations":
-          [ { "lineno": 208,
-              "filename": "DatePicker.es6" },
-            { "lineno": 239,
-              "filename": "DatePicker.es6" } ],
+          [ { "lineno": 118,
+              "filename": "DatePicker.js" },
+            { "lineno": 142,
+              "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the dates that a user cannot select.",
             "description":
@@ -74,10 +74,10 @@
             "typeParams":
               [ "number" ] },
         "locations":
-          [ { "lineno": 273,
-              "filename": "DatePicker.es6" },
-            { "lineno": 306,
-              "filename": "DatePicker.es6" } ],
+          [ { "lineno": 148,
+              "filename": "DatePicker.js" },
+            { "lineno": 175,
+              "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the days of the week that a user cannot select.",
             "description":
@@ -118,10 +118,10 @@
         "type": "Date",
         "defaultValue": "undefined",
         "locations":
-          [ { "lineno": 97,
-              "filename": "DatePicker.es6" },
-            { "lineno": 131,
-              "filename": "DatePicker.es6" } ],
+          [ { "lineno": 53,
+              "filename": "DatePicker.js" },
+            { "lineno": 80,
+              "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the latest date that a user can select.",
             "description":
@@ -161,10 +161,10 @@
         "type": "Date",
         "defaultValue": "undefined",
         "locations":
-          [ { "lineno": 153,
-              "filename": "DatePicker.es6" },
-            { "lineno": 186,
-              "filename": "DatePicker.es6" } ],
+          [ { "lineno": 86,
+              "filename": "DatePicker.js" },
+            { "lineno": 112,
+              "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the earliest date that a user can select.",
             "description":
@@ -202,10 +202,10 @@
         "set": true,
         "type": "Date",
         "locations":
-          [ { "lineno": 34,
-              "filename": "DatePicker.es6" },
-            { "lineno": 68,
-              "filename": "DatePicker.es6" } ],
+          [ { "lineno": 19,
+              "filename": "DatePicker.js" },
+            { "lineno": 47,
+              "filename": "DatePicker.js" } ],
         "docs":
           { "summary": "Sets or gets the value of the date picker.\n> **Notes:**\n > + Changing a date picker's `value` in code does not trigger an `onChange` event.\n>\n>\n> + If a date picker is connected to a dataset, setting the date picker's `value`\n in code does not set the value of the connected field in the dataset.\n That means if you use the dataset to perform a submit, the value changed\n in code is not reflected in the submitted item.\n>\n>\n> + To submit the new value using a dataset, set the field's value using the\n [`setFieldValue()`](wix-dataset.html#setFieldValue) function before\n performing the submit.",
             "links": [],

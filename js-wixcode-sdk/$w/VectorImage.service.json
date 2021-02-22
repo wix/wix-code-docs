@@ -7,8 +7,8 @@
       "$w.ClickableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 9,
-      "filename": "VectorImage.es6" },
+    { "lineno": 1,
+      "filename": "VectorImage.js" },
   "docs":
     { "summary": "Vector images are digital illustrations based on geometric shapes.\n They maintain their high quality when resized.",
       "links": [],
@@ -23,10 +23,10 @@
         "type": "string",
         "defaultValue": "An empty string",
         "locations":
-          [ { "lineno": 27,
-              "filename": "VectorImage.es6" },
-            { "lineno": 71,
-              "filename": "VectorImage.es6" } ],
+          [ { "lineno": 18,
+              "filename": "VectorImage.js" },
+            { "lineno": 51,
+              "filename": "VectorImage.js" } ],
         "docs":
           { "summary": "Sets or gets the file location of the vector image.",
             "description":

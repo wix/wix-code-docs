@@ -4,8 +4,8 @@
     [ "$w.Event" ],
   "labels": [],
   "location":
-    { "lineno": 14,
-      "filename": "QuickActionBarItemClickedEvent.es6" },
+    { "lineno": 11,
+      "filename": "QuickActionBarItemClickedEvent.js" },
   "docs":
     { "summary": "Event that is fired when a quick action bar item is clicked.",
       "links": [],
@@ -19,8 +19,8 @@
         "set": false,
         "type": "$w.QuickActionBarItemClickedEvent.QuickActionBarItem",
         "locations":
-          [ { "lineno": 99,
-              "filename": "QuickActionBarItemClickedEvent.es6" } ],
+          [ { "lineno": 89,
+              "filename": "QuickActionBarItemClickedEvent.js" } ],
         "docs":
           { "summary": "Gets the gallery item.",
             "links": [],
@@ -44,8 +44,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 111,
-              "filename": "QuickActionBarItemClickedEvent.es6" } ],
+          [ { "lineno": 101,
+              "filename": "QuickActionBarItemClickedEvent.js" } ],
         "docs":
           { "summary": "Gets the quick action bar item's index.",
             "links": [],
@@ -66,8 +66,8 @@
   "messages":
     [ { "name": "QuickActionBarItem",
         "locations":
-          [ { "lineno": 28,
-              "filename": "QuickActionBarItemClickedEvent.es6" } ],
+          [ { "lineno": 18,
+              "filename": "QuickActionBarItemClickedEvent.js" } ],
         "docs":
           { "summary": "An object representing a quick action bar item.",
             "links": [],

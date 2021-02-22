@@ -7,8 +7,8 @@
       "$w.ContainableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 69,
-      "filename": "MultiStateBox.es6" },
+    { "lineno": 1,
+      "filename": "MultiStateBox.js" },
   "docs":
     { "summary": "Multi-state boxes are containers for states.",
       "description":
@@ -27,8 +27,8 @@
         "set": false,
         "type": "$w.State",
         "locations":
-          [ { "lineno": 127,
-              "filename": "MultiStateBox.es6" } ],
+          [ { "lineno": 41,
+              "filename": "MultiStateBox.js" } ],
         "docs":
           { "summary": "Gets the multi-state box's current state.",
             "links": [],
@@ -53,8 +53,8 @@
             "typeParams":
               [ "$w.State" ] },
         "locations":
-          [ { "lineno": 209,
-              "filename": "MultiStateBox.es6" } ],
+          [ { "lineno": 84,
+              "filename": "MultiStateBox.js" } ],
         "docs":
           { "summary": "Gets a list of all the states contained in the multi-state box.",
             "links": [],
@@ -85,8 +85,8 @@
                   [ "$w.State" ] },
             "doc": "Fulfilled - The state that the multi-state box changed to.\nRejected - Error message: If no argument was provided or the argument is not a string or an existing state." },
         "locations":
-          [ { "lineno": 152,
-              "filename": "MultiStateBox.es6" } ],
+          [ { "lineno": 54,
+              "filename": "MultiStateBox.js" } ],
         "docs":
           { "summary": "Change the multi-state box's current state to a specific state.",
             "description":
@@ -170,8 +170,8 @@
           { "type": "$w.MultiStateBox",
             "doc": "The multi-state box on which the event is now registered." },
         "locations":
-          [ { "lineno": 90,
-              "filename": "MultiStateBox.es6" } ],
+          [ { "lineno": 21,
+              "filename": "MultiStateBox.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the multi-state box moves to a new state.",
             "description":

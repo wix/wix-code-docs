@@ -4,8 +4,8 @@
     [ "$w.IFrame" ],
   "labels": [],
   "location":
-    { "lineno": 18,
-      "filename": "HtmlComponent.es6" },
+    { "lineno": 12,
+      "filename": "HtmlComponent.js" },
   "docs":
     { "summary": "A container for internal or external HTML code.",
       "description":
@@ -29,10 +29,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 88,
-              "filename": "HtmlComponent.es6" },
-            { "lineno": 113,
-              "filename": "HtmlComponent.es6" } ],
+          [ { "lineno": 63,
+              "filename": "HtmlComponent.js" },
+            { "lineno": 69,
+              "filename": "HtmlComponent.js" } ],
         "docs":
           { "summary": "Sets or gets whether the HTML Component displays scrollbars.",
             "description":
@@ -69,10 +69,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 42,
-              "filename": "HtmlComponent.es6" },
-            { "lineno": 61,
-              "filename": "HtmlComponent.es6" } ],
+          [ { "lineno": 33,
+              "filename": "HtmlComponent.js" },
+            { "lineno": 39,
+              "filename": "HtmlComponent.js" } ],
         "docs":
           { "summary": "Sets or gets the URL of the HTML Component's code.",
             "description":
@@ -110,8 +110,8 @@
         "ret":
           { "type": "$w.HtmlComponent" },
         "locations":
-          [ { "lineno": 305,
-              "filename": "HtmlComponent.es6" } ],
+          [ { "lineno": 217,
+              "filename": "HtmlComponent.js" } ],
         "docs":
           { "summary": "Allows the HTML Component to be put into full screen mode.",
             "description":
@@ -139,8 +139,8 @@
           { "type": "$w.HtmlComponent",
             "doc": "The HTML Code element that triggered the event." },
         "locations":
-          [ { "lineno": 235,
-              "filename": "HtmlComponent.es6" } ],
+          [ { "lineno": 164,
+              "filename": "HtmlComponent.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the HTML Component\n sends a message.",
             "description":
@@ -260,8 +260,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 145,
-              "filename": "HtmlComponent.es6" } ],
+          [ { "lineno": 95,
+              "filename": "HtmlComponent.js" } ],
         "docs":
           { "summary": "Sends a message to the HTML Component.",
             "description":

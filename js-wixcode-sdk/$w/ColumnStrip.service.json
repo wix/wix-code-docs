@@ -8,8 +8,8 @@
       "$w.ContainableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 11,
-      "filename": "ColumnStrip.es6" },
+    { "lineno": 1,
+      "filename": "ColumnStrip.js" },
   "docs":
     { "summary": "A `ColumnStrip` is a strip of `Column` elements.",
       "links": [],
@@ -23,8 +23,8 @@
         "set": false,
         "type": "$w.Document.BackgroundOptions",
         "locations":
-          [ { "lineno": 57,
-              "filename": "ColumnStrip.es6" } ],
+          [ { "lineno": 33,
+              "filename": "ColumnStrip.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the column strip's background, such as its image or video source.",
             "links": [],
@@ -60,8 +60,8 @@
             "typeParams":
               [ "$w.Column" ] },
         "locations":
-          [ { "lineno": 28,
-              "filename": "ColumnStrip.es6" } ],
+          [ { "lineno": 16,
+              "filename": "ColumnStrip.js" } ],
         "docs":
           { "summary": "Gets a list of all the columns contained in the column strip.",
             "description":

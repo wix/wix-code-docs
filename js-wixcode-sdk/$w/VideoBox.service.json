@@ -5,8 +5,8 @@
       "$w.HiddenCollapsedMixin" ],
   "labels": [],
   "location":
-    { "lineno": 19,
-      "filename": "VideoBox.es6" },
+    { "lineno": 1,
+      "filename": "VideoBox.js" },
   "docs":
     { "summary": "An element for displaying videos in customizable video containers.",
       "description":
@@ -32,8 +32,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 116,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 85,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Gets the current play time from the beginning of the current video, in seconds.",
             "links": [],
@@ -53,8 +53,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 136,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 97,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Gets the total play time of the current video, in seconds.",
             "links": [],
@@ -74,8 +74,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 211,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 132,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Indicates if the volume is currently muted.",
             "description":
@@ -98,8 +98,8 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 90,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 70,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Indicates if a video is currently playing.",
             "description":
@@ -122,8 +122,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 604,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 322,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Sets or gets the file location of the current video.",
             "description":
@@ -160,8 +160,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 165,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 109,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Sets or gets the video box volume.",
             "description":
@@ -199,8 +199,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the volume has been muted." },
         "locations":
-          [ { "lineno": 351,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 224,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Mutes video box volume.",
             "links": [],
@@ -233,8 +233,8 @@
           { "type": "$w.VideoBox",
             "doc": "The video box that triggered the event." },
         "locations":
-          [ { "lineno": 511,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 286,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the playback has ended.",
             "description":
@@ -265,8 +265,8 @@
           { "type": "$w.Element",
             "doc": "The element to which the event handler was added." },
         "locations":
-          [ { "lineno": 45,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 26,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "**Note: This standard element property is not relevant for VideoBox.**",
             "description":
@@ -294,8 +294,8 @@
           { "type": "$w.Element",
             "doc": "The element to which the event handler was added." },
         "locations":
-          [ { "lineno": 68,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 48,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "**Note: This standard element property is not relevant for VideoBox.**",
             "description":
@@ -323,8 +323,8 @@
           { "type": "$w.VideoBox",
             "doc": "The video box that triggered the event." },
         "locations":
-          [ { "lineno": 464,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 267,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the playback is paused.",
             "description":
@@ -355,8 +355,8 @@
           { "type": "$w.VideoBox",
             "doc": "The video box that triggered the event." },
         "locations":
-          [ { "lineno": 423,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 248,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the playback is started or restarted.",
             "description":
@@ -386,8 +386,8 @@
         "ret":
           { "type": "$w.VideoBox" },
         "locations":
-          [ { "lineno": 557,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 305,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the playback progresses.",
             "description":
@@ -416,8 +416,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the playback has been paused." },
         "locations":
-          [ { "lineno": 263,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 165,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Pauses playback.",
             "description":
@@ -456,8 +456,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the playback begins or resumes." },
         "locations":
-          [ { "lineno": 235,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 147,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Begins or resumes playback.",
             "description":
@@ -496,8 +496,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the playback has been stopped." },
         "locations":
-          [ { "lineno": 291,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 183,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Stops the playback.",
             "description":
@@ -537,8 +537,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the playback has been toggled." },
         "locations":
-          [ { "lineno": 320,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 202,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Toggles playback.",
             "description":
@@ -581,8 +581,8 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the volume has been unmuted." },
         "locations":
-          [ { "lineno": 373,
-              "filename": "VideoBox.es6" } ],
+          [ { "lineno": 236,
+              "filename": "VideoBox.js" } ],
         "docs":
           { "summary": "Unmutes video volume.",
             "links": [],

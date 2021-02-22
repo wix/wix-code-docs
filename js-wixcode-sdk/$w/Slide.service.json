@@ -6,8 +6,8 @@
       "$w.ContainableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 6,
-      "filename": "Slide.es6" },
+    { "lineno": 1,
+      "filename": "Slide.js" },
   "docs":
     { "summary": "A `Slide` from a `Slideshow` that can contain other elements.",
       "description":
@@ -24,8 +24,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 25,
-              "filename": "Slide.es6" } ],
+          [ { "lineno": 18,
+              "filename": "Slide.js" } ],
         "docs":
           { "summary": "Gets the slide's ID.",
             "description":
@@ -49,8 +49,8 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 46,
-              "filename": "Slide.es6" } ],
+          [ { "lineno": 37,
+              "filename": "Slide.js" } ],
         "docs":
           { "summary": "Gets the name of the slide.",
             "description":

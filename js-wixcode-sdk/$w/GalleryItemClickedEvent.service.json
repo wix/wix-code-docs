@@ -5,8 +5,8 @@
       "$w.Event" ],
   "labels": [],
   "location":
-    { "lineno": 13,
-      "filename": "GalleryItemClickedEvent.es6" },
+    { "lineno": 11,
+      "filename": "GalleryItemClickedEvent.js" },
   "docs":
     { "summary": "Event that is fired when an image in a gallery is clicked.",
       "links": [],

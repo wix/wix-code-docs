@@ -6,8 +6,8 @@
       "$w.PlayableMixin" ],
   "labels": [],
   "location":
-    { "lineno": 74,
-      "filename": "BaseGallery.es6" },
+    { "lineno": 40,
+      "filename": "BaseGallery.js" },
   "docs":
     { "summary": "A gallery for displaying multiple items.",
       "description":
@@ -67,10 +67,10 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 162,
-              "filename": "BaseGallery.es6" },
-            { "lineno": 211,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 127,
+              "filename": "BaseGallery.js" },
+            { "lineno": 168,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "Sets or gets the action that occurs when an item in the gallery is clicked.",
             "description":
@@ -121,8 +121,8 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 233,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 174,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "Gets the index of the gallery's current item.",
             "description":
@@ -156,8 +156,8 @@
           [ "$w.Gallery.ImageItem",
             "$w.Gallery.VideoItem" ],
         "locations":
-          [ { "lineno": 550,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 371,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the current item.",
             "description":
@@ -231,8 +231,8 @@
         "set": false,
         "type": "$w.Gallery.GalleryCapabilities",
         "locations":
-          [ { "lineno": 620,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 427,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "Gets an object containing information about the gallery's capabilities.",
             "links": [],
@@ -270,10 +270,10 @@
               "typeParams":
                 [ "$w.Gallery.VideoItem" ] } ],
         "locations":
-          [ { "lineno": 266,
-              "filename": "BaseGallery.es6" },
-            { "lineno": 356,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 199,
+              "filename": "BaseGallery.js" },
+            { "lineno": 275,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "Sets or gets the items in a gallery.",
             "description":
@@ -385,10 +385,10 @@
         "set": true,
         "type": "boolean",
         "locations":
-          [ { "lineno": 490,
-              "filename": "BaseGallery.es6" },
-            { "lineno": 527,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 338,
+              "filename": "BaseGallery.js" },
+            { "lineno": 365,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "Determines if a gallery's navigation arrows are shown.",
             "description":
@@ -437,8 +437,8 @@
           { "type": "$w.Gallery",
             "doc": "The gallery that triggered the event." },
         "locations":
-          [ { "lineno": 397,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 281,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when a gallery's current item changes.",
             "description":
@@ -484,8 +484,8 @@
           { "type": "$w.Gallery",
             "doc": "The gallery that triggered the event." },
         "locations":
-          [ { "lineno": 449,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 315,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when an item in a gallery is\n clicked.\n\n > **Deprecation note:** The $w parameter of event handlers is being deprecated. To get\n a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function\n and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see\n [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers).",
             "links":
@@ -507,8 +507,8 @@
   "messages":
     [ { "name": "GalleryCapabilities",
         "locations":
-          [ { "lineno": 35,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 1,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "An object used by the `galleryCapabilities` property that contains the capabilities of a gallery.",
             "links":
@@ -548,8 +548,8 @@
         "labels": [] },
       { "name": "ImageItem",
         "locations":
-          [ { "lineno": 60,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 26,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "An object used by the Gallery properties `items` and `currentItem` to represent a single gallery image.",
             "links":
@@ -601,8 +601,8 @@
         "labels": [] },
       { "name": "VideoItem",
         "locations":
-          [ { "lineno": 45,
-              "filename": "BaseGallery.es6" } ],
+          [ { "lineno": 11,
+              "filename": "BaseGallery.js" } ],
         "docs":
           { "summary": "An object used by the Gallery properties `items` and `currentItem` to represent a single gallery video.",
             "links":

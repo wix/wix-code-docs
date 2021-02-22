@@ -3,8 +3,8 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 205,
-      "filename": "location.es6" },
+    { "lineno": 149,
+      "filename": "location.js" },
   "docs":
     { "summary": "An object used to manage the query segment of the current page's URL.",
       "links": [],
@@ -23,8 +23,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 222,
-              "filename": "location.es6" } ],
+          [ { "lineno": 165,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Adds query parameters to the current page's URL.",
             "description":
@@ -75,8 +75,8 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 266,
-              "filename": "location.es6" } ],
+          [ { "lineno": 198,
+              "filename": "location.js" } ],
         "docs":
           { "summary": "Removes query parameters from the current page's URL.",
             "description":
