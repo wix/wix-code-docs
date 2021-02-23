@@ -1,0 +1,1033 @@
+{ "name": "wix-events-ng-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "event",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-events-ng-backend.event",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "index.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "CalendarLinks_2113971438",
+        "locations":
+          [ { "lineno": 19,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "\"Add to calendar\" URLs.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "google",
+              "type": "string",
+              "doc": "\"Add to Google calendar\" URL." },
+            { "name": "ics",
+              "type": "string",
+              "doc": "\"Download ICS calendar file\" URL." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CheckoutFormMessages_6624606321",
+        "locations":
+          [ { "lineno": 314,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Checkout form messages.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Main form title for response." },
+            { "name": "submitActionLabel",
+              "type": "string",
+              "doc": "Submit form call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Dashboard_2771714876",
+        "locations":
+          [ { "lineno": 27,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event dashboard summary of RSVP / ticket sales.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvpSummary",
+              "type": "wix-events-ng-backend.Dashboard_RsvpSummary_4939655439",
+              "doc": "Guest RSVP summary." },
+            { "name": "ticketingSummary",
+              "type": "wix-events-ng-backend.Dashboard_TicketingSummary_5862734261",
+              "doc": "Summary of revenue and tickets sold.\n (Archived orders are not included)." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Dashboard_RsvpSummary_4939655439",
+        "locations":
+          [ { "lineno": 36,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Guest RSVP summary.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "total",
+              "type": "number",
+              "doc": "Total number of RSVPs." },
+            { "name": "yes",
+              "type": "number",
+              "doc": "Number of RSVPs with status `YES`." },
+            { "name": "no",
+              "type": "number",
+              "doc": "Number of RSVPs with status `NO`." },
+            { "name": "waitlist",
+              "type": "number",
+              "doc": "Number of RSVPs in waitlist." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Dashboard_TicketingSummary_5862734261",
+        "locations":
+          [ { "lineno": 46,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Summary of revenue and tickets sold.",
+            "description":
+              [ "(Archived orders are not included)." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "tickets",
+              "type": "number",
+              "doc": "Number of tickets sold." },
+            { "name": "revenue",
+              "type": "wix-events-ng-backend.Money_3268473980",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "currencyLocked",
+              "type": "boolean",
+              "doc": "Whether currency is locked and cannot be changed (generally occurs after the first order in the specified currency has been created)." },
+            { "name": "orders",
+              "type": "number",
+              "doc": "Number of orders placed." },
+            { "name": "totalSales",
+              "type": "wix-events-ng-backend.Money_3268473980",
+              "doc": "Price of lowest priced ticket." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Event_264400458673",
+        "locations":
+          [ { "lineno": 58,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Event ID." },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Custom event tags." },
+            { "name": "location",
+              "type": "wix-events-ng-backend.Location_15550153297",
+              "doc": "Event location." },
+            { "name": "scheduling",
+              "type": "wix-events-ng-backend.Scheduling_17566201923",
+              "doc": "Event scheduling." },
+            { "name": "title",
+              "type": "string",
+              "doc": "Event title." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Event description." },
+            { "name": "about",
+              "type": "string",
+              "doc": "Rich-text content displayed in Wix UI - \"About Event\" section (HTML)." },
+            { "name": "mainImage",
+              "type": "wix-events-ng-backend.Image_3608034099",
+              "doc": "Main event image." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "Event slug URL (generated from event title)." },
+            { "name": "language",
+              "type": "string",
+              "doc": "ISO 639-1 language code of the event (used in content translations)." },
+            { "name": "created",
+              "type": "Date",
+              "doc": "Event creation timestamp." },
+            { "name": "modified",
+              "type": "Date",
+              "doc": "Event modified timestamp." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Event status.\nOne of:\n + `\"SCHEDULED\"`\n + `\"STARTED\"`\n + `\"ENDED\"`\n + `\"CANCELED\"`" },
+            { "name": "registration",
+              "type": "wix-events-ng-backend.Registration_51443040459",
+              "doc": "RSVP or ticketing registration details." },
+            { "name": "calendarLinks",
+              "type": "wix-events-ng-backend.CalendarLinks_2113971438",
+              "doc": "\"Add to calendar\" URLs." },
+            { "name": "eventPageUrl",
+              "type": "wix-events-ng-backend.SiteUrl_5300502582",
+              "doc": "Event page URL components." },
+            { "name": "form",
+              "type": "wix-events-ng-backend.Form_94315172301",
+              "doc": "Event registration form." },
+            { "name": "dashboard",
+              "type": "wix-events-ng-backend.Dashboard_2771714876",
+              "doc": "Event dashboard summary of RSVP / ticket sales." },
+            { "name": "instanceId",
+              "type": "string",
+              "doc": "Instance ID of the site where event is hosted." },
+            { "name": "guestListConfig",
+              "type": "wix-events-ng-backend.GuestListConfig_3929178950",
+              "doc": "Guest list configuration." },
+            { "name": "userId",
+              "type": "string",
+              "doc": "Event creator user ID." },
+            { "name": "feed",
+              "type": "wix-events-ng-backend.Feed_2250420887",
+              "doc": "Event discussion feed. For internal use." },
+            { "name": "onlineConferencing",
+              "type": "wix-events-ng-backend.OnlineConferencing_27208283853",
+              "doc": "Online conferencing details." },
+            { "name": "seoSettings",
+              "type": "wix-events-ng-backend.SeoSettings_7510628004",
+              "doc": "SEO settings." },
+            { "name": "assignedContactsLabel",
+              "type": "string",
+              "doc": "Assigned contacts label key." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ExternalEvent_3219994176",
+        "locations":
+          [ { "lineno": 93,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "External registration details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "registration",
+              "type": "string",
+              "doc": "External event registration URL." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Feed_2250420887",
+        "locations":
+          [ { "lineno": 100,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event discussion feed. For internal use.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "token",
+              "type": "string",
+              "doc": "Event discussion feed token." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "FormMessages_43340367168",
+        "locations":
+          [ { "lineno": 330,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Set of configured form messages.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvp",
+              "type": "wix-events-ng-backend.RsvpFormMessages_19476488547",
+              "doc": "RSVP form messages." },
+            { "name": "checkout",
+              "type": "wix-events-ng-backend.CheckoutFormMessages_6624606321",
+              "doc": "Checkout form messages." },
+            { "name": "registrationClosed",
+              "type": "wix-events-ng-backend.RegistrationClosedMessages_10064481409",
+              "doc": "Messages shown when event registration is closed." },
+            { "name": "ticketsUnavailable",
+              "type": "wix-events-ng-backend.TicketsUnavailableMessages_7555249437",
+              "doc": "Messages shown when event tickets are unavailable." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Form_94315172301",
+        "locations":
+          [ { "lineno": 322,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event registration form.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "controls",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.InputControl_50791471072" ] },
+              "doc": "Nested fields as an ordered list." },
+            { "name": "messages",
+              "type": "wix-events-ng-backend.FormMessages_43340367168",
+              "doc": "Set of configured form messages." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GuestListConfig_3929178950",
+        "locations":
+          [ { "lineno": 107,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Guest list configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "publicGuestList",
+              "type": "boolean",
+              "doc": "Whether members can see other members attending the event (defaults to true)." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Image_3608034099",
+        "locations":
+          [ { "lineno": 114,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Main event image.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Wix Media image ID." },
+            { "name": "width",
+              "type": "number",
+              "doc": "Original image width." },
+            { "name": "height",
+              "type": "number",
+              "doc": "Original image height." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "InputControl_50791471072",
+        "locations":
+          [ { "lineno": 362,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "A block of nested fields.",
+            "description":
+              [ "Used to aggregate similar inputs like First Name and Last Name." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "type",
+              "type": "string",
+              "doc": "Field control type.\nOne of:\n + `\"INPUT\"`\n + `\"TEXTAREA\"`\n + `\"DROPDOWN\"`\n + `\"RADIO\"`\n + `\"CHECKBOX\"`\n + `\"NAME\"`\n + `\"GUEST_CONTROL\"`\n + `\"ADDRESS_SHORT\"`\n + `\"ADDRESS_FULL\"`\n + `\"DATE\"`" },
+            { "name": "system",
+              "type": "boolean",
+              "doc": "Whether control is mandatory (such as name & email). When true, only label can be changed." },
+            { "name": "inputs",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.Input_31318018517" ] },
+              "doc": "Child inputs." },
+            { "name": "orderIndex",
+              "type": "number",
+              "doc": "Field controls are sorted by this value in ascending order." },
+            { "name": "_id",
+              "type": "string",
+              "doc": "Unique control ID." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Input_31318018517",
+        "locations":
+          [ { "lineno": 340,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "An input of one or multiple text values",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Field name." },
+            { "name": "label",
+              "type": "string",
+              "doc": "Main field label" },
+            { "name": "additionalLabels",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Additional labels for multi-valued fields such as address." },
+            { "name": "options",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Predefined choice options for fields, such as dropdown." },
+            { "name": "mandatory",
+              "type": "boolean",
+              "doc": "Whether field is mandatory." },
+            { "name": "maxLength",
+              "type": "number",
+              "doc": "Maximum number of accepted characters (relevant for text fields)." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Type which determines field format.\n Used to validate submitted response.\nOne of:\n + `\"TEXT\"`\n + `\"NUMBER\"`\n + `\"TEXT_ARRAY\"`\n + `\"DATE_TIME\"`\n + `\"ADDRESS\"`" },
+            { "name": "maxSize",
+              "type": "number",
+              "doc": "A maximum accepted values for array input.\n Only applicable for inputs of valueType: TEXT_ARRAY." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Location_15550153297",
+        "locations":
+          [ { "lineno": 123,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event location.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Location name." },
+            { "name": "coordinates",
+              "type": "wix-events-ng-backend.MapCoordinates_4535947220",
+              "doc": "Location map coordinates." },
+            { "name": "address",
+              "type": "string",
+              "doc": "Single line address representation." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Location type.\nOne of:\n + `\"VENUE\"`\n + `\"ONLINE\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "MapCoordinates_4535947220",
+        "locations":
+          [ { "lineno": 136,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Location map coordinates.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "lat",
+              "type": "number",
+              "doc": "Latitude." },
+            { "name": "lng",
+              "type": "number",
+              "doc": "Longitude." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Money_3268473980",
+        "locations":
+          [ { "lineno": 144,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Price of lowest priced ticket.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "amount",
+              "type": "string",
+              "doc": "decimal amount representation." },
+            { "name": "currency",
+              "type": "string",
+              "doc": "ISO 4217 format of the currency i.e. `USD`." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Negative_ResponseConfirmation_4586887728",
+        "locations":
+          [ { "lineno": 405,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Confirmation messages shown after registration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Confirmation message title." },
+            { "name": "shareActionLabel",
+              "type": "string",
+              "doc": "\"Share event\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "OnlineConferencingConfig_7676888895",
+        "locations":
+          [ { "lineno": 161,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "enabled",
+              "type": "boolean",
+              "doc": "Whether online conferencing is enabled (not supported for TBD schedules).\n When enabled, links to join conferencing are generated and provided to guests." },
+            { "name": "providerId",
+              "type": "string",
+              "doc": "Conferencing provider ID." },
+            { "name": "conferenceType",
+              "type": "string",
+              "doc": "Conference type\nOne of:\n + `\"MEETING\"`\n + `\"WEBINAR\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "OnlineConferencingSession_12526595925",
+        "locations":
+          [ { "lineno": 173,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "hostLink",
+              "type": "string",
+              "doc": "Link for event host to start the online conference session." },
+            { "name": "guestLink",
+              "type": "string",
+              "doc": "Link for guests to join the online conference session." },
+            { "name": "password",
+              "type": "string",
+              "doc": "The password required to join online conferencing session (when relevant)." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "OnlineConferencing_27208283853",
+        "locations":
+          [ { "lineno": 152,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Online conferencing details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "config",
+              "type": "wix-events-ng-backend.OnlineConferencingConfig_7676888895" },
+            { "name": "session",
+              "type": "wix-events-ng-backend.OnlineConferencingSession_12526595925" },
+            { "name": "providerName",
+              "type": "string",
+              "doc": "Configured conferencing provider name." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Positive_ResponseConfirmation_8615945964",
+        "locations":
+          [ { "lineno": 413,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Confirmation messages shown after registration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Confirmation message title." },
+            { "name": "message",
+              "type": "string",
+              "doc": "Confirmation message text." },
+            { "name": "addToCalendarActionLabel",
+              "type": "string",
+              "doc": "\"Add to calendar\" call-to-action label text." },
+            { "name": "shareActionLabel",
+              "type": "string",
+              "doc": "\"Share event\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RegistrationClosedMessages_10064481409",
+        "locations":
+          [ { "lineno": 385,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Messages shown when event registration is closed.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "message",
+              "type": "string",
+              "doc": "Message shown when event registration is closed." },
+            { "name": "exploreEventsActionLabel",
+              "type": "string",
+              "doc": "\"Explore other events\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Registration_51443040459",
+        "locations":
+          [ { "lineno": 181,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP or ticketing registration details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "type",
+              "type": "string",
+              "doc": "Event type.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Event registration status.\nOne of:\n + `\"NA_REGISTRATION_STATUS\"`\n + `\"CLOSED\"`\n + `\"CLOSED_MANUALLY\"`\n + `\"OPEN_RSVP\"`\n + `\"OPEN_RSVP_WAITLIST\"`\n + `\"OPEN_TICKETS\"`\n + `\"OPEN_EXTERNAL\"`" },
+            { "name": "rsvpCollection",
+              "type": "wix-events-ng-backend.RsvpCollection_10333008726",
+              "doc": "RSVP collection details." },
+            { "name": "ticketing",
+              "type": "wix-events-ng-backend.Ticketing_13774179724",
+              "doc": "Ticketing details." },
+            { "name": "external",
+              "type": "wix-events-ng-backend.ExternalEvent_3219994176",
+              "doc": "External registration details." },
+            { "name": "restrictedTo",
+              "type": "string",
+              "doc": "Types of users allowed to register.\nOne of:\n + `\"VISITOR\"`\n + `\"MEMBER\"`\n + `\"VISITOR_OR_MEMBER\"`" },
+            { "name": "initialType",
+              "type": "string",
+              "doc": "Initial event type which was set when creating an event.\nOne of:\n + `\"NA_EVENT_TYPE\"`\n + `\"RSVP\"`\n + `\"TICKETS\"`\n + `\"EXTERNAL\"`\n + `\"NO_REGISTRATION\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RsvpCollectionConfig_11838011770",
+        "locations":
+          [ { "lineno": 225,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP collection configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvpStatusOptions",
+              "type": "string",
+              "doc": "Defines the supported RSVP statuses.\nOne of:\n + `\"YES_ONLY\"`\n + `\"YES_AND_NO\"`" },
+            { "name": "limit",
+              "type": "number",
+              "doc": "Total guest limit available to register to the event.\n Additional guests per RSVP are counted towards total guests." },
+            { "name": "waitlist",
+              "type": "boolean",
+              "doc": "Whether a waitlist is opened when total guest limit is reached, allowing guests to create RSVP with WAITING RSVP status." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RsvpCollection_10333008726",
+        "locations":
+          [ { "lineno": 218,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP collection details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "config",
+              "type": "wix-events-ng-backend.RsvpCollectionConfig_11838011770",
+              "doc": "RSVP collection configuration." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RsvpFormMessages_19476488547",
+        "locations":
+          [ { "lineno": 393,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "RSVP form messages.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rsvpYesOption",
+              "type": "string",
+              "doc": "Label text indicating RSVP `YES` response." },
+            { "name": "rsvpNoOption",
+              "type": "string",
+              "doc": "Label text indicating RSVP `NO` response." },
+            { "name": "positiveMessages",
+              "type": "wix-events-ng-backend.RsvpFormMessages_Positive_8813967668",
+              "doc": "Messages shown for RSVP = `YES`." },
+            { "name": "waitlistMessages",
+              "type": "wix-events-ng-backend.RsvpFormMessages_Positive_8813967668",
+              "doc": "Messages shown for RSVP = `YES`." },
+            { "name": "negativeMessages",
+              "type": "wix-events-ng-backend.RsvpFormMessages_Negative_4611603004",
+              "doc": "Messages shown for RSVP = `NO`." },
+            { "name": "submitActionLabel",
+              "type": "string",
+              "doc": "\"Submit form\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RsvpFormMessages_Negative_4611603004",
+        "locations":
+          [ { "lineno": 423,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Messages shown for RSVP = `NO`.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Main form title for negative response." },
+            { "name": "confirmation",
+              "type": "wix-events-ng-backend.Negative_ResponseConfirmation_4586887728",
+              "doc": "Confirmation messages shown after registration." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RsvpFormMessages_Positive_8813967668",
+        "locations":
+          [ { "lineno": 431,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Messages shown for RSVP = `YES`.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Main form title for positive response." },
+            { "name": "confirmation",
+              "type": "wix-events-ng-backend.Positive_ResponseConfirmation_8615945964",
+              "doc": "Confirmation messages shown after registration." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ScheduleConfig_13852377628",
+        "locations":
+          [ { "lineno": 238,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Schedule configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "scheduleTbd",
+              "type": "boolean",
+              "doc": "Defines event as TBD (To Be Determined) schedule.\n When event time is not yet defined, TBD message is displayed instead of event start and end times.\n `startDate`, `endDate` and `timeZoneId` are not required when schedule is TBD." },
+            { "name": "scheduleTbdMessage",
+              "type": "string",
+              "doc": "TBD message." },
+            { "name": "startDate",
+              "type": "Date",
+              "doc": "Event start timestamp." },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "Event end timestamp." },
+            { "name": "timeZoneId",
+              "type": "string",
+              "doc": "Event time zone ID in TZ database format, e.g., `EST`, `America/Los_Angeles`." },
+            { "name": "endDateHidden",
+              "type": "boolean",
+              "doc": "Whether end date is hidden in the formatted schedule." },
+            { "name": "showTimeZone",
+              "type": "boolean",
+              "doc": "Whether time zone is displayed in formatted schedule." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Scheduling_17566201923",
+        "locations":
+          [ { "lineno": 253,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event scheduling.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "config",
+              "type": "wix-events-ng-backend.ScheduleConfig_13852377628",
+              "doc": "Schedule configuration." },
+            { "name": "formatted",
+              "type": "string",
+              "doc": "Formatted schedule representation." },
+            { "name": "startDateFormatted",
+              "type": "string",
+              "doc": "Formatted start date of the event (empty for TBD schedules)." },
+            { "name": "startTimeFormatted",
+              "type": "string",
+              "doc": "Formatted start time of the event (empty for TBD schedules)." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SeoSchema_4434305645",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Advanced SEO data",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.SeoSchema_Tag_6403344610" ] },
+              "doc": "SEO tags information." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SeoSchema_Tag_6403344610",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "type",
+              "type": "string",
+              "doc": "SEO tag type. Supported values: `title`, `meta`, `script`, `link`." },
+            { "name": "props",
+              "type": "Object",
+              "doc": "SEO tag attributes/properties (name, content, rel, href)." },
+            { "name": "meta",
+              "type": "Object",
+              "doc": "Tag meta data, e.g. {height: 300, width: 240}." },
+            { "name": "children",
+              "type": "string",
+              "doc": "Tag inner content e.g. `<title> inner content </title>`." },
+            { "name": "custom",
+              "type": "boolean",
+              "doc": "Whether the tag is a custom tag." },
+            { "name": "disabled",
+              "type": "boolean",
+              "doc": "Whether the tag is disabled." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SeoSettings_7510628004",
+        "locations":
+          [ { "lineno": 263,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "SEO settings.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "slug",
+              "type": "string",
+              "doc": "URL slug" },
+            { "name": "advancedSeoData",
+              "type": "wix-events-ng-backend.SeoSchema_4434305645",
+              "doc": "Advanced SEO data" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SiteUrl_5300502582",
+        "locations":
+          [ { "lineno": 271,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Event page URL components.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "base",
+              "type": "string",
+              "doc": "Base URL. For premium sites, this will be the domain.\n For free sites, this would be site URL (e.g `mysite.wixsite.com/mysite`)" },
+            { "name": "path",
+              "type": "string",
+              "doc": "The path to that page - e.g `/my-events/weekly-meetup-2`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "TaxConfig_5203808133",
+        "locations":
+          [ { "lineno": 280,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Tax configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "type",
+              "type": "string",
+              "doc": "Tax application settings.\nOne of:\n + `\"INCLUDED\"`\n + `\"ADDED\"`\n + `\"ADDED_AT_CHECKOUT\"`" },
+            { "name": "name",
+              "type": "string",
+              "doc": "Tax name." },
+            { "name": "rate",
+              "type": "string",
+              "doc": "Tax rate (e.g.,`21.55`)." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "TicketingConfig_6758553378",
+        "locations":
+          [ { "lineno": 305,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Ticketing configuration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "guestAssignedTickets",
+              "type": "boolean",
+              "doc": "Whether the form must be filled out separately for each ticket." },
+            { "name": "taxConfig",
+              "type": "wix-events-ng-backend.TaxConfig_5203808133",
+              "doc": "Tax configuration." },
+            { "name": "ticketLimitPerOrder",
+              "type": "number",
+              "doc": "Limit of tickets that can be purchased per order, default 20." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Ticketing_13774179724",
+        "locations":
+          [ { "lineno": 293,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Ticketing details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "currency",
+              "type": "string",
+              "doc": "Currency used in event transactions." },
+            { "name": "config",
+              "type": "wix-events-ng-backend.TicketingConfig_6758553378",
+              "doc": "Ticketing configuration." },
+            { "name": "lowestTicketPrice",
+              "type": "wix-events-ng-backend.Money_3268473980",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "highestTicketPrice",
+              "type": "wix-events-ng-backend.Money_3268473980",
+              "doc": "Price of lowest priced ticket." },
+            { "name": "lowestTicketPriceFormatted",
+              "type": "string",
+              "doc": "Formatted price of lowest priced ticket." },
+            { "name": "highestTicketPriceFormatted",
+              "type": "string",
+              "doc": "Formatted price of highest priced ticket." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "TicketsUnavailableMessages_7555249437",
+        "locations":
+          [ { "lineno": 439,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Messages shown when event tickets are unavailable.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "message",
+              "type": "string",
+              "doc": "Message shown when event tickets are unavailable." },
+            { "name": "exploreEventsActionLabel",
+              "type": "string",
+              "doc": "\"Explore other events\" call-to-action label text." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

@@ -1,0 +1,257 @@
+{ "name": "event",
+  "memberOf": "wix-events-ng-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 5,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "copy",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "copyEventRequest",
+              "type": "wix-events-ng-backend.event.CopyEventRequest_630086060" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-events-ng-backend.event.CopyEventResult_264957905506" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 13,
+              "filename": "wix_events_EventManagement_Copy_copy.js" } ],
+        "docs":
+          { "summary": "Copies an event, including its registration form, notifications and tickets configuration - scheduled two weeks from the original event.",
+            "description":
+              [ "Multilingual translations are also copied to the new event.",
+                "",
+                "When an event with same title already exists, appends (1), (2), ... to it. For example, copying an event titled \"My Event\" creates \"My Event (1)\".",
+                "Very long event titles are cropped: \"Daily stand-up ev... (2)\"." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { event } from \"wix-events-ng-backend\";",
+                      "",
+                      "export function copy() {",
+                      "  const copyEventRequest = {",
+                      "    eventId: \"a string\"",
+                      "  };",
+                      "",
+                      "  return event",
+                      "    .copy(copyEventRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "query",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "queryEventsRequest",
+              "type": "wix-events-ng-backend.event.QueryEventsRequest_19870823581" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-events-ng-backend.event.QueryEventsResult_266767212923" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 35,
+              "filename": "wix_events_EventManagement_Query_query.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 1,000 events, given the provided [paging](https://dev.wix.com/api/rest/getting-started/pagination), [filtering and sorting](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { event } from \"wix-events-ng-backend\";",
+                      "",
+                      "export function query() {",
+                      "  const queryEventsRequest = {",
+                      "    offset: 42,",
+                      "    limit: 42,",
+                      "    fieldset: [\"FULL\"],",
+                      "    filter: {",
+                      "      someKey: \"some-value\"",
+                      "    },",
+                      "    tag: [\"a string\"],",
+                      "    facet: [\"a string\"],",
+                      "    userId: [\"a string\"],",
+                      "    sort: \"a string\"",
+                      "  };",
+                      "",
+                      "  return event",
+                      "    .query(queryEventsRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "CopyEventRequest_630086060",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_events_EventManagement_Copy_copy.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "eventId",
+              "type": "string",
+              "doc": "Event ID." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CopyEventResult_264957905506",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_events_EventManagement_Copy_copy.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "event",
+              "type": "wix-events-ng-backend.Event_264400458673" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "FacetCounts_708099164",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_events_EventManagement_Query_query.js" } ],
+        "docs":
+          { "summary": "`key` of type string, `value` of type object",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "counts",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Facet counts aggregated per value" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryEventsRequest_19870823581",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_events_EventManagement_Query_query.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "offset",
+              "type": "number",
+              "doc": "Number of items to skip. See [Pagination](https://dev.wix.com/api/rest/getting-started/pagination).",
+              "optional": true },
+            { "name": "limit",
+              "type": "number",
+              "doc": "Number of items to load per page. See [Pagination](https://dev.wix.com/api/rest/getting-started/pagination).",
+              "optional": true },
+            { "name": "fieldset",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Controls which event properties are returned. See [Fieldset](https://dev.wix.com/api/rest/wix-events/wix-events/fieldset#wix-events_wix-events_fieldset_event-fieldset).\n Some fields require additional computation that affects latency.\n Use minimum set of required fieldset for best performance.",
+              "optional": true },
+            { "name": "filter",
+              "type": "Object",
+              "doc": "Filter. See [supported fields and operators](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
+              "optional": true },
+            { "name": "tag",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Custom tags filter, by default any",
+              "optional": true },
+            { "name": "facet",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Filter facets to include in the response.\n See [supported facets](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
+              "optional": true },
+            { "name": "userId",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "User ID filter, by default any",
+              "optional": true },
+            { "name": "sort",
+              "type": "string",
+              "doc": "Sort order, defaults to `\"created:asc\"`.\n See [supported fields](https://dev.wix.com/api/rest/wix-events/wix-events/filter-and-sort#wix-events_wix-events_filter-and-sort_list-query-events).",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryEventsResult_266767212923",
+        "locations":
+          [ { "lineno": 25,
+              "filename": "wix_events_EventManagement_Query_query.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "total",
+              "type": "number",
+              "doc": "Total number of events that match the given filters." },
+            { "name": "offset",
+              "type": "number",
+              "doc": "Offset." },
+            { "name": "limit",
+              "type": "number",
+              "doc": "Limit." },
+            { "name": "events",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-events-ng-backend.Event_264400458673" ] },
+              "doc": "Events list" },
+            { "name": "facets",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Filter facets." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
