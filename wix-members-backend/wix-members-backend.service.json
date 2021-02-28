@@ -1,0 +1,292 @@
+{ "name": "wix-members-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "authentication",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-members-backend.Authentication",
+        "locations":
+          [ { "lineno": 47,
+              "filename": "index.js" } ],
+        "docs":
+          { "summary": "The Authentication API contains functionality for controlling how members are authenticated from backend code.",
+            "description":
+              [ "To use the Authentication API, import `{authentication}` from the `wix-members-backend` module:",
+                "",
+                "   ```javascript",
+                "   import {authentication} from 'wix-members-backend';",
+                "   ```" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "authorization",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-members-backend.Authorization",
+        "locations":
+          [ { "lineno": 6,
+              "filename": "authorization-index.js" } ],
+        "docs":
+          { "summary": "The Authorization API contains functionality for working with member roles from backend code.",
+            "description":
+              [ "To use the Authorization API, import `{authorization}` from the `wix-members-backend` module:",
+                "",
+                "   ```javascript",
+                "   import {authorization} from 'wix-members-backend';",
+                "   ```" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "badges",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-members-backend.Badges",
+        "locations":
+          [ { "lineno": 12,
+              "filename": "badges.js" } ],
+        "docs":
+          { "summary": "The Badges API contains functionality for working with [member badges](https://support.wix.com/en/article/about-member-badges) from backend code.",
+            "description":
+              [ "To use the Badges API, import `{badges}` from the `wix-members-backend` module:",
+                "",
+                "   ```javascript",
+                "   import {badges} from 'wix-members-backend';",
+                "   ```" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "currentMember",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-members-backend.CurrentMember",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "index.js" } ],
+        "docs":
+          { "summary": "The Current Member API contains functionality for working with the currently logged-in member from backend code.",
+            "description":
+              [ "To use the Current Member API, import `{currentMember}` from the `wix-members-backend` module:",
+                "",
+                "   ```javascript",
+                "   import {currentMember} from 'wix-members-backend';",
+                "   ```" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "members",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-members-backend.Members",
+        "locations":
+          [ { "lineno": 28,
+              "filename": "index.js" } ],
+        "docs":
+          { "summary": "The Members API contains functionality for working with site members from backend code.",
+            "description":
+              [ "To use the Members API, import `{members}` from the `wix-members-backend` module:",
+                "",
+                "   ```javascript",
+                "   import {members} from 'wix-members-backend';",
+                "   ```" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Address_30915385639",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "streetAddress",
+              "type": "wix-members-backend.StreetAddress_8353258269",
+              "doc": "Street address object, with number and name in separate fields.",
+              "optional": true },
+            { "name": "addressLine",
+              "type": "string",
+              "doc": "Main address line (usually street and number) as free text.",
+              "optional": true },
+            { "name": "addressLine2",
+              "type": "string",
+              "doc": "Free text providing more detailed address info. Usually contains Apt, Suite, Floor." },
+            { "name": "city",
+              "type": "string",
+              "doc": "City." },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "Code for a subdivision (such as state, prefecture, or province) in an\n[ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) format." },
+            { "name": "country",
+              "type": "string",
+              "doc": "2-letter country code in an\n[ISO-3166 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format." },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "Postal code." } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "street",
+                  "members":
+                    [ "addressLine",
+                      "streetAddress" ] } ] },
+        "labels": [] },
+      { "name": "Contact_51636736957",
+        "locations":
+          [ { "lineno": 16,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Member's contact info from the site's",
+            "description":
+              [ "[Contact List](https://www.wix.com/my-account/site-selector/?buttonText=Select%20Site&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fcontacts)." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactId",
+              "type": "string",
+              "doc": "Contact ID." },
+            { "name": "firstName",
+              "type": "string",
+              "doc": "Contact's first name." },
+            { "name": "lastName",
+              "type": "string",
+              "doc": "Contact's last name." },
+            { "name": "phones",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of phone numbers." },
+            { "name": "emails",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of email addresses." },
+            { "name": "addresses",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-members-backend.Address_30915385639" ] },
+              "doc": "List of street addresses." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Image_4846287094",
+        "locations":
+          [ { "lineno": 50,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Member's profile photo.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Wix Media image ID,\n set when the member selects an image from Wix Media." },
+            { "name": "url",
+              "type": "string",
+              "doc": "Image URL." },
+            { "name": "height",
+              "type": "number",
+              "doc": "Original image width." },
+            { "name": "width",
+              "type": "number",
+              "doc": "Original image height." },
+            { "name": "offsetX",
+              "type": "number",
+              "doc": "X-axis offset.\n\n Defaults to `0`." },
+            { "name": "offsetY",
+              "type": "number",
+              "doc": "Y-axis offset.\n\n Defaults to `0`." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Profile_9074948389",
+        "locations":
+          [ { "lineno": 29,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Profile display info.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nickname",
+              "type": "string",
+              "doc": "Name that identifies the member to other members.\nDisplayed on the member's profile page\nand interactions in the forum or blog." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "Slug that determines the member's profile page URL." },
+            { "name": "profilePhoto",
+              "type": "wix-members-backend.Image_4846287094",
+              "doc": "Member's profile photo." },
+            { "name": "coverPhoto",
+              "type": "wix-members-backend.Image_4846287094",
+              "doc": "Member's profile photo." },
+            { "name": "title",
+              "type": "string",
+              "doc": "Member title." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "StreetAddress_8353258269",
+        "locations":
+          [ { "lineno": 42,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Street address object, with number and name in separate fields.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "number",
+              "type": "string",
+              "doc": "Street number." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Street name." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

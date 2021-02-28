@@ -1,0 +1,203 @@
+{ "name": "Authorization",
+  "memberOf": "wix-members-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 2,
+      "filename": "authorization-index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "assignRole",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "roleId",
+              "type": "string",
+              "doc": "ID of the role to assign to the member." },
+            { "name": "memberId",
+              "type": "string",
+              "doc": "ID of the member to assign the role to." },
+            { "name": "options",
+              "type": "wix-members-backend.Authorization.WixRolesOptions",
+              "doc": "An object with the following boolean property: suppressAuth.",
+              "optional": true } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "Fulfilled - When the member is assigned to the role.\nRejected - Error message." },
+        "locations":
+          [ { "lineno": 32,
+              "filename": "roles.js" } ],
+        "docs":
+          { "summary": "Assigns a role to a member.",
+            "description":
+              [ "The `assignRole()` function returns a Promise that resolves when the",
+                " requested member is assigned as holding the requested role.",
+                "",
+                "> **Note:**",
+                "> This function replaces the deprecated",
+                "> `roles.assignRole()` from `wix-users-backend`.",
+                "> The deprecated function will continue to work, but it will not receive updates.",
+                ">",
+                "> To keep any existing code compatible with future changes,",
+                "> see the migration instructions at",
+                "> [`wix-users-backend.roles.assignRole()`](wix-users-backend/roles-obj.assignRole).",
+                "",
+                " The `roleId` parameter must be an ID from an existing role in your site.",
+                " The role ID can be copied from the Role Settings page.",
+                " You can reach the Role Settings page from your site's",
+                " [Member Permissions](https://www.wix.com/my-account/site-selector/?buttonText=Select%20Site&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fmember-permissions%2Froles%3FreferralInfo%3Dvelo-docs)",
+                " page.",
+                "",
+                " > **Note:** This function may take a few seconds until the role is assigned",
+                " > and the promise is resolved." ],
+            "links": [],
+            "examples":
+              [ { "title": "Assign a member to a role",
+                  "body":
+                    [ "import { authorization } from 'wix-members-backend';",
+                      "",
+                      "export function assignRole() {",
+                      "  const roleId = '42082477-9616-4f15-bf1d-64b2b3049a42';",
+                      "  const memberId = 'efab296e-2687-4751-9956-ee73200dd4bb';",
+                      "  const options = {",
+                      "    suppressAuth: false",
+                      "  };",
+                      "",
+                      "  return authorization.assignRole(roleId, memberId, options)",
+                      "    .then( () => {",
+                      "      console.log(\"Role assigned to member\");",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "removeRole",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "roleId",
+              "type": "string",
+              "doc": "ID of the role to remove from the member." },
+            { "name": "memberId",
+              "type": "string",
+              "doc": "ID of the member to remove the role from." },
+            { "name": "options",
+              "type": "wix-members-backend.Authorization.WixRolesOptions",
+              "doc": "An object with the following boolean property: suppressAuth.",
+              "optional": true } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "Fulfilled - When the member is removed from the role.\nRejected - Error message." },
+        "locations":
+          [ { "lineno": 67,
+              "filename": "roles.js" } ],
+        "docs":
+          { "summary": "Removes a role from a member.",
+            "description":
+              [ "The `removeRole()` function returns a Promise that resolves when the",
+                " member with the given ID is removed as a holder of the requested role.",
+                "",
+                "> **Note:**",
+                "> This function replaces the deprecated",
+                "> `Roles.removeRole()` from `wix-users-backend`.",
+                "> The deprecated function will continue to work, but it will not receive updates.",
+                ">",
+                "> To keep any existing code compatible with future changes,",
+                "> see the migration instructions at",
+                "> [`wix-users-backend.Roles.removeRole()`](wix-users-backend/Roles-obj/removeRole).",
+                "",
+                " The `roleId` parameter must be an ID from an existing role in your site.",
+                " The role ID can be copied from the Role Settings page.",
+                " You can reach the Role Settings page from your site's",
+                " [Member Permissions](https://www.wix.com/my-account/site-selector/?buttonText=Select%20Site&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fmember-permissions%2Froles%3FreferralInfo%3Dvelo-docs)",
+                " page.",
+                "",
+                " > **Note:** This function may take a few seconds until the role is assigned",
+                " > and the promise is resolved." ],
+            "links": [],
+            "examples":
+              [ { "title": "Remove a member from a role",
+                  "body":
+                    [ "import { authorization } from 'wix-members-backend';",
+                      "",
+                      "export function removeRole() {",
+                      "  const roleId = '42082477-9616-4f15-bf1d-64b2b3049a42';",
+                      "  const memberId = 'efab296e-2687-4751-9956-ee73200dd4bb';",
+                      "  const options = {",
+                      "    suppressAuth: false",
+                      "  };",
+                      "",
+                      "  return authorization.removeRole(roleId, memberId, options)",
+                      "    .then( () => {",
+                      "      console.log(\"Role removed from member\");",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.log(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "MemberRole",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "getRoles.js" } ],
+        "docs":
+          { "summary": "An object returned by the `getRoles()` function representing a user's [roles](https://support.wix.com/en/article/creating-member-roles-6943237).",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Role name as defined in the site's dashboard or one of \"Admin\" or \"Member\"." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Role description, if defined in the site's dashboard.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "WixRolesOptions",
+        "locations":
+          [ { "lineno": 25,
+              "filename": "roles.js" } ],
+        "docs":
+          { "summary": "An object that you pass as the `options` parameter that modifies how an operation is performed.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "Prevents permission checks from running for the operation." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
