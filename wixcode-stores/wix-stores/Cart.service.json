@@ -244,12 +244,13 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 384,
+          [ { "lineno": 385,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Hides the Mini Cart.",
             "description":
-              [ "The `hideMiniCart()` function hides the Mini Cart." ],
+              [ "The `hideMiniCart()` function hides the Mini Cart.",
+                "> **Note:** This API will fail when viewing the site on mobile because there is no Mini Cart on the mobile site." ],
             "links": [],
             "examples":
               [ { "title": "Add products to the cart, then show the Mini Cart. After 3 seconds, hide the Mini Cart",
@@ -292,7 +293,8 @@
         "docs":
           { "summary": "Shows the Mini Cart.",
             "description":
-              [ "The `showMiniCart()` function displays the Mini Cart." ],
+              [ "The `showMiniCart()` function displays the Mini Cart.",
+                "> **Note:** This API will fail when viewing the site on mobile because there is no Mini Cart on the mobile site." ],
             "links": [],
             "examples":
               [ { "title": "Add products to the cart, then show the Mini Cart",
