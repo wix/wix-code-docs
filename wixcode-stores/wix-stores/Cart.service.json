@@ -238,7 +238,7 @@
           {  } },
       { "name": "hideMiniCart",
         "labels":
-          [ "new" ],
+          [ "removed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -285,7 +285,8 @@
           {  } },
       { "name": "showMiniCart",
         "labels":
-          [ "changed" ],
+          [ "changed",
+            "removed" ],
         "nameParams": [],
         "params": [],
         "ret":
