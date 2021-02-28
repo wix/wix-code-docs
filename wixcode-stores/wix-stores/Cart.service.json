@@ -1,7 +1,8 @@
 { "name": "Cart",
   "memberOf": "wix-stores",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 16,
       "filename": "stores.js" },
@@ -237,17 +238,13 @@
           {  } },
       { "name": "hideMiniCart",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "void" ] },
-            "doc": "Fulfilled - When the Mini Cart is hidden." },
+          { "type": "void" },
         "locations":
-          [ { "lineno": 386,
+          [ { "lineno": 385,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Hides the Mini Cart.",
@@ -284,15 +281,11 @@
           {  } },
       { "name": "showMiniCart",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "void" ] },
-            "doc": "Fulfilled - When the Mini Cart is displayed." },
+          { "type": "void" },
         "locations":
           [ { "lineno": 375,
               "filename": "stores.js" } ],
