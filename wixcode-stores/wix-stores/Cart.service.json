@@ -244,12 +244,12 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 385,
+          [ { "lineno": 384,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Hides the Mini Cart.",
             "description":
-              [ "The `hideMiniCart()` function returns a Promise that resolves when the Mini Cart is hidden." ],
+              [ "The `hideMiniCart()` function hides the Mini Cart." ],
             "links": [],
             "examples":
               [ { "title": "Add products to the cart, then show the Mini Cart. After 3 seconds, hide the Mini Cart",
@@ -292,7 +292,7 @@
         "docs":
           { "summary": "Shows the Mini Cart.",
             "description":
-              [ "The `showMiniCart()` function returns a Promise that resolves when the Mini Cart is displayed." ],
+              [ "The `showMiniCart()` function displays the Mini Cart." ],
             "links": [],
             "examples":
               [ { "title": "Add products to the cart, then show the Mini Cart",
