@@ -2,7 +2,7 @@
   "memberOf": "wix-stores",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 16,
       "filename": "stores.js" },
@@ -236,8 +236,9 @@
               {  } },
         "extra":
           {  } },
-      { "name": "showMiniCart",
-        "labels": [],
+      { "name": "hideMiniCart",
+        "labels":
+          [ "new" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -245,16 +246,82 @@
               { "name": "Promise",
                 "typeParams":
                   [ "void" ] },
-            "doc": "Fulfilled - When the mini cart is displayed." },
+            "doc": "Fulfilled - When the Mini Cart is hidden." },
+        "locations":
+          [ { "lineno": 386,
+              "filename": "stores.js" } ],
+        "docs":
+          { "summary": "Hides the Mini Cart.",
+            "description":
+              [ "The `hideMiniCart()` function returns a Promise that resolves when the Mini Cart is hidden." ],
+            "links": [],
+            "examples":
+              [ { "title": "Add products to the cart, then show the Mini Cart. After 3 seconds, hide the Mini Cart",
+                  "body":
+                    [ "import wixStores from 'wix-stores';",
+                      "",
+                      "const products = [{",
+                      "  \"productId\": \"0873ed58-f88d-77d1-4566-afd4c50d253e\",",
+                      "  \"quantity\": 2",
+                      "}]",
+                      "",
+                      "wixStores.cart.addProducts(products)",
+                      "  .then(() => {",
+                      "    // After the products are added to the cart, show the Mini Cart",
+                      "    wixStores.cart.showMiniCart();",
+                      "  })",
+                      "  .then(() => {",
+                      "    // After displaying the Mini Cart for 3 seconds, hide the Mini Cart",
+                      "    setTimeout(() => wixStores.cart.hideMiniCart(), 3000);",
+                      "  })",
+                      "  .catch((error) => {",
+                      "    console.error(error);",
+                      "  });" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "showMiniCart",
+        "labels":
+          [ "changed" ],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "Fulfilled - When the Mini Cart is displayed." },
         "locations":
           [ { "lineno": 375,
               "filename": "stores.js" } ],
         "docs":
-          { "summary": "Shows the mini cart.",
+          { "summary": "Shows the Mini Cart.",
             "description":
-              [ "The `showMiniCart()` function returns a Promise that resolves when the mini cart is displayed." ],
+              [ "The `showMiniCart()` function returns a Promise that resolves when the Mini Cart is displayed." ],
             "links": [],
-            "examples": [],
+            "examples":
+              [ { "title": "Add products to the cart, then show the Mini Cart",
+                  "body":
+                    [ "import wixStores from 'wix-stores';",
+                      "",
+                      "const products = [{",
+                      "  \"productId\": \"0873ed58-f88d-77d1-4566-afd4c50d253e\",",
+                      "  \"quantity\": 2",
+                      "}]",
+                      "",
+                      "wixStores.cart.addProducts(products)",
+                      "  .then(() => {",
+                      "    // After the products are added to the cart, show the Mini Cart",
+                      "    wixStores.cart.showMiniCart();",
+                      "  })",
+                      "  .catch((error) => {",
+                      "    console.error(error);",
+                      "  });" ],
+                  "extra":
+                    {  } } ],
             "extra":
               {  } },
         "extra":
