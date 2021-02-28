@@ -2,7 +2,8 @@
   "memberOf": "wix-multilingual-backend",
   "mixes": [],
   "labels":
-    [ "changed" ],
+    [ "changed",
+      "removed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
