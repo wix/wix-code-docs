@@ -1,7 +1,6 @@
 { "name": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -29,8 +28,7 @@
           {  } } ],
   "operations":
     [ { "name": "activate",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -80,8 +78,7 @@
         "extra":
           {  } },
       { "name": "create",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "languageCode",
@@ -143,8 +140,7 @@
         "extra":
           {  } },
       { "name": "deactivate",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -194,8 +190,7 @@
         "extra":
           {  } },
       { "name": "list",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "limit",
@@ -243,8 +238,7 @@
         "extra":
           {  } },
       { "name": "remove",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -296,8 +290,7 @@
         "extra":
           {  } },
       { "name": "setDefault",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -350,8 +343,7 @@
         "extra":
           {  } },
       { "name": "update",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
