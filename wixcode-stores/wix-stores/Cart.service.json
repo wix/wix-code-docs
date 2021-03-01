@@ -244,12 +244,13 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 385,
+          [ { "lineno": 386,
               "filename": "stores.js" } ],
         "docs":
           { "summary": "Hides the Mini Cart.",
             "description":
               [ "The `hideMiniCart()` function hides the Mini Cart.",
+                "To learn more about the Mini Cart, click [here](https://support.wix.com/en/article/wix-stores-adding-and-setting-up-the-mini-cart).",
                 "> **Note:** This API will fail when viewing the site on mobile because there is no Mini Cart on the mobile site." ],
             "links": [],
             "examples":
@@ -294,6 +295,7 @@
           { "summary": "Shows the Mini Cart.",
             "description":
               [ "The `showMiniCart()` function displays the Mini Cart.",
+                "To learn more about the Mini Cart, click [here](https://support.wix.com/en/article/wix-stores-adding-and-setting-up-the-mini-cart).",
                 "> **Note:** This API will fail when viewing the site on mobile because there is no Mini Cart on the mobile site." ],
             "links": [],
             "examples":
