@@ -1,0 +1,358 @@
+{ "name": "ConsentPolicy",
+  "memberOf": "wix-window",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1374,
+      "filename": "window.es6" },
+  "docs":
+    { "summary": "The ConsentPolicy API is used to perform actions related to the user's allowed cookies and third-party data transfer, such as for GDPR or CCPA purposes.",
+      "description":
+        [ "The consent policy helps you comply with [GDPR](https://support.wix.com/en/article/preparing-your-wix-site-for-the-gdpr) and [CCPA](https://support.wix.com/en/article/preparing-your-wix-site-for-ccpa) regulations and lets your users",
+          "control their information. The site owner sets up the site consent policy and cookie consent banners in",
+          "the site's [Privacy Center](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Privacy%20Center&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fcookie-consent-settings-app?referralInfo=corvid-docs).",
+          "",
+          " To use the ConsentPolicy API, import `wixWindow` from the `wix-window` module:",
+          "",
+          "   ```javascript",
+          "   import wixWindow from 'wix-window';",
+          "   ```",
+          "",
+          "The APIs in `wix-window.ConsentPolicy` can only be used in front-end code." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getCurrentConsentPolicy",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "wix-window.ConsentPolicy.PolicyDetails" },
+        "locations":
+          [ { "lineno": 1413,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "Gets the user's consent policy regarding allowed cookies and third-party data transfer, such as for GDPR or CCPA purposes.",
+            "description":
+              [ "The `getCurrentConsentPolicy()` function returns the",
+                "consent policy details of the user, meaning, which cookies the user allows and whether data transfer",
+                "to third parties is allowed." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get a user's consent policy",
+                  "body":
+                    [ "import wixWindow from 'wix-window';",
+                      "",
+                      "// ...",
+                      "",
+                      "const policyDetails = wixWindow.consentPolicy.getCurrentConsentPolicy();",
+                      "",
+                      "/* policyDetails:",
+                      " *",
+                      " * {",
+                      " *   \"defaultPolicy\" : true,",
+                      " *   \"policy\" : {",
+                      " *     \"essential\" : true,",
+                      " *     \"functional\" : true,",
+                      " *     \"analytics\" : true,",
+                      " *     \"advertising\" : true,",
+                      " *     \"dataToThirdParty\" : true",
+                      " *   },",
+                      " *   \"createdDate\" : 2020-07-20T12:33:09.775Z",
+                      " * }",
+                      " */" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "onConsentPolicyChanged",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "handler",
+              "type": "wix-window.ConsentPolicy.ConsentPolicyChangedHandler",
+              "doc": "The name of the function or\n the function expression to run when the consent policy is changed." } ],
+        "ret":
+          { "type": "void" },
+        "locations":
+          [ { "lineno": 1474,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "Sets the function that runs when a user's consent policy was changed using [`setConsentPolicy()`](#setConsentPolicy) or if it was reset using [`resetConsentPolicy()`](#resetConsentPolicy).",
+            "description":
+              [ "Use the `onConsentPolicyChanged()` function for code you want to run after",
+                " the user's current consent policy was changed using [`setConsentPolicy()`](#setConsentPolicy) or if it was reset using [`resetConsentPolicy()`](#resetConsentPolicy).",
+                "",
+                " Usually, you want to call the `onConsentPolicyChanged()` function in the **Site** tab of the",
+                " code panel so that the `onConsentPolicyChanged()` event handler runs no matter which",
+                " page on your site is used to change the policy." ],
+            "links": [],
+            "examples":
+              [ { "title": "Run code when a user's consent policy changed",
+                  "body":
+                    [ "import wixWindow from 'wix-window';",
+                      "",
+                      "// ...",
+                      "",
+                      "const consentPolicy = wixWindow.consentPolicy;",
+                      "consentPolicy.onConsentPolicyChanged( (event) => {",
+                      "  console.log(JSON.stringify(event.policy));",
+                      "} );" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "resetConsentPolicy",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "Fulfilled - When the reset is complete.\nRejected - Error message." },
+        "locations":
+          [ { "lineno": 1426,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "Removes the current policy from the user's browser and resets the user's consent policy to the default policy for the site.",
+            "description":
+              [ "The `resetConsentPolicy()` function returns a Promise that resolves when the policy is reset." ],
+            "links": [],
+            "examples":
+              [ { "title": "Reset a visitor's consent policy",
+                  "body":
+                    [ "import wixWindow from 'wix-window';",
+                      "",
+                      "// ...",
+                      "",
+                      "const result = wixWindow.consentPolicy.resetConsentPolicy()",
+                      "  .then( (policy) => {",
+                      "    console.log(\"The policy is now set to the default site policy.\");",
+                      "    return {\"reset\": true, policy};",
+                      "  } )",
+                      "  .catch( (error) => {",
+                      "    return {\"reset\": false, \"reason\": error};",
+                      "  } );" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "setConsentPolicy",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "policy",
+              "type": "wix-window.ConsentPolicy.Policy",
+              "doc": "An object representing the cookies of the user's consent policy." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-window.ConsentPolicy.PolicyDetails" ] },
+            "doc": "Fulfilled - All the details of the user's consent policy, including if the the current policy is the default site policy and the policy's allowed cookies.\nRejected - Error message." },
+        "locations":
+          [ { "lineno": 1439,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "Sets the current user's consent policy regarding allowed cookies and data transfer to third parties, such as for GDPR or CCPA purposes.",
+            "description":
+              [ "The `setConsentPolicy()` function returns a Promise that resolves to the",
+                "consent policy details of the user.",
+                "",
+                "You can use the [`onConsentPolicyChanged()`](#onConsentPolicyChanged) event to listen for",
+                "changes made when a visitor changes their consent policy with `setConsentPolicy()`. Handle",
+                "the policy change accordingly in the event handler's [ConsentPolicyChangedHandler callback function](#ConsentPolicyChangedHandler).",
+                "Changes to the consent policy take affect after the page is refreshed." ],
+            "links": [],
+            "examples":
+              [ { "title": "Set a user's consent policy",
+                  "body":
+                    [ "import wixWindow from 'wix-window';",
+                      "",
+                      "$w(\"#setPolicyButton\").onClick(() => {",
+                      "\tconst newPolicy = {",
+                      "\t\t\"defaultPolicy\": false,",
+                      "\t\t\"policy\": {",
+                      "\t\t\t\"essential\": $w(\"#essentialCheckbox\").checked,",
+                      "\t\t\t\"analytics\": $w(\"#analyticsCheckbox\").checked,",
+                      "\t\t\t\"functional\": $w(\"#functionalCheckbox\").checked,",
+                      "\t\t\t\"advertising\": $w(\"#advertisingCheckbox\").checked",
+                      "\t\t},",
+                      "\t\t\"createdDate\": new Date()",
+                      "\t};",
+                      "\tconst result = wixWindow.consentPolicy.setConsentPolicy(newPolicy)",
+                      "\t\t.then( (policyDetails) => {",
+                      "\t\t\tconst policy = policyDetails.policy;",
+                      "\t\t\treturn {\"set\": true, policy};",
+                      "\t\t} )",
+                      "\t\t.catch( (error) => {",
+                      "\t\t  return {\"set\": false, \"reason\": error};",
+                      "\t\t});",
+                      "",
+                      "\t// ...",
+                      "});",
+                      "",
+                      "/* policyDetails:",
+                      " * {",
+                      " *   \"defaultPolicy\" : false,",
+                      " *   \"policy\" : {",
+                      " *     \"essential\" : true,",
+                      " *     \"functional\" : false,",
+                      " *     \"analytics\" : false,",
+                      " *     \"advertising\" : false,",
+                      " *     \"dataToThirdParty\" : false",
+                      " *   },",
+                      " *   \"createdDate\" : 2020-12-20T12:33:09.775Z",
+                      " * }",
+                      " */" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks":
+    [ { "name": "ConsentPolicyChangedHandler",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "event",
+              "type": "wix-window.ConsentPolicy.ConsentPolicyChangedEvent",
+              "doc": "The event that occurred when the consent policy changed." } ],
+        "ret":
+          { "type": "void" },
+        "locations":
+          [ { "lineno": 1459,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "Function that runs when a user's consent policy was changed using [`setConsentPolicy()`](#setConsentPolicy).",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "messages":
+    [ { "name": "ConsentPolicyChangedEvent",
+        "locations":
+          [ { "lineno": 1466,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "The event that occurred when the consent policy changed.",
+            "links":
+              [ "[onConsentPolicyChanged()](#onConsentPolicyChanged)" ],
+            "examples":
+              [ { "title": "Run code when a a user's consent policy changed",
+                  "body":
+                    [ "import wixWindow from 'wix-window';",
+                      "",
+                      "// ...",
+                      "",
+                      "const consentPolicy = wixWindow.consentPolicy;",
+                      "consentPolicy.onConsentPolicyChanged( (event) => {",
+                      "  console.log(JSON.stringify(event.policy));",
+                      "} );" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "members": [],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Policy",
+        "locations":
+          [ { "lineno": 1505,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "The current user's consent policy settings.",
+            "description":
+              [ "An object containing the consent policy cookie settings, by type, of the user currently viewing the site." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get the current user's consent policy",
+                  "body":
+                    [ "import wixWindow from 'wix-window';",
+                      "",
+                      "// ...",
+                      "",
+                      "const policyDetails = wixWindow.consentPolicy.getCurrentConsentPolicy();",
+                      "",
+                      "/* policyDetails:",
+                      " *",
+                      " * {",
+                      " *   \"defaultPolicy\" : true,",
+                      " *   \"policy\" : {",
+                      " *     \"essential\" : true,",
+                      " *     \"functional\" : true,",
+                      " *     \"analytics\" : true,",
+                      " *     \"advertising\" : true,",
+                      " *     \"dataToThirdParty\" : true",
+                      " *   },",
+                      " *   \"createdDate\" : 2020-07-20T12:33:09.775Z",
+                      " * }",
+                      " */" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "essential",
+              "type": "boolean",
+              "doc": "Consent for mandatory cookies for Wix websites, such as for security cookies. Wix places these cookies on your device and these cookies do not require user consent. Always `true`." },
+            { "name": "functional",
+              "type": "boolean",
+              "doc": "Consent for cookies placed on the user's device that \"remember\" user settings to improve user experience. For example, an indication that the user dismissed a popup. The default is `true`." },
+            { "name": "analytics",
+              "type": "boolean",
+              "doc": "Consent for cookies used for analytics, such as Wix analytics, Google Analytics, Yandex Metrica, and so on. The default is `true`." },
+            { "name": "advertising",
+              "type": "boolean",
+              "doc": "Consent for cookies used for advertising purposes. This includes third-party scripts and pixels that may potentially place advertising cookies on the device (such as Twitter page view and Facebook Pixel). The default is `true`." },
+            { "name": "dataToThirdParty",
+              "type": "boolean",
+              "doc": "Consent for a user's personal data to be transferred to a third party (such as Google Analytics, Facebook Pixel, and FullStory). The default is `true`." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PolicyDetails",
+        "locations":
+          [ { "lineno": 1493,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "The complete details of the current user's consent policy.",
+            "description":
+              [ "An object containing all the details about the consent policy of the user currently viewing the site.",
+                " This is returned in the Promise of the `setConsentPolicy()` function." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "defaultPolicy",
+              "type": "boolean",
+              "doc": "Whether the policy is the default consent policy set by the site owner. If `true`, either the user has not set a policy or the site owner has reset the policy." },
+            { "name": "policy",
+              "type": "wix-window.ConsentPolicy.Policy",
+              "doc": "An object representing the user's current consent policy." },
+            { "name": "createdDate",
+              "type": "Date",
+              "doc": "If a cookie exists in the browser defining the current consent policy, the date the policy was set. Otherwise, undefined.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

@@ -6,7 +6,8 @@
       "$w.ClickableMixin",
       "$w.ContainableMixin",
       "$w.StyleMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 8,
       "filename": "Box.es6" },
@@ -25,7 +26,8 @@
         {  } },
   "properties":
     [ { "name": "style",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "$w.Style",
@@ -41,11 +43,7 @@
                 " + [`borderColor`]($w.Style.html#borderColor)",
                 " + [`borderWidth`]($w.Style.html#borderWidth)",
                 "",
-                "> **Note:** Not all styles can be used on all box designs. To determine which styles",
-                " work with a specific box design, go to the **Box Design** panel in",
-                " the Editor, choose a design, and click **Customize Design**. The design",
-                " options that you see in the **Box Design** panel for your particular",
-                " box are the styles you can use in your code." ],
+                "> **Note:** Not all styles can be used on all box designs. To determine which styles work with a specific box design, go to the **Box Design** panel in the Editor, choose a design, and click **Customize Design**. The design options that you see in the **Box Design** panel for your particular box are the styles you can use in your code." ],
             "links": [],
             "examples":
               [ { "title": "Set the background color",
