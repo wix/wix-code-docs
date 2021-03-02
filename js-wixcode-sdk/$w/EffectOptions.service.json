@@ -3,7 +3,7 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 359,
+    { "lineno": 363,
       "filename": "HiddenMixin.es6" },
   "docs":
     { "summary": "Use effect options to customize an effect when [showing]($w.HiddenMixin.html#show) or [hiding]($w.HiddenMixin.html#hide) an element.\n Effect options include arcs, bouncing, fading, flipping, floating, flying in/out, folding, gliding and more.",
@@ -17,7 +17,7 @@
   "messages":
     [ { "name": "ArcEffectOptions",
         "locations":
-          [ { "lineno": 365,
+          [ { "lineno": 369,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"arc\"` effect.",
@@ -53,7 +53,7 @@
         "labels": [] },
       { "name": "BounceEffectOptions",
         "locations":
-          [ { "lineno": 376,
+          [ { "lineno": 380,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"bounce\"` effect.",
@@ -93,7 +93,7 @@
         "labels": [] },
       { "name": "FadeEffectOptions",
         "locations":
-          [ { "lineno": 389,
+          [ { "lineno": 393,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"fade\"` effect.",
@@ -125,7 +125,7 @@
         "labels": [] },
       { "name": "FlipEffectOptions",
         "locations":
-          [ { "lineno": 399,
+          [ { "lineno": 403,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"flip\"` effect.",
@@ -161,7 +161,7 @@
         "labels": [] },
       { "name": "FloatEffectOptions",
         "locations":
-          [ { "lineno": 410,
+          [ { "lineno": 414,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"float\"` effect.",
@@ -197,7 +197,7 @@
         "labels": [] },
       { "name": "FlyEffectOptions",
         "locations":
-          [ { "lineno": 421,
+          [ { "lineno": 425,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"fly\"` effect.",
@@ -233,7 +233,7 @@
         "labels": [] },
       { "name": "FoldEffectOptions",
         "locations":
-          [ { "lineno": 432,
+          [ { "lineno": 436,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"fold\"` effect.",
@@ -269,7 +269,7 @@
         "labels": [] },
       { "name": "GlideEffectOptions",
         "locations":
-          [ { "lineno": 443,
+          [ { "lineno": 447,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"glide\"` effect.",
@@ -309,7 +309,7 @@
         "labels": [] },
       { "name": "PuffEffectOptions",
         "locations":
-          [ { "lineno": 455,
+          [ { "lineno": 459,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"puff\"` effect.",
@@ -341,7 +341,7 @@
         "labels": [] },
       { "name": "RollEffectOptions",
         "locations":
-          [ { "lineno": 465,
+          [ { "lineno": 469,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"roll\"` effect.",
@@ -377,7 +377,7 @@
         "labels": [] },
       { "name": "SlideEffectOptions",
         "locations":
-          [ { "lineno": 476,
+          [ { "lineno": 480,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"slide\"` effect.",
@@ -413,7 +413,7 @@
         "labels": [] },
       { "name": "SpinEffectOptions",
         "locations":
-          [ { "lineno": 487,
+          [ { "lineno": 491,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"spin\"` effect.",
@@ -453,7 +453,7 @@
         "labels": [] },
       { "name": "TurnEffectOptions",
         "locations":
-          [ { "lineno": 499,
+          [ { "lineno": 503,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"turn\"` effect.",
@@ -489,7 +489,7 @@
         "labels": [] },
       { "name": "ZoomEffectOptions",
         "locations":
-          [ { "lineno": 510,
+          [ { "lineno": 514,
               "filename": "HiddenMixin.es6" } ],
         "docs":
           { "summary": "An object used to customize the `\"zoom\"` effect.",

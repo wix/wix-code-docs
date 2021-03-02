@@ -125,9 +125,9 @@
         "set": true,
         "type": "number",
         "locations":
-          [ { "lineno": 200,
+          [ { "lineno": 245,
               "filename": "DropDown.es6" },
-            { "lineno": 230,
+            { "lineno": 200,
               "filename": "DropDown.es6" } ],
         "docs":
           { "summary": "Sets or gets the index of the selected option.",
@@ -165,7 +165,7 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 330,
+          [ { "lineno": 361,
               "filename": "DropDown.es6" } ],
         "docs":
           { "summary": "Gets an object containing information about the dropdown's styles.",
@@ -204,9 +204,9 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 264,
+          [ { "lineno": 285,
               "filename": "DropDown.es6" },
-            { "lineno": 298,
+            { "lineno": 319,
               "filename": "DropDown.es6" } ],
         "docs":
           { "summary": "Sets or gets an element's value.\n> **Notes:**\n> + Changing a dropdown's `value` in code does not trigger an `onChange` event.\n>\n>\n> + If an element is connected to a dataset, setting the element's `value`\n in code does not set the value of the connected field in the dataset.\n That means if you use the dataset to perform a submit, the value changed\n in code is not reflected in the submitted item.\n>\n>\n> + To submit the new value using a dataset, set the field's value using the\n [`setFieldValue()`](wix-dataset.html#setFieldValue) function before\n performing the submit.",

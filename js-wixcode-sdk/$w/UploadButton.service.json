@@ -7,8 +7,7 @@
       "$w.FocusMixin",
       "$w.StyleMixin",
       "$w.RequiredMixin" ],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 112,
       "filename": "UploadButton.es6" },
@@ -267,8 +266,7 @@
         "extra":
           {  } },
       { "name": "value",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type":
@@ -357,8 +355,7 @@
         "extra":
           {  } },
       { "name": "startUpload",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -533,7 +530,7 @@
         "labels": [] },
       { "name": "ValidityState",
         "locations":
-          [ { "lineno": 443,
+          [ { "lineno": 465,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "Contains detailed information about the validity states of a file to upload.",

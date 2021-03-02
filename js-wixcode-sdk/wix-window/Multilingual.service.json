@@ -30,9 +30,9 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 1420,
+          [ { "lineno": 1489,
               "filename": "window.es6" },
-            { "lineno": 1468,
+            { "lineno": 1537,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Sets or gets the site's current display language.",
@@ -135,7 +135,7 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 1411,
+          [ { "lineno": 1480,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets whether the site has been set up to be shown in multiple languages.",
