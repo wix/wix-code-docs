@@ -290,7 +290,8 @@
         "extra":
           {  } },
       { "name": "delete",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "request",
@@ -335,9 +336,9 @@
                 "",
                 "",
                 " > **Note:** You must publish your site at least once before using both the testing and",
-                " production endpoints. After that, you save your site for changes you make to",
-                " testing endpoints to take effect and you publish your site for changes you",
-                " make to the production endpoints to take effect." ],
+                " > production endpoints. After that, you save your site for changes you make to",
+                " > testing endpoints to take effect and you publish your site for changes you",
+                " > make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a DELETE HTTP function",
@@ -466,7 +467,8 @@
         "extra":
           {  } },
       { "name": "get",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "request",
@@ -511,9 +513,9 @@
                 "",
                 "",
                 " > **Note:** You must publish your site at least once before using both the testing and",
-                " production endpoints. After that, you save your site for changes you make to",
-                " testing endpoints to take effect and you publish your site for changes you",
-                " make to the production endpoints to take effect." ],
+                " > production endpoints. After that, you save your site for changes you make to",
+                " > testing endpoints to take effect and you publish your site for changes you",
+                " > make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a GET HTTP function",
@@ -590,8 +592,7 @@
         "extra":
           {  } },
       { "name": "notFound",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "options",
@@ -717,7 +718,8 @@
         "extra":
           {  } },
       { "name": "options",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "request",
@@ -768,9 +770,9 @@
                 "",
                 "",
                 " > **Note:** You must publish your site at least once before using both the testing and",
-                " production endpoints. After that, you save your site for changes you make to",
-                " testing endpoints to take effect and you publish your site for changes you",
-                " make to the production endpoints to take effect." ],
+                " > production endpoints. After that, you save your site for changes you make to",
+                " > testing endpoints to take effect and you publish your site for changes you",
+                " > make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create an OPTIONS HTTP function",
@@ -828,7 +830,8 @@
         "extra":
           {  } },
       { "name": "post",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "request",
@@ -873,9 +876,9 @@
                 "",
                 "",
                 " > **Note:** You must publish your site at least once before using both the testing and",
-                " production endpoints. After that, you save your site for changes you make to",
-                " testing endpoints to take effect and you publish your site for changes you",
-                " make to the production endpoints to take effect." ],
+                " > production endpoints. After that, you save your site for changes you make to",
+                " > testing endpoints to take effect and you publish your site for changes you",
+                " > make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a POST HTTP function",
@@ -946,7 +949,8 @@
         "extra":
           {  } },
       { "name": "put",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "request",
@@ -993,9 +997,9 @@
                 "",
                 "",
                 " > **Note:** You must publish your site at least once before using both the testing and",
-                " production endpoints. After that, you save your site for changes you make to",
-                " testing endpoints to take effect and you publish your site for changes you",
-                " make to the production endpoints to take effect." ],
+                " > production endpoints. After that, you save your site for changes you make to",
+                " > testing endpoints to take effect and you publish your site for changes you",
+                " > make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a PUT HTTP function",
@@ -1183,7 +1187,8 @@
         "extra":
           {  } },
       { "name": "use",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "request",
@@ -1234,9 +1239,9 @@
                 " functions.",
                 "",
                 " > **Note:** You must publish your site at least once before using both the testing and",
-                " production endpoints. After that, you save your site for changes you make to",
-                " testing endpoints to take effect and you publish your site for changes you",
-                " make to the production endpoints to take effect." ],
+                " > production endpoints. After that, you save your site for changes you make to",
+                " > testing endpoints to take effect and you publish your site for changes you",
+                " > make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a catchall HTTP function",
@@ -1297,13 +1302,13 @@
   "relatedContent":
     [ { "icon": "article",
         "text": "Exposing a Site API with HTTP Functions",
-        "url": "https://support.wix.com/en/article/wix-code-exposing-a-site-api-with-http-functions" },
+        "url": "https://support.wix.com/en/article/velo-exposing-a-site-api-with-http-functions" },
       { "icon": "example",
         "text": "Exposing APIs",
-        "url": "https://www.wix.com/corvid/example/exposing-apis" },
+        "url": "https://www.wix.com/velo/example/exposing-apis" },
       { "icon": "example",
         "text": "Expose and Access Site APIs",
-        "url": "https://www.wix.com/corvid/forum/community-discussion/example-myapi-and-myapiclient" } ],
+        "url": "https://www.wix.com/velo/forum/community-discussion/example-myapi-and-myapiclient" } ],
   "FAQs":
     [ { "title": "How do I debug an HTTP function?",
         "markdown": "Each HTTP function you create has two endpoints, one for your users and one for you to use for testing. The testing endpoint is similar to the regular one, but the suffix `-dev` is added to the  `_functions` in the URL. You can send requests to your testing endpoint in whatever way is most convenient for you, such as using a third-party tool like [Postman](https://www.getpostman.com/). [Learn more](https://support.wix.com/en/article/wix-code-exposing-a-site-api-with-http-functions#debugging)." },
