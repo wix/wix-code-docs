@@ -1,7 +1,6 @@
 { "name": "wix-multilingual-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -191,8 +190,7 @@
         "extra":
           {  } },
       { "name": "list",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "listLocalesRequest",
@@ -411,8 +409,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Locale_227900549199",
         "locations":
           [ { "lineno": 1,
@@ -542,7 +539,6 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
