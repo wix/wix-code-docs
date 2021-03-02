@@ -114,10 +114,7 @@
           " ```",
           "",
           "",
-          " > **Note:** You must publish your site at least once before using both the testing and",
-          " production endpoints. After that, you save your site for changes you make to",
-          " testing endpoints to take effect and you publish your site for changes you",
-          " make to the production endpoints to take effect." ],
+          " > **Note:** You must publish your site at least once before using both the testing and production endpoints. After that, you save your site for changes you make to testing endpoints to take effect and you publish your site for changes you make to the production endpoints to take effect." ],
       "links": [],
       "examples": [],
       "extra":
@@ -300,7 +297,7 @@
         "ret":
           { "type": "wix-http-functions.WixHttpFunctionResponse" },
         "locations":
-          [ { "lineno": 267,
+          [ { "lineno": 255,
               "filename": "http-functions.js" } ],
         "docs":
           { "summary": "A function that responds to requests made with the HTTP DELETE method.",
@@ -335,10 +332,7 @@
                 " ```",
                 "",
                 "",
-                " > **Note:** You must publish your site at least once before using both the testing and",
-                " > production endpoints. After that, you save your site for changes you make to",
-                " > testing endpoints to take effect and you publish your site for changes you",
-                " > make to the production endpoints to take effect." ],
+                " > **Note:** You must publish your site at least once before using both the testing and production endpoints. After that, you save your site for changes you make to testing endpoints to take effect and you publish your site for changes you make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a DELETE HTTP function",
@@ -477,7 +471,7 @@
         "ret":
           { "type": "wix-http-functions.WixHttpFunctionResponse" },
         "locations":
-          [ { "lineno": 117,
+          [ { "lineno": 114,
               "filename": "http-functions.js" } ],
         "docs":
           { "summary": "A function that responds to requests made with the HTTP GET method.",
@@ -512,10 +506,7 @@
                 " ```",
                 "",
                 "",
-                " > **Note:** You must publish your site at least once before using both the testing and",
-                " > production endpoints. After that, you save your site for changes you make to",
-                " > testing endpoints to take effect and you publish your site for changes you",
-                " > make to the production endpoints to take effect." ],
+                " > **Note:** You must publish your site at least once before using both the testing and production endpoints. After that, you save your site for changes you make to testing endpoints to take effect and you publish your site for changes you make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a GET HTTP function",
@@ -728,7 +719,7 @@
         "ret":
           { "type": "wix-http-functions.WixHttpFunctionResponse" },
         "locations":
-          [ { "lineno": 316,
+          [ { "lineno": 301,
               "filename": "http-functions.js" } ],
         "docs":
           { "summary": "A function that responds to requests made with the HTTP OPTIONS method.",
@@ -769,10 +760,7 @@
                 " ```",
                 "",
                 "",
-                " > **Note:** You must publish your site at least once before using both the testing and",
-                " > production endpoints. After that, you save your site for changes you make to",
-                " > testing endpoints to take effect and you publish your site for changes you",
-                " > make to the production endpoints to take effect." ],
+                " > **Note:** You must publish your site at least once before using both the testing and production endpoints. After that, you save your site for changes you make to testing endpoints to take effect and you publish your site for changes you make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create an OPTIONS HTTP function",
@@ -840,7 +828,7 @@
         "ret":
           { "type": "wix-http-functions.WixHttpFunctionResponse" },
         "locations":
-          [ { "lineno": 167,
+          [ { "lineno": 161,
               "filename": "http-functions.js" } ],
         "docs":
           { "summary": "A function that responds to requests made with the HTTP POST method.",
@@ -875,10 +863,7 @@
                 " ```",
                 "",
                 "",
-                " > **Note:** You must publish your site at least once before using both the testing and",
-                " > production endpoints. After that, you save your site for changes you make to",
-                " > testing endpoints to take effect and you publish your site for changes you",
-                " > make to the production endpoints to take effect." ],
+                " > **Note:** You must publish your site at least once before using both the testing and production endpoints. After that, you save your site for changes you make to testing endpoints to take effect and you publish your site for changes you make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a POST HTTP function",
@@ -959,7 +944,7 @@
         "ret":
           { "type": "wix-http-functions.WixHttpFunctionResponse" },
         "locations":
-          [ { "lineno": 216,
+          [ { "lineno": 207,
               "filename": "http-functions.js" } ],
         "docs":
           { "summary": "A function that responds to requests made with the HTTP PUT method.",
@@ -996,10 +981,7 @@
                 " ```",
                 "",
                 "",
-                " > **Note:** You must publish your site at least once before using both the testing and",
-                " > production endpoints. After that, you save your site for changes you make to",
-                " > testing endpoints to take effect and you publish your site for changes you",
-                " > make to the production endpoints to take effect." ],
+                " > **Note:** You must publish your site at least once before using both the testing and production endpoints. After that, you save your site for changes you make to testing endpoints to take effect and you publish your site for changes you make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a PUT HTTP function",
@@ -1197,7 +1179,7 @@
         "ret":
           { "type": "wix-http-functions.WixHttpFunctionResponse" },
         "locations":
-          [ { "lineno": 370,
+          [ { "lineno": 352,
               "filename": "http-functions.js" } ],
         "docs":
           { "summary": "A function that responds to requests made with any HTTP method.",
@@ -1238,10 +1220,7 @@
                 " [`badRequest()`](wix-http-functions.html#badRequest), or [`forbidden()`](wix-http-functions.html#forbidden)",
                 " functions.",
                 "",
-                " > **Note:** You must publish your site at least once before using both the testing and",
-                " > production endpoints. After that, you save your site for changes you make to",
-                " > testing endpoints to take effect and you publish your site for changes you",
-                " > make to the production endpoints to take effect." ],
+                " > **Note:** You must publish your site at least once before using both the testing and production endpoints. After that, you save your site for changes you make to testing endpoints to take effect and you publish your site for changes you make to the production endpoints to take effect." ],
             "links": [],
             "examples":
               [ { "title": "Create a catchall HTTP function",
