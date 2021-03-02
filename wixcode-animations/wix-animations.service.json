@@ -38,7 +38,8 @@
   "properties": [],
   "operations":
     [ { "name": "timeline",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "timelineOptions",
@@ -60,7 +61,8 @@
                 "",
                 " Typically, after creating a new timeline, you add animation attributes and",
                 " sequence them within the timeline using the [`add()`](wix-animations.TimeLine.html#add) function.",
-                " Then, control the playing of the timeline using the [`play()`](wix-animations.TimeLine.html#play),",
+                "",
+                " Control the timeline playback using the [`play()`](wix-animations.TimeLine.html#play),",
                 " [`reverse()`](wix-animations.TimeLine.html#reverse), [`pause()`](wix-animations.TimeLine.html#pause),",
                 " and [`replay()`](wix-animations.TimeLine.html#replay) functions.",
                 "",
@@ -235,12 +237,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  },
   "menuSections": "APIs",
   "relatedContent":
     [ { "icon": "example",
         "text": "Image and Text Animation",
-        "url": "https://www.wix.com/corvid/example/image-and-text-animation" } ] }
+        "url": "https://www.wix.com/velo/example/image-and-text-animation" } ] }
