@@ -1,6 +1,7 @@
 { "name": "wix-multilingual-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -190,15 +191,12 @@
         "extra":
           {  } },
       { "name": "list",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
-          [ { "name": "limit",
-              "type": "number",
-              "doc": "The number of items to load" },
-            { "name": "offset",
-              "type": "number",
-              "doc": "number of items to skip in the current sort order" } ],
+          [ { "name": "listLocalesRequest",
+              "type": "wix-multilingual-backend.ListLocalesRequest_649175084" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -208,7 +206,7 @@
                         [ "wix-multilingual-backend.Locale_792377915733" ] } ] },
             "doc": "Fulfilled - All the site's locales" },
         "locations":
-          [ { "lineno": 1,
+          [ { "lineno": 14,
               "filename": "com_wixpress_multilingual_api_Locales_List_list.js" } ],
         "docs":
           { "summary": "Lists all locales for the site",
@@ -219,11 +217,15 @@
                     [ "import wixMultilingualBackend from \"wix-multilingual-backend\";",
                       "",
                       "export function list() {",
-                      "  const limit = 42;",
-                      "  const offset = 42;",
+                      "  const listLocalesRequest = {",
+                      "    page: {",
+                      "      limit: 42,",
+                      "      offset: 42",
+                      "    }",
+                      "  };",
                       "",
                       "  return wixMultilingualBackend",
-                      "    .list(limit, offset)",
+                      "    .list(listLocalesRequest)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -394,7 +396,24 @@
           {  } } ],
   "callbacks": [],
   "messages":
-    [ { "name": "Locale_227900549199",
+    [ { "name": "ListLocalesRequest_649175084",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_multilingual_api_Locales_List_list.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "page",
+              "type": "wix-multilingual-backend.Paging_1617727965",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "Locale_227900549199",
         "locations":
           [ { "lineno": 1,
               "filename": "shared.js" } ],
@@ -502,6 +521,28 @@
               "doc": "Date and numbers formatting" } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels": [] },
+      { "name": "Paging_1617727965",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com_wixpress_multilingual_api_Locales_List_list.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "The number of items to load",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "doc": "number of items to skip in the current sort order",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] } ],
   "extra":
     {  } }
