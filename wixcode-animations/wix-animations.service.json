@@ -1,7 +1,6 @@
 { "name": "wix-animations",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "animations.js" },
@@ -38,8 +37,7 @@
   "properties": [],
   "operations":
     [ { "name": "timeline",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "timelineOptions",
