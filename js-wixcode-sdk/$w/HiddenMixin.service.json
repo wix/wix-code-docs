@@ -323,7 +323,7 @@
                 " This table shows the possible `effectName` values",
                 " and their corresponding names in the Velo editor:",
                 "",
-                " | Velo API Effect Name | Velo Editor Animation Name |",
+                " | Effect Name Value    | Velo Editor Animation Name |",
                 " | -------------------- | -------------------------- |",
                 " | `\"arc\"`              | Arc-In                     |",
                 " | `\"bounce\"`           | Bounce-In                  |",

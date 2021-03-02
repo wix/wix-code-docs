@@ -1,7 +1,8 @@
 { "name": "Node",
   "memberOf": "$w",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 8,
       "filename": "Node.es6" },
@@ -119,7 +120,8 @@
         "extra":
           {  } },
       { "name": "type",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "string",
@@ -128,6 +130,25 @@
               "filename": "Node.es6" } ],
         "docs":
           { "summary": "Gets the element's type.",
+            "description":
+              [ "Possible values:",
+                "",
+                " - `$w.TextInput`",
+                " - `$w.TextBox`",
+                " - `$w.RichTextBox`",
+                " - `$w.RadioButtonGroup`",
+                " - `$w.CheckboxGroup`",
+                " - `$w.Dropdown`",
+                " - `$w.SelectionTags`",
+                " - `$w.Slider`",
+                " - `$w.DatePicker`",
+                " - `$w.UploadButton`",
+                " - `$w.RatingsInput`",
+                " - `$w.AddressInput`",
+                " - `$w.Switch`",
+                " - `$w.SignatureInput`",
+                " - `$w.Captcha`",
+                " - `$w.Form`" ],
             "links": [],
             "examples":
               [ { "title": "Get the element's type",
@@ -151,7 +172,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the scroll is complete." },
         "locations":
-          [ { "lineno": 190,
+          [ { "lineno": 209,
               "filename": "Node.es6" } ],
         "docs":
           { "summary": "Scrolls the page to the top of the element using an animation.",

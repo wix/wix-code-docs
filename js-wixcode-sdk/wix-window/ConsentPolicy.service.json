@@ -1,8 +1,7 @@
 { "name": "ConsentPolicy",
   "memberOf": "wix-window",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 1374,
       "filename": "window.es6" },
