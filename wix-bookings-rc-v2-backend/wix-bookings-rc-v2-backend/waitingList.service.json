@@ -1,0 +1,516 @@
+{ "name": "waitingList",
+  "memberOf": "wix-bookings-rc-v2-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 29,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "addParticipantToWaitlist",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "requestedEntityId",
+              "type": "string",
+              "doc": "Resource to be waitlisted for.\n Currently only supports session ID." },
+            { "name": "formInfo",
+              "type": "wix-bookings-rc-v2-backend.FormInfo_88699268303",
+              "doc": "Participant information as filled in the booking form (required).\n Contains contact details and other form fields specified by the owner for this 'waiting resource' (service)." },
+            { "name": "addParticipantToWaitlistOptions",
+              "type": "wix-bookings-rc-v2-backend.waitingList.RegisterRequest_4123456586" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "string" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 17,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Register_addParticipantToWaitlist.js" } ],
+        "docs":
+          { "summary": "Registers a site member to a waitlist.",
+            "description":
+              [ "If the requested session does not have a waitlist, or if the waitlist is already full, an error is received.",
+                "> **Permissions**",
+                "> This endpoint requires the Manage Bookings permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { waitingList } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function addParticipantToWaitlist() {",
+                      "  const requestedEntityId = \"a string\";",
+                      "  const formInfo = {",
+                      "    contactDetails: {",
+                      "      contactId: \"a string\",",
+                      "      firstName: \"a string\",",
+                      "      lastName: \"a string\",",
+                      "      email: \"a string\",",
+                      "      phone: \"a string\",",
+                      "      fullAddress: {",
+                      "        country: \"a string\",",
+                      "        subdivision: \"a string\",",
+                      "        city: \"a string\",",
+                      "        postalCode: \"a string\",",
+                      "        street: {",
+                      "          streetAddress: {",
+                      "            number: \"a string\",",
+                      "            name: \"a string\",",
+                      "            apt: \"a string\"",
+                      "          }",
+                      "        },",
+                      "        addressLine2: \"a string\",",
+                      "        formattedAddress: \"a string\",",
+                      "        hint: \"a string\",",
+                      "        geocode: {",
+                      "          latitude: 1.23,",
+                      "          longitude: 1.23",
+                      "        },",
+                      "        countryFullname: \"a string\",",
+                      "        subdivisions: [",
+                      "          {",
+                      "            code: \"a string\",",
+                      "            name: \"a string\"",
+                      "          }",
+                      "        ]",
+                      "      },",
+                      "      timeZone: \"a string\",",
+                      "      countryCode: \"a string\"",
+                      "    },",
+                      "    paymentSelection: [",
+                      "      {",
+                      "        rateLabel: \"a string\",",
+                      "        numberOfParticipants: 42",
+                      "      }",
+                      "    ],",
+                      "    customFormFields: {",
+                      "      someKey: \"a string\"",
+                      "    },",
+                      "    additionalFields: [",
+                      "      {",
+                      "        _id: \"a string\",",
+                      "        value: \"a string\",",
+                      "        valueType: \"SHORT_TEXT\"",
+                      "      }",
+                      "    ]",
+                      "  };",
+                      "  const addParticipantToWaitlistOptions = {",
+                      "    presentedStartTime: {",
+                      "      year: 42,",
+                      "      monthOfYear: 42,",
+                      "      dayOfMonth: 42,",
+                      "      hourOfDay: 42,",
+                      "      minutesOfHour: 42",
+                      "    },",
+                      "    presentedEndTime: {",
+                      "      year: 42,",
+                      "      monthOfYear: 42,",
+                      "      dayOfMonth: 42,",
+                      "      hourOfDay: 42,",
+                      "      minutesOfHour: 42",
+                      "    },",
+                      "    flowControlSettings: {",
+                      "      ignoreWaitlistCapacity: true",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return waitingList",
+                      "    .addParticipantToWaitlist(requestedEntityId, formInfo, addParticipantToWaitlistOptions)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "bookWaitlistParticipant",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "registrationId",
+              "type": "string",
+              "doc": "Registration to book." },
+            { "name": "enrollRequest",
+              "type": "wix-bookings-rc-v2-backend.waitingList.EnrollRequest_17262823939" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-v2-backend.waitingList.EnrollResult_374579348286" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 28,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Enroll_bookWaitlistParticipant.js" } ],
+        "docs":
+          { "summary": "Books a site member into the session for which they are waitlisted (waiting resource), and the associated booking is checked out.",
+            "description":
+              [ "Waitlist registration status is changed to ENROLLED.",
+                "> **Permissions**",
+                "> This endpoint requires the Manage Bookings permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { waitingList } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function bookWaitlistParticipant() {",
+                      "  const registrationId = \"a string\";",
+                      "  const enrollRequest = {",
+                      "    couponCode: \"a string\",",
+                      "    planSelection: {",
+                      "      orderId: \"a string\",",
+                      "      benefitId: \"a string\",",
+                      "      planId: \"a string\"",
+                      "    },",
+                      "    notifyParticipants: true,",
+                      "    flowControlSettings: {",
+                      "      forceEnrollment: true,",
+                      "      forceInPersonCheckout: true",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return waitingList",
+                      "    .bookWaitlistParticipant(registrationId, enrollRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listWaitlistParticipants",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "requestedEntitiesIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of sessions (waitingResources) with active waitlists." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-bookings-rc-v2-backend.waitingList.WaitingListEntry_13248045746" ] } ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 49,
+              "filename": "com_wix_bookings_api_v1_WaitingList_List_listWaitlistParticipants.js" } ],
+        "docs":
+          { "summary": "Returns a list of waitlisted entries.",
+            "description":
+              [ "Each WaitingListEntry returned holds the current Waitlist registrations, configuration and suggesting status.",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { waitingList } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function listWaitlistParticipants() {",
+                      "  const requestedEntitiesIds = [\"a string\"];",
+                      "",
+                      "  return waitingList",
+                      "    .listWaitlistParticipants(requestedEntitiesIds)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "removeParticipantFromWaitlist",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "registrationId",
+              "type": "string" },
+            { "name": "requestedEntityId",
+              "type": "string" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-v2-backend.waitingList.LeaveResult_4441311823" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Leave_removeParticipantFromWaitlist.js" } ],
+        "docs":
+          { "summary": "Removes a site member's registration to a waitlist (and cancels the associated pending-state booking).",
+            "description":
+              [ "If a spot has become available for booking and the server is SUGGESTING registration to waitlist registrants, the next member registered to the waitlist will receive an invitation to the opened spot.",
+                "> **Permissions**",
+                "> This endpoint requires the Manage Bookings permissions scope" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { waitingList } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function removeParticipantFromWaitlist() {",
+                      "  const registrationId = \"a string\";",
+                      "  const requestedEntityId = \"a string\";",
+                      "",
+                      "  return waitingList",
+                      "    .removeParticipantFromWaitlist(registrationId, requestedEntityId)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "AvailableActions_1190100350",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_api_v1_WaitingList_List_listWaitlistParticipants.js" } ],
+        "docs":
+          { "summary": "Currently available actions for this registration.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "leave",
+              "type": "boolean",
+              "doc": "Whether the registrant can leave the waitlist." },
+            { "name": "enroll",
+              "type": "boolean",
+              "doc": "Whether the registrant can book from the waitlist." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "EnrollRequest_17262823939",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Enroll_bookWaitlistParticipant.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "couponCode",
+              "type": "string",
+              "doc": "Coupon code to apply to this booking at checkout.",
+              "optional": true },
+            { "name": "planSelection",
+              "type": "wix-bookings-rc-v2-backend.PaidPlan_11584964510",
+              "doc": "Selected paid plan to apply to this booking at checkout.",
+              "optional": true },
+            { "name": "notifyParticipants",
+              "type": "boolean",
+              "optional": true },
+            { "name": "flowControlSettings",
+              "type": "wix-bookings-rc-v2-backend.waitingList.EnrollRequest_FlowControlSettings_1763359190",
+              "doc": "Sets the book flow behavior, some behaviors required permissions.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "EnrollRequest_FlowControlSettings_1763359190",
+        "locations":
+          [ { "lineno": 10,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Enroll_bookWaitlistParticipant.js" } ],
+        "docs":
+          { "summary": "Sets the book flow behavior, some behaviors required permissions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "forceEnrollment",
+              "type": "boolean",
+              "doc": "when defined as true, enroll the specifid registration to the session, with no regard to the registration status.\n required BBOOKINGS.IGNORE_BOOKING_POLICY and BOOKINGS.OVERRIDE_AVAILABILITY permission.",
+              "optional": true },
+            { "name": "forceInPersonCheckout",
+              "type": "boolean",
+              "doc": "when defined as true, checkout the booking as \"in-person\" method, that doesnt required online payment.\n required BOOKINGS.MANAGE_PAYMENTS permission.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "EnrollResult_374579348286",
+        "locations":
+          [ { "lineno": 20,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Enroll_bookWaitlistParticipant.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "booking",
+              "type": "wix-bookings-rc-v2-backend.Booking_371474855211",
+              "doc": "Checked-out booking.\n (Online-payments can only be completed in the Wix Bookings UI.)" },
+            { "name": "registrationId",
+              "type": "string" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "LeaveResult_4441311823",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Leave_removeParticipantFromWaitlist.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "registrationId",
+              "type": "string" },
+            { "name": "waitingResource",
+              "type": "string" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RegisterRequest_4123456586",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Register_addParticipantToWaitlist.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "presentedStartTime",
+              "type": "wix-bookings-rc-v2-backend.LocalDateTime_957146317",
+              "doc": "Service start time as presented to the user. For validation - Optional.",
+              "optional": true },
+            { "name": "presentedEndTime",
+              "type": "wix-bookings-rc-v2-backend.LocalDateTime_957146317",
+              "doc": "Service start time as presented to the user. For validation - Optional.",
+              "optional": true },
+            { "name": "flowControlSettings",
+              "type": "wix-bookings-rc-v2-backend.waitingList.RegisterRequest_FlowControlSettings_4715659461",
+              "doc": "Sets the cancel flow behavior, some settings required permissions.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RegisterRequest_FlowControlSettings_4715659461",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "com_wix_bookings_api_v1_WaitingList_Register_addParticipantToWaitlist.js" } ],
+        "docs":
+          { "summary": "Sets the cancel flow behavior, some settings required permissions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "ignoreWaitlistCapacity",
+              "type": "boolean",
+              "doc": "when defined as true, skips the waitlist defined capacity policy.\n required BOOKINGS.IGNORE_BOOKING_POLICY permission.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Registration_4016875000",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "com_wix_bookings_api_v1_WaitingList_List_listWaitlistParticipants.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Registration ID" },
+            { "name": "bookingId",
+              "type": "string",
+              "doc": "Registration's associated booking" },
+            { "name": "waitingResource",
+              "type": "string",
+              "doc": "Resource to be waitlisted for.\n Currently only supports session ID." },
+            { "name": "availableActions",
+              "type": "wix-bookings-rc-v2-backend.waitingList.AvailableActions_1190100350",
+              "doc": "Currently available actions for this registration." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Registration status\n WAITING - Registrant is on the waitlist. Waiting to be suggested a spot.\n SUGGESTING - Registrant is currently being suggested an opened spot.\n DECLINED - Registration has been declined.\n ENROLLED - Registrant has been enrolled to a suggested spot.\nOne of:\n + `\"UNDEFINED\"`\n + `\"WAITING\"`\n + `\"SUGGESTING\"`\n + `\"DECLINED\"`\n + `\"ENROLLED\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "WaitingListEntry_13248045746",
+        "locations":
+          [ { "lineno": 30,
+              "filename": "com_wix_bookings_api_v1_WaitingList_List_listWaitlistParticipants.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "waitingResource",
+              "type": "string",
+              "doc": "The waitlisted session ID." },
+            { "name": "registrations",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-rc-v2-backend.waitingList.Registration_4016875000" ] },
+              "doc": "List of registrants to the waitlist." },
+            { "name": "numberOfRegistrations",
+              "type": "number" },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "Waitlisted session's capacity. Defined as part of the service's booking policy." },
+            { "name": "timeWindowMinutes",
+              "type": "number",
+              "doc": "Waitlisted session's \"suggesting\" time window. Defined as part of the service's booking policy." },
+            { "name": "status",
+              "type": "string",
+              "doc": "The Waitlist's current status:\n IDLE - Waiting for a cancellation that will free up a spot in the session.\n SUGGESTING - Currently suggesting a free spot to a registrant in the waitlist. The service will keep suggesting until the end of the list is reached, or until all free spots are filled.\n OPEN_TO_ALL - Once we got to the end of the list - booking is opened for the session, and any registrant on the list can book.\nOne of:\n + `\"UNDEFINED\"`\n + `\"IDLE\"`\n + `\"SUGGESTING\"`\n + `\"OPEN_TO_ALL\"`" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

@@ -1,0 +1,320 @@
+{ "name": "availability",
+  "memberOf": "wix-bookings-rc-v2-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 17,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "checkScheduleAvailability",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "scheduleId",
+              "type": "string",
+              "doc": "The ID of the schedule whose availability is being checked." },
+            { "name": "groupSize",
+              "type": "number",
+              "doc": "Number of spots to check availability for." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-v2-backend.IsAvailableResult_6686246600" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_availability_api_v1_Availability_IsAvailable_checkScheduleAvailability.js" } ],
+        "docs":
+          { "summary": "Returns the current availability of a requested entity.",
+            "description":
+              [ "Based on the requested entity, validate there is enough spots left.",
+                "When invoking on a locked session, availability is False.",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data permission scope." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { availability } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function checkScheduleAvailability() {",
+                      "  const scheduleId = \"a string\";",
+                      "  const groupSize = 42;",
+                      "",
+                      "  return availability",
+                      "    .checkScheduleAvailability(scheduleId, groupSize)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "checkSessionAvailability",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "sessionId",
+              "type": "string",
+              "doc": "The ID of the session whose availability is being checked." },
+            { "name": "groupSize",
+              "type": "number",
+              "doc": "Number of spots to check availability for." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-v2-backend.IsAvailableResult_6686246600" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_availability_api_v1_Availability_IsAvailable_checkSessionAvailability.js" } ],
+        "docs":
+          { "summary": "Returns the current availability of a requested entity.",
+            "description":
+              [ "Based on the requested entity, validate there is enough spots left.",
+                "When invoking on a locked session, availability is False.",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data permission scope." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { availability } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function checkSessionAvailability() {",
+                      "  const sessionId = \"a string\";",
+                      "  const groupSize = 42;",
+                      "",
+                      "  return availability",
+                      "    .checkSessionAvailability(sessionId, groupSize)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "checkTimeslotAvailability",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "timeSlot",
+              "type": "wix-bookings-rc-v2-backend.availability.IsAvailableRequest_Slot_13509445101",
+              "doc": "The ID of the time slot whose availability is being checked." },
+            { "name": "groupSize",
+              "type": "number",
+              "doc": "Number of spots to check availability for." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-rc-v2-backend.IsAvailableResult_6686246600" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 11,
+              "filename": "com_wix_bookings_availability_api_v1_Availability_IsAvailable_checkTimeslotAvailability.js" } ],
+        "docs":
+          { "summary": "Returns the current availability of a requested entity.",
+            "description":
+              [ "Based on the requested entity, validate there is enough spots left.",
+                "When invoking on a locked session, availability is False.",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data permission scope." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { availability } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function checkTimeslotAvailability() {",
+                      "  const timeSlot = {",
+                      "    startDate: new Date(),",
+                      "    endDate: new Date(),",
+                      "    scheduleId: \"a string\",",
+                      "    requiredResourceSheduleIds: [\"a string\"]",
+                      "  };",
+                      "  const groupSize = 42;",
+                      "",
+                      "  return availability",
+                      "    .checkTimeslotAvailability(timeSlot, groupSize)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "lockSession",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "sessionId",
+              "type": "string",
+              "doc": "The session ID to lock" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "string" ] },
+            "doc": "Fulfilled - The locked session key." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_availability_api_v1_Availability_Lock_lockSession.js" } ],
+        "docs":
+          { "summary": "Lock a session for bookings.",
+            "description":
+              [ "When invoking this API with a sessionId, it returns a key that will enable to book the given session.",
+                "Once the session is locked -",
+                "Only the holder of the right key will be able to Book or Checkout.",
+                "Calling IsAvailable returns as not available.",
+                "Invoking Bookings.Book, Bookings.Checkout APIs without the right key will fail.",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Manage Bookings permission scope." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { availability } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function lockSession() {",
+                      "  const sessionId = \"a string\";",
+                      "",
+                      "  return availability",
+                      "    .lockSession(sessionId)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "unlockSession",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "sessionId",
+              "type": "string",
+              "doc": "The session ID to unlock." },
+            { "name": "key",
+              "type": "string",
+              "doc": "The locked session key." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_availability_api_v1_Availability_Unlock_unlockSession.js" } ],
+        "docs":
+          { "summary": "Unlock a locked session for bookings.",
+            "description":
+              [ "When invoking this API with a sessionId and its key, the session will be available for bookings.",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Manage Bookings permission scope." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import { availability } from \"wix-bookings-rc-v2-backend\";",
+                      "",
+                      "export function unlockSession() {",
+                      "  const sessionId = \"a string\";",
+                      "  const key = \"a string\";",
+                      "",
+                      "  return availability",
+                      "    .unlockSession(sessionId, key)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "IsAvailableRequest_Slot_13509445101",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_availability_api_v1_Availability_IsAvailable_checkTimeslotAvailability.js" } ],
+        "docs":
+          { "summary": "The ID of the time slot whose availability is being checked.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "startDate",
+              "type": "Date",
+              "doc": "Slot start time.",
+              "optional": true },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "Slot end time.",
+              "optional": true },
+            { "name": "scheduleId",
+              "type": "string",
+              "doc": "The ID of the schedule that the slot belongs to.",
+              "optional": true },
+            { "name": "requiredResourceSheduleIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "The schedule IDs of the required resources for which the availability will be checked. Returns true if at least 1 of resources' schedules has availability.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
