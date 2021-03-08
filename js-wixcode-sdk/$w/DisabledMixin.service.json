@@ -14,7 +14,7 @@
           "",
           " **About Mixins**",
           "",
-          " [Mixins](https://support.wix.com/en/article/corvid-about-mixins) provide functionality that other elements can inherit and use. ",
+          " [Mixins](https://support.wix.com/en/article/velo-about-mixins) provide functionality that other elements can inherit and use. ",
           " ",
           " Mixins are not elements. You cannot add mixins to a page in the Editor like other `$w` elements, and mixins are not meant to be used directly ",
           " in your code. ",

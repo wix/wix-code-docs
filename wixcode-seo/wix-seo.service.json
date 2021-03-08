@@ -7,10 +7,7 @@
   "docs":
     { "summary": "The wix-seo module contains functionality for working with\n [your site's SEO](https://support.wix.com/en/article/search-engine-optimization-seo) from\n client-side code.",
       "description":
-        [ "Because you want the SEO data you set to be read by search engines, you should",
-          " always set such data in the [`onReady()`]($w.html#onReady) event handler.",
-          "",
-          " To use the SEO API, import `wixSeo` from the `wix-seo` module:",
+        [ "To use the SEO API, import `wixSeo` from the `wix-seo` module:",
           "",
           "   ```javascript",
           "   import wixSeo from 'wix-seo';",
@@ -29,14 +26,18 @@
             "typeParams":
               [ "wix-seo.Link" ] },
         "locations":
-          [ { "lineno": 88,
+          [ { "lineno": 96,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "Gets the page's SEO-related link tags.",
             "description":
               [ "Use the `links` property to get a page's SEO-related link tags which provide additional",
                 " SEO information about your page. For example, the tags may contain a link to a canonical",
-                " or alternate version of the current page." ],
+                " or alternate version of the current page.",
+                "",
+                "> **Note:** ",
+                " You should always invoke the `wixSeo.links` getter outside of the [`onReady()`]($w.html#onReady) event handler to",
+                " ensure receiving the proper response." ],
             "links":
               [ "[setLinks( )](#setLinks)" ],
             "examples":
@@ -75,14 +76,14 @@
             "typeParams":
               [ "wix-seo.MetaTag" ] },
         "locations":
-          [ { "lineno": 57,
+          [ { "lineno": 62,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "Gets the page's SEO-related meta tags.",
             "description":
               [ "The `metaTags` property retrieves the SEO-related meta tags from the head of the page.",
                 "",
-                " The keys in the returned `MetaTag` objects represent the keys in the tag and the values in the",
+                " The keys in the returned `metaTags` objects represent the keys in the tag, while the values in the",
                 " object represent the values in the tag.",
                 "",
                 " For example:",
@@ -98,7 +99,10 @@
                 "",
                 " ```html",
                 " <meta property=\"og:image\" content=\"https://.../Wix+logo.jpg\"/>",
-                " ```" ],
+                " ```",
+                "> **Note:**",
+                " You should always invoke the `wixSeo.metaTags` getter outside of the [`onReady()`]($w.html#onReady) event handler to",
+                " ensure receiving the proper response." ],
             "links":
               [ "[setMetaTags( )](#setMetaTags)" ],
             "examples":
@@ -137,7 +141,7 @@
             "typeParams":
               [ "Object" ] },
         "locations":
-          [ { "lineno": 39,
+          [ { "lineno": 41,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "Gets the page's structured data.",
@@ -147,7 +151,10 @@
                 " in search results.",
                 "",
                 " Set the structured data with a list of structured data objects in the JSON-LD format",
-                " as defined by [schema.org](https://schema.org/docs/schemas.html)." ],
+                " as defined by [schema.org](https://schema.org/docs/schemas.html).",
+                "> **Note:**",
+                " You should always invoke the `wixSeo.structuredData` getter outside of the [`onReady()`]($w.html#onReady) event handler to",
+                " ensure receiving the proper response." ],
             "links":
               [ "[setStructuredData( )](#setStructuredData)" ],
             "examples":
@@ -190,10 +197,15 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 28,
+          [ { "lineno": 25,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "Gets the page's title.",
+            "description":
+              [ "The `title` is an important factor that lets search engines determine the topic of a page.",
+                "> **Note:** ",
+                " You should always invoke the `wixSeo.title` getter outside of the [`onReady()`]($w.html#onReady) event handler to",
+                " ensure receiving the proper response." ],
             "links":
               [ "[setTitle( )](#setTitle)" ],
             "examples":
@@ -228,7 +240,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the link tags are set." },
         "locations":
-          [ { "lineno": 204,
+          [ { "lineno": 220,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "Sets the page's SEO-related link tags.",
@@ -237,12 +249,14 @@
                 " SEO information about your page. For example, you can set a link to a canonical",
                 " or alternate version of the current page.",
                 "",
-                " Because you want the links you set to be read by search engines, you should",
-                " always set them in the [`onReady()`]($w.html#onReady) event handler.",
-                "",
                 " The links you set overwrite any link information set earlier.",
-                "> **Note:**",
-                " You cannot add a stylesheet link using the `setLinks` function." ],
+                "",
+                "> **Notes:**",
+                "> ",
+                "> * You should always set the links inside the [`onReady()`]($w.html#onReady) event handler to",
+                "> ensure search engines can read it.",
+                ">",
+                "> * You cannot add a stylesheet link using the `setLinks` function." ],
             "links":
               [ "[links](#links)" ],
             "examples":
@@ -294,15 +308,15 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the meta tags are set." },
         "locations":
-          [ { "lineno": 150,
+          [ { "lineno": 165,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "Sets the page's SEO-related meta tags.",
             "description":
               [ "The `setMetaTags()` function creates SEO-related meta tags in the head of the page.",
                 "",
-                " The keys in the specified `MetaTag` objects represent the keys in the tag and the values in the",
-                " object represent the values in the tag.",
+                " The keys in the specified `metaTags` objects represent the keys in the tag, while the values in the",
+                " `metaTags` object represent the values in the tag.",
                 "",
                 " For example:",
                 "",
@@ -322,13 +336,14 @@
                 " When setting `og:image` meta tags, the `content` can be and external image URL",
                 " or a Media Manager image URL as described [here]($w.Image.html#src).",
                 "",
-                " Because you want the meta tags you set to be read by search engines, you should",
-                " always set them in the [`onReady()`]($w.html#onReady) event handler.",
-                "",
                 " The meta tags you set overwrite any meta tag information set earlier.",
-                "> **Note:**",
-                " Do not use `setMetaTags()` to create tags for title. Use the [`setTitle()`](#setTitle)",
-                " function instead." ],
+                "> **Notes:**",
+                ">",
+                "> * Do not use `setMetaTags()` to create tags for the title. Use the [`setTitle()`](#setTitle)",
+                "> function instead.",
+                ">",
+                "> * You should always set the `metaTags` inside the [`onReady()`]($w.html#onReady) event handler to",
+                "> ensure search engines can read it." ],
             "links":
               [ "[metaTags](#metaTags)" ],
             "examples":
@@ -380,7 +395,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the structured data is set." },
         "locations":
-          [ { "lineno": 115,
+          [ { "lineno": 129,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "Sets the page's structured data.",
@@ -389,10 +404,11 @@
                 " your page and your business so they can display a richer snippet of your pages",
                 " in search results.",
                 "",
-                " Because you want the structured data you set to be read by search engines, you should",
-                " always set it in the [`onReady()`]($w.html#onReady) event handler.",
+                " The structured data you set overwrites any structured data information set earlier.",
                 "",
-                " The structured data you set overwrites any structured data information set earlier." ],
+                " > **Note:**",
+                "  You should always set the structured data inside the [`onReady()`]($w.html#onReady) event handler to",
+                "  ensure search engines can read it." ],
             "links":
               [ "[structuredData](#structuredData)" ],
             "examples":
@@ -448,13 +464,15 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the title is set." },
         "locations":
-          [ { "lineno": 101,
+          [ { "lineno": 113,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "Sets the page's title.",
             "description":
-              [ "Because you want the title you set to be read by search engines, you should",
-                " always set it in the [`onReady()`]($w.html#onReady) event handler." ],
+              [ "Setting a proper `title` is important to let search engines determine the topic of your page.",
+                "> **Note:**",
+                " You should always set the title inside the [`onReady()`]($w.html#onReady) event handler to",
+                " ensure search engines can read it." ],
             "links":
               [ "[title](#title)" ],
             "examples":
@@ -484,7 +502,7 @@
   "messages":
     [ { "name": "Link",
         "locations":
-          [ { "lineno": 192,
+          [ { "lineno": 208,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "An object representing a link tag.",
@@ -557,7 +575,7 @@
         "labels": [] },
       { "name": "MetaTag",
         "locations":
-          [ { "lineno": 135,
+          [ { "lineno": 150,
               "filename": "seo.js" } ],
         "docs":
           { "summary": "An object representing a meta tag.",

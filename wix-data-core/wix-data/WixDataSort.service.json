@@ -8,7 +8,9 @@
   "docs":
     { "summary": "Provides functionality for sorting a query.",
       "description":
-        [ "Provides the ability to sort the results of a query, based on one or more fields in the results, in either ascending or descending order." ],
+        [ "Provides the ability to sort the results of a query, based on one or more fields in the results, in either ascending or descending order.",
+          "",
+          "When working with [Wix app collections](https://support.wix.com/en/article/velo-working-with-wix-app-collections-and-code), check [which fields](https://support.wix.com/en/search?term=velo%20collection%20fields) can be used in a sort." ],
       "links": [],
       "examples": [],
       "extra":
@@ -27,7 +29,7 @@
           { "type": "wix-data.WixDataQuery",
             "doc": "A `WixDataQuery` object representing the refined query." },
         "locations":
-          [ { "lineno": 19,
+          [ { "lineno": 21,
               "filename": "sortMixin.es6" } ],
         "docs":
           { "summary": "Adds a sort to a query or sort, sorting by the specified properties in ascending order.",
@@ -135,7 +137,7 @@
           { "type": "wix-data.WixDataQuery",
             "doc": "A `WixDataQuery` object representing the refined query." },
         "locations":
-          [ { "lineno": 53,
+          [ { "lineno": 55,
               "filename": "sortMixin.es6" } ],
         "docs":
           { "summary": "Adds a sort to a query or sort, sorting by the specified properties in descending order.",

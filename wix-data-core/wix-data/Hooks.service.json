@@ -1,9 +1,10 @@
 { "name": "Hooks",
   "memberOf": "wix-data",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
-    { "lineno": 14,
+    { "lineno": 22,
       "filename": "hooks.es6" },
   "docs":
     { "summary": "Hooks that can be added to wix-data operations.",
@@ -21,7 +22,7 @@
           " optional `WixDataOptions` object and use it",
           " to suppress hooks from being called on that particular operation.",
           "",
-          " To add a hook to a collection, click the **Databases** button on the **Corvid Sidebar** and ",
+          " To add a hook to a collection, click the **Databases** button on the **Velo Sidebar** and ",
           " hover over the relevant collection. Click the **Show More** icon, ",
           " select **Add/Remove Hooks**, and choose the hooks you want to add.",
           " ",
@@ -58,7 +59,7 @@
                 "number" ],
             "doc": "The count to return to [`count()`](wix-data.WixDataQuery.html#count) instead of the original count.\n Returning a rejected promise will not block the operation, but will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 47,
+          [ { "lineno": 55,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered after a `count()` operation.",
@@ -152,7 +153,7 @@
                 "Object" ],
             "doc": "The item to return to [`get()`](wix-data.html#get) instead of the retrieved item.\n Returning a rejected promise will not block the operation, but will return a rejected promise to the operation caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 78,
+          [ { "lineno": 86,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered after a `get()` operation.",
@@ -245,7 +246,7 @@
                 "Object" ],
             "doc": "The item to return to [`insert()`](wix-data.html#insert) instead of the inserted item.\n Returning a rejected promise will not block the operation, but will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 110,
+          [ { "lineno": 118,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered after an `insert()` operation.",
@@ -255,7 +256,7 @@
                 " + The [`insert()`](wix-data.html#insert) function is called.",
                 " + An action is performed on a dataset that inserts a new item into the collection.",
                 " + An item is inserted using the Content Manager.",
-                " + An item is imported into the collection. (Sandbox only.)",
+                " + An item is imported into the Sandbox or Live collection.",
                 "",
                 "",
                 " Return an object or a Promise that resolves to an object from the `afterInsert()`",
@@ -343,7 +344,7 @@
                 "Object" ],
             "doc": "The item to return to [`find`](wix-data.WixDataQuery.html#find) instead of the item retrieved from the database.\n Returning a rejected promise will not block the operation, but will return a rejected promise to the operation caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 147,
+          [ { "lineno": 155,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered after a `find` operation, for each of the items in the query results.",
@@ -439,7 +440,7 @@
                 "Object" ],
             "doc": "The item to return to [`remove()`](wix-data.html#remove) instead of the deleted item.\n Returning a rejected promise will not block the operation, but will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 183,
+          [ { "lineno": 191,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered after a `remove()` operation.",
@@ -535,7 +536,7 @@
                 "Object" ],
             "doc": "The item to return to [`update()`](wix-data.html#update) instead of the updated item.\n Returning a rejected promise will not block the operation, but will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 218,
+          [ { "lineno": 226,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered after an `update()` operation.",
@@ -632,7 +633,7 @@
                 "wix-data.WixDataQuery" ],
             "doc": "The `query` to be used for the [`count()`](wix-data.WixDataQuery.html#count) operation instead of the original query.\n Returning a rejected promise will block the operation and will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 254,
+          [ { "lineno": 262,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered before a `count()` operation.",
@@ -728,7 +729,7 @@
                 "string" ],
             "doc": "The ID to be used for the [`get()`](wix-data.html#get) operation instead of the original `itemId` specified by the caller.\n Returning a rejected promise will block the operation and will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 289,
+          [ { "lineno": 297,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered before a `get()` operation.",
@@ -824,7 +825,7 @@
                 "Object" ],
             "doc": "The item to be inserted instead of the original item specified by the caller.\n Returning a rejected promise will block the operation and will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 324,
+          [ { "lineno": 332,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered before an `insert()` operation.",
@@ -834,7 +835,7 @@
                 " + The [`insert()`](wix-data.html#insert) function is called.",
                 " + An action is performed on a dataset that inserts a new item into the collection.",
                 " + An item is inserted using the Content Manager.",
-                " + An item is imported into the collection. (Sandbox only.)",
+                " + An item is imported into the Sandbox or Live collection.",
                 "",
                 "",
                 " The hook also runs when an action is performed on a dataset that inserts a",
@@ -929,7 +930,7 @@
                 "wix-data.WixDataQuery" ],
             "doc": "The query to use instead of the original query specified by the caller.\n Returning a rejected promise will block the operation and will return a rejected promise to the operation caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 362,
+          [ { "lineno": 370,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered before a `find()` operation.",
@@ -1014,14 +1015,15 @@
         "extra":
           {  } },
       { "name": "beforeRemove",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "itemId",
               "type": "string",
               "doc": "The ID of the original item to be removed." },
             { "name": "context",
-              "type": "wix-data.Hooks.HookContext",
+              "type": "wix-data.Hooks.UpdateHookContext",
               "doc": "Contextual information about the hook." } ],
         "ret":
           { "type":
@@ -1031,7 +1033,7 @@
                 "string" ],
             "doc": "The ID to be used for the [`remove()`](wix-data.html#remove) instead of the original `itemId` specified by the caller.\n Returning a rejected promise will block the operation and will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 403,
+          [ { "lineno": 411,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is called before a `remove()` operation.",
@@ -1113,14 +1115,15 @@
         "extra":
           {  } },
       { "name": "beforeUpdate",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "item",
               "type": "Object",
               "doc": "The original item to be updated." },
             { "name": "context",
-              "type": "wix-data.Hooks.HookContext",
+              "type": "wix-data.Hooks.UpdateHookContext",
               "doc": "Contextual information about the hook." } ],
         "ret":
           { "type":
@@ -1130,7 +1133,7 @@
                 "Object" ],
             "doc": "The item to be updated instead of the original item specified by the caller.\n Returning a rejected promise will block the operation and will return a rejected promise to the caller as well as trigger the [`onFailure()`](#onFailure) hook." },
         "locations":
-          [ { "lineno": 441,
+          [ { "lineno": 449,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered before an `update()` operation.",
@@ -1233,7 +1236,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - Returning a fulfilled promise will result in a fulfilled data operation with the provided result.\nRejected - Returning a rejected promise will result in returning a rejected promise to the caller of the data operation." },
         "locations":
-          [ { "lineno": 478,
+          [ { "lineno": 486,
               "filename": "hooks.es6" } ],
         "docs":
           { "summary": "A hook that is triggered on any error or rejected Promise from any of the wix-data operations.",
@@ -1289,19 +1292,44 @@
               "doc": "The current site user ID. If no user is logged in to the site it may be null." },
             { "name": "userRole",
               "type": "string",
+              "doc": "The permissions role of the current user. Possibilities are: `anonymous`, `siteMember`,  `siteOwner` and `dataOwner`." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "changed" ] },
+      { "name": "UpdateHookContext",
+        "locations":
+          [ { "lineno": 10,
+              "filename": "hooks.es6" } ],
+        "docs":
+          { "summary": "An object that contains contextual information when calling the `beforeUpdate()` or `beforeRemove()` hooks.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "collectionName",
+              "type": "string",
+              "doc": "The ID of the collection the hook affects." },
+            { "name": "userId",
+              "type": "string",
+              "doc": "The current site user ID. If no user is logged in to the site it may be null." },
+            { "name": "userRole",
+              "type": "string",
               "doc": "The permissions role of the current user. Possibilities are: `anonymous`, `siteMember`,  `siteOwner` and `dataOwner`." },
             { "name": "currentItem",
               "type": "Object",
-              "doc": "The item stored in the database before an `update` or `delete` operation.\nWill be `undefined` for all other operations." } ],
+              "doc": "The item stored in the database collection before an update or delete operation." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "new" ] } ],
   "extra":
     {  },
   "relatedContent":
     [ { "icon": "example",
         "text": "Prevent Database Duplicates",
-        "url": "https://www.wix.com/code/home/forum/wix-tips-and-updates/example-no-database-duplicates" },
+        "url": "https://www.wix.com/velo/forum/wix-tips-and-updates/example-no-database-duplicates" },
       { "icon": "article",
         "text": "About Data Hooks",
         "url": "https://support.wix.com/en/article/wix-code-about-data-hooks" },

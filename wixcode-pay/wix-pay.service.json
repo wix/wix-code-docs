@@ -1,7 +1,6 @@
 { "name": "wix-pay",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "pay.js" },
@@ -94,8 +93,7 @@
           {  } } ],
   "operations":
     [ { "name": "startPayment",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "paymentId",
@@ -584,7 +582,7 @@
         "url": "https://www.youtube.com/watch?v=OPzzmEhY4dw" },
       { "icon": "example",
         "text": "Collect Payments for a Single Product",
-        "url": "https://www.wix.com/code/home/example/Pay-API-Example" },
+        "url": "https://www.wix.com/velo/example/collect-payments-for-a-single-product" },
       { "icon": "example",
         "text": "Collect Payments for Products in a Database Collection",
-        "url": "https://www.wix.com/code/home/example/Pay-API-Example-Using-Collections" } ] }
+        "url": "https://www.wix.com/velo/example/collect-payments-for-products-in-a-database-collection" } ] }

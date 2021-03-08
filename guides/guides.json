@@ -44,13 +44,8 @@
           "isMdFile": true
         },
         {
-          "name": "Submit to the Corvid Wishlist",
+          "name": "Submit to the Velo Wishlist",
           "url": "./wishlist.md",
-          "isMdFile": true
-        },
-        {
-          "name": "What's New",
-          "url": "./whats-new.md",
           "isMdFile": true
         }
       ]
@@ -64,6 +59,17 @@
           "isMdFile": true
         }
       ]
-    }
+    },
+    {
+      "title": "Release Notes",
+      "articles": [
+        {
+          "name": "Release Notes",
+          "url": "./release-notes.md",
+          "isMdFile": true,
+          "isChangelog": true
+        }
+      ]
+    } 
   ]
 }

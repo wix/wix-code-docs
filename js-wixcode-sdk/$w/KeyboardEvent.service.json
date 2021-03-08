@@ -2,7 +2,8 @@
   "memberOf": "$w",
   "mixes":
     [ "$w.Event" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 14,
       "filename": "KeyboardEvent.es6" },
@@ -10,8 +11,7 @@
     { "summary": "Event that is fired when the keyboard is pressed.",
       "description":
         [ "A `KeyboardEvent` event occurs when the user presses a key while the cursor",
-          " is located inside a [`TextInput`]($w.TextInput.html), [`TextBox`]($w.TextBox.html),",
-          " or [`RichTextBox`]($w.RichTextBox.html)." ],
+          " is located inside a [`TextInput`]($w.TextInput.html) or [`TextBox`]($w.TextBox.html)." ],
       "links": [],
       "examples": [],
       "extra":
@@ -23,20 +23,20 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 53,
+          [ { "lineno": 51,
               "filename": "KeyboardEvent.es6" } ],
         "docs":
           { "summary": "Indicates if the Option key on a Mac or Alt key on a PC was pressed.",
             "links": [],
             "examples":
-              [ { "title": "Get the keyboard event's `altKey` property",
+              [ { "title": "Gets the keyboard event's `altKey` property when the `altKey` is pressed",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
-                      "  let alt = event.altKey;  // false",
+                      "  let alt = event.altKey;  // true",
                       "} );" ],
                   "extra":
                     {  } },
-                { "title": "Get all of the keyboard event's properties",
+                { "title": "Gets all of the keyboard event's properties",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
                       "  let key  = event.key;                 // \"A\"",
@@ -44,35 +44,36 @@
                       "  let meta = event.metaKey;             // false",
                       "  let alt = event.altKey;               // false",
                       "  let ctrl = event.ctrlKey;             // false",
-                      "  let value = event.target.value;       // \"SE\"",
+                      "  let value = event.target.value;       // string value of text inside \"#myElement\" before the last KeyPress event",
                       "} );",
                       "" ],
                   "extra":
-                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys were pressed." } } ],
+                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys are pressed." } } ],
             "extra":
               {  } },
         "extra":
           {  } },
       { "name": "ctrlKey",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 83,
+          [ { "lineno": 81,
               "filename": "KeyboardEvent.es6" } ],
         "docs":
           { "summary": "Indicates if the Control (Ctrl) key was pressed.",
             "links": [],
             "examples":
-              [ { "title": "Get the keyboard event's `ctrlKey` property",
+              [ { "title": "Gets the keyboard event's `ctrlKey` property when the `ctrlKey` is pressed",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
-                      "  let ctrl = event.ctrlKey;  // false",
+                      "  let ctrl = event.ctrlKey;  // true",
                       "} );" ],
                   "extra":
                     {  } },
-                { "title": "Get all of the keyboard event's properties",
+                { "title": "Gets all of the keyboard event's properties",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
                       "  let key  = event.key;                 // \"A\"",
@@ -80,11 +81,11 @@
                       "  let meta = event.metaKey;             // false",
                       "  let alt = event.altKey;               // false",
                       "  let ctrl = event.ctrlKey;             // false",
-                      "  let value = event.target.value;       // \"SE\"",
+                      "  let value = event.target.value;       // string value of text inside \"#myElement\" before the last KeyPress event",
                       "} );",
                       "" ],
                   "extra":
-                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys were pressed." } } ],
+                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys are pressed." } } ],
             "extra":
               {  } },
         "extra":
@@ -95,7 +96,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 98,
+          [ { "lineno": 96,
               "filename": "KeyboardEvent.es6" } ],
         "docs":
           { "summary": "Gets a string representation of the key that was pressed.",
@@ -116,14 +117,14 @@
                 " + `\"Tab\"`" ],
             "links": [],
             "examples":
-              [ { "title": "Get the keyboard event's `key` property",
+              [ { "title": "Gets the keyboard event's `key` property when the `a` key is pressed",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
                       "  let key = event.key;  // \"A\"",
                       "} );" ],
                   "extra":
                     {  } },
-                { "title": "Get all of the keyboard event's properties",
+                { "title": "Gets all of the keyboard event's properties",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
                       "  let key  = event.key;                 // \"A\"",
@@ -131,11 +132,11 @@
                       "  let meta = event.metaKey;             // false",
                       "  let alt = event.altKey;               // false",
                       "  let ctrl = event.ctrlKey;             // false",
-                      "  let value = event.target.value;       // \"SE\"",
+                      "  let value = event.target.value;       // string value of text inside \"#myElement\" before the last KeyPress event",
                       "} );",
                       "" ],
                   "extra":
-                    { "description": "This example get the properties of a keyboard event fired when the\n `Shift` and `a` keys were pressed." } } ],
+                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys are pressed." } } ],
             "extra":
               {  } },
         "extra":
@@ -146,20 +147,20 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 37,
+          [ { "lineno": 36,
               "filename": "KeyboardEvent.es6" } ],
         "docs":
-          { "summary": "Indicates if the ⌘ Command key on a Mac or ⊞ Windows key on a PC\n was pressed.",
+          { "summary": "Indicates if the ⌘ Command key on a Mac or ⊞ Windows key on a PC was pressed.",
             "links": [],
             "examples":
-              [ { "title": "Get the keyboard event's `metaKey` property",
+              [ { "title": "Gets the keyboard event's `metaKey` property when the `metaKey` is pressed",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
-                      "  let meta = event.metaKey;  // false",
+                      "  let meta = event.metaKey;  // true",
                       "} );" ],
                   "extra":
                     {  } },
-                { "title": "Get all of the keyboard event's properties",
+                { "title": "Gets all of the keyboard event's properties",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
                       "  let key  = event.key;                 // \"A\"",
@@ -167,35 +168,36 @@
                       "  let meta = event.metaKey;             // false",
                       "  let alt = event.altKey;               // false",
                       "  let ctrl = event.ctrlKey;             // false",
-                      "  let value = event.target.value;       // \"SE\"",
+                      "  let value = event.target.value;       // string value of text inside \"#myElement\" before the last KeyPress event",
                       "} );",
                       "" ],
                   "extra":
-                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys were pressed." } } ],
+                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys are pressed." } } ],
             "extra":
               {  } },
         "extra":
           {  } },
       { "name": "shiftKey",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 68,
+          [ { "lineno": 66,
               "filename": "KeyboardEvent.es6" } ],
         "docs":
           { "summary": "Indicates if the Shift key was pressed.",
             "links": [],
             "examples":
-              [ { "title": "Get the keyboard event's `shiftKey` property",
+              [ { "title": "Gets the keyboard event's `shiftKey` property when the `shiftKey` is pressed",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
                       "  let shift = event.shiftKey;  // true",
                       "} );" ],
                   "extra":
                     {  } },
-                { "title": "Get all of the keyboard event's properties",
+                { "title": "Gets all of the keyboard event's properties",
                   "body":
                     [ "$w(\"#myElement\").onKeyPress( (event) => {",
                       "  let key  = event.key;                 // \"A\"",
@@ -203,11 +205,11 @@
                       "  let meta = event.metaKey;             // false",
                       "  let alt = event.altKey;               // false",
                       "  let ctrl = event.ctrlKey;             // false",
-                      "  let value = event.target.value;       // \"SE\"",
+                      "  let value = event.target.value;       // string value of text inside \"#myElement\" before the last KeyPress event",
                       "} );",
                       "" ],
                   "extra":
-                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys were pressed." } } ],
+                    { "description": "This example gets the properties of a keyboard event fired when the\n `Shift` and `a` keys are pressed." } } ],
             "extra":
               {  } },
         "extra":

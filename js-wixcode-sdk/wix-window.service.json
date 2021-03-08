@@ -1,6 +1,7 @@
 { "name": "wix-window",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 14,
       "filename": "window.es6" },
@@ -174,7 +175,7 @@
         "set": false,
         "type": "wix-window.Multilingual",
         "locations":
-          [ { "lineno": 1230,
+          [ { "lineno": 1235,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "The Multilingual API is used when working with the languages in a multilingual site.",
@@ -202,7 +203,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 1317,
+          [ { "lineno": 1323,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets the HTTP referrer header field.",
@@ -404,7 +405,8 @@
         "extra":
           {  } },
       { "name": "getCurrentGeolocation",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -414,7 +416,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - The coordinates and timestamp of the current location.\nRejected - The user blocked the geolocation popup." },
         "locations":
-          [ { "lineno": 640,
+          [ { "lineno": 644,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Returns the current geolocation of the user.",
@@ -435,11 +437,12 @@
                 "   + `\"speed\"`: The velocity in meters per second of the device. This value may be null if the browser cannot provide the data.",
                 "",
                 "",
-                "  > **Note:** The `getCurrentGeolocation()` function has the following limitiations:",
+                "  > **Note:** The `getCurrentGeolocation()` function has the following limitations:",
                 "",
                 " + On Chrome, the function only works on HTTPS sites.",
                 " + On Chrome, Firefox, and Safari, the function only works if the user",
-                "   approves a popup. If they do not approve, the promise is rejected." ],
+                "   approves a popup. If they do not approve, the promise is rejected.",
+                " + Run `getCurrentGeolocation()` with a [`setTimeout()`](https://www.w3schools.com/js/js_timing.asp) in case the browser is set to not detect the locale. Adding the timeout lets you handle the unfulfilled promise." ],
             "links": [],
             "examples":
               [ { "title": "Get the geolocation data",
@@ -523,7 +526,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - The returned data from the lightbox.\nRejected - The error that caused the rejection." },
         "locations":
-          [ { "lineno": 682,
+          [ { "lineno": 688,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Opens a lightbox and optionally passes it the given data.",
@@ -668,7 +671,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the modal window is closed.\nRejected - The error that caused the rejection." },
         "locations":
-          [ { "lineno": 1061,
+          [ { "lineno": 1067,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Opens a modal window that displays the specified web page.",
@@ -681,8 +684,7 @@
                 " Only one modal window can be open at any given time. Therefore, opening",
                 " a modal window closes an already open modal window if there is one.",
                 "",
-                "  > **Note:** The specified `url` must be an HTTPS URL. To use an HTTP URL, [turn off",
-                " SSL for your site](https://support.wix.com/en/article/turning-ssl-on-or-off-for-your-site)." ],
+                "  > **Note:** The specified `url` must be an HTTPS URL." ],
             "links":
               [ "[openLightbox( )](#openLightbox)" ],
             "examples":
@@ -735,7 +737,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - The data returned from the modal window.\nRejected - The error that caused the rejection." },
         "locations":
-          [ { "lineno": 1118,
+          [ { "lineno": 1123,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Sends a message to the page's parent.",
@@ -880,10 +882,10 @@
           [ { "lineno": 515,
               "filename": "window.es6" } ],
         "docs":
-          { "summary": "Scrolls the page to a specific location.",
+          { "summary": "Scrolls the page to a specific location inside the vertical [gridlines] (https://support.wix.com/en/article/wix-editor-editor-gridlines).",
             "description":
               [ "The `scrollTo()` function returns a Promise that resolves when the current",
-                " page has been scrolled to the given location.",
+                " page has been scrolled to the given location inside the vertical gridlines.",
                 "",
                 " The `x` and `y` parameters determine the top-left pixel that is",
                 " displayed on screen after the scroll.",
@@ -954,7 +956,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 979,
+          [ { "lineno": 985,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Sends a tracking event to external analytics tools.",
@@ -1044,7 +1046,7 @@
   "messages":
     [ { "name": "OpenModalOptions",
         "locations":
-          [ { "lineno": 1052,
+          [ { "lineno": 1058,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when opening a modal window.",
@@ -1149,34 +1151,31 @@
   "relatedContent":
     [ { "icon": "article",
         "text": "Processing Payments",
-        "url": "https://support.wix.com/en/article/wix-code-tutorial-processing-payments" },
+        "url": "https://support.wix.com/en/article/velo-tutorial-processing-payments" },
       { "icon": "article",
         "text": "Sending Tracking and Analytics Events",
-        "url": "https://support.wix.com/en/article/wix-code-tutorial-sending-tracking-and-analytics-events" },
+        "url": "https://support.wix.com/en/article/velo-tutorial-sending-tracking-and-analytics-events" },
       { "icon": "article",
         "text": "Creating a One-Time Popup",
-        "url": "https://support.wix.com/en/article/wix-code-tutorial-creating-a-one-time-popup" },
+        "url": "https://support.wix.com/en/article/velo-tutorial-creating-a-one-time-popup" },
       { "icon": "article",
         "text": "Displaying Elements in Mobile Only",
-        "url": "https://support.wix.com/en/article/wix-code-tutorial-displaying-elements-in-mobile-only" },
+        "url": "https://support.wix.com/en/article/velo-tutorial-displaying-elements-in-mobile-only" },
       { "icon": "article",
         "text": "Writing Code That Only Runs on Mobile Devices",
-        "url": "https://support.wix.com/en/article/wix-code-how-to-write-code-that-only-runs-on-mobile-devices" },
+        "url": "https://support.wix.com/en/article/velo-writing-code-that-only-runs-on-mobile-devices" },
       { "icon": "example",
         "text": "Reviews",
-        "url": "https://www.wix.com/corvid/example/product-reviews" },
+        "url": "https://www.wix.com/velo/example/product-reviews" },
       { "icon": "example",
         "text": "Product Configurator",
-        "url": "https://www.wix.com/corvid/example/product-configurator" },
+        "url": "https://www.wix.com/velo/example/product-configurator" },
       { "icon": "example",
         "text": "Service List",
-        "url": "https://www.wix.com/code/home/example/Service-List" },
+        "url": "https://www.wix.com/velo/example/service-list" },
       { "icon": "example",
         "text": "Stories",
-        "url": "https://www.wix.com/corvid/example/stories" },
-      { "icon": "video",
-        "text": "How to Use Corvid with Marketing Tools to Create Custom Events",
-        "url": "https://www.youtube.com/watch?v=MTBVyk0YGv0" } ],
+        "url": "https://www.wix.com/velo/example/stories" } ],
   "FAQs":
     [ { "title": "How do I make my site act differently depending on what device it is being viewed on?",
         "markdown": "You can check the type of device your site is being viewed on using the [`formFactor`](https://www.wix.com/code/reference/wix-window.html#formFactor) property. Note, that when you preview your site in the mobile editor the [`formFactor`](https://www.wix.com/code/reference/wix-window.html#formFactor) property still returns `\"Desktop\"`." },

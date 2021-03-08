@@ -8,7 +8,8 @@
       "$w.StyleMixin",
       "$w.RequiredMixin",
       "$w.ValidatableMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 50,
       "filename": "SelectionTagsList.js" },
@@ -26,7 +27,8 @@
         {  } },
   "properties":
     [ { "name": "options",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
@@ -57,7 +59,7 @@
                 "   1. Reset the `options` property with the modified array.",
                 "",
                 "",
-                " > **Note:** Setting the `options` property clears the [`value`](#value) and [`selectedIndices`](#selectedIndices) of the selection tags." ],
+                " > **Note:** Setting the `options` property clears the [`values`](#value) that do not match the new `options`." ],
             "links": [],
             "examples":
               [ { "title": "Get the options of selection tags",

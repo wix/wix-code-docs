@@ -62,8 +62,7 @@
         "extra":
           {  } },
       { "name": "createTask",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "taskInfo",
@@ -497,7 +496,6 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

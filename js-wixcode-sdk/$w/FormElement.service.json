@@ -11,7 +11,7 @@
   "docs":
     { "summary": "Provides functionality related to user input elements.",
       "description":
-        [ "The `FormElement` [mixin](https://support.wix.com/en/article/corvid-about-mixins) provides properties, functions, and event handlers that user input elements can inherit and use.",
+        [ "The `FormElement` [mixin](https://support.wix.com/en/article/velo-about-mixins) provides properties, functions, and event handlers that user input elements can inherit and use.",
           " ",
           " > **Note:** Mixins are not elements. You cannot add mixins to a page in the Editor like other `$w` elements, and mixins are not meant to be used directly ",
           " in your code." ],

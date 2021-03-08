@@ -13,7 +13,7 @@
   "docs":
     { "summary": "Slideshows are playable containers for slides.",
       "description":
-        [ "You can open the Corvid Properties & Events panel for the `Slideshow` element",
+        [ "You can open the Velo Properties & Events panel for the `Slideshow` element",
           " but not for its individual [`Slide`]($w.Slide.html) elements." ],
       "links": [],
       "examples": [],
@@ -266,14 +266,14 @@
                 " on navigation or slide buttons, or programmatically, using functions",
                 " such as [changeSlide()](#changeSlide), [play()](#play), [previous( )](#previous), and [next( )](#next).",
                 "",
-                "> **Note:** You can see the `Slideshow` element in the Corvid Properties & Events panel, but ",
+                "> **Note:** You can see the `Slideshow` element in the Velo Properties & Events panel, but ",
                 " its [`Slide`]($w.Slide.html) elements are not visible there.",
                 ">",
                 ">",
                 "> **Deprecation note:** The $w parameter of event handlers is being deprecated. To get",
                 " a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function",
                 " and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see",
-                " [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
+                " [here](https://www.wix.com/velo/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
             "links":
               [ "[changeSlide( )](#changeSlide)",
                 "[previous( )](#previous)",
@@ -298,20 +298,20 @@
   "relatedContent":
     [ { "icon": "example",
         "text": "Dynamic Slideshow",
-        "url": "https://www.wix.com/corvid/example/dynamic-slideshow" },
+        "url": "https://www.wix.com/velo/example/dynamic-slideshow" },
       { "icon": "example",
         "text": "Multistage Form",
-        "url": "https://www.wix.com/corvid/example/Multistage-Form" },
+        "url": "https://www.wix.com/velo/example/multistage-form" },
       { "icon": "example",
         "text": "Change Layout",
-        "url": "https://www.wix.com/corvid/example/Change-Layout" },
+        "url": "https://www.wix.com/velo/example/change-layout" },
       { "icon": "example",
         "text": "Gift Quiz",
-        "url": "https://www.wix.com/corvid/example/Gift-Quiz" } ],
+        "url": "https://www.wix.com/velo/example/gift-quiz" } ],
   "FAQs":
     [ { "title": "How do I toggle my slideshow on and off?",
-        "markdown": "Check if your slideshow [`isPlaying`](https://www.wix.com/code/reference/$w.Slideshow.html#isPlaying). If it's playing, [`pause()`](https://www.wix.com/code/reference/$w.Slideshow.html#pause) the slideshow. If it's not playing, [`play()`](https://www.wix.com/code/reference/$w.Slideshow.html#play) the slideshow.\n\n```javascript\n\nif($w(\"#myElement\").isPlaying) {\n\n  $w(\"#myElement\").pause();\n\n}\n\nelse {\n\n  $w(\"#myElement\").play();\n\n}\n\n```" },
+        "markdown": "Check if your slideshow [`isPlaying`](https://www.wix.com/velo/reference/$w.Slideshow.html#isPlaying). If it's playing, [`pause()`](https://www.wix.com/velo/reference/$w.Slideshow.html#pause) the slideshow. If it's not playing, [`play()`](https://www.wix.com/velo/reference/$w.Slideshow.html#play) the slideshow.\n\n```javascript\n\nif($w(\"#myElement\").isPlaying) {\n\n  $w(\"#myElement\").pause();\n\n}\n\nelse {\n\n  $w(\"#myElement\").play();\n\n}\n\n```" },
       { "title": "How do I control which navigation buttons appear in my slideshow?",
-        "markdown": "Set the [`showNavigationButtons`](https://www.wix.com/code/reference/$w.Slideshow.html#showNavigationButtons) property to `true` to show [navigation arrows](https://support.wix.com/en/article/showing-or-hiding-the-navigation-arrows-on-your-slideshow) on your slideshow.\n\nSet the [`showSlideButtons`](https://www.wix.com/code/reference/$w.Slideshow.html#showSlideButtons) property to `true` to show [slide buttons](https://support.wix.com/en/article/showing-or-hiding-the-slide-buttons-on-your-slideshow) on your slideshow." },
+        "markdown": "Set the [`showNavigationButtons`](https://www.wix.com/velo/reference/$w.Slideshow.html#showNavigationButtons) property to `true` to show [navigation arrows](https://support.wix.com/en/article/showing-or-hiding-the-navigation-arrows-on-your-slideshow) on your slideshow.\n\nSet the [`showSlideButtons`](https://www.wix.com/velo/reference/$w.Slideshow.html#showSlideButtons) property to `true` to show [slide buttons](https://support.wix.com/en/article/showing-or-hiding-the-slide-buttons-on-your-slideshow) on your slideshow." },
       { "title": "How can I move my slideshow to a specific slide?",
-        "markdown": "Use the [`changeSlide()`](https://www.wix.com/code/reference/$w.Slideshow.html#changeSlide) function with an index number or a [`Slide`](https://www.wix.com/code/reference/$w.Slide.html) object to move to a specific slide in your slideshow.\n\nIf using an index number, note that slide indices are zero-based." } ] }
+        "markdown": "Use the [`changeSlide()`](https://www.wix.com/velo/reference/$w.Slideshow.html#changeSlide) function with an index number or a [`Slide`](https://www.wix.com/velo/reference/$w.Slide.html) object to move to a specific slide in your slideshow.\n\nIf using an index number, note that slide indices are zero-based." } ] }

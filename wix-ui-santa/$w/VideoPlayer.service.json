@@ -3,7 +3,8 @@
   "mixes":
     [ "$w.Element",
       "$w.HiddenCollapsedMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 8,
       "filename": "VideoPlayer.js" },
@@ -48,7 +49,8 @@
         "extra":
           {  } },
       { "name": "description",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type": "string",
@@ -58,7 +60,7 @@
             { "lineno": 96,
               "filename": "VideoPlayer.js" } ],
         "docs":
-          { "summary": "Sets or gets the description of a video.\n > **Note:** Setting a video description only works when a video player is presenting a\n video uploaded to your site.\n\n Getting a video description does not work when a video player is presenting a\n video from Facebook, Twitch, or YouTube.",
+          { "summary": "Sets or gets the description of a video.\n > **Notes:** \n > - Setting a video description only works when a video player is presenting a\n video uploaded to your site.\n > - Getting a video description does not work when a video player is presenting a\n video from Facebook, Twitch, or YouTube.",
             "links": [],
             "examples":
               [ { "title": "Get a video player's description",

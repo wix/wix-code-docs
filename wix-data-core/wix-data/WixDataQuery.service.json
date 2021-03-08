@@ -4,7 +4,7 @@
     [ "wix-data.WixDataFilter" ],
   "labels": [],
   "location":
-    { "lineno": 9,
+    { "lineno": 8,
       "filename": "query.es6" },
   "docs":
     { "summary": "Contains functionality for refining a data query.",
@@ -31,7 +31,9 @@
           "   .then( (results) => {",
           "     console.log(results.items);",
           "   } );",
-          " ```" ],
+          " ```",
+          "",
+          "When working with [Wix app collections](https://support.wix.com/en/article/velo-working-with-wix-app-collections-and-code), check [which fields](https://support.wix.com/en/search?term=velo%20collection%20fields) can be used in a query." ],
       "links": [],
       "examples": [],
       "extra":
@@ -50,7 +52,7 @@
           { "type": "wix-data.WixDataQuery",
             "doc": "A `WixDataQuery` object representing the refined query." },
         "locations":
-          [ { "lineno": 19,
+          [ { "lineno": 21,
               "filename": "sortMixin.es6" } ],
         "docs":
           { "summary": "Adds a sort to a query or sort, sorting by the specified properties in ascending order.",
@@ -161,7 +163,7 @@
                   [ "number" ] },
             "doc": "Fulfilled - The number of items that match the query.\nRejected - The errors that caused the rejection." },
         "locations":
-          [ { "lineno": 57,
+          [ { "lineno": 58,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the number of items that match the query.",
@@ -253,7 +255,7 @@
           { "type": "wix-data.WixDataQuery",
             "doc": "A `WixDataQuery` object representing the refined query." },
         "locations":
-          [ { "lineno": 53,
+          [ { "lineno": 55,
               "filename": "sortMixin.es6" } ],
         "docs":
           { "summary": "Adds a sort to a query or sort, sorting by the specified properties in descending order.",
@@ -367,7 +369,7 @@
                   [ "wix-data.WixDataQueryResult" ] },
             "doc": "Fulfilled - A Promise that resolves to the results of the query.\nRejected - Error that caused the query to fail." },
         "locations":
-          [ { "lineno": 100,
+          [ { "lineno": 101,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the distinct values that match the query, without duplicates.",
@@ -526,7 +528,7 @@
                   [ "wix-data.WixDataQueryResult" ] },
             "doc": "Fulfilled - A Promise that resolves to the results of the query.\nRejected - Error that caused the query to fail." },
         "locations":
-          [ { "lineno": 210,
+          [ { "lineno": 182,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the items that match the query.",
@@ -685,7 +687,7 @@
           { "type": "wix-data.WixDataQuery",
             "doc": "A `WixDataQuery` object representing the query." },
         "locations":
-          [ { "lineno": 352,
+          [ { "lineno": 324,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Includes referenced items for the specified properties in a query's results.",
@@ -870,7 +872,7 @@
           { "type": "wix-data.WixDataQuery",
             "doc": "A `WixDataQuery` object representing the refined query." },
         "locations":
-          [ { "lineno": 267,
+          [ { "lineno": 239,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Limits the number of items the query returns.",
@@ -993,7 +995,7 @@
           { "type": "wix-data.WixDataQuery",
             "doc": "A `WixDataQuery` object representing the refined query." },
         "locations":
-          [ { "lineno": 312,
+          [ { "lineno": 284,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Sets the number of items to skip before returning query results.",
@@ -1088,12 +1090,12 @@
     {  },
   "FAQs":
     [ { "title": "When do I need to use the 'and()' function?",
-        "markdown": "When you chain multiple query refinements such as [`eq()`](https://www.wix.com/code/reference/wix-data.WixDataQuery.html#eq) nad [`gt()`](https://www.wix.com/code/reference/wix-data.WixDataQuery.html#gt) there is an implied \"and\" between them. \n\nFor example, this query matches items where the status is active **and** the age is greater than 21:\n\n```javascripts\n\nwixData.query()\n\n  .eq(\"status\", \"active\")\n\n  .gt(\"age\", 21) \n\n  // ...\n\n```\n\nHowever, there are some types of complex queries where you need an explicit [`and()`](https://www.wix.com/code/reference/wix-data.WixDataQuery.html#and) function.\n\nFor example, to create a query that returns results where the status is either pending or rejected **and** the age is either less than 25 or greater than 65 you need to create two queries and join them with an [and()](https://www.wix.com/code/reference/wix-data.WixDataQuery.html#and)." },
+        "markdown": "When you chain multiple query refinements such as [`eq()`](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html#eq) nad [`gt()`](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html#gt) there is an implied \"and\" between them. \n\nFor example, this query matches items where the status is active **and** the age is greater than 21:\n\n```javascripts\n\nwixData.query()\n\n  .eq(\"status\", \"active\")\n\n  .gt(\"age\", 21) \n\n  // ...\n\n```\n\nHowever, there are some types of complex queries where you need an explicit [`and()`](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html#and) function.\n\nFor example, to create a query that returns results where the status is either pending or rejected **and** the age is either less than 25 or greater than 65 you need to create two queries and join them with an [and()](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html#and)." },
       { "title": "How can I retrieve the items referenced by another item?",
-        "markdown": "When you [query an item that references other items](https://support.wix.com/en/article/including-referenced-data-when-filtering), you only receive the IDs of the referenced items in the query's results.\n\nThere are two ways to retrieve the items referenced by another item:\n\n1. Call the [`queryReferenced()`](https://www.wix.com/code/reference/wix-data.html#queryReferenced) function to retrieve the items referenced in the specified property of an item.\n2. Add the [`include()`](https://www.wix.com/code/reference/wix-data.WixDataQuery.html#include) function to your query chain to included referenced items for the specified properties in your query's results." },
+        "markdown": "When you [query an item that references other items](https://support.wix.com/en/article/including-referenced-data-when-filtering), you only receive the IDs of the referenced items in the query's results.\n\nThere are two ways to retrieve the items referenced by another item:\n\n1. Call the [`queryReferenced()`](https://www.wix.com/velo/reference/wix-data.html#queryReferenced) function to retrieve the items referenced in the specified property of an item.\n2. Add the [`include()`](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html#include) function to your query chain to included referenced items for the specified properties in your query's results." },
       { "title": "How can I limit the number of items returned by a query?",
-        "markdown": "By default, a [`query()`](https://www.wix.com/code/reference/wix-data.html#query) is limited to returning 50 items. Add the [`limit()`](https://www.wix.com/code/reference/wix-data.WixDataQuery.html#limit) function to your query chain." } ],
+        "markdown": "By default, a [`query()`](https://www.wix.com/velo/reference/wix-data.html#query) is limited to returning 50 items. Add the [`limit()`](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html#limit) function to your query chain." } ],
   "Related Content":
     [ { "icon": "example",
         "text": "Multiple Reference Query",
-        "url": "https://www.wix.com/code/home/forum/wix-tips-and-updates/example-wix-data-multiple-references" } ] }
+        "url": "https://www.wix.com/velo/forum/wix-tips-and-updates/example-wix-data-multiple-references" } ] }

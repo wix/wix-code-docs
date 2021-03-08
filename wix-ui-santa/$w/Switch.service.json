@@ -8,7 +8,8 @@
       "$w.ClickableMixin",
       "$w.ValueMixin",
       "$w.CheckedMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 6,
       "filename": "Switch.js" },
@@ -20,14 +21,15 @@
         {  } },
   "properties":
     [ { "name": "checked",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type": "boolean",
         "locations":
           [ { "lineno": 29,
               "filename": "Switch.js" },
-            { "lineno": 46,
+            { "lineno": 48,
               "filename": "Switch.js" } ],
         "docs":
           { "summary": "Sets or gets whether a switch is on or off.",
@@ -36,6 +38,49 @@
                 " position. Setting it to `false` toggles the switch to the off position.",
                 "",
                 " Getting the `checked` property returns whether the switch is on or off." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get whether a switch is toggled on or off",
+                  "body":
+                    [ "let isChecked = $w(\"#mySwitch\").checked;  // true" ],
+                  "extra":
+                    {  } },
+                { "title": "Set a switch to be toggled on",
+                  "body":
+                    [ "$w(\"#mySwitch\").checked = true;" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "value",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "string",
+        "locations":
+          [ { "lineno": 54,
+              "filename": "Switch.js" } ],
+        "docs":
+          { "summary": "**Note: This standard element property is not relevant for Switch. Use [`checked`](#checked) instead.**",
+            "description":
+              [ "The `value` property's type depends on the element implementing it. ",
+                "",
+                "> **Notes:**",
+                "> + Changing an element's `value` in code does not trigger an `onChange` event.",
+                ">",
+                ">",
+                "> + If an element is connected to a dataset, setting the element's `value`",
+                " in code does not set the value of the connected field in the dataset.",
+                " That means if you use the dataset to perform a submit, the value changed",
+                " in code is not reflected in the submitted item.",
+                ">",
+                ">",
+                "> + To submit the new value using a dataset, set the field's value using the",
+                " [`setFieldValue()`](wix-dataset.html#setFieldValue) function before",
+                " performing the submit." ],
             "links": [],
             "examples": [],
             "extra":

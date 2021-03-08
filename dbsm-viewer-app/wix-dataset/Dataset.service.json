@@ -1,7 +1,8 @@
 { "name": "Dataset",
   "memberOf": "wix-dataset",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 54,
       "filename": "datasetApi.js" },
@@ -21,7 +22,7 @@
           { "type": "Object",
             "doc": "The current item, or null if there is no current item." },
         "locations":
-          [ { "lineno": 231,
+          [ { "lineno": 229,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Returns the current item.",
@@ -44,23 +45,23 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getCurrentItem()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `getCurrentItem()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " >  Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `getCurrentItem()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `getCurrentItem()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading.",
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading.",
                 " >",
                 " > If the current item is changed from a non-dataset source, such as by",
-                " selecting a row in a table connected to a dataset or clicking a button set",
-                " to advance to the next item in a dataset, the dataset's current item is",
-                " not updated immediately. Therefore, to get the dataset's new current item,",
-                " call `getCurrentItem()` in the dataset's [`onCurrentIndexChanged()`](#onCurrentIndexChanged)",
-                " event handler. Do not use the events of the non-dataset source, such as",
-                " [`onRowSelect`]($w.Table.html#onRowSelect) or [`onClick`]($w.ClickableMixin.html#onClick),",
-                " to call `getCurrentItem()` because they will fire before the dataset's",
-                " current item is updated." ],
+                " > selecting a row in a table connected to a dataset or clicking a button set",
+                " > to advance to the next item in a dataset, the dataset's current item is",
+                " > not updated immediately. Therefore, to get the dataset's new current item,",
+                " > call `getCurrentItem()` in the dataset's [`onCurrentIndexChanged()`](#onCurrentIndexChanged)",
+                " > event handler. Do not use the events of the non-dataset source, such as",
+                " > [`onRowSelect`]($w.Table.html#onRowSelect) or [`onClick`]($w.ClickableMixin.html#onClick),",
+                " > to call `getCurrentItem()` because they will fire before the dataset's",
+                " > current item is updated." ],
             "links":
               [ "[getCurrentItemIndex( )](#getCurrentItemIndex)",
                 "[setCurrentItemIndex( )](#setCurrentItemIndex)" ],
@@ -118,7 +119,7 @@
           { "type": "number",
             "doc": "The index of the current item, or null if there is no current item." },
         "locations":
-          [ { "lineno": 281,
+          [ { "lineno": 279,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Returns the current item's index.",
@@ -140,23 +141,23 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getCurrentItemIndex()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `getCurrentItemIndex()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                "> Usually a dataset finishes loading a short time after the page it is on finishes",
+                ">  loading. So if you call `getCurrentItemIndex()` inside the page’s [`onReady()`]($w.html#onReady)",
+                "> event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `getCurrentItemIndex()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading.",
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading.",
                 " >",
                 " > If the current item is changed from a non-dataset source, such as by",
-                " selecting a row in a table connected to a dataset or clicking a button set",
-                " to advance to the next item in a dataset, the dataset's current item is",
-                " not updated immediately. Therefore, to get the dataset's new current item index,",
-                " call `getCurrentItemIndex()` in the dataset's [`onCurrentIndexChanged()`](#onCurrentIndexChanged)",
-                " event handler. Do not use the events of the non-dataset source, such as",
-                " [`onRowSelect`]($w.Table.html#onRowSelect) or [`onClick`]($w.ClickableMixin.html#onClick),",
-                " to call `getCurrentItemIndex()` because they will fire before the dataset's",
-                " current item is updated." ],
+                " > selecting a row in a table connected to a dataset or clicking a button set",
+                " > to advance to the next item in a dataset, the dataset's current item is",
+                " > not updated immediately. Therefore, to get the dataset's new current item index,",
+                " > call `getCurrentItemIndex()` in the dataset's [`onCurrentIndexChanged()`](#onCurrentIndexChanged)",
+                " > event handler. Do not use the events of the non-dataset source, such as",
+                " > [`onRowSelect`]($w.Table.html#onRowSelect) or [`onClick`]($w.ClickableMixin.html#onClick),",
+                " > to call `getCurrentItemIndex()` because they will fire before the dataset's",
+                " > current item is updated." ],
             "links":
               [ "[setCurrentItemIndex( )](#setCurrentItemIndex)",
                 "[getCurrentItem( )](#getCurrentItem)" ],
@@ -178,7 +179,7 @@
           { "type": "number",
             "doc": "The index of the current page or null if there is no current page." },
         "locations":
-          [ { "lineno": 1184,
+          [ { "lineno": 1186,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Gets the index of the dataset's current page.",
@@ -188,13 +189,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getCurrentPageIndex()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `getCurrentPageIndex()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `getCurrentPageIndex()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `getCurrentPageIndex()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links": [],
             "examples":
               [ { "title": "Get the current page's index",
@@ -223,7 +224,7 @@
                   [ "wix-dataset.Dataset.GetItemsResult" ] },
             "doc": "Fulfilled - The items retrieved and the total number of items in the dataset that match its filter criteria.\nRejected - An error object." },
         "locations":
-          [ { "lineno": 172,
+          [ { "lineno": 170,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Returns the selected items.",
@@ -237,13 +238,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getItems()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `getItems()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `getItems()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `getItems()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[getCurrentItem( )](#getCurrentItem)" ],
             "examples":
@@ -293,7 +294,7 @@
           { "type": "number",
             "doc": "The page size." },
         "locations":
-          [ { "lineno": 1246,
+          [ { "lineno": 1248,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Gets the dataset's page size.",
@@ -320,7 +321,7 @@
           { "type": "number",
             "doc": "The number of items in the dataset that match its filter criteria." },
         "locations":
-          [ { "lineno": 207,
+          [ { "lineno": 205,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Returns the number of items in the dataset that match its filter criteria.",
@@ -330,13 +331,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getTotalCount()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `getTotalCount()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `getTotalCount()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `getTotalCount()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links": [],
             "examples":
               [ { "title": "Get the number of items in the dataset that match its filter criteria",
@@ -367,7 +368,7 @@
           { "type": "number",
             "doc": "The number of pages in the dataset." },
         "locations":
-          [ { "lineno": 1157,
+          [ { "lineno": 1159,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Gets the number of pages in the dataset.",
@@ -380,13 +381,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `getTotalPageCount()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `getTotalPageCount()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `getTotalPageCount()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `getTotalPageCount()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links": [],
             "examples":
               [ { "title": "Get the number of pages in the dataset",
@@ -406,7 +407,7 @@
           { "type": "boolean",
             "doc": "`true` if the current item is not the last item in the dataset." },
         "locations":
-          [ { "lineno": 518,
+          [ { "lineno": 516,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Indicates if there is a next item.",
@@ -420,13 +421,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `hasNext()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `hasNext()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `hasNext()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `hasNext()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[hasPrevious( )](#hasPrevious)" ],
             "examples":
@@ -458,7 +459,7 @@
           { "type": "boolean",
             "doc": "`true` if the current page is not the last page in the dataset." },
         "locations":
-          [ { "lineno": 1094,
+          [ { "lineno": 1096,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Indicates if there is a next page of data.",
@@ -473,13 +474,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `hasNextPage()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `hasNextPage()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `hasNextPage()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `hasNextPage()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[nextPage( )](#previousPage)",
                 "[hasPreviousPage( )](#hasNextPage)" ],
@@ -512,7 +513,7 @@
           { "type": "boolean",
             "doc": "`true` if the current item is not the first item in the dataset." },
         "locations":
-          [ { "lineno": 548,
+          [ { "lineno": 546,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Indicates if there is a previous item.",
@@ -526,13 +527,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `hasPrevious()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `hasPrevious()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `hasPrevious()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `hasPrevious()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[hasNext( )](#hasNext)" ],
             "examples":
@@ -564,7 +565,7 @@
           { "type": "boolean",
             "doc": "`true` if the current page is not the first page in the dataset." },
         "locations":
-          [ { "lineno": 1125,
+          [ { "lineno": 1127,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Indicates if there is a previous page of data.",
@@ -580,13 +581,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `hasPreviousPage()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `hasPreviousPage()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `hasPreviousPage()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `hasPreviousPage()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[previousPage( )](#previousPage)",
                 "[hasNextPage( )](#hasNextPage)" ],
@@ -622,7 +623,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the additional data has been loaded and any connected repeaters have been updated.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 967,
+          [ { "lineno": 969,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Loads the next page of data in addition to the current data.",
@@ -648,13 +649,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `loadMore()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `loadMore()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `loadMore()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `loadMore()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links": [],
             "examples":
               [ { "title": "Load more dataset content",
@@ -699,7 +700,7 @@
                         [ "Object" ] } ] },
             "doc": "Fulfilled - When the specified page has been loaded and any connected elements have been updated.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 1208,
+          [ { "lineno": 1210,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Loads the specified page.",
@@ -717,13 +718,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `loadPage()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `loadPage()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `loadPage()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `loadPage()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[previousPage( )](#previousPage)",
                 "[nextPage( )](#nextPage)" ],
@@ -775,7 +776,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When a new empty item is the current item of the dataset.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 578,
+          [ { "lineno": 576,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Create a new blank item.",
@@ -796,13 +797,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `new()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `new()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `new()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `new()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links": [],
             "examples":
               [ { "title": "Save the current item and create a new blank item",
@@ -848,7 +849,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - The next item in the dataset.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 440,
+          [ { "lineno": 438,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Saves the current item and moves to the next item.",
@@ -869,13 +870,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `next()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `next()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `next()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `next()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[previous( )](#previous)",
                 "[hasNext( )](#hasNext)" ],
@@ -925,7 +926,7 @@
                         [ "Object" ] } ] },
             "doc": "Fulfilled - When the next page of data has been loaded and any connected elements have been updated.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 1010,
+          [ { "lineno": 1012,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Moves to the next page of data.",
@@ -948,13 +949,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `nextPage()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `nextPage()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `nextPage()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `nextPage()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[previousPage( )](#previousPage)",
                 "[hasNextPage( )](#hasNextPage)",
@@ -1084,7 +1085,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 719,
+          [ { "lineno": 717,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the current index changes.",
@@ -1116,7 +1117,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 782,
+          [ { "lineno": 780,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when an error occurs.",
@@ -1161,7 +1162,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 745,
+          [ { "lineno": 743,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when a value of the current item changes.",
@@ -1196,7 +1197,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 816,
+          [ { "lineno": 814,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the dataset is ready.",
@@ -1229,7 +1230,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - The previous item in the dataset.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 479,
+          [ { "lineno": 477,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Saves the current item and moves to the previous item.",
@@ -1250,13 +1251,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `previous()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `previous()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `previous()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `previous()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[next( )](#next)",
                 "[hasPrevious( )](#hasPrevious)" ],
@@ -1306,7 +1307,7 @@
                         [ "Object" ] } ] },
             "doc": "Fulfilled - When the previous page of data has been loaded and any connected repeaters have been updated.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 1052,
+          [ { "lineno": 1054,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Moves to the previous page of data.",
@@ -1329,13 +1330,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `previousPage()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `previousPage()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `previousPage()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `previousPage()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[nextPage( )](#previousPage)",
                 "[hasPreviousPage( )](#hasNextPage)",
@@ -1388,7 +1389,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the refresh is finished.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 690,
+          [ { "lineno": 688,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Refetches the contents of the dataset from the collection.",
@@ -1408,13 +1409,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `refresh()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `refresh()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `refresh()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `refresh()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[revert( )](#revert)",
                 "[save( )](#save)" ],
@@ -1456,7 +1457,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the current item has been removed from the collection." },
         "locations":
-          [ { "lineno": 616,
+          [ { "lineno": 614,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Removes the current item.",
@@ -1475,13 +1476,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `remove()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `remove()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `remove()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `remove()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[revert( )](#revert)",
                 "[refresh( )](#refresh)" ],
@@ -1523,7 +1524,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the item has been reverted to its saved state.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 653,
+          [ { "lineno": 651,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Reverts the current item to its saved value.",
@@ -1541,13 +1542,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `revert()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `revert()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `revert()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `revert()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[refresh( )](#refresh)",
                 "[save( )](#save)" ],
@@ -1612,15 +1613,13 @@
                 "",
                 " > **Note:**",
                 " >",
-                " > A dataset needs to load its data before you call its `save()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `save()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > A dataset needs to load its data before you call its `save()` function. ",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes loading. So if you call `save()` inside the page’s [`onReady()`]($w.html#onReady) event handler, the dataset might not be ready yet.",
                 " >",
                 " >",
                 " > To call `save()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[revert( )](#revert)",
                 "[refresh( )](#refresh)" ],
@@ -1658,7 +1657,8 @@
         "extra":
           {  } },
       { "name": "setCurrentItemIndex",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "index",
@@ -1671,7 +1671,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the item with the given index is set to the current item.\nRejected - Rejects if the item with the given index does not exist or it cannot be set to the current item." },
         "locations":
-          [ { "lineno": 330,
+          [ { "lineno": 328,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Sets the current item by index.",
@@ -1689,13 +1689,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `setCurrentItemIndex()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `setCurrentItemIndex()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `setCurrentItemIndex()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `setCurrentItemIndex()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading.",
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " >  event handler to ensure that both the page and the dataset have finished loading.",
                 " >",
                 " > `setCurrentItemIndex()` saves the current item even if the requested item is same as the current item." ],
             "links":
@@ -1738,7 +1738,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 370,
+          [ { "lineno": 368,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Updates the value of a field in the current item.",
@@ -1757,13 +1757,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `setFieldValue()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `setFieldValue()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `setFieldValue()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `setFieldValue()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[setFieldValues( )](#setFieldValues)" ],
             "examples":
@@ -1803,7 +1803,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 409,
+          [ { "lineno": 407,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Updates the values of a set of fields in the current item.",
@@ -1817,13 +1817,13 @@
                 " > **Note:**",
                 " >",
                 " > A dataset needs to load its data before you call its `setFieldValues()` function.",
-                " Usually a dataset finishes loading a short time after the page it is on finishes",
-                " loading. So if you call `setFieldValues()` inside the page’s [`onReady()`]($w.html#onReady)",
-                " event handler, the dataset might not be ready yet.",
+                " > Usually a dataset finishes loading a short time after the page it is on finishes",
+                " > loading. So if you call `setFieldValues()` inside the page’s [`onReady()`]($w.html#onReady)",
+                " > event handler, the dataset might not be ready yet.",
                 " >",
                 " > To call `setFieldValues()` as soon as possible after a page loads, use the **dataset's**",
-                " [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
-                " event handler to ensure that both the page and the dataset have finished loading." ],
+                " > [`onReady()`](#onReady) function inside the **page’s** [`onReady()`]($w.html#onReady)",
+                " > event handler to ensure that both the page and the dataset have finished loading." ],
             "links":
               [ "[setFieldValue( )](#setFieldValue)" ],
             "examples":
@@ -1867,7 +1867,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the filter has been set.\nRejected - An error object." },
         "locations":
-          [ { "lineno": 904,
+          [ { "lineno": 902,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Sets the dataset filter.",
@@ -1879,21 +1879,25 @@
                 " function on `wixData` and chaining one or more of the following Wix Data",
                 " filter functions.",
                 "",
-                " + [and](wix-data.WixDataQuery.html#and): See note below.",
-                " + [between](wix-data.WixDataQuery.html#between)",
-                " + [contains](wix-data.WixDataQuery.html#contains)",
-                " + [endsWith](wix-data.WixDataQuery.html#endsWith)",
-                " + [eq](wix-data.WixDataQuery.html#eq)",
-                " + [ge](wix-data.WixDataQuery.html#ge)",
-                " + [gt](wix-data.WixDataQuery.html#gt)",
-                " + [hasAll](wix-data.WixDataQuery.html#hasAll)",
-                " + [hasSome](wix-data.WixDataQuery.html#hasSome)",
-                " + [le](wix-data.WixDataQuery.html#le)",
-                " + [lt](wix-data.WixDataQuery.html#lt)",
-                " + [ne](wix-data.WixDataQuery.html#ne)",
-                " + [not](wix-data.WixDataQuery.html#not): See note below.",
-                " + [or](wix-data.WixDataQuery.html#or): See note below.",
-                " + [startsWith](wix-data.WixDataQuery.html#startsWith)",
+                " + [and](wix-data.WixDataFilter.html#and): See note below.",
+                " + [ascending](wix-data.WixDataSort.html#ascending)",
+                " + [between](wix-data.WixDataFilter.html#between)",
+                " + [contains](wix-data.WixDataFilter.html#contains)",
+                " + [descending](wix-data.WixDataSort.html#descending)",
+                " + [endsWith](wix-data.WixDataFilter.html#endsWith)",
+                " + [eq](wix-data.WixDataFilter.html#eq)",
+                " + [ge](wix-data.WixDataFilter.html#ge)",
+                " + [gt](wix-data.WixDataFilter.html#gt)",
+                " + [hasAll](wix-data.WixDataFilter.html#hasAll)",
+                " + [hasSome](wix-data.WixDataFilter.html#hasSome)",
+                " + [isEmpty](wix-data.WixDataFilter.html#isEmpty)",
+                " + [isNotEmpty](wix-data.WixDataFilter.html#isNotEmpty)",
+                " + [le](wix-data.WixDataFilter.html#le)",
+                " + [lt](wix-data.WixDataFilter.html#lt)",
+                " + [ne](wix-data.WixDataFilter.html#ne)",
+                " + [not](wix-data.WixDataFilter.html#not): See note below.",
+                " + [or](wix-data.WixDataFilter.html#or): See note below.",
+                " + [startsWith](wix-data.WixDataFilter.html#startsWith)",
                 "",
                 "",
                 " Setting a dataset's filter overrides existing filters that were previously",
@@ -2015,7 +2019,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the page size has been set.\nRejected - An error object." },
         "locations":
-          [ { "lineno": 1261,
+          [ { "lineno": 1263,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Sets the dataset's page size.",
@@ -2064,7 +2068,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the sort has been set.\nRejected - An error message." },
         "locations":
-          [ { "lineno": 858,
+          [ { "lineno": 856,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "Sets the dataset sort order.",
@@ -2220,7 +2224,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 712,
+          [ { "lineno": 710,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "A current item index change event handler.",
@@ -2243,7 +2247,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 774,
+          [ { "lineno": 772,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "An error event handler.",
@@ -2266,7 +2270,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 737,
+          [ { "lineno": 735,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "A current item value change event handler.",
@@ -2283,7 +2287,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 810,
+          [ { "lineno": 808,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "A dataset ready event handler.",
@@ -2296,7 +2300,7 @@
   "messages":
     [ { "name": "DatasetError",
         "locations":
-          [ { "lineno": 787,
+          [ { "lineno": 785,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "An object representing a dataset error.",
@@ -2328,7 +2332,7 @@
         "labels": [] },
       { "name": "GetItemsResult",
         "locations":
-          [ { "lineno": 162,
+          [ { "lineno": 160,
               "filename": "datasetApi.js" } ],
         "docs":
           { "summary": "An object used by the `getItems()` function that contains the items retrieved and the total number of items in the dataset that match its filter criteria",

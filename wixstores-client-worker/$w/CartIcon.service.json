@@ -1,324 +1,411 @@
-{ "name": "CartIcon",
+{
+  "name": "CartIcon",
   "memberOf": "$w",
-  "mixes":
-    [ "$w.Element",
-      "$w.HiddenCollapsedMixin" ],
+  "mixes": [
+    "$w.Element",
+    "$w.HiddenCollapsedMixin"
+  ],
   "labels": [],
-  "location":
-    { "lineno": 589,
-      "filename": "wixCodeDoc.js" },
-  "docs":
-    { "summary": "An icon that leads users to the shopping cart.",
-      "description":
-        [ "The shopping cart icon displays how many items are in the shopping cart.",
-          " When users click on the cart icon, a cart sidebar opens on the current page.",
-          " You can use a `CartIcon` element to programmatically add items to a user's",
-          " cart." ],
-      "links": [],
-      "examples": [],
-      "extra":
-        {  } },
+  "location": {
+    "lineno": 636,
+    "filename": "wixCodeDoc.js"
+  },
+  "docs": {
+    "summary": "An icon that leads users to the shopping cart.",
+    "description": [
+      "The shopping cart icon displays how many items are in the shopping cart.",
+      " When users click on the cart icon, a cart sidebar opens on the current page.",
+      " You can use a `CartIcon` element to programmatically add items to a user's",
+      " cart."
+    ],
+    "links": [],
+    "examples": [],
+    "extra": {}
+  },
   "properties": [],
-  "operations":
-    [ { "name": "addProductsToCart",
-        "labels": [],
-        "nameParams": [],
-        "params":
-          [ { "name": "products",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "$w.CartIcon.AddToCartItem" ] },
-              "doc": "The list of products to add to the cart." } ],
-        "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "void" ] },
-            "doc": "Fulfilled - When the products have been added to the cart." },
-        "locations":
-          [ { "lineno": 640,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "Adds multiple products to the shopping cart.",
-            "description":
-              [ "The `addProductsToCart()` function returns a Promise that is resolved when the",
-                " specified products are added to the shopping cart.",
-                "",
-                " Use the `quantity` property of each `AddToCartItem` object that is",
-                " passed to the products parameter to add more than one product unit to the shopping",
-                " cart at one time. If `quantity` is omitted, one product unit will be added.",
-                "",
-                " Use the `options` property of each `AddToCartItem` object that is",
-                " passed to the products parameter to specify the product options to choose when adding",
-                " the product to the cart. For example, if a product comes in different sizes, you can",
-                " specify the size that should be added to the cart. If the product you are adding to the",
-                " cart has options, you must specify which options should be chosen.",
-                "",
-                " You can retrieve a product's option information from the `productOptions` field in the **Stores/Product** collection.",
-                "",
-                " You can use the [`getProductOptionsAvailability()`](wix-stores-backend.html#getProductOptionsAvailability)",
-                " to determine if an item with specific options is available for purchase.",
-                "",
-                " Also use the `options` property to specify the values for the product's",
-                " custom text fields. If the product you are adding to the cart has mandatory",
-                " custom text fields, you must specify values for those fields." ],
-            "links": [],
-            "examples":
-              [ { "title": "Add multiple products to the cart",
-                  "body":
-                    [ "$w('#shoppingCartIcon1').addProductsToCart([",
-                      "  {",
-                      "    \"productId\": \"580a3cd8-8e39-2863-2a56-1d7019cbfcc1\",",
-                      "    \"quantity\": 5",
-                      "  },",
-                      "  {",
-                      "    \"productId\": \"2ab0eac2-69b3-bc77-5033-fac8805b223a\",",
-                      "    \"options\": {",
-                      "      \"choices\": {",
-                      "        \"Size\": \"Small\"",
-                      "      },",
-                      "      \"customTextFields\": [{",
-                      "        \"title\": \"Personalization 1\",",
-                      "        \"value\": \"Personalized Text 1\"",
-                      "      },",
-                      "      {",
-                      "        \"title\": \"Personalization 2\",",
-                      "        \"value\": \"Personalized Text 2\"",
-                      "      }]",
-                      "    }",
-                      "  }",
-                      "])",
-                      "  .then(() => {",
-                      "    console.log(\"Products added\");",
-                      "  })",
-                      "  .catch((error) => {",
-                      "    console.log(error);",
-                      "  });" ],
-                  "extra":
-                    {  } } ],
-            "extra":
-              {  } },
-        "extra":
-          {  } },
-      { "name": "addToCart",
-        "labels": [],
-        "nameParams": [],
-        "params":
-          [ { "name": "productID",
-              "type": "string",
-              "doc": "The ID of the product to add to the cart." },
-            { "name": "quantity",
-              "type": "number",
-              "doc": "The number of product units to add to\n the cart. If omitted, one product unit will be added.",
-              "optional": true },
-            { "name": "options",
-              "type": "$w.CartIcon.AddToCartOptions",
-              "doc": "Product options.",
-              "optional": true } ],
-        "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "void" ] },
-            "doc": "Fulfilled - When the product has been added to the cart." },
-        "locations":
-          [ { "lineno": 238,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "Adds a product to the shopping cart.",
-            "description":
-              [ "The `addToCart()` function returns a Promise that is resolved when the",
-                " specified product is added to the shopping cart.",
-                "",
-                " Use the optional `quantity` parameter to add more than one product unit to",
-                " the shopping cart at one time. If `quantity` is omitted, one product unit",
-                " will be added.",
-                "",
-                " Use the `options` parameter to specify the product options to choose when",
-                " adding the product to the cart. For example, if a product comes in different",
-                " sizes, you can specify the size that should be added to the cart. If the",
-                " product you are adding to the cart has options, you must specify which",
-                " options should be chosen.",
-                "",
-                " You can use the [`getProductOptionsAvailability()`](wix-stores-backend.html#getProductOptionsAvailability)",
-                " to determine if an item with specific options is available for purchase.",
-                "",
-                " Also use the `options` parameter to specify the values for the product's",
-                " custom text fields. If the product you are adding to the cart has mandatory",
-                " custom text fields, you must specify values for those fields." ],
-            "links": [],
-            "examples":
-              [ { "title": "Add a product to the cart",
-                  "body":
-                    [ "$w('#myShoppingCartIcon').addToCart(\"ea77f230-558f-0ba565e8f827\")",
-                      "  .then( () => {",
-                      "    console.log(\"Product added\");",
-                      "  } )",
-                      "  .catch( (error) => {",
-                      "    console.log(error);",
-                      "  } );" ],
-                  "extra":
-                    {  } },
-                { "title": "Add a product to the cart from a button click",
-                  "body":
-                    [ "$w(\"#myButton\").onClick( () => {",
-                      "  $w(\"#myShoppingCartIcon\").addToCart(\"ea77f230-558f-0ba565e8f827\")",
-                      "    .then( () => {",
-                      "      console.log(\"Product added\");",
-                      "    } )",
-                      "    .catch( (error) => {",
-                      "      console.log(error);",
-                      "    } );",
-                      "} );" ],
-                  "extra":
-                    {  } },
-                { "title": "Add two units of a product to the cart",
-                  "body":
-                    [ "$w('#myShoppingCartIcon').addToCart(\"ea77f230-558f-0ba565e8f827\", 2)",
-                      "  .then( () => {",
-                      "    console.log(\"Product added\");",
-                      "  } )",
-                      "  .catch( (error) => {",
-                      "    console.log(error);",
-                      "  } );" ],
-                  "extra":
-                    {  } },
-                { "title": "Add a product to the cart with options",
-                  "body":
-                    [ "$w('#shoppingCartIcon1').addToCart(\"ea77f230-558f-0ba565e8f827\", 2, {",
-                      "    \"choices\": {",
-                      "      \"Size\": \"Small\"",
-                      "    },",
-                      "    \"customTextFields\": [ {",
-                      "      \"title\": \"Personalization 1\",",
-                      "      \"value\": \"Personalized Text 1\"",
-                      "    },",
-                      "    {",
-                      "      \"title\": \"Personalization 2\",",
-                      "      \"value\": \"Personalized Text 2\"",
-                      "    } ]",
-                      "  } )",
-                      "  .then( () => {",
-                      "    console.log(\"Product added\");",
-                      "  } )",
-                      "  .catch( (error) => {",
-                      "    console.log(error);",
-                      "  } );" ],
-                  "extra":
-                    {  } } ],
-            "extra":
-              {  } },
-        "extra":
-          {  } } ],
+  "operations": [
+    {
+      "name": "addProductsToCart",
+      "labels": [],
+      "nameParams": [],
+      "params": [
+        {
+          "name": "products",
+          "type": {
+            "name": "Array",
+            "typeParams": [
+              "$w.CartIcon.AddToCartItem"
+            ]
+          },
+          "doc": "The list of products to add to the cart."
+        }
+      ],
+      "ret": {
+        "type": {
+          "name": "Promise",
+          "typeParams": [
+            "void"
+          ]
+        },
+        "doc": "Fulfilled - When the products have been added to the cart."
+      },
+      "locations": [
+        {
+          "lineno": 687,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "Adds multiple products to the shopping cart.",
+        "description": [
+          "The `addProductsToCart()` function returns a Promise that is resolved when the",
+          " specified products are added to the shopping cart.",
+          "",
+          " Use the `quantity` property of each `AddToCartItem` object that is",
+          " passed to the products parameter to add more than one product unit to the shopping",
+          " cart at one time. If `quantity` is omitted, one product unit will be added.",
+          "",
+          " Use the `options` property of each `AddToCartItem` object that is",
+          " passed to the products parameter to specify the product options to choose when adding",
+          " the product to the cart. For example, if a product comes in different sizes, you can",
+          " specify the size that should be added to the cart. If the product you are adding to the",
+          " cart has options, you must specify which options should be chosen.",
+          "",
+          " You can retrieve a product's option information from the `productOptions` field in the **Stores/Product** collection.",
+          "",
+          " You can use the [`getProductOptionsAvailability()`](wix-stores-backend.html#getProductOptionsAvailability)",
+          " to determine if an item with specific options is available for purchase.",
+          "",
+          " Also use the `options` property to specify the values for the product's",
+          " custom text fields. If the product you are adding to the cart has mandatory",
+          " custom text fields, you must specify values for those fields."
+        ],
+        "links": [],
+        "examples": [
+          {
+            "title": "Add multiple products to the cart",
+            "body": [
+              "$w('#shoppingCartIcon1').addProductsToCart([",
+              "  {",
+              "    \"productId\": \"580a3cd8-8e39-2863-2a56-1d7019cbfcc1\",",
+              "    \"quantity\": 5",
+              "  },",
+              "  {",
+              "    \"productId\": \"2ab0eac2-69b3-bc77-5033-fac8805b223a\",",
+              "    \"options\": {",
+              "      \"choices\": {",
+              "        \"Size\": \"Small\"",
+              "      },",
+              "      \"customTextFields\": [{",
+              "        \"title\": \"Personalization 1\",",
+              "        \"value\": \"Personalized Text 1\"",
+              "      },",
+              "      {",
+              "        \"title\": \"Personalization 2\",",
+              "        \"value\": \"Personalized Text 2\"",
+              "      }]",
+              "    }",
+              "  }",
+              "])",
+              "  .then(() => {",
+              "    console.log(\"Products added\");",
+              "  })",
+              "  .catch((error) => {",
+              "    console.log(error);",
+              "  });"
+            ],
+            "extra": {}
+          }
+        ],
+        "extra": {}
+      },
+      "extra": {}
+    },
+    {
+      "name": "addToCart",
+      "labels": [],
+      "nameParams": [],
+      "params": [
+        {
+          "name": "productID",
+          "type": "string",
+          "doc": "The ID of the product to add to the cart."
+        },
+        {
+          "name": "quantity",
+          "type": "number",
+          "doc": "The number of product units to add to\n the cart. If omitted, one product unit will be added.",
+          "optional": true
+        },
+        {
+          "name": "options",
+          "type": "$w.CartIcon.AddToCartOptions",
+          "doc": "Product options.",
+          "optional": true
+        }
+      ],
+      "ret": {
+        "type": {
+          "name": "Promise",
+          "typeParams": [
+            "void"
+          ]
+        },
+        "doc": "Fulfilled - When the product has been added to the cart."
+      },
+      "locations": [
+        {
+          "lineno": 285,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "Adds a product to the shopping cart.",
+        "description": [
+          "The `addToCart()` function returns a Promise that is resolved when the",
+          " specified product is added to the shopping cart.",
+          "",
+          " Use the optional `quantity` parameter to add more than one product unit to",
+          " the shopping cart at one time. If `quantity` is omitted, one product unit",
+          " will be added.",
+          "",
+          " Use the `options` parameter to specify the product options to choose when",
+          " adding the product to the cart. For example, if a product comes in different",
+          " sizes, you can specify the size that should be added to the cart. If the",
+          " product you are adding to the cart has options, you must specify which",
+          " options should be chosen.",
+          "",
+          " You can use the [`getProductOptionsAvailability()`](wix-stores-backend.html#getProductOptionsAvailability)",
+          " to determine if an item with specific options is available for purchase.",
+          "",
+          " Also use the `options` parameter to specify the values for the product's",
+          " custom text fields. If the product you are adding to the cart has mandatory",
+          " custom text fields, you must specify values for those fields."
+        ],
+        "links": [],
+        "examples": [
+          {
+            "title": "Add a product to the cart",
+            "body": [
+              "$w('#myShoppingCartIcon').addToCart(\"ea77f230-558f-0ba565e8f827\")",
+              "  .then( () => {",
+              "    console.log(\"Product added\");",
+              "  } )",
+              "  .catch( (error) => {",
+              "    console.log(error);",
+              "  } );"
+            ],
+            "extra": {}
+          },
+          {
+            "title": "Add a product to the cart from a button click",
+            "body": [
+              "$w(\"#myButton\").onClick( () => {",
+              "  $w(\"#myShoppingCartIcon\").addToCart(\"ea77f230-558f-0ba565e8f827\")",
+              "    .then( () => {",
+              "      console.log(\"Product added\");",
+              "    } )",
+              "    .catch( (error) => {",
+              "      console.log(error);",
+              "    } );",
+              "} );"
+            ],
+            "extra": {}
+          },
+          {
+            "title": "Add two units of a product to the cart",
+            "body": [
+              "$w('#myShoppingCartIcon').addToCart(\"ea77f230-558f-0ba565e8f827\", 2)",
+              "  .then( () => {",
+              "    console.log(\"Product added\");",
+              "  } )",
+              "  .catch( (error) => {",
+              "    console.log(error);",
+              "  } );"
+            ],
+            "extra": {}
+          },
+          {
+            "title": "Add a product to the cart with options",
+            "body": [
+              "$w('#shoppingCartIcon1').addToCart(\"ea77f230-558f-0ba565e8f827\", 2, {",
+              "    \"choices\": {",
+              "      \"Size\": \"Small\"",
+              "    },",
+              "    \"customTextFields\": [ {",
+              "      \"title\": \"Personalization 1\",",
+              "      \"value\": \"Personalized Text 1\"",
+              "    },",
+              "    {",
+              "      \"title\": \"Personalization 2\",",
+              "      \"value\": \"Personalized Text 2\"",
+              "    } ]",
+              "  } )",
+              "  .then( () => {",
+              "    console.log(\"Product added\");",
+              "  } )",
+              "  .catch( (error) => {",
+              "    console.log(error);",
+              "  } );"
+            ],
+            "extra": {}
+          }
+        ],
+        "extra": {}
+      },
+      "extra": {}
+    }
+  ],
   "callbacks": [],
-  "messages":
-    [ { "name": "AddToCartCustomTextField",
-        "locations":
-          [ { "lineno": 229,
-              "filename": "wixCodeDoc.js" },
-            { "lineno": 629,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object used to pass a custom text field when adding a product to\n the shopping cart with options.",
-            "links":
-              [ "[addToCart( )](#addToCart)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "title",
-              "type": "string",
-              "doc": "Custom text field title." },
-            { "name": "value",
-              "type": "string",
-              "doc": "Custom text field value." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "AddToCartItem",
-        "locations":
-          [ { "lineno": 605,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object used when adding multiple products to the shopping cart.",
-            "links":
-              [ "[addToCart( )](#addToCart)" ],
-            "examples":
-              [ { "title": "Add multiple products to the cart",
-                  "body":
-                    [ "$w('#shoppingCartIcon1').addProductsToCart([",
-                      "  {",
-                      "    \"productId\": \"580a3cd8-8e39-2863-2a56-1d7019cbfcc1\",",
-                      "    \"quantity\": 5",
-                      "  },",
-                      "  {",
-                      "    \"productId\": \"2ab0eac2-69b3-bc77-5033-fac8805b223a\",",
-                      "    \"options\": {",
-                      "      \"choices\": {",
-                      "        \"Size\": \"Small\"",
-                      "      },",
-                      "      \"customTextFields\": [{",
-                      "        \"title\": \"Personalization 1\",",
-                      "        \"value\": \"Personalized Text 1\"",
-                      "      },",
-                      "      {",
-                      "        \"title\": \"Personalization 2\",",
-                      "        \"value\": \"Personalized Text 2\"",
-                      "      }]",
-                      "    }",
-                      "  }",
-                      "])",
-                      "  .then(() => {",
-                      "    console.log(\"Products added\");",
-                      "  })",
-                      "  .catch((error) => {",
-                      "    console.log(error);",
-                      "  });" ],
-                  "extra":
-                    {  } } ],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "productId",
-              "type": "string",
-              "doc": "The ID of the product to add to the cart." },
-            { "name": "quantity",
-              "type": "number",
-              "doc": "The number of product units to add to the cart. If omitted, one product unit will be added.",
-              "optional": true },
-            { "name": "options",
-              "type": "$w.CartIcon.AddToCartOptions",
-              "doc": "Custom custom\ntext fields to use when adding the product to the cart.",
-              "optional": true } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "AddToCartOptions",
-        "locations":
-          [ { "lineno": 218,
-              "filename": "wixCodeDoc.js" },
-            { "lineno": 616,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object used when adding a product to the shopping cart with options.",
-            "links":
-              [ "[addToCart( )](#addToCart)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "choices",
-              "type": "Object",
-              "doc": "Product options to use when adding the\n product to the cart. The object contains key:value pairs where the key is the\n option name and the value is the chosen option value." },
-            { "name": "customTextFields",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "$w.CartIcon.AddToCartCustomTextField" ] },
-              "doc": "Custom custom\n text fields to use when adding the product to the cart." } ],
-        "extra":
-          {  },
-        "labels": [] } ],
-  "extra":
-    {  } }
+  "messages": [
+    {
+      "name": "AddToCartCustomTextField",
+      "locations": [
+        {
+          "lineno": 276,
+          "filename": "wixCodeDoc.js"
+        },
+        {
+          "lineno": 676,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object used to pass a custom text field when adding a product to\n the shopping cart with options.",
+        "links": [
+          "[addToCart( )](#addToCart)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "title",
+          "type": "string",
+          "doc": "Custom text field title."
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "doc": "Custom text field value."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "AddToCartItem",
+      "locations": [
+        {
+          "lineno": 652,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object used when adding multiple products to the shopping cart.",
+        "links": [
+          "[addToCart( )](#addToCart)"
+        ],
+        "examples": [
+          {
+            "title": "Add multiple products to the cart",
+            "body": [
+              "$w('#shoppingCartIcon1').addProductsToCart([",
+              "  {",
+              "    \"productId\": \"580a3cd8-8e39-2863-2a56-1d7019cbfcc1\",",
+              "    \"quantity\": 5",
+              "  },",
+              "  {",
+              "    \"productId\": \"2ab0eac2-69b3-bc77-5033-fac8805b223a\",",
+              "    \"options\": {",
+              "      \"choices\": {",
+              "        \"Size\": \"Small\"",
+              "      },",
+              "      \"customTextFields\": [{",
+              "        \"title\": \"Personalization 1\",",
+              "        \"value\": \"Personalized Text 1\"",
+              "      },",
+              "      {",
+              "        \"title\": \"Personalization 2\",",
+              "        \"value\": \"Personalized Text 2\"",
+              "      }]",
+              "    }",
+              "  }",
+              "])",
+              "  .then(() => {",
+              "    console.log(\"Products added\");",
+              "  })",
+              "  .catch((error) => {",
+              "    console.log(error);",
+              "  });"
+            ],
+            "extra": {}
+          }
+        ],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "productId",
+          "type": "string",
+          "doc": "The ID of the product to add to the cart."
+        },
+        {
+          "name": "quantity",
+          "type": "number",
+          "doc": "The number of product units to add to the cart. If omitted, one product unit will be added.",
+          "optional": true
+        },
+        {
+          "name": "options",
+          "type": "$w.CartIcon.AddToCartOptions",
+          "doc": "Custom custom\ntext fields to use when adding the product to the cart.",
+          "optional": true
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "AddToCartOptions",
+      "locations": [
+        {
+          "lineno": 265,
+          "filename": "wixCodeDoc.js"
+        },
+        {
+          "lineno": 663,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object used when adding a product to the shopping cart with options.",
+        "links": [
+          "[addToCart( )](#addToCart)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "choices",
+          "type": "Object",
+          "doc": "Product options to use when adding the\n product to the cart. The object contains key:value pairs where the key is the\n option name and the value is the chosen option value."
+        },
+        {
+          "name": "customTextFields",
+          "type": {
+            "name": "Array",
+            "typeParams": [
+              "$w.CartIcon.AddToCartCustomTextField"
+            ]
+          },
+          "doc": "Custom custom\n text fields to use when adding the product to the cart."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    }
+  ],
+  "extra": {}
+}

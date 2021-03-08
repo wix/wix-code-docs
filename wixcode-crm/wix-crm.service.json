@@ -1,7 +1,6 @@
 { "name": "wix-crm",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "crm.js" },
@@ -20,8 +19,7 @@
   "properties": [],
   "operations":
     [ { "name": "createContact",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "contactInfo",

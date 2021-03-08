@@ -1,0 +1,1638 @@
+{ "name": "wix-bookings-backend",
+  "mixes": [],
+  "labels": [],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "summary": "The wix-bookings-backend module contains functionality for working with bookings from backend code.",
+      "description":
+        [ "The wix-bookings-backend API allows you to manage bookings and calendar functionality on your site.",
+          "",
+          "To enable bookings backend API functionality for your site, add the [Wix Bookings](https://support.wix.com/en/article/adding-wix-bookings-to-your-site) application to your site.",
+          "You must upgrade your site to a [Premium Plan](https://support.wix.com/en/article/upgrading-your-site-to-premium-3066683) in order to accept bookings and receive online payments. ",
+          "",
+          "",
+          "The wix-bookings-backend API provides bookings functionality allowing you to:",
+          "+ List and [query](wix-bookings-backend/bookings/querybookings) booking information.",
+          "+ [Confirm](wix-bookings-backend/bookings/confirmbooking) pending booking requests.",
+          "+ [Decline](wix-bookings-backend/bookings/declinebooking) pending booking requests.",
+          "+ [Cancel](wix-bookings-backend/bookings/cancelbooking) a booking.",
+          "+ [Set attendance](wix-bookings-backend/bookings/setattendance) for booked sessions.",
+          "+ [Mark](wix-bookings-backend/bookings/setbookingaspaid) a booking as paid.",
+          "+ Update the customer's [booking information](wix-bookings-backend/bookings/updatecustomerinfo).",
+          "",
+          "To accept payments, see [About Accepting Payments](https://support.wix.com/en/article/accepting-payments-on-your-wix-site-7014346)." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "bookings",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-bookings-backend.Bookings",
+        "locations":
+          [ { "lineno": 48,
+              "filename": "index.js" } ],
+        "docs":
+          { "summary": "The Bookings API provides functionality for updating and managing bookings created in the Wix Bookings app.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "events",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-bookings-backend.Events",
+        "locations":
+          [ { "lineno": 30,
+              "filename": "bookingsEvents.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Address",
+        "locations":
+          [ { "lineno": 4,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "Contact's full [address](https://www.wix.com/corvid/reference/$w/addressinput/value).",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "formatted",
+              "type": "string",
+              "doc": "A string containing the full address of this location." },
+            { "name": "addressLine1",
+              "type": "string",
+              "doc": "Main address line, usually street and number, as free text.",
+              "optional": true },
+            { "name": "addressLine2",
+              "type": "string",
+              "doc": "Free text providing more detailed address info. Usually contains Apt, Suite, and Floor." },
+            { "name": "streetAddress",
+              "type": "wix-bookings-backend.StreetAddress",
+              "doc": "Street name, number, and apartment number.",
+              "optional": true },
+            { "name": "location",
+              "type": "wix-bookings-backend.AddressLocation",
+              "doc": "Coordinates of the physical address." },
+            { "name": "city",
+              "type": "string",
+              "doc": "City name." },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "Subdivision. Usually state, region, prefecture or province code, according to [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)." },
+            { "name": "country",
+              "type": "string",
+              "doc": "Country code." },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "Zip/postal code." } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "address",
+                  "members":
+                    [ "streetAddress",
+                      "addressLine1" ] } ] },
+        "labels": [] },
+      { "name": "AddressCoordinates",
+        "locations":
+          [ { "lineno": 70,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "coordinates of the physical address.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "latitude",
+              "type": "number",
+              "doc": "Latitude." },
+            { "name": "longitude",
+              "type": "number",
+              "doc": "Longitude." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "AddressLocation",
+        "locations":
+          [ { "lineno": 29,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "Coordinates of the physical address.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "latitude",
+              "type": "number",
+              "doc": "Address latitude." },
+            { "name": "longitude",
+              "type": "number",
+              "doc": "Address longitude." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "AddressLocationInfo",
+        "locations":
+          [ { "lineno": 78,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "Coordinates of the physical address.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "latitude",
+              "type": "number",
+              "doc": "Address latitude.",
+              "optional": true },
+            { "name": "longitude",
+              "type": "number",
+              "doc": "Address longitude.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "AddressLocation_5466057688",
+        "locations":
+          [ { "lineno": 92,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "coordinates of the physical address.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "latitude",
+              "type": "number",
+              "doc": "Latitude.",
+              "optional": true },
+            { "name": "longitude",
+              "type": "number",
+              "doc": "Longitude.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "Address_30702269075",
+        "locations":
+          [ { "lineno": 70,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "Address.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "country",
+              "type": "string",
+              "doc": "country code.",
+              "optional": true },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "subdivision (usually state or region) code according to ISO 3166-2.",
+              "optional": true },
+            { "name": "city",
+              "type": "string",
+              "doc": "city name.",
+              "optional": true },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "zip/postal code.",
+              "optional": true },
+            { "name": "streetAddress",
+              "type": "wix-bookings-backend.StreetAddress_7212524817",
+              "doc": "A break down of the street to number and street name.",
+              "optional": true },
+            { "name": "formattedAddress",
+              "type": "string",
+              "doc": "A string containing the human-readable address of this location.",
+              "optional": true },
+            { "name": "hint",
+              "type": "string",
+              "doc": "Free text for human-to-human textual orientation aid purposes.",
+              "optional": true },
+            { "name": "geocode",
+              "type": "wix-bookings-backend.AddressLocation_5466057688",
+              "doc": "coordinates of the physical address.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "Attendance",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Attendance information.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "attendanceStatus",
+              "type": "boolean",
+              "doc": "Whether the booked contact attended the session." },
+            { "name": "numberOfAttendees",
+              "type": "number",
+              "doc": "Number of attendees that attended the session. This can be more than 1 if `formInfo.paymentSelection.numberOfParticipants` for the booking is greater than 1." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Balance",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The final price, currency, down payment, and amount received.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "finalPrice",
+              "type": "wix-bookings-backend.Price",
+              "doc": "Required payment amount, currency, and any down payment required." },
+            { "name": "amountReceived",
+              "type": "string",
+              "doc": "Current total amount paid." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "BookedEntity",
+        "locations":
+          [ { "lineno": 17,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "An object describing the entity that was booked.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rate",
+              "type": "wix-bookings-backend.Rate",
+              "doc": "Price options offered to book this session at the time of booking.",
+              "optional": true },
+            { "name": "location",
+              "type": "wix-bookings-backend.Location",
+              "doc": "Location of the session." },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "A list of tags for the booking." },
+            { "name": "scheduleId",
+              "type": "string",
+              "doc": "ID of the booked schedule." },
+            { "name": "title",
+              "type": "string",
+              "doc": "Session title at the time of booking." },
+            { "name": "singleSession",
+              "type": "wix-bookings-backend.SingleSession",
+              "doc": "Start and end time of the booked sessions.",
+              "optional": true },
+            { "name": "setOfSessions",
+              "type": "wix-bookings-backend.SetOfSessions",
+              "doc": "First start and last end time of the booked sessions.",
+              "optional": true },
+            { "name": "serviceId",
+              "type": "string",
+              "doc": "ID of the booked service." },
+            { "name": "onlineConference",
+              "type": "wix-bookings-backend.OnlineConference",
+              "doc": "Online conference information.",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "type",
+                  "members":
+                    [ "setOfSessions",
+                      "singleSession" ] } ] },
+        "labels": [] },
+      { "name": "BookedResource",
+        "locations":
+          [ { "lineno": 33,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Booked resource ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Resource's name at the time of booking." },
+            { "name": "email",
+              "type": "string",
+              "doc": "Resource's email at the time of booking." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Booking",
+        "locations":
+          [ { "lineno": 41,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Booking ID." },
+            { "name": "bookedEntity",
+              "type": "wix-bookings-backend.BookedEntity",
+              "doc": "An object describing the entity that was booked." },
+            { "name": "bookedResources",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.BookedResource" ] },
+              "doc": "A list of booked resources." },
+            { "name": "formInfo",
+              "type": "wix-bookings-backend.Form",
+              "doc": "Form information submitted when booking. `formInfo` contains contact details, participants, and other form fields, set up for the service." },
+            { "name": "paymentDetails",
+              "type": "wix-bookings-backend.PaymentDetails",
+              "doc": "Payment Details." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Booking status.\nOne of:\n + `\"PENDING_CHECKOUT\"` The booking is waiting to be checked out.\n + `\"CONFIRMED\"` The booking was approved by the business.\n + `\"CANCELED\"` The booking was canceled.\n + `\"PENDING\"` The booking was created.\n + `\"PENDING_APPROVAL\"` The booking is waiting to be approved or declined.\n + `\"DECLINED\"` The booking was declined by the business." },
+            { "name": "attendanceInfo",
+              "type": "wix-bookings-backend.Attendance",
+              "doc": "Attendance information.",
+              "optional": true },
+            { "name": "bookingSource",
+              "type": "wix-bookings-backend.BookingSource",
+              "doc": "An object describing the platform and application that made the booking.",
+              "optional": true },
+            { "name": "externalUserId",
+              "type": "string",
+              "doc": "ID provided by the client app on creation.",
+              "optional": true },
+            { "name": "_createdDate",
+              "type": "Date",
+              "doc": "Date and time when the booking was created." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "BookingSource",
+        "locations":
+          [ { "lineno": 63,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "An object describing the platform and application that made the booking.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "platform",
+              "type": "string",
+              "doc": "Platform from which a booking was created.\nOne of:\n + `\"WEB\"` Desktop browser.\n + `\"MOBILE_APP\"` Mobile application." },
+            { "name": "actor",
+              "type": "string",
+              "doc": "Actor that created this booking.\nOne of:\n + `\"BUSINESS\"`\n + `\"CUSTOMER\"`" },
+            { "name": "appDefId",
+              "type": "string",
+              "doc": "Wix site ID of the application that created this booking." },
+            { "name": "appName",
+              "type": "string",
+              "doc": "Name of the application that created this booking." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "BusinessLocation",
+        "locations":
+          [ { "lineno": 368,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Not supported yet.",
+            "description":
+              [ "Valid only when locationType is OWNER_BUSINESS.",
+                "If the locationType is OWNER_BUSINESS the default value is the default business location." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "ID of the location." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Display name of the location." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Free text to better describe the location." },
+            { "name": "default",
+              "type": "boolean",
+              "doc": "Whether this is the default location." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Status of the location. Active by default.\nOne of:\n + `\"ACTIVE\"`\n + `\"IN_ACTIVE\"`" },
+            { "name": "locationType",
+              "type": "string",
+              "doc": "Type of the location.\nOne of:\n + `\"UNKNOWN\"`\n + `\"BRANCH\"`\n + `\"OFFICES\"`\n + `\"RECEPTION\"`\n + `\"HEADQUARTERS\"`" },
+            { "name": "fax",
+              "type": "string",
+              "doc": "Fax number." },
+            { "name": "timeZone",
+              "type": "string",
+              "doc": "Time zone." },
+            { "name": "email",
+              "type": "string",
+              "doc": "Email address." },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Phone number." },
+            { "name": "address",
+              "type": "wix-bookings-backend.Address",
+              "doc": "Address." },
+            { "name": "businessSchedule",
+              "type": "wix-bookings-backend.BusinessSchedule",
+              "doc": "Time periods that this location is open for business. Each period represents a range of hours when the location is open. Limited to 100 time periods." },
+            { "name": "revision",
+              "type": "string",
+              "doc": "Number of changes on the location." },
+            { "name": "archived",
+              "type": "boolean",
+              "doc": "Whether the location is archived. Archived locations are locations that are no longer in use and can not be updated or used for new services." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "BusinessSchedule",
+        "locations":
+          [ { "lineno": 399,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.",
+            "description":
+              [ "TimePeriod indicates when the location is open. Each period represents a range of hours when the location is",
+                "open during the week. Limited to 100 time periods." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "periods",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.TimePeriod" ] },
+              "doc": "Times that this location is open. Each period represents a range of hours when the location is.\nopen during the week. Limited to 100 time periods." },
+            { "name": "specialHourPeriod",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.SpecialHourPeriod" ] },
+              "doc": "Exceptions to the business's regular hours." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "BusinessSchedule_46474402208",
+        "locations":
+          [ { "lineno": 390,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.",
+            "description":
+              [ "TimePeriod indicates when the location is open. Each period represents a range of hours when the location is",
+                "open during the week. Limited to 100 time periods." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "periods",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.TimePeriod_38785543152" ] },
+              "doc": "Times that this location is open. Each period represents a range of hours when the location is\nopen during the week. Limited to 100 time periods.",
+              "optional": true },
+            { "name": "specialHourPeriod",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.SpecialHourPeriod_8149530360" ] },
+              "doc": "Exceptions to the business's regular hours.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "ContactDetails",
+        "locations":
+          [ { "lineno": 79,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The contact details of the customer making the booking.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactId",
+              "type": "string",
+              "doc": "Contact's ID." },
+            { "name": "firstName",
+              "type": "string",
+              "doc": "Contact's first name. When populated from a standard booking form, this property corresponds to the \"Name\" field." },
+            { "name": "lastName",
+              "type": "string",
+              "doc": "Contact's last name." },
+            { "name": "email",
+              "type": "string",
+              "doc": "Contact's email, used to create a new contact or get an existing one from the [CRM API](wix-crm/introduction)." },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Contact's phone number." },
+            { "name": "timeZone",
+              "type": "string",
+              "doc": "Contact's time zone." },
+            { "name": "countryCode",
+              "type": "string",
+              "doc": "Contact's country in [ISO 3166-1 alpha-2 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format." },
+            { "name": "address",
+              "type": "wix-bookings-backend.Address",
+              "doc": "Custom address. Used when `locationType` is `\"OWNER_CUSTOM\"`." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ContactDetailsInfo",
+        "locations":
+          [ { "lineno": 94,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The contact details of the customer making the booking.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactId",
+              "type": "string",
+              "doc": "Contact's ID.",
+              "optional": true },
+            { "name": "firstName",
+              "type": "string",
+              "doc": "Contact's first name.",
+              "optional": true },
+            { "name": "lastName",
+              "type": "string",
+              "doc": "Contact's last name.",
+              "optional": true },
+            { "name": "email",
+              "type": "string",
+              "doc": "Contact's email, used to create a new contact or get an existing one from the [CRM API](wix-crm/introduction).",
+              "optional": true },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Contact's phone number.",
+              "optional": true },
+            { "name": "address",
+              "type": "wix-bookings-backend.Bookings.AddressInfo",
+              "doc": "Contact's full [address](https://www.wix.com/corvid/reference/$w/addressinput/value).",
+              "optional": true },
+            { "name": "timeZone",
+              "type": "string",
+              "doc": "Contact's time zone.",
+              "optional": true },
+            { "name": "countryCode",
+              "type": "string",
+              "doc": "Contact's country in [ISO 3166-1 alpha-2 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CouponDetails",
+        "locations":
+          [ { "lineno": 108,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Coupon details, if a coupon was used to pay for the booking.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "couponName",
+              "type": "string",
+              "doc": "Coupon name." },
+            { "name": "couponCode",
+              "type": "string",
+              "doc": "Coupon code." },
+            { "name": "couponDiscount",
+              "type": "string",
+              "doc": "Coupon discount amount." },
+            { "name": "couponId",
+              "type": "string",
+              "doc": "Coupon ID." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CustomFormField",
+        "locations":
+          [ { "lineno": 136,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "ID of the form field as defined in the form." },
+            { "name": "value",
+              "type": "string",
+              "doc": "Value that was submitted for this field." },
+            { "name": "label",
+              "type": "string",
+              "doc": "Form field's label at the time of submission." },
+            { "name": "valueType",
+              "type": "string",
+              "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CustomFormFieldInfo",
+        "locations":
+          [ { "lineno": 148,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "ID of the form field as defined in the form.",
+              "optional": true },
+            { "name": "value",
+              "type": "string",
+              "doc": "Value that was submitted for this field.",
+              "optional": true },
+            { "name": "valueType",
+              "type": "string",
+              "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Form",
+        "locations":
+          [ { "lineno": 118,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up for the service.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactDetails",
+              "type": "wix-bookings-backend.ContactDetails",
+              "doc": "Contact details of the user making the booking." },
+            { "name": "paymentSelection",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.PaymentSelection" ] },
+              "doc": "A list of rates and the number of participants for each rate." },
+            { "name": "additionalFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.CustomFormField" ] },
+              "doc": "Additional custom fields submitted with the form.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "FormInfo",
+        "locations":
+          [ { "lineno": 127,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Updated form info and contact details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "contactDetails",
+              "type": "wix-bookings-backend.ContactDetailsInfo",
+              "doc": "Contact details of the user making the booking.",
+              "optional": true },
+            { "name": "paymentSelection",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.PaymentSelectionInfo" ] },
+              "doc": "A list of rates and the number of participants for each rate." },
+            { "name": "additionalFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.CustomFormFieldInfo" ] },
+              "doc": "Additional custom fields submitted with the form.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "FormInfo_CustomFormField",
+        "locations":
+          [ { "lineno": 148,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "ID of the form field as defined in the form.",
+              "optional": true },
+            { "name": "value",
+              "type": "string",
+              "doc": "Value that was submitted for this field.",
+              "optional": true },
+            { "name": "valueType",
+              "type": "string",
+              "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "Form_CustomFormField",
+        "locations":
+          [ { "lineno": 136,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "ID of the form field as defined in the form." },
+            { "name": "value",
+              "type": "string",
+              "doc": "Value that was submitted for this field." },
+            { "name": "label",
+              "type": "string",
+              "doc": "Form field's label at the time of submission." },
+            { "name": "valueType",
+              "type": "string",
+              "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "IsAvailableResult_6686246600",
+        "locations":
+          [ { "lineno": 266,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "available",
+              "type": "boolean",
+              "doc": "Whether the requested entity is available for booking for the specified party size." },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "Number of spots available to be booked, not including the number of participants in the availability request." },
+            { "name": "totalParticipants",
+              "type": "number",
+              "doc": "Current number of booked participants." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Location",
+        "locations":
+          [ { "lineno": 274,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The location of the session.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "locationType",
+              "type": "string",
+              "doc": "Location type.\n\nOne of:\n + `\"OWNER_BUSINESS\"` Business address as set in the site’s [general settings](https://support.wix.com/en/article/adding-your-sites-business-information).\n + `\"OWNER_CUSTOM\"` Address as set when creating the service.\n + `\"CUSTOM\"` Address as set for the individual session." },
+            { "name": "address",
+              "type": "string",
+              "doc": "Deprecated. Use `customAddress`.",
+              "optional": true },
+            { "name": "businessLocation",
+              "type": "wix-bookings-backend.BusinessLocation",
+              "doc": "Currently not supported.\n\n Valid when locationType is `\"OWNER_BUSINESS\"` and defaults to the default business location." },
+            { "name": "customAddress",
+              "type": "wix-bookings-backend.Address",
+              "doc": "Address used when `locationType` is `\"OWNER_CUSTOM\"`.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Location_103381755471",
+        "locations":
+          [ { "lineno": 290,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Geographic location of the session as free-form text. Optional.",
+            "description":
+              [ "The default value is the location in the schedule.",
+                "For single sessions, `session.location.businessLocation` can only be provided for locations which were defined in the schedule (`schedule.location` or `schedule.availability.locations`)" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "locationType",
+              "type": "string",
+              "doc": "Location type.\nOne of:\n + `\"OWNER_BUSINESS\"` The business address as set by the owner in the site’s general settings.\n + `\"OWNER_CUSTOM\"` The address as set by owner when creating the service.\n + `\"CUSTOM\"` The address as set for the individual session.",
+              "optional": true },
+            { "name": "address",
+              "type": "string",
+              "doc": "Free text address used when location_type is `OWNER_CUSTOM`.",
+              "optional": true },
+            { "name": "businessLocation",
+              "type": "wix-bookings-backend.Location_99881894064",
+              "doc": "Currently not supported.\n Valid when locationType is `\"OWNER_BUSINESS\"` and defaults to the default business location.\n When used, businessLocation._id is required.\n Supported read only fields: name, description, timezone, email, phone, address.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "Location_99881894064",
+        "locations":
+          [ { "lineno": 403,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Not supported yet.",
+            "description":
+              [ "Valid only when location_type is OWNER_BUSINESS.",
+                "If the location_type is OWNER_BUSINESS the default value is the default business location.",
+                "business_location.id is required.",
+                "Supported read only fields: name, description, timezone, email, phone, address." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Display name of the location.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Free text to better describe the location.",
+              "optional": true },
+            { "name": "status",
+              "type": "string",
+              "doc": "Status of the location. Active by default.\nOne of:\n + `\"ACTIVE\"`\n + `\"IN_ACTIVE\"`",
+              "optional": true },
+            { "name": "locationType",
+              "type": "string",
+              "doc": "Type of the location.\nOne of:\n + `\"UNKNOWN\"`\n + `\"BRANCH\"`\n + `\"OFFICES\"`\n + `\"RECEPTION\"`\n + `\"HEADQUARTERS\"`",
+              "optional": true },
+            { "name": "fax",
+              "type": "string",
+              "doc": "Fax number.",
+              "optional": true },
+            { "name": "timeZone",
+              "type": "string",
+              "doc": "Time zone.",
+              "optional": true },
+            { "name": "email",
+              "type": "string",
+              "doc": "Email address.",
+              "optional": true },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Phone number.",
+              "optional": true },
+            { "name": "address",
+              "type": "wix-bookings-backend.Address_30702269075",
+              "doc": "Address.",
+              "optional": true },
+            { "name": "businessSchedule",
+              "type": "wix-bookings-backend.BusinessSchedule_46474402208",
+              "doc": "Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.\nTimePeriod indicates when the location is open. Each period represents a range of hours when the location is open during the week. Limited to 100 time periods.",
+              "optional": true },
+            { "name": "revision",
+              "type": "string",
+              "doc": "Location revision, represent the number of changes on the location.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "OnlineConference",
+        "locations":
+          [ { "lineno": 159,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Online conference information.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "guestUrl",
+              "type": "string",
+              "doc": "Participant url." },
+            { "name": "providerId",
+              "type": "string",
+              "doc": "Online conference provider identifier." },
+            { "name": "password",
+              "type": "string",
+              "doc": "Online conference password." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PaidPlan",
+        "locations":
+          [ { "lineno": 293,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Plan details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "orderId",
+              "type": "string",
+              "doc": "Order ID when the Pricing Plan was purchased." },
+            { "name": "benefitId",
+              "type": "string",
+              "doc": "Benefit ID." },
+            { "name": "planId",
+              "type": "string",
+              "doc": "ID of the pricing plan." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "PaidPlanDetails",
+        "locations":
+          [ { "lineno": 170,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Pricing plan details, if a pricing plan was used to pay for the booking.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "plan",
+              "type": "wix-bookings-backend.PaidPlan",
+              "doc": "Plan details." },
+            { "name": "planName",
+              "type": "string",
+              "doc": "Plan name." },
+            { "name": "transactionId",
+              "type": "string",
+              "doc": "Transaction ID created in the Pricing Plans service when the member redeemed a benefit to pay for this booking." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "PaidPlan_11584964510",
+        "locations":
+          [ { "lineno": 302,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Describes the selected paid plan to use for this booking.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "orderId",
+              "type": "string",
+              "doc": "Order ID when the Pricing Plan was purchased.",
+              "optional": true },
+            { "name": "benefitId",
+              "type": "string",
+              "doc": "Benefit ID.",
+              "optional": true },
+            { "name": "planId",
+              "type": "string",
+              "doc": "ID of the pricing plan.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "ParticipantNotificationInfo",
+        "locations":
+          [ { "lineno": 358,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Whether to notify the participants about the booking confirmation, and an optional custom message.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "notifyParticipants",
+              "type": "boolean",
+              "doc": "Whether to notify participants about the change.",
+              "optional": true },
+            { "name": "message",
+              "type": "string",
+              "doc": "A custom message to send to the participants.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PaymentDetails",
+        "locations":
+          [ { "lineno": 177,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Payment Details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Checkout ID.",
+              "optional": true },
+            { "name": "balance",
+              "type": "wix-bookings-backend.Balance",
+              "doc": "Final price, currency, down payment, and amount received.",
+              "optional": true },
+            { "name": "couponDetails",
+              "type": "wix-bookings-backend.CouponDetails",
+              "doc": "Coupon details, if a coupon was used to pay for the booking.",
+              "optional": true },
+            { "name": "state",
+              "type": "string",
+              "doc": "Payment status.\nOne of:\n + `\"COMPLETE\"` Amount paid in full.\n + `\"PENDING_CASHIER\"` An online payment is in progress and awaiting a response.\n + `\"REJECTED\"` The checkout request was rejected by the online payment process. \n + `\"READY\"` All online checkout requirements were met. For example, when the service is set up for pay in person, or a partial or down payment was paid online.\n + `\"CANCELED\"`  Checkout canceled.\n + `\"REFUNDED\"` When using Pricing Plans, if the booking was canceled, it is automatically refunded.\n + `\"PENDING_MERCHANT\"` An online payment was made, but the owner did not set up the necessary details.\n + `\"WIX_PAY_FAILURE\"` Online payment failure.\n + `\"PENDING_MARK_AS_PAID\"` Offline transaction. The transaction will be complete when explicitly marked as paid.\n + `\"PENDING_BUYER\"`  The transaction started, but is waiting for confirmation on the buyer's side. This can be due to credit or fraud checking on the provider's side, a long bank transfer, or similar processes." },
+            { "name": "wixPayMultipleDetails",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.WixPayDetails" ] },
+              "doc": "In case of wix-pay service, holds all payment history for a booking." },
+            { "name": "pricingPlanDetails",
+              "type": "wix-bookings-backend.PricingPlanDetails",
+              "doc": "Pricing plan details, if a pricing plan was used to pay for the booking.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PaymentSelection",
+        "locations":
+          [ { "lineno": 200,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rateLabel",
+              "type": "string",
+              "doc": "Label corresponding to the booking rate. Default is free/custom." },
+            { "name": "numberOfParticipants",
+              "type": "number",
+              "doc": "Number of participants for this rate." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PaymentSelectionInfo",
+        "locations":
+          [ { "lineno": 207,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rateLabel",
+              "type": "string",
+              "doc": "Label corresponding to the booking rate. Default is free/custom.",
+              "optional": true },
+            { "name": "numberOfParticipants",
+              "type": "number",
+              "doc": "Number of participants for this rate.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Price",
+        "locations":
+          [ { "lineno": 323,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Required payment amount, currency, and any down payment required.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "amount",
+              "type": "string",
+              "doc": "Required payment amount." },
+            { "name": "currency",
+              "type": "string",
+              "doc": "Currency in which the amount is quoted." },
+            { "name": "downPayAmount",
+              "type": "string",
+              "doc": "Amount of a down payment or deposit as part of the transaction." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Price_7237915081",
+        "locations":
+          [ { "lineno": 332,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "`key` of type string, `value` of type object.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "amount",
+              "type": "string",
+              "doc": "Required payment amount.",
+              "optional": true },
+            { "name": "currency",
+              "type": "string",
+              "doc": "Currency in which the amount is quoted.",
+              "optional": true },
+            { "name": "downPayAmount",
+              "type": "string",
+              "doc": "Amount of a down payment or deposit as part of the transaction.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PricingPlan",
+        "locations":
+          [ { "lineno": 314,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Plan details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "orderId",
+              "type": "string",
+              "doc": "Order ID when the Pricing Plan was purchased." },
+            { "name": "benefitId",
+              "type": "string",
+              "doc": "Benefit ID." },
+            { "name": "planId",
+              "type": "string",
+              "doc": "ID of the pricing plan." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PricingPlanDetails",
+        "locations":
+          [ { "lineno": 168,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Pricing plan details, if a pricing plan was used to pay for the booking.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "plan",
+              "type": "wix-bookings-backend.PricingPlan",
+              "doc": "Plan details." },
+            { "name": "planName",
+              "type": "string",
+              "doc": "Plan name." },
+            { "name": "transactionId",
+              "type": "string",
+              "doc": "Transaction ID created in the Pricing Plans service when the member redeemed a benefit to pay for this booking." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Rate",
+        "locations":
+          [ { "lineno": 341,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The price options offered to book this session at the time of booking.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "labeledPriceOptions",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Mapping between a named price option and the price, currency, and down payment amount. Supports only the \"General\" label." },
+            { "name": "priceText",
+              "type": "string",
+              "doc": "Textual price information used when Price Per Session is set to Custom Price in the Bookings app's Service Details page." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Rate_13652876269",
+        "locations":
+          [ { "lineno": 328,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The price options offered to participate this session. Optional. The default value is the schedule rate.",
+            "description":
+              [ "If the recurrence field is given, the value is read only and inherited from the schedule." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "labeledPriceOptions",
+              "type": "Object",
+              "doc": "Set of key-value pairs.Mapping between a named price option and the price, currency and down payment amount.",
+              "optional": true },
+            { "name": "priceText",
+              "type": "string",
+              "doc": "Textual price information used when Price Per Session is set to Custom Price in the app's service details page.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "RescheduleRequest_6918542709",
+        "locations":
+          [ { "lineno": 214,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "participantNotification",
+              "type": "wix-bookings-backend.ParticipantNotificationInfo",
+              "doc": "Whether to notify the participants about the booking confirmation, and an optional custom message.",
+              "optional": true },
+            { "name": "ignoreReschedulePolicy",
+              "type": "wix-bookings-backend.RescheduleRequest_FlowControlSettings_1362659582",
+              "doc": "Sets the reschedule flow behavior, some behaviors required permissions.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RescheduleRequest_FlowControlSettings_1362659582",
+        "locations":
+          [ { "lineno": 221,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Sets the reschedule flow behavior, some behaviors required permissions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "ignoreReschedulePolicy",
+              "type": "boolean",
+              "doc": "when defined as true, skips the service defined reschedule policy.\n required BOOKINGS.IGNORE_BOOKING_POLICY permission.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SetOfSessions",
+        "locations":
+          [ { "lineno": 229,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "First start and last end time of the booked sessions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "firstSessionStart",
+              "type": "Date",
+              "doc": "Start time of the first session." },
+            { "name": "lastSessionEnd",
+              "type": "Date",
+              "doc": "End time of the last session." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SingleSession",
+        "locations":
+          [ { "lineno": 237,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Start and end time of the booked sessions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "sessionId",
+              "type": "string",
+              "doc": "Session ID." },
+            { "name": "start",
+              "type": "Date",
+              "doc": "Start time of the session." },
+            { "name": "end",
+              "type": "Date",
+              "doc": "End time of the session." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SpecialHourPeriod",
+        "locations":
+          [ { "lineno": 410,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Set of time periods when a location's operational hours differ from its normal business hours.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "startDate",
+              "type": "string",
+              "doc": "Date and Time in 24hr [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Coordinated universal time (UTC)." },
+            { "name": "endDate",
+              "type": "string",
+              "doc": "Date and Time in 24hr [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Coordinated universal time (UTC)." },
+            { "name": "isClosed",
+              "type": "boolean",
+              "doc": "Whether the business is closed during this period." },
+            { "name": "comment",
+              "type": "string",
+              "doc": "Comment." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SpecialHourPeriod_8149530360",
+        "locations":
+          [ { "lineno": 411,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Set of time periods when a location's operational hours differ from its normal business hours.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "startDate",
+              "type": "string",
+              "doc": "Date and Time in 24hr iso-8601 Coordinated universal time (UTC).",
+              "optional": true },
+            { "name": "endDate",
+              "type": "string",
+              "doc": "Date and Time in 24hr iso-8601 Coordinated universal time (UTC).",
+              "optional": true },
+            { "name": "isClosed",
+              "type": "boolean",
+              "doc": "Whether the business is closed during this period.",
+              "optional": true },
+            { "name": "comment",
+              "type": "string",
+              "doc": "Comment text.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "StreetAddress",
+        "locations":
+          [ { "lineno": 20,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "Street name, number, and apartment number.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "number",
+              "type": "string",
+              "doc": "Street number." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Street name." },
+            { "name": "apt",
+              "type": "string",
+              "doc": "Apartment number." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "StreetAddressInfo",
+        "locations":
+          [ { "lineno": 61,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "Street name, number, and apartment number.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "number",
+              "type": "string",
+              "doc": "Street number.",
+              "optional": true },
+            { "name": "name",
+              "type": "string",
+              "doc": "Street name.",
+              "optional": true },
+            { "name": "apt",
+              "type": "string",
+              "doc": "Apartment number.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "StreetAddress_7212524817",
+        "locations":
+          [ { "lineno": 101,
+              "filename": "address.js" } ],
+        "docs":
+          { "summary": "A break down of the street to number and street name.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "number",
+              "type": "string",
+              "doc": "street number.",
+              "optional": true },
+            { "name": "name",
+              "type": "string",
+              "doc": "street name.",
+              "optional": true },
+            { "name": "apt",
+              "type": "string",
+              "doc": "apartment number.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "Subdivision",
+        "locations":
+          [ { "lineno": 37,
+              "filename": "address.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "code",
+              "type": "string",
+              "doc": "Subdivision code. Usually state, region, prefecture or province code, according to [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Subdivision full name." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "TimePeriod",
+        "locations":
+          [ { "lineno": 420,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "A span of time that the business is open.",
+            "description":
+              [ "starting on the specified open day/time and closing on the specified close day/time.",
+                "Closing time must occur after the opening time, for example later in the same day, or on a subsequent day." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "openDay",
+              "type": "string",
+              "doc": "Day of the week this period starts on.\nOne of:\n + `\"MONDAY\"`\n + `\"TUESDAY\"`\n + `\"WEDNESDAY\"`\n + `\"THURSDAY\"`\n + `\"FRIDAY\"`\n + `\"SATURDAY\"`\n + `\"SUNDAY\"`" },
+            { "name": "openTime",
+              "type": "string",
+              "doc": "Time in 24hr [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field." },
+            { "name": "closeDay",
+              "type": "string",
+              "doc": "Day of the week this period ends on.\nOne of:\n + `\"MONDAY\"`\n + `\"TUESDAY\"`\n + `\"WEDNESDAY\"`\n + `\"THURSDAY\"`\n + `\"FRIDAY\"`\n + `\"SATURDAY\"`\n + `\"SUNDAY\"`" },
+            { "name": "closeTime",
+              "type": "string",
+              "doc": "Time in 24hr [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "TimePeriod_38785543152",
+        "locations":
+          [ { "lineno": 451,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "A span of time that the business is open.",
+            "description":
+              [ "starting on the specified open day/time and closing on the specified close day/time.",
+                "Closing time must occur after the opening time, for example later in the same day, or on a subsequent day." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "openDay",
+              "type": "string",
+              "doc": "Day of the week this period starts on.\nOne of:\n + `\"MONDAY\"`\n + `\"TUESDAY\"`\n + `\"WEDNESDAY\"`\n + `\"THURSDAY\"`\n + `\"FRIDAY\"`\n + `\"SATURDAY\"`\n + `\"SUNDAY\"`",
+              "optional": true },
+            { "name": "openTime",
+              "type": "string",
+              "doc": "Time in 24hr [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field.",
+              "optional": true },
+            { "name": "closeDay",
+              "type": "string",
+              "doc": "Day of the week this period ends on.\nOne of:\n + `\"MONDAY\"`\n + `\"TUESDAY\"`\n + `\"WEDNESDAY\"`\n + `\"THURSDAY\"`\n + `\"FRIDAY\"`\n + `\"SATURDAY\"`\n + `\"SUNDAY\"`",
+              "optional": true },
+            { "name": "closeTime",
+              "type": "string",
+              "doc": "Time in 24hr [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "removed" ] },
+      { "name": "WixPayDetails",
+        "locations":
+          [ { "lineno": 246,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "txId",
+              "type": "string",
+              "doc": "Wix Pay payment transaction ID." },
+            { "name": "orderId",
+              "type": "string",
+              "doc": "WixPay payment order ID." },
+            { "name": "orderAmount",
+              "type": "string",
+              "doc": "Order amount was sent to the Wix Pay system." },
+            { "name": "orderStatus",
+              "type": "string",
+              "doc": "Order status.\n One of: \n + `\"CREATED\"`  The transaction has started.\n + `\"PENDING_MERCHANT\"` An online payment was made, but the owner did not set up the necessary details.\n + `\"COMPLETE\"`  The current part of the payment was completed.\n + `\"FAILED\"`  The Wix online payment system is unavailable or failed processing.\n + `\"DECLINED\"` The payment was declined.\n + `\"PENDING_MARK_AS_PAID\"` Offline transaction. The transaction will be complete when explicitly marked as paid.\n + `\"CANCELED\"` The transaction was canceled.\n +" },
+            { "name": "orderApprovalTime",
+              "type": "Date",
+              "doc": "Date and time that the order was approved." },
+            { "name": "paymentVendorName",
+              "type": "string",
+              "doc": "Payment vendor name. The company processing the payment, such as Pay Pal or a credit card company. `\"inPerson\"` is used for cash payments." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

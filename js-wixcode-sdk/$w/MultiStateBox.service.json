@@ -12,10 +12,10 @@
   "docs":
     { "summary": "Multi-state boxes are containers for states.",
       "description":
-        [ "A [multi-state box](https://support.wix.com/en/article/corvid-about-multi-state-boxes) contains",
+        [ "A [multi-state box](https://support.wix.com/en/article/velo-about-multi-state-boxes) contains",
           "multiple states, each with different content. A multi-state box displays one state at a time.",
           "",
-          "For a tutorial on working with your multi-state box and Corvid, click [here](https://support.wix.com/en/article/corvid-working-with-multi-state-boxes-and-code)." ],
+          "For a tutorial on working with your multi-state box and Velo, click [here](https://support.wix.com/en/article/velo-working-with-multi-state-boxes-and-code)." ],
       "links": [],
       "examples": [],
       "extra":
@@ -198,10 +198,10 @@
   "relatedContent":
     [ { "icon": "example",
         "text": "State Toggle",
-        "url": "https://www.wix.com/corvid/example/state-toggle" },
+        "url": "https://www.wix.com/velo/example/state-toggle" },
       { "icon": "article",
         "text": "About Multi-State Boxes",
-        "url": "https://support.wix.com/en/article/corvid-about-multi-state-boxes" },
+        "url": "https://support.wix.com/en/article/velo-about-multi-state-boxes" },
       { "icon": "article",
         "text": "Working with Multi-State Boxes and Code",
-        "url": "https://support.wix.com/en/article/corvid-tutorial-working-with-multi-state-boxes-and-code" } ] }
+        "url": "https://support.wix.com/en/article/velo-tutorial-working-with-multi-state-boxes-and-code" } ] }

@@ -11,7 +11,7 @@
   "docs":
     { "summary": "A `Slide` from a `Slideshow` that can contain other elements.",
       "description":
-        [ "You can open the Corvid Properties & Events panel for the [`Slideshow`]($w.Slideshow.html) element",
+        [ "You can open the Velo Properties & Events panel for the [`Slideshow`]($w.Slideshow.html) element",
           "  but not for `Slide` elements." ],
       "links": [],
       "examples": [],
@@ -31,7 +31,7 @@
             "description":
               [ "The ID is the slide's unique identifier. It is used when selecting elements using the [`$w()`]($w.html#$w) function.",
                 "",
-                " You cannot view or change a slide's `id` in the Corvid Properties & Events panel. You can change a slide's [`name`]($w.Slide.html#name) instead." ],
+                " You cannot view or change a slide's `id` in the Velo Properties & Events panel. You can change a slide's [`name`]($w.Slide.html#name) instead." ],
             "links": [],
             "examples":
               [ { "title": "Get the ID",

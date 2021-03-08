@@ -3,7 +3,7 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 1213,
+    { "lineno": 1220,
       "filename": "window.es6" },
   "docs":
     { "summary": "The Multilingual API is used when working with the languages in a multilingual site.",
@@ -30,9 +30,9 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 1412,
+          [ { "lineno": 1420,
               "filename": "window.es6" },
-            { "lineno": 1460,
+            { "lineno": 1468,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Sets or gets the site's current display language.",
@@ -135,7 +135,7 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 1403,
+          [ { "lineno": 1411,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets whether the site has been set up to be shown in multiple languages.",
@@ -163,7 +163,7 @@
             "typeParams":
               [ "wix-window.Multilingual.SiteLanguage" ] },
         "locations":
-          [ { "lineno": 1341,
+          [ { "lineno": 1348,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets information about the site's languages.",
@@ -240,7 +240,7 @@
   "messages":
     [ { "name": "SiteLanguage",
         "locations":
-          [ { "lineno": 1315,
+          [ { "lineno": 1322,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object returned by the `siteLanguages` property that contains information about the site's languages.",

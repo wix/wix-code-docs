@@ -265,17 +265,17 @@
   "relatedContent":
     [ { "icon": "example",
         "text": "Checkbox Dropdown",
-        "url": "https://www.wix.com/corvid/example/Checkbox-Dropdown" },
+        "url": "https://www.wix.com/velo/example/checkbox-dropdown" },
       { "icon": "example",
         "text": "Create a Weather Widget",
-        "url": "https://www.wix.com/corvid/example/Create-a-Weather-Widget" },
+        "url": "https://www.wix.com/velo/example/create-a-weather-widget" },
       { "icon": "article",
         "text": "Setting Labels and Values for Radio Buttons and Dropdown Lists",
         "url": "https://support.wix.com/en/article/setting-labels-and-values-for-radio-buttons-and-dropdown-lists" } ],
   "FAQs":
     [ { "title": "How do I set the dropdown to display a default option?",
-        "markdown": "Set a dropdown's default option using the [`selectedIndex`](https://www.wix.com/code/reference/$w.Dropdown.html#selectedIndex) property." },
+        "markdown": "Set a dropdown's default option using the [`selectedIndex`](https://www.wix.com/velo/reference/$w.Dropdown.html#selectedIndex) property." },
       { "title": "What is the difference between the 'label' and 'value' of a dropdown option?",
-        "markdown": "Each [`Option`](https://www.wix.com/code/reference/$w.Dropdown.html#Option) in a dropdown has a `label` and a `value`. The `label` is the text that visitors see, and the `value` is used in code and stored in your collections. [Learn more](https://support.wix.com/en/article/setting-labels-and-values-for-radio-buttons-and-dropdown-lists)." },
+        "markdown": "Each [`Option`](https://www.wix.com/velo/reference/$w.Dropdown.html#Option) in a dropdown has a `label` and a `value`. The `label` is the text that visitors see, and the `value` is used in code and stored in your collections. [Learn more](https://support.wix.com/en/article/managing-choices-for-a-dropdown-checkbox-or-radio-button-element)." },
       { "title": "Should I use a dropdown or radio buttons for my input element?",
         "markdown": "Dropdowns and radio buttons provide the same basic functionality. Here are some tips on when to use one or the other:\n\n**Dropdowns:**\n\n*   When you have many choices. This prevents clutter on your page.\n*   When the default option is recommended or likely to be chosen. Dropdowns emphasize the default option since it's the initial option visitors see.\n\n**Radio Buttons:**\n\n*   When you want your site visitors to read and compare all options. \n*   When you only have a few options. Visitors don't have to click anything to quickly read the options and make their choice.\n*   When time is crucial or the input form is long. Using dropdowns requires an extra click." } ] }

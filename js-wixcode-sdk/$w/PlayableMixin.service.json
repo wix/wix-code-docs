@@ -12,7 +12,7 @@
           "",
           " **About Mixins**",
           "",
-          " [Mixins](https://support.wix.com/en/article/corvid-about-mixins) provide functionality that other elements can inherit and use. ",
+          " [Mixins](https://support.wix.com/en/article/velo-about-mixins) provide functionality that other elements can inherit and use. ",
           " ",
           " Mixins are not elements. You cannot add mixins to a page in the Editor like other `$w` elements, and mixins are not meant to be used directly ",
           " in your code. ",
@@ -158,7 +158,7 @@
                 "> + **Deprecation note:** The $w parameter of event handlers is being deprecated. To get",
                 " a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function",
                 " and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see",
-                " [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
+                " [here](https://www.wix.com/velo/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
             "links":
               [ "[pause( )](#pause)" ],
             "examples":
@@ -207,7 +207,7 @@
                 "> + **Deprecation note:** The $w parameter of event handlers is being deprecated. To get",
                 " a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function",
                 " and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see",
-                " [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
+                " [here](https://www.wix.com/velo/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
             "links":
               [ "[play( )](#play)" ],
             "examples":

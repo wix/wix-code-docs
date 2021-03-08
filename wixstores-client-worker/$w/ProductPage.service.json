@@ -1,697 +1,1293 @@
-{ "name": "ProductPage",
+{
+  "name": "ProductPage",
   "memberOf": "$w",
-  "mixes":
-    [ "$w.Element",
-      "$w.HiddenCollapsedMixin" ],
-  "labels": [],
-  "location":
-    { "lineno": 1,
-      "filename": "wixCodeDoc.js" },
-  "docs":
-    { "summary": "A store page for a specific product.",
-      "links": [],
-      "examples": [],
-      "extra":
-        {  } },
+  "mixes": [
+    "$w.Element",
+    "$w.HiddenCollapsedMixin"
+  ],
+  "labels": [
+    "changed"
+  ],
+  "location": {
+    "lineno": 1,
+    "filename": "wixCodeDoc.js"
+  },
+  "docs": {
+    "summary": "A store page for a specific product.",
+    "links": [],
+    "examples": [],
+    "extra": {}
+  },
   "properties": [],
-  "operations":
-    [ { "name": "getProduct",
-        "labels": [],
-        "nameParams": [],
-        "params": [],
-        "ret":
-          { "type":
-              { "name": "Promise",
-                "typeParams":
-                  [ "$w.ProductPage.Product" ] },
-            "doc": "Fulfilled - Information about the current product." },
-        "locations":
-          [ { "lineno": 189,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "Gets all the information associated with the current product.",
-            "description":
-              [ "The `getProduct()` function returns a Promise that is resolved when all",
-                " of the information about the product shown on the `ProductPage` is",
-                " retrieved." ],
-            "links": [],
-            "examples":
-              [ { "title": "Get the current product's information",
-                  "body":
-                    [ "$w('#myProductPage').getProduct()",
-                      "  .then( (product) => {",
-                      "    let productName = product.name;",
-                      "    let productDescription = product.description;",
-                      "    // see example product object below",
-                      "  } )",
-                      "  .catch( (error) => {",
-                      "    console.log(error);",
-                      "  } );",
-                      "",
-                      "/*",
-                      " * Example product object:",
-                      " *",
-                      " * {",
-                      " *   \"_id\": \"3fb6a3c8-988b-8755-04bd-5c59ae0b18ea\",",
-                      " *   \"_updatedDate: \"2020-1-26T11:24:25.607Z\"",
-                      " *   \"name\": \"Product Name\",",
-                      " *   \"description\": \"Product description\",",
-                      " *   \"mainMedia\": \"wix:image://v1/a...3.jpg/file.jpg#originWidth=1000&originHeight=1000\",",
-                      " *   \"mediaItems\": [",
-                      " *     {",
-                      " *       \"id\": \"a...3.jpg\",",
-                      " *       \"src\": \"wix:image://v1/a...3.jpg/file.jpg#originWidth=1000&originHeight=1000\",",
-                      " *       \"description\": \"Media desc\",",
-                      " *       \"title\": \"Media title\",",
-                      " *       \"type\": \"Image\"",
-                      " *     }",
-                      " *   ],",
-                      " *   \"sku\": \"36523641234523\",",
-                      " *   \"ribbons\": [",
-                      " *     {",
-                      " *       \"text\": \"New and Improved\"",
-                      " *     }",
-                      " *   ],",
-                      " *   \"currency\": \"USD\",",
-                      " *   \"price\": 15,",
-                      " *   \"discountedPrice\": 12,",
-                      " *   \"formattedPrice\": \"$15.00\",",
-                      " *   \"formattedDiscountedPrice\": \"$12.00\",",
-                      " *   \"discount\": {",
-                      " *     \"type\": \"PERCENT\",",
-                      " *     \"value\" :20",
-                      " *   },",
-                      " *   \"trackInventory\": true,",
-                      " *   \"inStock\": true,",
-                      " *   \"quantityInStock\": \"100\",",
-                      " *   \"additionalInfoSections\": [",
-                      " *     {",
-                      " *       \"title\": \"Product info\",",
-                      " *       \"description\": \"Product detail.\"",
-                      " *     }",
-                      " *   ],",
-                      " *   \"productOptions\": {",
-                      " *     \"Size\": {",
-                      " *       \"optionType\": \"drop_down\",",
-                      " *       \"name\": \"Size\",",
-                      " *       \"choices\": [",
-                      " *         {",
-                      " *           \"value\": \"Small\",",
-                      " *           \"description\": \"Small\",",
-                      " *           \"inStock\": true,",
-                      " *           \"visible\": true",
-                      " *         },",
-                      " *         {",
-                      " *           \"value\": \"Large\",",
-                      " *           \"description\": \"Large\",",
-                      " *           \"inStock\": true,",
-                      " *           \"visible\": true",
-                      " *         }",
-                      " *       ]",
-                      " *   },",
-                      " *   \"productPageUrl\": \"/product-page/i-m-a-product\",",
-                      " *   \"manageVariants\": true,",
-                      " *   \"customTextFields\": [",
-                      " *     { ",
-                      " *       \"title\": \"New Custom Text\",",
-                      " *       \"maxLength\": 500,",
-                      " *       \"mandatory\": true",
-                      " *     }",
-                      " *   ],",
-                      " *   \"productType\": \"physical\",",
-                      " *   \"slug\": \"my-product\",",
-                      " *   \"weight\": 10,",
-                      " *   \"variants\": [",
-                      " *     {",
-                      " *       \"_id\":\"00000000-0000-0020-0005-97ae39161f00\",",
-                      " *       \"choices\": {",
-                      " *         \"Size\": \"Small\"",
-                      " *       },",
-                      " *       \"variant\": {",
-                      " *         \"currency\": \"USD\",",
-                      " *         \"price\": 15,",
-                      " *         \"discountedPrice\": 12,",
-                      " *         \"formattedPrice\": \"$15.00\",",
-                      " *         \"formattedDiscountedPrice\":\"$12.00\",",
-                      " *         \"weight\":10,",
-                      " *         \"sku\":\"217537123517253\",",
-                      " *         \"visible\":true",
-                      " *       }",
-                      " *     }, {",
-                      " *       \"_id\":\"00000000-0000-0021-0005-97ae39161f00\",",
-                      " *       \"choices\": {",
-                      " *         \"Size\": \"Large\"",
-                      " *       },",
-                      " *       \"variant\": {",
-                      " *         \"currency\": \"USD\",",
-                      " *         \"price\": 15,",
-                      " *         \"discountedPrice\": 15,",
-                      " *         \"formattedPrice\": \"$15.00\",",
-                      " *         \"formattedDiscountedPrice\":\"$15.00\",",
-                      " *         \"weight\":12,",
-                      " *         \"sku\":\"217537123517253\",",
-                      " *         \"visible\":true",
-                      " *       }",
-                      " *    }",
-                      " *  ]",
-                      " */" ],
-                  "extra":
-                    {  } } ],
-            "extra":
-              {  } },
-        "extra":
-          {  } } ],
+  "operations": [
+    {
+      "name": "getProduct",
+      "labels": [],
+      "nameParams": [],
+      "params": [],
+      "ret": {
+        "type": {
+          "name": "Promise",
+          "typeParams": [
+            "$w.ProductPage.Product"
+          ]
+        },
+        "doc": "Fulfilled - Information about the current product."
+      },
+      "locations": [
+        {
+          "lineno": 236,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "Gets all the information associated with the current product.",
+        "description": [
+          "The `getProduct()` function returns a Promise that is resolved when all",
+          " of the information about the product shown on the `ProductPage` is",
+          " retrieved."
+        ],
+        "links": [],
+        "examples": [
+          {
+            "title": "Get the current product's information",
+            "body": [
+              "$w('#myProductPage').getProduct()",
+              "  .then((product) => {",
+              "    let productName = product.name;",
+              "    let productDescription = product.description;",
+              "    // see example product object below",
+              "  })",
+              "  .catch((error) => {",
+              "    console.error(error);",
+              "  });",
+              "",
+              "/*",
+              " * Example product object:",
+              " *",
+              " *  {",
+              " *    \"_id\": \"91f7ac8b-2baa-289c-aa50-6d64764f35d3\",",
+              " *    \"_updatedDate\": \"Wed Jan 20 2021 10:54:48 GMT+0200\",",
+              " *    \"name\": \"Colombian Arabica\",",
+              " *    \"description\": \"<p>The best organic coffee that Colombia has to offer.</p>\",",
+              " *    \"mainMedia\": \"wix:image://v1/nsplsh_5033504669385448625573~mv2_d_6000_3376_s_4_2.jpg/file.jpg#originWidth=6000&originHeight=3376\",",
+              " *    \"mediaItems\": [",
+              " *      {",
+              " *        \"id\": \"nsplsh_5033504669385448625573~mv2_d_6000_3376_s_4_2.jpg\",",
+              " *        \"src\": \"wix:image://v1/nsplsh_5033504669385448625573~mv2_d_6000_3376_s_4_2.jpg/file.jpg#originWidth=6000&originHeight=3376\",",
+              " *        \"description\": \"\",",
+              " *        \"title\": \"\",",
+              " *        \"link\": \"undefined\",",
+              " *        \"type\": \"Image\"",
+              " *      }",
+              " *    ],",
+              " *    \"sku\": \"undefined\",",
+              " *    \"ribbons\": [",
+              " *      {",
+              " *        \"text\": \"Organic and Fair trade\"",
+              " *      }",
+              " *    ],",
+              " *    \"currency\": \"USD\",",
+              " *    \"price\": 35,",
+              " *    \"discountedPrice\": 30,",
+              " *    \"formattedPrice\": \"$35.00\",",
+              " *    \"formattedDiscountedPrice\": \"$30.00\",",
+              " *    \"pricePerUnit\": 0.12,",
+              " *    \"formattedPricePerUnit\": \"$0.12\",",
+              " *    \"pricePerUnitData\": {",
+              " *      \"totalQuantity\": 250,",
+              " *      \"totalMeasurementUnit\": \"G\",",
+              " *      \"baseQuantity\": 1,",
+              " *      \"baseMeasurementUnit\": \"G\"",
+              " *    },",
+              " *    \"inventoryItemId\": \"6e085374-d455-d763-55af-929b89b0ca2c\",",
+              " *    \"discount\": {",
+              " *      \"type\": \"AMOUNT\",",
+              " *      \"value\": 5",
+              " *    },",
+              " *    \"trackInventory\": false,",
+              " *    \"inStock\": true,",
+              " *    \"quantityInStock\": \"undefined\",",
+              " *    \"additionalInfoSections\": [",
+              " *      {",
+              " *        \"title\": \"Storage recommendations\",",
+              " *        \"description\": \"<p>To&nbsp;preserve&nbsp;your beans' fresh roasted flavor as long as possible, store them in an opaque, air-tight container at room temperature.</p>\\n\"",
+              " *      }",
+              " *    ],",
+              " *    \"productOptions\": {",
+              " *      \"Weight\": {",
+              " *        \"optionType\": \"drop_down\",",
+              " *        \"name\": \"Weight\",",
+              " *        \"choices\": [",
+              " *          {",
+              " *            \"value\": \"250g\",",
+              " *            \"description\": \"250g\",",
+              " *            \"inStock\": true,",
+              " *            \"visible\": true,",
+              " *            \"mainMedia\": \"wix:image://v1/614034_103e8f4ab0ae4536a38b319d3eb437ed~mv2.png/missing-media.png#originWidth=500&originHeight=500\",",
+              " *            \"mediaItems\": []",
+              " *          },",
+              " *          {",
+              " *            \"value\": \"500g\",",
+              " *            \"description\": \"500g\",",
+              " *            \"inStock\": true,",
+              " *            \"visible\": true,",
+              " *            \"mainMedia\": \"wix:image://v1/614034_103e8f4ab0ae4536a38b319d3eb437ed~mv2.png/missing-media.png#originWidth=500&originHeight=500\",",
+              " *            \"mediaItems\": []",
+              " *          }",
+              " *        ]",
+              " *      },",
+              " *      \"Ground for\": {",
+              " *        \"optionType\": \"drop_down\",",
+              " *        \"name\": \"Ground for\",",
+              " *        \"choices\": [",
+              " *          {",
+              " *            \"value\": \"Stovetop\",",
+              " *            \"description\": \"Stovetop\",",
+              " *            \"inStock\": true,",
+              " *            \"visible\": true,",
+              " *            \"mainMedia\": \"wix:image://v1/614034_103e8f4ab0ae4536a38b319d3eb437ed~mv2.png/missing-media.png#originWidth=500&originHeight=500\",",
+              " *            \"mediaItems\": []",
+              " *          },",
+              " *          {",
+              " *            \"value\": \"Filter\",",
+              " *            \"description\": \"Filter\",",
+              " *            \"inStock\": true,",
+              " *            \"visible\": true,",
+              " *            \"mainMedia\": \"null\",",
+              " *            \"mediaItems\": []",
+              " *          }",
+              " *        ]",
+              " *      }",
+              " *    },",
+              " *    \"productPageUrl\": \"/product-page/colombian-arabica-1\",",
+              " *    \"customTextFields\": [",
+              " *      {",
+              " *        \"title\": \"What would you like us to print on the custom label?\",",
+              " *        \"maxLength\": 200,",
+              " *        \"mandatory\": false",
+              " *      }",
+              " *    ],",
+              " *    \"manageVariants\": true,",
+              " *    \"productType\": \"physical\",",
+              " *    \"slug\": \"colombian-arabica-1\",",
+              " *    \"weight\": \"undefined\",",
+              " *    \"collections\": \"undefined\",",
+              " *    \"seoData\": {",
+              " *      \"tags\": [",
+              " *        {",
+              " *          \"type\": \"title\",",
+              " *          \"children\": \"Colombian Arabica | Organic and Fair Trade\",",
+              " *          \"custom\": false,",
+              " *          \"disabled\": false",
+              " *        },",
+              " *        {",
+              " *          \"type\": \"meta\",",
+              " *          \"props\": {",
+              " *            \"name\": \"description\",",
+              " *            \"content\": \"The best organic fair trade coffee that Colombia has to offer.\"",
+              " *          },",
+              " *          \"children\": \"\",",
+              " *          \"custom\": false,",
+              " *          \"disabled\": false",
+              " *        }",
+              " *      ]",
+              " *    },",
+              " *    \"variants\": [",
+              " *      {",
+              " *        \"_id\": \"00000000-0000-0020-0005-a316e6ba5b37\",",
+              " *        \"choices\": {",
+              " *          \"Weight\": \"250g\",",
+              " *          \"Ground for\": \"Stovetop\"",
+              " *        },",
+              " *        \"variant\": {",
+              " *          \"currency\": \"USD\",",
+              " *          \"price\": 35,",
+              " *          \"discountedPrice\": 30,",
+              " *          \"pricePerUnit\": 0.12,",
+              " *          \"formattedPrice\": \"$35.00\",",
+              " *          \"formattedDiscountedPrice\": \"$35.00\",",
+              " *          \"formattedPricePerUnit\": \"$0.12\",",
+              " *          \"weight\": 0.25,",
+              " *          \"sku\": \"10001\",",
+              " *          \"visible\": true",
+              " *        }",
+              " *      },",
+              " *      {",
+              " *        \"_id\": \"00000000-0000-0021-0005-a316e6ba5b37\",",
+              " *        \"choices\": {",
+              " *          \"Weight\": \"250g\",",
+              " *          \"Ground for\": \"Filter\"",
+              " *        },",
+              " *        \"variant\": {",
+              " *          \"currency\": \"USD\",",
+              " *          \"price\": 40,",
+              " *          \"discountedPrice\": 35,",
+              " *          \"pricePerUnit\": 0.14,",
+              " *          \"formattedPrice\": \"$40.00\",",
+              " *          \"formattedDiscountedPrice\": \"$40.00\",",
+              " *          \"formattedPricePerUnit\": \"$0.14\",",
+              " *          \"weight\": 0.25,",
+              " *          \"sku\": \"10003\",",
+              " *          \"visible\": true",
+              " *        }",
+              " *      },",
+              " *      {",
+              " *        \"_id\": \"00000000-0000-003f-0005-a316e6ba5b37\",",
+              " *        \"choices\": {",
+              " *          \"Weight\": \"500g\",",
+              " *          \"Ground for\": \"Stovetop\"",
+              " *        },",
+              " *        \"variant\": {",
+              " *          \"currency\": \"USD\",",
+              " *          \"price\": 65,",
+              " *          \"discountedPrice\": 60,",
+              " *          \"pricePerUnit\": 0.24,",
+              " *          \"formattedPrice\": \"$65.00\",",
+              " *          \"formattedDiscountedPrice\": \"$65.00\",",
+              " *          \"formattedPricePerUnit\": \"$0.24\",",
+              " *          \"weight\": 0.5,",
+              " *          \"sku\": \"10002\",",
+              " *          \"visible\": true",
+              " *        }",
+              " *      },",
+              " *      {",
+              " *        \"_id\": \"00000000-0000-0040-0005-a316e6ba5b37\",",
+              " *        \"choices\": {",
+              " *          \"Weight\": \"500g\",",
+              " *          \"Ground for\": \"Filter\"",
+              " *        },",
+              " *        \"variant\": {",
+              " *          \"currency\": \"USD\",",
+              " *          \"price\": 70,",
+              " *          \"discountedPrice\": 65,",
+              " *          \"pricePerUnit\": 0.26,",
+              " *          \"formattedPrice\": \"$70.00\",",
+              " *          \"formattedDiscountedPrice\": \"$70.00\",",
+              " *          \"formattedPricePerUnit\": \"$0.26\",",
+              " *          \"weight\": 1,",
+              " *          \"sku\": \"10004\",",
+              " *          \"visible\": true",
+              " *        }",
+              " *      }",
+              " *    ]",
+              " *  }",
+              " *",
+              " */"
+            ],
+            "extra": {}
+          }
+        ],
+        "extra": {}
+      },
+      "extra": {}
+    }
+  ],
   "callbacks": [],
-  "messages":
-    [ { "name": "MediaItem",
-        "locations":
-          [ { "lineno": 19,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing a media item.",
-            "description":
-              [ "The `src` property of a `MediaItem` can be an image or video from the <a href=\"https://support.wix.com/en/article/about-the-media-manager\" target=\"_blank\">Media Manager</a>.",
-                "",
-                " The image source format is:",
-                " `wix:image://v1/<uri>/<filename>#originWidth=<width>&originHeight=<height>[&watermark=<watermark_manifest_string>]`",
-                "",
-                " The video source format is:",
-                " `wix:video://v1/<video_uri>/<filename>#posterUri=<poster_uri>&posterWidth=<width>&posterHeight=<height>`" ],
-            "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "id",
-              "type": "string",
-              "doc": "Media item ID." },
-            { "name": "title",
-              "type": "string",
-              "doc": "Media item title." },
-            { "name": "description",
-              "type": "string",
-              "doc": "Media item description. Descriptions over 100 characters are truncated." },
-            { "name": "type",
-              "type": "string",
-              "doc": "Media item type. Can be \"image\" or \"video.\"" },
-            { "name": "src",
-              "type": "string",
-              "doc": "Media item source URL." },
-            { "name": "thumbnail",
-              "type": "string",
-              "doc": "Thumbnail URL for videos only.",
-              "optional": true } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "Product",
-        "locations":
-          [ { "lineno": 153,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing a product in a store.",
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples":
-              [ { "title": "Get the current product's information",
-                  "body":
-                    [ "$w('#myProductPage').getProduct()",
-                      "  .then( (product) => {",
-                      "    let productName = product.name;",
-                      "    let productDescription = product.description;",
-                      "    // see example product object below",
-                      "  } )",
-                      "  .catch( (error) => {",
-                      "    console.log(error);",
-                      "  } );",
-                      "",
-                      "/*",
-                      " * Example product object:",
-                      " *",
-                      " * {",
-                      " *   \"_id\": \"3fb6a3c8-988b-8755-04bd-5c59ae0b18ea\",",
-                      " *   \"_updatedDate: \"2020-1-26T11:24:25.607Z\"",
-                      " *   \"name\": \"Product Name\",",
-                      " *   \"description\": \"Product description\",",
-                      " *   \"mainMedia\": \"wix:image://v1/a...3.jpg/file.jpg#originWidth=1000&originHeight=1000\",",
-                      " *   \"mediaItems\": [",
-                      " *     {",
-                      " *       \"id\": \"a...3.jpg\",",
-                      " *       \"src\": \"wix:image://v1/a...3.jpg/file.jpg#originWidth=1000&originHeight=1000\",",
-                      " *       \"description\": \"Media desc\",",
-                      " *       \"title\": \"Media title\",",
-                      " *       \"type\": \"Image\"",
-                      " *     }",
-                      " *   ],",
-                      " *   \"sku\": \"36523641234523\",",
-                      " *   \"ribbons\": [",
-                      " *     {",
-                      " *       \"text\": \"New and Improved\"",
-                      " *     }",
-                      " *   ],",
-                      " *   \"currency\": \"USD\",",
-                      " *   \"price\": 15,",
-                      " *   \"discountedPrice\": 12,",
-                      " *   \"formattedPrice\": \"$15.00\",",
-                      " *   \"formattedDiscountedPrice\": \"$12.00\",",
-                      " *   \"discount\": {",
-                      " *     \"type\": \"PERCENT\",",
-                      " *     \"value\" :20",
-                      " *   },",
-                      " *   \"trackInventory\": true,",
-                      " *   \"inStock\": true,",
-                      " *   \"quantityInStock\": \"100\",",
-                      " *   \"additionalInfoSections\": [",
-                      " *     {",
-                      " *       \"title\": \"Product info\",",
-                      " *       \"description\": \"Product detail.\"",
-                      " *     }",
-                      " *   ],",
-                      " *   \"productOptions\": {",
-                      " *     \"Size\": {",
-                      " *       \"optionType\": \"drop_down\",",
-                      " *       \"name\": \"Size\",",
-                      " *       \"choices\": [",
-                      " *         {",
-                      " *           \"value\": \"Small\",",
-                      " *           \"description\": \"Small\",",
-                      " *           \"inStock\": true,",
-                      " *           \"visible\": true",
-                      " *         },",
-                      " *         {",
-                      " *           \"value\": \"Large\",",
-                      " *           \"description\": \"Large\",",
-                      " *           \"inStock\": true,",
-                      " *           \"visible\": true",
-                      " *         }",
-                      " *       ]",
-                      " *   },",
-                      " *   \"productPageUrl\": \"/product-page/i-m-a-product\",",
-                      " *   \"manageVariants\": true,",
-                      " *   \"customTextFields\": [",
-                      " *     { ",
-                      " *       \"title\": \"New Custom Text\",",
-                      " *       \"maxLength\": 500,",
-                      " *       \"mandatory\": true",
-                      " *     }",
-                      " *   ],",
-                      " *   \"productType\": \"physical\",",
-                      " *   \"slug\": \"my-product\",",
-                      " *   \"weight\": 10,",
-                      " *   \"variants\": [",
-                      " *     {",
-                      " *       \"_id\":\"00000000-0000-0020-0005-97ae39161f00\",",
-                      " *       \"choices\": {",
-                      " *         \"Size\": \"Small\"",
-                      " *       },",
-                      " *       \"variant\": {",
-                      " *         \"currency\": \"USD\",",
-                      " *         \"price\": 15,",
-                      " *         \"discountedPrice\": 12,",
-                      " *         \"formattedPrice\": \"$15.00\",",
-                      " *         \"formattedDiscountedPrice\":\"$12.00\",",
-                      " *         \"weight\":10,",
-                      " *         \"sku\":\"217537123517253\",",
-                      " *         \"visible\":true",
-                      " *       }",
-                      " *     }, {",
-                      " *       \"_id\":\"00000000-0000-0021-0005-97ae39161f00\",",
-                      " *       \"choices\": {",
-                      " *         \"Size\": \"Large\"",
-                      " *       },",
-                      " *       \"variant\": {",
-                      " *         \"currency\": \"USD\",",
-                      " *         \"price\": 15,",
-                      " *         \"discountedPrice\": 15,",
-                      " *         \"formattedPrice\": \"$15.00\",",
-                      " *         \"formattedDiscountedPrice\":\"$15.00\",",
-                      " *         \"weight\":12,",
-                      " *         \"sku\":\"217537123517253\",",
-                      " *         \"visible\":true",
-                      " *       }",
-                      " *    }",
-                      " *  ]",
-                      " */" ],
-                  "extra":
-                    {  } } ],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "_id",
-              "type": "string",
-              "doc": "Product ID." },
-            { "name": "_updatedDate",
-              "type": "Date",
-              "doc": "Date and time the product was last updated." },
-            { "name": "name",
-              "type": "string",
-              "doc": "Product name." },
-            { "name": "description",
-              "type": "string",
-              "doc": "Product description." },
-            { "name": "mainMedia",
-              "type": "string",
-              "doc": "Main product media item (image or video thumbnail) URL." },
-            { "name": "mediaItems",
-              "type": "$w.ProductPage.MediaItem",
-              "doc": "List of product media items." },
-            { "name": "sku",
-              "type": "string",
-              "doc": "Product stock keeping unit value. Must be unique." },
-            { "name": "ribbons",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "$w.ProductPage.ProductRibbon" ] },
-              "doc": "List of product ribbons." },
-            { "name": "currency",
-              "type": "string",
-              "doc": "Product currency." },
-            { "name": "price",
-              "type": "number",
-              "doc": "Product price.\n The price must be greater than its discount.\n The product price is propagated to the product's newly-created variants. Product variants whose prices have been updated directly are not affected by the changes to the product price." },
-            { "name": "discountedPrice",
-              "type": "number",
-              "doc": "Discounted product price." },
-            { "name": "formattedPrice",
-              "type": "string",
-              "doc": "Product price formatted with the currency." },
-            { "name": "formattedDiscountedPrice",
-              "type": "string",
-              "doc": "Discounted product price formatted with the currency." },
-            { "name": "inventoryItemId",
-              "type": "string",
-              "doc": "ID for the inventory item." },
-            { "name": "discount",
-              "type": "$w.ProductPage.ProductDiscount",
-              "doc": "Product discount." },
-            { "name": "trackInventory",
-              "type": "boolean",
-              "doc": "Indicates whether inventory is tracked for the product." },
-            { "name": "inStock",
-              "type": "boolean",
-              "doc": "Indicates whether the product is in stock." },
-            { "name": "quantityInStock",
-              "type": "number",
-              "doc": "Number of units currently in stock." },
-            { "name": "additionalInfoSections",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "$w.ProductPage.ProductAdditionalInfoSection" ] },
-              "doc": "Additional product information sections." },
-            { "name": "productOptions",
-              "type": "$w.ProductPage.ProductOptions",
-              "doc": "All the available options for a store product." },
-            { "name": "productPageUrl",
-              "type": "string",
-              "doc": "Product page relative URL." },
-            { "name": "manageVariants",
-              "type": "boolean",
-              "doc": "Indicates whether product variants are managed. Can be set to true only if the product has options. Once set to true, `manageVariants` can only be reset to false only if no variants exist. Use [`getProductVariants()`](https://www.wix.com/corvid/reference/wix-stores.html#getProductVariants) to check if variants exist. You cannot set `manageVariants` to true if more than 300 variants are defined." },
-            { "name": "customTextFields",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "$w.ProductPage.ProductCustomTextFields" ] },
-              "doc": "List of product customization fields." },
-            { "name": "productType",
-              "type": "string",
-              "doc": "Product type. Either `\"physical\"` or `\"digital\"`. When creating a product using the API, currently only `\"physical\"` is supported." },
-            { "name": "slug",
-              "type": "string",
-              "doc": "Product slug." },
-            { "name": "weight",
-              "type": "number",
-              "doc": "Product weight." },
-            { "name": "variants",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "$w.ProductPage.VariantItem" ] },
-              "doc": "Product variants." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductAdditionalInfoSection",
-        "locations":
-          [ { "lineno": 39,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing an additional info section for a store product.",
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "title",
-              "type": "string",
-              "doc": "Section title." },
-            { "name": "description",
-              "type": "string",
-              "doc": "Section description." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductChoices",
-        "locations":
-          [ { "lineno": 141,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing a product variant's option choices.",
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "optionKey",
-              "type": "string",
-              "doc": "Value of the choice. This key name is dependent on the\n product option. For example, if a product has a size option, this\n key value will be something like `\"Size\"` and its value will be something like\n `\"Large\"`.\n\n `optionKey` is not case-sensitive. Therefore the values for the option keys \"`Size`\", \"`SIZE`\", and \"`size`\" are combined." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductCustomTextFields",
-        "locations":
-          [ { "lineno": 88,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing a custom text field for a store product.",
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "title",
-              "type": "string",
-              "doc": "Product customization field title." },
-            { "name": "maxLength",
-              "type": "string",
-              "doc": "Maximum length of product customization field in characters." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductDiscount",
-        "locations":
-          [ { "lineno": 96,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing a product discount.",
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "type",
-              "type": "string",
-              "doc": "Discount type. Required.\n\n One of:\n\n\n\n - `\"AMOUNT\"`\n - `\"PERCENT\"`\n - `\"NONE\"`" },
-            { "name": "value",
-              "type": "string",
-              "doc": "Discount value. The discount value cannot be greater than the price of the product or the variant." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductOption",
-        "locations":
-          [ { "lineno": 79,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing an option for a store product.",
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "optionType",
-              "type": "string",
-              "doc": "Option type. Either `\"color\"` or `\"drop_down\"`." },
-            { "name": "name",
-              "type": "string",
-              "doc": "Option name." },
-            { "name": "choices",
-              "type":
-                { "name": "Array",
-                  "typeParams":
-                    [ "$w.ProductPage.ProductOptionsChoice" ] },
-              "doc": "Option choices." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductOptions",
-        "locations":
-          [ { "lineno": 67,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing all the available options for a store product, such as \"Size\" and \"Color.\"",
-            "description":
-              [ "An option cannot be changed if it has choices and variants. To change an option, reset its variants with [`resetVariantData()`](https://www.wix.com/corvid/reference/wix-stores-backend.html#resetVariantData). For each option, you can define a maximum of six choices." ],
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "optionKey",
-              "type": "$w.ProductPage.ProductOption",
-              "doc": "Name of the option. This key name\n is dependent on the options added to the product. For example, if a product has a size\n option, this key will be something like `\"Size\"`.\n\n `optionKey` is not case-sensitive. Therefore the values for the option keys \"`Size`\", \"`SIZE`\", and \"`size`\" are combined." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductOptionsChoice",
-        "locations":
-          [ { "lineno": 47,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing an option's choice for a store product, such as choice \"Small\" for the option \"Size.\"",
-            "description":
-              [ "You can define between one and thirty choices for each option." ],
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "value",
-              "type": "number",
-              "doc": "Choice value." },
-            { "name": "description",
-              "type": "number",
-              "doc": "Choice description." },
-            { "name": "media",
-              "type": "$w.ProductPage.ProductOptionsChoiceMedia",
-              "doc": "Choice media." },
-            { "name": "inStock",
-              "type": "boolean",
-              "doc": "Indicates whether the product with this choice is in stock." },
-            { "name": "visible",
-              "type": "boolean",
-              "doc": "Indicates whether the product with this option is visible." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductOptionsChoiceMedia",
-        "locations":
-          [ { "lineno": 59,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing the choice media.",
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "mainMedia",
-              "type": "string",
-              "doc": "Main choice media item (image or video thumbnail) URL." },
-            { "name": "mediaItems",
-              "type": "$w.ProductPage.MediaItem",
-              "doc": "List of choice media items." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "ProductRibbon",
-        "locations":
-          [ { "lineno": 12,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing a ribbon for a store product.",
-            "links":
-              [ "[getProduct( )](#getProduct)" ],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "text",
-              "type": "string",
-              "doc": "Ribbon text." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "VariantInfo",
-        "locations":
-          [ { "lineno": 127,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing variant information to use when creating or updating variants.",
-            "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "currency",
-              "type": "string",
-              "doc": "Variant currency." },
-            { "name": "price",
-              "type": "number",
-              "doc": "Variant price. The variant price must be greater than its discount. If the variant price has been updated, changes to the product price do not affect the variant price." },
-            { "name": "discountedPrice",
-              "type": "number",
-              "doc": "Discounted variant price." },
-            { "name": "formattedPrice",
-              "type": "string",
-              "doc": "Variant price formatted with the currency." },
-            { "name": "formattedDiscountedPrice",
-              "type": "string",
-              "doc": "Discounted variant price formatted with the currency." },
-            { "name": "weight",
-              "type": "number",
-              "doc": "Variant weight." },
-            { "name": "sku",
-              "type": "string",
-              "doc": "Variant stock keeping unit value." },
-            { "name": "visible",
-              "type": "boolean",
-              "doc": "Whether the variant is visible in the store." } ],
-        "extra":
-          {  },
-        "labels": [] },
-      { "name": "VariantItem",
-        "locations":
-          [ { "lineno": 118,
-              "filename": "wixCodeDoc.js" } ],
-        "docs":
-          { "summary": "An object representing a product variant item.",
-            "links": [],
-            "examples": [],
-            "extra":
-              {  } },
-        "members":
-          [ { "name": "_id",
-              "type": "string",
-              "doc": "Unique variant ID." },
-            { "name": "choices",
-              "type": "$w.ProductPage.ProductChoices",
-              "doc": "The choices of the retrieved variant." },
-            { "name": "variant",
-              "type": "$w.ProductPage.VariantInfo",
-              "doc": "Variant information." } ],
-        "extra":
-          {  },
-        "labels": [] } ],
-  "extra":
-    {  } }
+  "messages": [
+    {
+      "name": "MediaItem",
+      "locations": [
+        {
+          "lineno": 19,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing a media item.",
+        "description": [
+          "The `src` property of a `MediaItem` can be an image or video from the <a href=\"https://support.wix.com/en/article/about-the-media-manager\" target=\"_blank\">Media Manager</a>.",
+          "",
+          " The image source format is:",
+          " `wix:image://v1/<uri>/<filename>#originWidth=<width>&originHeight=<height>[&watermark=<watermark_manifest_string>]`",
+          "",
+          " The video source format is:",
+          " `wix:video://v1/<video_uri>/<filename>#posterUri=<poster_uri>&posterWidth=<width>&posterHeight=<height>`"
+        ],
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "id",
+          "type": "string",
+          "doc": "Media item ID."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "doc": "Media item title."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "doc": "Media item description. Descriptions over 100 characters are truncated."
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "doc": "Media item type. Can be \"image\" or \"video.\""
+        },
+        {
+          "name": "src",
+          "type": "string",
+          "doc": "Media item source URL."
+        },
+        {
+          "name": "thumbnail",
+          "type": "string",
+          "doc": "Thumbnail URL for videos only.",
+          "optional": true
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "Product",
+      "locations": [
+        {
+          "lineno": 181,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing a product in a store.",
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [
+          {
+            "title": "Get the current product's information",
+            "body": [
+              "$w('#myProductPage').getProduct()",
+              "  .then((product) => {",
+              "    let productName = product.name;",
+              "    let productDescription = product.description;",
+              "    // see example product object below",
+              "  })",
+              "  .catch((error) => {",
+              "    console.error(error);",
+              "  });",
+              "",
+              "/*",
+              " * Example product object:",
+              " *",
+              " *  {",
+              " *    \"_id\": \"91f7ac8b-2baa-289c-aa50-6d64764f35d3\",",
+              " *    \"_updatedDate\": \"Wed Jan 20 2021 10:54:48 GMT+0200\",",
+              " *    \"name\": \"Colombian Arabica\",",
+              " *    \"description\": \"<p>The best organic coffee that Colombia has to offer.</p>\",",
+              " *    \"mainMedia\": \"wix:image://v1/nsplsh_5033504669385448625573~mv2_d_6000_3376_s_4_2.jpg/file.jpg#originWidth=6000&originHeight=3376\",",
+              " *    \"mediaItems\": [",
+              " *      {",
+              " *        \"id\": \"nsplsh_5033504669385448625573~mv2_d_6000_3376_s_4_2.jpg\",",
+              " *        \"src\": \"wix:image://v1/nsplsh_5033504669385448625573~mv2_d_6000_3376_s_4_2.jpg/file.jpg#originWidth=6000&originHeight=3376\",",
+              " *        \"description\": \"\",",
+              " *        \"title\": \"\",",
+              " *        \"link\": \"undefined\",",
+              " *        \"type\": \"Image\"",
+              " *      }",
+              " *    ],",
+              " *    \"sku\": \"undefined\",",
+              " *    \"ribbons\": [",
+              " *      {",
+              " *        \"text\": \"Organic and Fair trade\"",
+              " *      }",
+              " *    ],",
+              " *    \"currency\": \"USD\",",
+              " *    \"price\": 35,",
+              " *    \"discountedPrice\": 30,",
+              " *    \"formattedPrice\": \"$35.00\",",
+              " *    \"formattedDiscountedPrice\": \"$30.00\",",
+              " *    \"pricePerUnit\": 0.12,",
+              " *    \"formattedPricePerUnit\": \"$0.12\",",
+              " *    \"pricePerUnitData\": {",
+              " *      \"totalQuantity\": 250,",
+              " *      \"totalMeasurementUnit\": \"G\",",
+              " *      \"baseQuantity\": 1,",
+              " *      \"baseMeasurementUnit\": \"G\"",
+              " *    },",
+              " *    \"inventoryItemId\": \"6e085374-d455-d763-55af-929b89b0ca2c\",",
+              " *    \"discount\": {",
+              " *      \"type\": \"AMOUNT\",",
+              " *      \"value\": 5",
+              " *    },",
+              " *    \"trackInventory\": false,",
+              " *    \"inStock\": true,",
+              " *    \"quantityInStock\": \"undefined\",",
+              " *    \"additionalInfoSections\": [",
+              " *      {",
+              " *        \"title\": \"Storage recommendations\",",
+              " *        \"description\": \"<p>To&nbsp;preserve&nbsp;your beans' fresh roasted flavor as long as possible, store them in an opaque, air-tight container at room temperature.</p>\\n\"",
+              " *      }",
+              " *    ],",
+              " *    \"productOptions\": {",
+              " *      \"Weight\": {",
+              " *        \"optionType\": \"drop_down\",",
+              " *        \"name\": \"Weight\",",
+              " *        \"choices\": [",
+              " *          {",
+              " *            \"value\": \"250g\",",
+              " *            \"description\": \"250g\",",
+              " *            \"inStock\": true,",
+              " *            \"visible\": true,",
+              " *            \"mainMedia\": \"wix:image://v1/614034_103e8f4ab0ae4536a38b319d3eb437ed~mv2.png/missing-media.png#originWidth=500&originHeight=500\",",
+              " *            \"mediaItems\": []",
+              " *          },",
+              " *          {",
+              " *            \"value\": \"500g\",",
+              " *            \"description\": \"500g\",",
+              " *            \"inStock\": true,",
+              " *            \"visible\": true,",
+              " *            \"mainMedia\": \"wix:image://v1/614034_103e8f4ab0ae4536a38b319d3eb437ed~mv2.png/missing-media.png#originWidth=500&originHeight=500\",",
+              " *            \"mediaItems\": []",
+              " *          }",
+              " *        ]",
+              " *      },",
+              " *      \"Ground for\": {",
+              " *        \"optionType\": \"drop_down\",",
+              " *        \"name\": \"Ground for\",",
+              " *        \"choices\": [",
+              " *          {",
+              " *            \"value\": \"Stovetop\",",
+              " *            \"description\": \"Stovetop\",",
+              " *            \"inStock\": true,",
+              " *            \"visible\": true,",
+              " *            \"mainMedia\": \"wix:image://v1/614034_103e8f4ab0ae4536a38b319d3eb437ed~mv2.png/missing-media.png#originWidth=500&originHeight=500\",",
+              " *            \"mediaItems\": []",
+              " *          },",
+              " *          {",
+              " *            \"value\": \"Filter\",",
+              " *            \"description\": \"Filter\",",
+              " *            \"inStock\": true,",
+              " *            \"visible\": true,",
+              " *            \"mainMedia\": \"null\",",
+              " *            \"mediaItems\": []",
+              " *          }",
+              " *        ]",
+              " *      }",
+              " *    },",
+              " *    \"productPageUrl\": \"/product-page/colombian-arabica-1\",",
+              " *    \"customTextFields\": [",
+              " *      {",
+              " *        \"title\": \"What would you like us to print on the custom label?\",",
+              " *        \"maxLength\": 200,",
+              " *        \"mandatory\": false",
+              " *      }",
+              " *    ],",
+              " *    \"manageVariants\": true,",
+              " *    \"productType\": \"physical\",",
+              " *    \"slug\": \"colombian-arabica-1\",",
+              " *    \"weight\": \"undefined\",",
+              " *    \"collections\": \"undefined\",",
+              " *    \"seoData\": {",
+              " *      \"tags\": [",
+              " *        {",
+              " *          \"type\": \"title\",",
+              " *          \"children\": \"Colombian Arabica | Organic and Fair Trade\",",
+              " *          \"custom\": false,",
+              " *          \"disabled\": false",
+              " *        },",
+              " *        {",
+              " *          \"type\": \"meta\",",
+              " *          \"props\": {",
+              " *            \"name\": \"description\",",
+              " *            \"content\": \"The best organic fair trade coffee that Colombia has to offer.\"",
+              " *          },",
+              " *          \"children\": \"\",",
+              " *          \"custom\": false,",
+              " *          \"disabled\": false",
+              " *        }",
+              " *      ]",
+              " *    },",
+              " *    \"variants\": [",
+              " *      {",
+              " *        \"_id\": \"00000000-0000-0020-0005-a316e6ba5b37\",",
+              " *        \"choices\": {",
+              " *          \"Weight\": \"250g\",",
+              " *          \"Ground for\": \"Stovetop\"",
+              " *        },",
+              " *        \"variant\": {",
+              " *          \"currency\": \"USD\",",
+              " *          \"price\": 35,",
+              " *          \"discountedPrice\": 30,",
+              " *          \"pricePerUnit\": 0.12,",
+              " *          \"formattedPrice\": \"$35.00\",",
+              " *          \"formattedDiscountedPrice\": \"$35.00\",",
+              " *          \"formattedPricePerUnit\": \"$0.12\",",
+              " *          \"weight\": 0.25,",
+              " *          \"sku\": \"10001\",",
+              " *          \"visible\": true",
+              " *        }",
+              " *      },",
+              " *      {",
+              " *        \"_id\": \"00000000-0000-0021-0005-a316e6ba5b37\",",
+              " *        \"choices\": {",
+              " *          \"Weight\": \"250g\",",
+              " *          \"Ground for\": \"Filter\"",
+              " *        },",
+              " *        \"variant\": {",
+              " *          \"currency\": \"USD\",",
+              " *          \"price\": 40,",
+              " *          \"discountedPrice\": 35,",
+              " *          \"pricePerUnit\": 0.14,",
+              " *          \"formattedPrice\": \"$40.00\",",
+              " *          \"formattedDiscountedPrice\": \"$40.00\",",
+              " *          \"formattedPricePerUnit\": \"$0.14\",",
+              " *          \"weight\": 0.25,",
+              " *          \"sku\": \"10003\",",
+              " *          \"visible\": true",
+              " *        }",
+              " *      },",
+              " *      {",
+              " *        \"_id\": \"00000000-0000-003f-0005-a316e6ba5b37\",",
+              " *        \"choices\": {",
+              " *          \"Weight\": \"500g\",",
+              " *          \"Ground for\": \"Stovetop\"",
+              " *        },",
+              " *        \"variant\": {",
+              " *          \"currency\": \"USD\",",
+              " *          \"price\": 65,",
+              " *          \"discountedPrice\": 60,",
+              " *          \"pricePerUnit\": 0.24,",
+              " *          \"formattedPrice\": \"$65.00\",",
+              " *          \"formattedDiscountedPrice\": \"$65.00\",",
+              " *          \"formattedPricePerUnit\": \"$0.24\",",
+              " *          \"weight\": 0.5,",
+              " *          \"sku\": \"10002\",",
+              " *          \"visible\": true",
+              " *        }",
+              " *      },",
+              " *      {",
+              " *        \"_id\": \"00000000-0000-0040-0005-a316e6ba5b37\",",
+              " *        \"choices\": {",
+              " *          \"Weight\": \"500g\",",
+              " *          \"Ground for\": \"Filter\"",
+              " *        },",
+              " *        \"variant\": {",
+              " *          \"currency\": \"USD\",",
+              " *          \"price\": 70,",
+              " *          \"discountedPrice\": 65,",
+              " *          \"pricePerUnit\": 0.26,",
+              " *          \"formattedPrice\": \"$70.00\",",
+              " *          \"formattedDiscountedPrice\": \"$70.00\",",
+              " *          \"formattedPricePerUnit\": \"$0.26\",",
+              " *          \"weight\": 1,",
+              " *          \"sku\": \"10004\",",
+              " *          \"visible\": true",
+              " *        }",
+              " *      }",
+              " *    ]",
+              " *  }",
+              " *",
+              " */"
+            ],
+            "extra": {}
+          }
+        ],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "_id",
+          "type": "string",
+          "doc": "Product ID."
+        },
+        {
+          "name": "_updatedDate",
+          "type": "Date",
+          "doc": "Date and time the product was last updated."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "doc": "Product name."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "doc": "Product description."
+        },
+        {
+          "name": "mainMedia",
+          "type": "string",
+          "doc": "Main product media item (image or video thumbnail) URL."
+        },
+        {
+          "name": "mediaItems",
+          "type": "$w.ProductPage.MediaItem",
+          "doc": "List of product media items."
+        },
+        {
+          "name": "sku",
+          "type": "string",
+          "doc": "Product stock keeping unit value. Must be unique."
+        },
+        {
+          "name": "ribbons",
+          "type": {
+            "name": "Array",
+            "typeParams": [
+              "$w.ProductPage.ProductRibbon"
+            ]
+          },
+          "doc": "List of product ribbons."
+        },
+        {
+          "name": "currency",
+          "type": "string",
+          "doc": "Product currency."
+        },
+        {
+          "name": "price",
+          "type": "number",
+          "doc": "Product price.\n The price must be greater than its discount.\n The product price is propagated to the product's newly-created variants. Product variants whose prices have been updated directly are not affected by the changes to the product price."
+        },
+        {
+          "name": "discountedPrice",
+          "type": "number",
+          "doc": "Discounted product price."
+        },
+        {
+          "name": "formattedPrice",
+          "type": "string",
+          "doc": "Product price formatted with the currency."
+        },
+        {
+          "name": "formattedDiscountedPrice",
+          "type": "string",
+          "doc": "Discounted product price formatted with the currency."
+        },
+        {
+          "name": "inventoryItemId",
+          "type": "string",
+          "doc": "ID for the inventory item."
+        },
+        {
+          "name": "discount",
+          "type": "$w.ProductPage.ProductDiscount",
+          "doc": "Product discount."
+        },
+        {
+          "name": "trackInventory",
+          "type": "boolean",
+          "doc": "Indicates whether inventory is tracked for the product."
+        },
+        {
+          "name": "inStock",
+          "type": "boolean",
+          "doc": "Indicates whether the product is in stock."
+        },
+        {
+          "name": "quantityInStock",
+          "type": "number",
+          "doc": "Number of units currently in stock."
+        },
+        {
+          "name": "additionalInfoSections",
+          "type": {
+            "name": "Array",
+            "typeParams": [
+              "$w.ProductPage.ProductAdditionalInfoSection"
+            ]
+          },
+          "doc": "Additional product information sections."
+        },
+        {
+          "name": "productOptions",
+          "type": "$w.ProductPage.ProductOptions",
+          "doc": "All the available options for a store product."
+        },
+        {
+          "name": "productPageUrl",
+          "type": "string",
+          "doc": "Product page relative URL."
+        },
+        {
+          "name": "manageVariants",
+          "type": "boolean",
+          "doc": "Indicates whether product variants are managed. Can be set to true only if the product has options. Once set to true, `manageVariants` can only be reset to false only if no variants exist. Use [`getProductVariants()`](https://www.wix.com/velo/reference/wix-stores.html#getProductVariants) to check if variants exist. You cannot set `manageVariants` to true if more than 300 variants are defined."
+        },
+        {
+          "name": "customTextFields",
+          "type": {
+            "name": "Array",
+            "typeParams": [
+              "$w.ProductPage.ProductCustomTextFields"
+            ]
+          },
+          "doc": "List of product customization fields."
+        },
+        {
+          "name": "productType",
+          "type": "string",
+          "doc": "Product type. Either `\"physical\"` or `\"digital\"`. When creating a product using the API, currently only `\"physical\"` is supported."
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "doc": "Product slug."
+        },
+        {
+          "name": "weight",
+          "type": "number",
+          "doc": "Product weight."
+        },
+        {
+          "name": "variants",
+          "type": {
+            "name": "Array",
+            "typeParams": [
+              "$w.ProductPage.VariantItem"
+            ]
+          },
+          "doc": "Product variants."
+        },
+        {
+          "name": "pricePerUnit",
+          "type": "number",
+          "doc": "Price per unit."
+        },
+        {
+          "name": "formattedPricePerUnit",
+          "type": "string",
+          "doc": "Price per unit formatted with currency symbol."
+        },
+        {
+          "name": "pricePerUnitData",
+          "type": "$w.ProductPage.pricePerUnitData",
+          "doc": "Details of the product's price per unit."
+        },
+        {
+          "name": "seoData",
+          "type": "$w.ProductPage.SeoData",
+          "doc": "Custom SEO data for the product. Learn more [about SEO](https://support.wix.com/en/search?term=seo)."
+        }
+      ],
+      "extra": {},
+      "labels": [
+        "changed"
+      ]
+    },
+    {
+      "name": "ProductAdditionalInfoSection",
+      "locations": [
+        {
+          "lineno": 39,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing an additional info section for a store product.",
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "title",
+          "type": "string",
+          "doc": "Section title."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "doc": "Section description."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "ProductChoices",
+      "locations": [
+        {
+          "lineno": 143,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing a product variant's option choices.",
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "optionKey",
+          "type": "string",
+          "doc": "Value of the choice. This key name is dependent on the\n product option. For example, if a product has a size option, this\n key value will be something like `\"Size\"` and its value will be something like\n `\"Large\"`.\n\n `optionKey` is not case-sensitive. Therefore the values for the option keys \"`Size`\", \"`SIZE`\", and \"`size`\" are combined."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "ProductCustomTextFields",
+      "locations": [
+        {
+          "lineno": 88,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing a custom text field for a store product.",
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "title",
+          "type": "string",
+          "doc": "Product customization field title."
+        },
+        {
+          "name": "maxLength",
+          "type": "string",
+          "doc": "Maximum length of product customization field in characters."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "ProductDiscount",
+      "locations": [
+        {
+          "lineno": 96,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing a product discount.",
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "type",
+          "type": "string",
+          "doc": "Discount type. Required.\n\n One of:\n\n\n\n - `\"AMOUNT\"`\n - `\"PERCENT\"`\n - `\"NONE\"`"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "doc": "Discount value. The discount value cannot be greater than the price of the product or the variant."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "ProductOption",
+      "locations": [
+        {
+          "lineno": 79,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing an option for a store product.",
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "optionType",
+          "type": "string",
+          "doc": "Option type. Either `\"color\"` or `\"drop_down\"`."
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "doc": "Option name."
+        },
+        {
+          "name": "choices",
+          "type": {
+            "name": "Array",
+            "typeParams": [
+              "$w.ProductPage.ProductOptionsChoice"
+            ]
+          },
+          "doc": "Option choices."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "ProductOptions",
+      "locations": [
+        {
+          "lineno": 67,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing all the available options for a store product, such as \"Size\" and \"Color.\"",
+        "description": [
+          "An option cannot be changed if it has choices and variants. To change an option, reset its variants with [`resetVariantData()`](https://www.wix.com/velo/reference/wix-stores-backend.html#resetVariantData). For each option, you can define a maximum of six choices."
+        ],
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "optionKey",
+          "type": "$w.ProductPage.ProductOption",
+          "doc": "Name of the option. This key name\n is dependent on the options added to the product. For example, if a product has a size\n option, this key will be something like `\"Size\"`.\n\n `optionKey` is not case-sensitive. Therefore the values for the option keys \"`Size`\", \"`SIZE`\", and \"`size`\" are combined."
+        }
+      ],
+      "extra": {},
+      "labels": [
+        "changed"
+      ]
+    },
+    {
+      "name": "ProductOptionsChoice",
+      "locations": [
+        {
+          "lineno": 47,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing an option's choice for a store product, such as choice \"Small\" for the option \"Size.\"",
+        "description": [
+          "You can define between one and thirty choices for each option."
+        ],
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "value",
+          "type": "number",
+          "doc": "Choice value."
+        },
+        {
+          "name": "description",
+          "type": "number",
+          "doc": "Choice description."
+        },
+        {
+          "name": "media",
+          "type": "$w.ProductPage.ProductOptionsChoiceMedia",
+          "doc": "Choice media."
+        },
+        {
+          "name": "inStock",
+          "type": "boolean",
+          "doc": "Indicates whether the product with this choice is in stock."
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "doc": "Indicates whether the product with this option is visible."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "ProductOptionsChoiceMedia",
+      "locations": [
+        {
+          "lineno": 59,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing the choice media.",
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "mainMedia",
+          "type": "string",
+          "doc": "Main choice media item (image or video thumbnail) URL."
+        },
+        {
+          "name": "mediaItems",
+          "type": "$w.ProductPage.MediaItem",
+          "doc": "List of choice media items."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "ProductRibbon",
+      "locations": [
+        {
+          "lineno": 12,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing a ribbon for a store product.",
+        "links": [
+          "[getProduct( )](#getProduct)"
+        ],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "text",
+          "type": "string",
+          "doc": "Ribbon text."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "SeoData",
+      "locations": [
+        {
+          "lineno": 155,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing custom SEO data for the product.",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "tags",
+          "type": {
+            "name": "Array",
+            "typeParams": [
+              "$w.ProductPage.SeoTag"
+            ]
+          },
+          "doc": "SEO tag details."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "SeoTag",
+      "locations": [
+        {
+          "lineno": 161,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing the product's custom SEO tags.",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "type",
+          "type": "string",
+          "doc": "SEO tag type.\nSupported values:\n\n + `\"title\"`\n + `\"meta\"`\n + `\"script\"`\n + `\"link\"`"
+        },
+        {
+          "name": "props",
+          "type": "object",
+          "doc": "The props property holds an object of `{\"key\": \"value\"}` pairs where the key is one of the SEO tag's properties (name, content, rel, href, etc.)\nand the value is the value for that property. `{\"name\": \"description\", \"content\": \"The description itself.\"}`."
+        },
+        {
+          "name": "meta",
+          "type": "object",
+          "doc": "Tag metadata. For example, `{\"height\": 300, \"width\": 240}`."
+        },
+        {
+          "name": "children",
+          "type": "string",
+          "doc": "Tag inner content. For example, `<title> inner content </title>`."
+        },
+        {
+          "name": "custom",
+          "type": "boolean",
+          "doc": "Whether the tag is a custom tag."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "doc": "Whether the tag is disabled."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "VariantInfo",
+      "locations": [
+        {
+          "lineno": 127,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing variant information to use when creating or updating variants.",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "currency",
+          "type": "string",
+          "doc": "Variant currency."
+        },
+        {
+          "name": "price",
+          "type": "number",
+          "doc": "Variant price. The variant price must be greater than its discount. If the variant price has been updated, changes to the product price do not affect the variant price."
+        },
+        {
+          "name": "discountedPrice",
+          "type": "number",
+          "doc": "Discounted variant price."
+        },
+        {
+          "name": "formattedPrice",
+          "type": "string",
+          "doc": "Variant price formatted with the currency."
+        },
+        {
+          "name": "formattedDiscountedPrice",
+          "type": "string",
+          "doc": "Discounted variant price formatted with the currency."
+        },
+        {
+          "name": "weight",
+          "type": "number",
+          "doc": "Variant weight."
+        },
+        {
+          "name": "sku",
+          "type": "string",
+          "doc": "Variant stock keeping unit value."
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "doc": "Whether the variant is visible in the store."
+        },
+        {
+          "name": "pricePerUnit",
+          "type": "number",
+          "doc": "Price per unit."
+        },
+        {
+          "name": "formattedPricePerUnit",
+          "type": "string",
+          "doc": "Price per unit formatted with currency symbol."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "VariantItem",
+      "locations": [
+        {
+          "lineno": 118,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing a product variant item.",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "_id",
+          "type": "string",
+          "doc": "Unique variant ID."
+        },
+        {
+          "name": "choices",
+          "type": "$w.ProductPage.ProductChoices",
+          "doc": "The choices of the retrieved variant."
+        },
+        {
+          "name": "variant",
+          "type": "$w.ProductPage.VariantInfo",
+          "doc": "Variant information."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    },
+    {
+      "name": "pricePerUnitData",
+      "locations": [
+        {
+          "lineno": 221,
+          "filename": "wixCodeDoc.js"
+        }
+      ],
+      "docs": {
+        "summary": "An object representing a product's price per unit data.",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "members": [
+        {
+          "name": "totalQuantity",
+          "type": "number",
+          "doc": "Product’s total weight, volume, or area. For example, if your product weighs 1 kilogram, the `totalQuantity` is `1`."
+        },
+        {
+          "name": "totalMeasurementUnit",
+          "type": "string",
+          "doc": "Total measurement unit of weight, volume, or area. For example, if your product weighs 1 kilogram, the `totalMeasurementUnit` is `\"KG\"`.\n\nSupported values:\n`\"ML\"`, `\"CL\"`, `\"L\"`, `\"CBM\"`, `\"MG\"`, `\"G\"`, `\"KG\"`, `\"MM\"`, `\"CM\"`, `\"M\"`, `\"SQM\"`, `\"OZ\"`, `\"LB\"`, `\"FLOZ\"`, `\"PT\"`, `\"QT\"`, `\"GAL\"`, `\"IN\"`, `\"FT\"`, `\"YD\"`, `\"SQFT\"`."
+        },
+        {
+          "name": "baseQuantity",
+          "type": "number",
+          "doc": "Product’s base weight, volume, or area. For example, for a product weighing 1 kilogram, the `baseQuantity` could be `100` (grams)."
+        },
+        {
+          "name": "baseMeasurementUnit",
+          "type": "string",
+          "doc": "Base measurement unit of weight, volume, or area. For example, if your product weighs 1 kilogram, and the `baseQuantity` is `100` grams, `baseMeasurementUnit` is `\"G\"`.\n\nSupported values:\n`\"ML\"`, `\"CL\"`, `\"L\"`, `\"CBM\"`, `\"MG\"`, `\"G\"`, `\"KG\"`, `\"MM\"`, `\"CM\"`, `\"M\"`, `\"SQM\"`, `\"OZ\"`, `\"LB\"`, `\"FLOZ\"`, `\"PT\"`, `\"QT\"`, `\"GAL\"`, `\"IN\"`, `\"FT\"`, `\"YD\"`, `\"SQFT\"`."
+        }
+      ],
+      "extra": {},
+      "labels": []
+    }
+  ],
+  "extra": {}
+}

@@ -1,0 +1,524 @@
+{ "name": "WixBookingsQueryBuilder",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "removed" ],
+  "location":
+    { "lineno": 1,
+      "filename": "WixBookingsQueryBuilder.js" },
+  "docs":
+    { "summary": "Contains functionality for refining a Bookings query.",
+      "description":
+        [ "The `WixBookingsQueryBuilder` functions enable you to run, sort, filter, and control",
+          " which results a query returns.",
+          "",
+          " Typically, you build a query using any of the Bookings query functions,",
+          " refine the query by chaining `WixBookingsQueryBuilder` functions, and then execute the",
+          " query by chaining *one* of the following: [`find()`](#find) or [`count()`](#count).",
+          "",
+          " For example, the following code queries all bookings of the customer with the",
+          " specified contact ID and logs the first 5 results to the console, sorted in",
+          " ascending order by the sessions' start times:",
+          "",
+          " ```javascript",
+          " import wixBookingsBackend from 'wix-bookings-backend';",
+          "",
+          " wixBookingsBackend.queryBookings",
+          "   .eq(\"contactId\", \"2cb1846f-0c7a-4c39-8736-349236cfab40\")",
+          "   .ascending(\"startTime\")",
+          "   .limit(5)",
+          "   .find()",
+          "   .then( (results) => {",
+          "     console.log(results.items);",
+          "   } );",
+          " ```" ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "ascending",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The properties used in the sort.",
+              "spread": true } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 196,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Adds a sort to a query, sorting by the specified properties in ascending order.",
+            "description":
+              [ "The `ascending()` function refines a `WixBookingsQueryBuilder` to sort in ascending order of",
+                " the specified properties. If you specify more than one property,",
+                " `ascending()` sorts the results in ascending order by each property in the",
+                " order they are listed.",
+                "",
+                " You can sort the following types:",
+                "",
+                " + Number: Sorts numerically.",
+                " + Date: Sorts by date and time.",
+                " + String: Sorts lexicographically, so `\"abc\"` comes after `\"XYZ\"`.",
+                "",
+                "",
+                " If a property contains a number as a String, that value will be sorted",
+                " alphabetically and not numerically. Items that do not have a value for the",
+                " specified sort property are ranked lowest." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "count",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "options",
+              "type": "wix-bookings-backend.WixBookingsQueryBuilder.QueryOptions",
+              "doc": "Options to use when performing a query or query count.",
+              "optional": true } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "number" ] },
+            "doc": "Fulfilled - The number of items that match the query.\nRejected - The errors that caused the rejection." },
+        "locations":
+          [ { "lineno": 297,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Returns the number of items that match the query.",
+            "description":
+              [ "The `count()` function returns a Promise that resolves to the number of",
+                " items that match the query. The Promise is rejected if `count()` is called",
+                " with incorrect permissions or if any of the functions used to refine the",
+                " query are invalid.",
+                "",
+                " Use the `options` parameter to run `count()` without checking for permissions.",
+                "",
+                " Any function that does not filter query results (for example, [`ascending()`](#ascending))",
+                " does not affect the result of `count()`.",
+                "",
+                " If you have already run a query with [`find()`](#find), you can retrieve",
+                " the number of query results without calling `count()`. The [`find()`](#find)",
+                " function returns a Promise that resolves to a [`WixBookingsQueryResult`](wix-bookings-backend.WixBookingsQueryResult)",
+                " object, which has a `totalCount` property whose value is the number of results." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "descending",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The properties used in the sort.",
+              "spread": true } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 220,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Adds a sort to a query or sort, sorting by the specified properties in descending order.",
+            "description":
+              [ "The `descending()` function refines a `WixBookingsQueryBuilder` to sort in descending order of",
+                " the specified properties. If you specify more than one property,",
+                " `descending()` sorts the results in descending order by each property in the",
+                " order they are listed.",
+                "",
+                " You can sort the following types:",
+                "",
+                " + Number: Sorts numerically.",
+                " + Date: Sorts by date and time.",
+                " + String: Sorts lexicographically, so `\"abc\"` comes before `\"XYZ\"`.",
+                "",
+                "",
+                " If a property contains a number as a String, that value will be sorted",
+                " alphabetically and not numerically. Items that do not have a value for the",
+                " specified sort property are ranked lowest." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "eq",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type": "*",
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 46,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value equals the specified value.",
+            "description":
+              [ "The `eq()` function refines a `WixBookingsQueryBuilder` to only",
+                " match items where the value of the specified property equals the specified `value`.",
+                "",
+                " It only matches values of the same type. For example, a number value stored",
+                " as a String type does not match the same number stored as a Number type.",
+                "",
+                " Matching strings with `eq()` is case sensitive, so `\"text\"` is not equal to `\"Text\"`.",
+                "",
+                " If the value of the `propertyName` property is an Array, `eq()` includes items",
+                " in which any of the elements of the Array match the specified `value`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "find",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "options",
+              "type": "wix-bookings-backend.WixBookingsQueryBuilder.QueryOptions",
+              "doc": "Options to use when performing a query or query count.",
+              "optional": true } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.WixBookingsQueryResult" ] },
+            "doc": "Fulfilled - A Promise that resolves to the results of the query.\nRejected - Error that caused the query to fail." },
+        "locations":
+          [ { "lineno": 279,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Returns the items that match the query.",
+            "description":
+              [ "The `find()` function returns a Promise that resolves to the results found",
+                " by the query and some information about the results. The Promise is",
+                " rejected if `find()` is called with incorrect permissions or if any of the",
+                " functions used to refine the query are invalid.",
+                "",
+                " Use the `options` parameter to run `find()` without checking for permissions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "ge",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 66,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is greater than or equal to the specified value.",
+            "description":
+              [ "The `ge()` function refines a `WixBookingsQueryBuilder` to only",
+                " match items where the value of the specified property is greater than or",
+                " equal to the specified `value`.",
+                "",
+                " It only matches values of the same type. For example, a number value stored",
+                " as a String type does not match the same number stored as a Number type.",
+                "",
+                " If a property contains a number as a String, that value will be compared",
+                " alphabetically and not numerically. Items that do not have a value for the",
+                " specified property are ranked lowest.",
+                "",
+                " The following types of properties can be compared:",
+                "",
+                " + Number: Compares numerically.",
+                " + Date: Compares JavaScript Date objects.",
+                " + String: Compares lexicographically,",
+                "   so `\"abc\"` is greater than or equal to `\"ABC\"` (because of the greater than),",
+                "   but `\"ABC\"` is not greater than or equal to `\"abc\"`.",
+                "",
+                "ß @snippet [com_wix_bookings_api_v1_Bookings_Cancel_cancelBooking.es6=basic usage]" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "gt",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 96,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is greater than the specified value.",
+            "description":
+              [ "The `gt()` function refines a `WixBookingsQueryBuilder` to only match",
+                " items where the value of the specified property is greater than the specified `value`.",
+                "",
+                " It only matches values of the same type. For example, a number value stored",
+                " as a String type does not match the same number stored as a Number type.",
+                "",
+                " If a property contains a number as a String, that value will be compared",
+                " alphabetically and not numerically. Items that do not have a value for the",
+                " specified property are ranked lowest.",
+                "",
+                " The following types of properties can be compared:",
+                "",
+                " + Number: Compares numerically.",
+                " + Date: Compares JavaScript Date objects.",
+                " + String: Compares lexicographically, so `\"text\"` is greater than `\"Text\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "hasSome",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose values will be compared with `value`." },
+            { "name": "value",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "The values to match against." } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 180,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property contains any of the specified `value` parameters.",
+            "description":
+              [ "The `hasSome()` function refines a `WixBookingsQueryBuilder` to",
+                " only match items where any of the values of the array of the specified property equal any of",
+                " the specified values.",
+                "",
+                " Matching strings with `hasSome()` is case sensitive, so `\"text\"` is not equal to `\"Text\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "le",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 123,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is less than or equal to the specified value.",
+            "description":
+              [ "The `le()` function refines a `WixBookingsQueryBuilder`to only match",
+                " items where the value of the specified property is less than or equal to the",
+                " specified `value`.",
+                "",
+                " It only matches values of the same type. For example, a number value stored",
+                " as a String type does not match the same number stored as a Number type.",
+                "",
+                " If a property contains a number as a String, that value will be compared",
+                " alphabetically and not numerically. Items that do not have a value for the",
+                " specified property are ranked lowest.",
+                "",
+                " The following types of properties can be compared:",
+                "",
+                " + Number: Compares numerically.",
+                " + Date: Compares JavaScript Date objects.",
+                " + String: Compares lexicographically,",
+                "   so `\"ABC\"` is less than or equal to `\"abc\"` (because of the less than),",
+                "   but `\"abc\"` is not less than or equal to `\"ABC\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "limit",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "The number of items to return, which is also the [`pageSize`](wix-bookings-backend.WixBookingsQueryResult.html#pageSize) of the results object." } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 244,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Limits the number of items the query returns.",
+            "description":
+              [ "The `limit()` function defines the number of results a query returns in each",
+                " page. Only one page of results is retrieved at a time. The [`next()`](wix-bookings-backend.WixBookingsQueryResult.html#next)",
+                " and [`prev()`](wix-bookings-backend.WixBookingsQueryResult.html#prev) functions are used to",
+                " navigate the pages of a query result.",
+                "",
+                " By default, `limit` is set to `50`.",
+                "",
+                " The maximum value that `limit()` can accept is `1000`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "lt",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "propertyName",
+              "type": "string",
+              "doc": "The property whose value will be compared with `value`." },
+            { "name": "value",
+              "type":
+                [ "string",
+                  "number",
+                  "Date" ],
+              "doc": "The value to match against." } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 153,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Refines a query to match items whose specified property value is less than the specified value.",
+            "description":
+              [ "The `lt()` function refines a `WixBookingsQueryBuilder` to only match",
+                " items where the value of the specified property is less than the specified `value`.",
+                "",
+                " It only matches values of the same type. For example, a number value stored",
+                " as a String type does not match the same number stored as a Number type.",
+                "",
+                " If a property contains a number as a String, that value will be compared",
+                " alphabetically and not numerically. Items that do not have a value for the",
+                " specified property are ranked lowest.",
+                "",
+                " The following types of properties can be compared:",
+                "",
+                " + Number: Compares numerically.",
+                " + Date: Compares JavaScript Date objects.",
+                " + String: Compares lexicographically, so `\"Text\"` is less than `\"text\"`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "skip",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "skip",
+              "type": "number",
+              "doc": "The number of items to skip in the query results before returning the results." } ],
+        "ret":
+          { "type": "wix-bookings-backend.WixBookingsQueryBuilder",
+            "doc": "A `WixBookingsQueryBuilder` object representing the refined query." },
+        "locations":
+          [ { "lineno": 262,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Sets the number of items to skip before returning query results.",
+            "description":
+              [ "The `skip()` function defines the number of results to skip in the query",
+                " results before returning new query results.",
+                "",
+                " For example, if you query a collection and 50 items match your query, but",
+                " you set `skip` to 10, the results returned will skip the first 10 items",
+                " that match and return the 11th through 50th items.",
+                "",
+                " By default, `skip` is set to 0." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "QueryOptions",
+        "locations":
+          [ { "lineno": 31,
+              "filename": "WixBookingsQueryBuilder.js" } ],
+        "docs":
+          { "summary": "Options to use when performing a query.",
+            "description":
+              [ "The `options` parameter is an optional parameter that can be used when",
+                " calling the query [`find()`](#find) or [`count()`](#count) functions. To use `options`, pass it a `QueryOptions`",
+                " object with the following key:value pair:",
+                "",
+                " + `\"suppressAuth\"`: `true`/`false`" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "Prevents [permission](https://support.wix.com/en/article/about-collection-permissions) checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

@@ -243,7 +243,7 @@
               "doc": "The Email ID of the Triggered Email to send." },
             { "name": "toContact",
               "type": "string",
-              "doc": "The Contact ID." },
+              "doc": "The contact's ID you are sending the email to." },
             { "name": "options",
               "type": "wix-users.TriggeredEmailOptions",
               "doc": "Variable values to insert into the email.",
@@ -272,7 +272,7 @@
                 "",
                 " Specify which email to send by passing the email's ID in the `emailId` parameter.",
                 "",
-                " Specify which contact the email is sent to by passing the contact's ID in the `toContact`",
+                " Specify which contact the email is sent to by passing a contact's ID in the `toContact`",
                 " parameter.",
                 "",
                 " If the specified Triggered Email contains [variables](https://support.wix.com/en/article/using-variables-to-add-personalized-text),",
@@ -292,7 +292,7 @@
                 " [How to Send a Triggered Email with Code](https://support.wix.com/en/article/how-to-send-a-triggered-email-with-code)." ],
             "links": [],
             "examples":
-              [ { "title": "Send a Triggered Email to a contact",
+              [ { "title": "Send a Triggered Email",
                   "body":
                     [ "import wixCrmBackend from 'wix-crm-backend';",
                       "",
@@ -474,7 +474,7 @@
                 { "name": "Array",
                   "typeParams":
                     [ "string" ] },
-              "doc": "List of contact's email addresses. When \n creating a contact, if no phone number is\n provided, at least one email address must be provided.",
+              "doc": "List of contact's email addresses. When\n creating a contact, if no phone number is\n provided, at least one email address must be provided.",
               "optional": true },
             { "name": "loginEmail",
               "type": "string",
@@ -485,7 +485,7 @@
                 { "name": "Array",
                   "typeParams":
                     [ "string" ] },
-              "doc": "List of contact's phone numbers. When \n creating a contact, if no email is\n provided, at least one phone number must be provided.",
+              "doc": "List of contact's phone numbers. When\n creating a contact, if no email is\n provided, at least one phone number must be provided.",
               "optional": true },
             { "name": "labels",
               "type":
@@ -507,8 +507,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "DeleteOptions",
         "locations":
           [ { "lineno": 122,
@@ -551,4 +550,4 @@
   "relatedContent":
     [ { "icon": "example",
         "text": "Members Area",
-        "url": "https://www.wix.com/corvid/example/members-area" } ] }
+        "url": "https://www.wix.com/velo/example/members-area" } ] }

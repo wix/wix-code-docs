@@ -1,15 +1,14 @@
 { "name": "GeneralInfo",
   "memberOf": "wix-site-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 13,
       "filename": "general-info.js" },
   "docs":
-    { "summary": "The General Info API contains functionality for getting\n [the information about your business](https://support.wix.com/en/article/adding-your-sites-business-info) that\n has been entered in the **General Info** section of your site's [**Dashboard**](https://support.wix.com/en/article/wix-dashboard-overview).",
+    { "summary": "The generalInfo API contains functionality for getting\n [the information about your business](https://support.wix.com/en/article/adding-your-sites-business-info) that\n has been entered in the **General Info** section of your site's [**Dashboard**](https://support.wix.com/en/article/wix-dashboard-overview).",
       "description":
-        [ "To use the General Info API, import `wixSiteBackend` from the `wix-site-backend` module:",
+        [ "To use the generalInfo API, import `wixSiteBackend` from the `wix-site-backend` module:",
           "",
           "   ```javascript",
           "   import wixSiteBackend from 'wix-site-backend';",

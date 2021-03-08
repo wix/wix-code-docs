@@ -33,7 +33,7 @@
           "     * Error: Token fails authorization. [`reset()`]($w.Captcha.html#reset) the reCAPTCHA element and ask the visitor to redo the challenge. Return to Step 1.",
           "",
           "",
-          "For more information on working with your reCAPTCHA element, click [here](https://support.wix.com/en/article/corvid-tutorial-using-captcha-to-protect-data-submission)",
+          "For more information on working with your reCAPTCHA element, click [here](https://support.wix.com/en/article/velo-tutorial-using-captcha-to-protect-data-submission)",
           "",
           "",
           "> **Note:**",
@@ -514,4 +514,4 @@
   "relatedContent":
     [ { "icon": "example",
         "text": "reCAPTCHA",
-        "url": "https://www.wix.com/corvid/example/recaptcha" } ] }
+        "url": "https://www.wix.com/velo/example/recaptcha" } ] }

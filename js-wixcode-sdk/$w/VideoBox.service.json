@@ -13,7 +13,7 @@
         [ "A [`VideoBox`](https://support.wix.com/en/article/videobox) is a design element that allows you to showcase your videos in designed, fully-customizable video containers. ",
           " A video box also allows you to control how site visitors interact with it. ",
           "",
-          " Unlike the [`VideoPlayer`](https://www.wix.com/corvid/reference/$w/videoplayer) element, a video box does ",
+          " Unlike the [`VideoPlayer`](https://www.wix.com/velo/reference/$w/videoplayer) element, a video box does ",
           " not expose text descriptions or titles, and cannot be displayed in full-screen mode.",
           "",
           " A video box allows you to present video from the following sources:",
@@ -32,7 +32,7 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 115,
+          [ { "lineno": 116,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Gets the current play time from the beginning of the current video, in seconds.",
@@ -53,7 +53,7 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 135,
+          [ { "lineno": 136,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Gets the total play time of the current video, in seconds.",
@@ -74,7 +74,7 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 210,
+          [ { "lineno": 211,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Indicates if the volume is currently muted.",
@@ -122,7 +122,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 602,
+          [ { "lineno": 604,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Sets or gets the file location of the current video.",
@@ -160,7 +160,7 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 164,
+          [ { "lineno": 165,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Sets or gets the video box volume.",
@@ -199,7 +199,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the volume has been muted." },
         "locations":
-          [ { "lineno": 349,
+          [ { "lineno": 351,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Mutes video box volume.",
@@ -233,7 +233,7 @@
           { "type": "$w.VideoBox",
             "doc": "The video box that triggered the event." },
         "locations":
-          [ { "lineno": 509,
+          [ { "lineno": 511,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the playback has ended.",
@@ -276,7 +276,7 @@
                 "> **Deprecation note:** The $w parameter of event handlers is being deprecated. To get",
                 " a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function",
                 " and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see",
-                " [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
+                " [here](https://www.wix.com/velo/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
             "links": [],
             "examples": [],
             "extra":
@@ -305,7 +305,7 @@
                 " > **Deprecation note:** The $w parameter of event handlers is being deprecated. To get",
                 " a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function",
                 " and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see",
-                " [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
+                " [here](https://www.wix.com/velo/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers)." ],
             "links": [],
             "examples": [],
             "extra":
@@ -323,7 +323,7 @@
           { "type": "$w.VideoBox",
             "doc": "The video box that triggered the event." },
         "locations":
-          [ { "lineno": 462,
+          [ { "lineno": 464,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the playback is paused.",
@@ -355,7 +355,7 @@
           { "type": "$w.VideoBox",
             "doc": "The video box that triggered the event." },
         "locations":
-          [ { "lineno": 421,
+          [ { "lineno": 423,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the playback is started or restarted.",
@@ -386,7 +386,7 @@
         "ret":
           { "type": "$w.VideoBox" },
         "locations":
-          [ { "lineno": 555,
+          [ { "lineno": 557,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the playback progresses.",
@@ -416,7 +416,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the playback has been paused." },
         "locations":
-          [ { "lineno": 261,
+          [ { "lineno": 263,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Pauses playback.",
@@ -456,7 +456,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the playback begins or resumes." },
         "locations":
-          [ { "lineno": 233,
+          [ { "lineno": 235,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Begins or resumes playback.",
@@ -496,7 +496,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the playback has been stopped." },
         "locations":
-          [ { "lineno": 289,
+          [ { "lineno": 291,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Stops the playback.",
@@ -537,7 +537,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the playback has been toggled." },
         "locations":
-          [ { "lineno": 318,
+          [ { "lineno": 320,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Toggles playback.",
@@ -581,7 +581,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the volume has been unmuted." },
         "locations":
-          [ { "lineno": 371,
+          [ { "lineno": 373,
               "filename": "VideoBox.es6" } ],
         "docs":
           { "summary": "Unmutes video volume.",

@@ -1,8 +1,7 @@
 { "name": "PermissionsRouter",
   "memberOf": "wix-realtime-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "permissions-router.js" },
@@ -155,8 +154,7 @@
         "extra":
           {  } },
       { "name": "check",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "channel",
@@ -282,8 +280,7 @@
         "extra":
           {  } },
       { "name": "default",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "handler",

@@ -1,7 +1,6 @@
 { "name": "wix-search",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "search.js" },
@@ -342,7 +341,6 @@
               "doc": "An object containing the filter definition." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }

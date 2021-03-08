@@ -216,13 +216,13 @@
   "relatedContent":
     [ { "icon": "example",
         "text": "Product Reviews",
-        "url": "https://www.wix.com/code/home/example/product-reviews" },
+        "url": "https://www.wix.com/velo/example/product-reviews" },
       { "icon": "example",
         "text": "Stories",
-        "url": "https://www.wix.com/corvid/example/stories" },
+        "url": "https://www.wix.com/velo/example/stories" },
       { "icon": "article",
         "text": "Processing Payments",
-        "url": "https://support.wix.com/en/article/wix-code-tutorial-processing-payments" } ],
+        "url": "https://support.wix.com/en/article/velo-tutorial-processing-payments" } ],
   "FAQs":
     [ { "title": "How do I pass data between a page and a lightbox?",
         "markdown": "When you open a lightbox using the [`openLightbox()`](https://www.wix.com/code/reference/wix-window.html#openLightbox) function, you can pass an object containing data to be used in the lightbox. In the lightbox's code, you call the [`getContext()`](https://www.wix.com/code/reference/wix-window.lightbox.html#getContext) function to retrieve the data sent by the [`openLightbox()`](https://www.wix.com/code/reference/wix-window.html#openLightbox) function. \n\nWhen you close the lightbox using the [`close()`](https://www.wix.com/code/reference/wix-window.lightbox.html#close) function, you can pass an object containing data to be used by the page that opened the lightbox. This data is retrieved from the resolution of the Promise returned by the [`openLightbox()`](https://www.wix.com/code/reference/wix-window.html#openLightbox) function." },

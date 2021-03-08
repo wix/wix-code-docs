@@ -64,7 +64,7 @@
                 " selectors select the same element, it's still returned only once in the array.",
                 "",
                 "  > **Note:** Most elements accessible for selection by `$w` have basic API properties and functions,",
-                " like `id`, `type`, `show()`, `hide()`, and others. Use Corvid's autocomplete",
+                " like `id`, `type`, `show()`, `hide()`, and others. Use Velo's autocomplete",
                 " in the code panel to see which API functions and properties are available",
                 " for each element." ],
             "links": [],
@@ -679,20 +679,17 @@
   "relatedContent":
     [ { "icon": "example",
         "text": "Hide and Show Elements",
-        "url": "https://www.wix.com/corvid/example/hide-&-show-elements" },
+        "url": "https://www.wix.com/velo/example/hide-&-show-elements" },
       { "icon": "example",
         "text": "Collapse Elements",
-        "url": "https://www.wix.com/corvid/example/Collapse-Elements" },
+        "url": "https://www.wix.com/velo/example/collapse-elements" },
       { "icon": "example",
         "text": "Change Layout",
-        "url": "https://www.wix.com/corvid/example/Change-Layout" },
-      { "icon": "video",
-        "text": "How to Add Custom Interactions with JavaScript",
-        "url": "https://www.youtube.com/watch?v=4hym1nbqua8" } ],
+        "url": "https://www.wix.com/velo/example/change-layout" } ],
   "FAQs":
     [ { "title": "Can I use $w in backend code?",
         "markdown": "No. The `$w` functionality is used to work with a page and its elements. Backend code is not related to a specific page and therefore using `$w` there would have no meaning. You can however, use `$w` in page code and send values you retrieve to backend code." },
       { "title": "Elements in a repeater have the same ID for each repeater item. So how do I select an element in a specific repeater item?",
         "markdown": "You can get an element from a specific repeater item by using the [`at()`](https://www.wix.com/code/reference/$w.html#at) function. You pass the function a [`context`](https://www.wix.com/code/reference/$w.Event.html#context) from an event handler's `event` property. The function returns a selector function that selects elements from the same item that triggered the event whose context you passed it. You can then use that selector to select the specific element you want." },
       { "title": "Why are my $w() selections not working?",
-        "markdown": "You can only select page elements using [`$w()`](https://www.wix.com/code/reference/$w.html#$w) when the page is ready. If you use [`$w()`](https://www.wix.com/code/reference/$w.html#$w) in code that runs before the page is ready, like global page code, the page elements are not ready to be selected. Use [`$w()`](https://www.wix.com/code/reference/$w.html#$w) to select elements in the [`onReady()`](https://www.wix.com/code/reference/$w.html#onReady) event handler, element event handlers, or any functions called by the above. \n\nAlso, be sure to check your selection syntax is correct. When selecting individual elements, make sure you have the proper ID and include a hash. For example: `$w(\"#myElement\")`. When selecting elements by type, make sure you have the proper type name and don't include a hash or `$w.` before the type name. For example: `$w(\"Text\")`. " } ] }
+        "markdown": "You can only select page elements using [`$w()`](https://www.wix.com/velo/reference/$w.html#$w) when the page is ready. If you use [`$w()`](https://www.wix.com/velo/reference/$w.html#$w) in code that runs before the page is ready, like global page code, the page elements are not ready to be selected. Use [`$w()`](https://www.wix.com/velo/reference/$w.html#$w) to select elements in the [`onReady()`](https://www.wix.com/velo/reference/$w.html#onReady) event handler, element event handlers, or any functions called by the above. \n\nAlso, be sure to check your selection syntax is correct. When selecting individual elements, make sure you have the proper ID and include a hash. For example: `$w(\"#myElement\")`. When selecting elements by type, make sure you have the proper type name and don't include a hash or `$w.` before the type name. For example: `$w(\"Text\")`. " } ] }

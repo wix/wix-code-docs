@@ -57,7 +57,7 @@
               [ "The `onCategoryCreated()` event handler runs when a new forum category is created in your site.",
                 " The received `CreatedCategory` object contains information about the new category that was created.",
                 "",
-                "> **Notes:** ",
+                "> **Notes:**",
                 "> +  If you create a category from your published site, `onCategoryCreated()` runs only when you finish defining the settings and click **Create**. If you create a category using the forum settings in the Editor, `onCategoryCreated()` will run with the default settings as soon as you click **Add New Category**. As you continue to define the category settings, `onCategoryUpdated()` will run.",
                 ">",
                 ">",
@@ -178,8 +178,7 @@
         "extra":
           {  } },
       { "name": "onCategoryUpdated",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -367,7 +366,8 @@
         "extra":
           {  } },
       { "name": "onCommentDownvoted",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -384,7 +384,7 @@
               [ "The `onCommentDownvoted()` event handler runs when an existing forum comment in your site is downvoted.",
                 " The received `DownvotedComment` object contains information about the comment that was downvoted.",
                 "",
-                "> **Notes:** ",
+                "> **Notes:**",
                 "> + Only comments on posts with a `postType` of `\"QUESTION\"` can be voted on.",
                 ">",
                 ">",
@@ -443,7 +443,8 @@
         "extra":
           {  } },
       { "name": "onCommentMarkedAsBest",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -457,10 +458,10 @@
         "docs":
           { "summary": "A backend event that fires when a forum comment is marked as best.",
             "description":
-              [ "The `onCommentMarkedAsBest()` event handler runs when an existing forum comment in your site is marked as best. ",
+              [ "The `onCommentMarkedAsBest()` event handler runs when an existing forum comment in your site is marked as best.",
                 " The received `MarkedAsBestComment` object contains information about the comment that was marked as best.",
                 "",
-                "> **Notes:** ",
+                "> **Notes:**",
                 "> + Only comments on posts with a `postType` of `\"QUESTION\"` can be marked as best.",
                 ">",
                 ">",
@@ -483,7 +484,8 @@
         "extra":
           {  } },
       { "name": "onCommentReported",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -497,7 +499,7 @@
         "docs":
           { "summary": "A backend event that fires when a forum comment is reported.",
             "description":
-              [ "The `onCommentReported()` event handler runs when a site visitor reports a comment on your site. ",
+              [ "The `onCommentReported()` event handler runs when a site visitor reports a comment on your site.",
                 " The received `ReportedComment` object contains information about the comment that was reported.",
                 "",
                 "> **Note:** Backend events are **not** fired when previewing your site." ],
@@ -556,7 +558,8 @@
         "extra":
           {  } },
       { "name": "onCommentUnmarkedAsBest",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -570,10 +573,10 @@
         "docs":
           { "summary": "A backend event that fires when a forum comment is unmarked as best.",
             "description":
-              [ "The `onCommentUnmarkedAsBest()` event handler runs when an existing forum comment in your site is unmarked as best. ",
+              [ "The `onCommentUnmarkedAsBest()` event handler runs when an existing forum comment in your site is unmarked as best.",
                 " The received `UnmarkedAsBestComment` object contains information about the comment that was unmarked as best.",
                 "",
-                "> **Notes:** ",
+                "> **Notes:**",
                 "> + Only comments on posts with a `postType` of `\"QUESTION\"` can be marked and unmarked as best.",
                 ">",
                 ">",
@@ -596,7 +599,8 @@
         "extra":
           {  } },
       { "name": "onCommentUnvoted",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -613,7 +617,7 @@
               [ "The `onCommentUnvoted()` event handler runs when a vote is removed from a forum comment.",
                 " The received `UnvotedComment` object contains information about the comment that was unvoted.",
                 "",
-                "> **Notes:** ",
+                "> **Notes:**",
                 "> + Only comments on posts with a `postType` of `\"QUESTION\"` can be voted on.",
                 ">",
                 ">",
@@ -690,7 +694,8 @@
         "extra":
           {  } },
       { "name": "onCommentUpvoted",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -707,7 +712,7 @@
               [ "The `onCommentUpvoted()` event handler runs when an existing forum comment in your site is upvoted.",
                 " The received `UpvotedComment` object contains information about the comment that was upvoted.",
                 "",
-                "> **Notes:** ",
+                "> **Notes:**",
                 "> + Only comments on posts with a `postType` of `\"QUESTION\"` can be upvoted.",
                 ">",
                 ">",
@@ -730,7 +735,8 @@
         "extra":
           {  } },
       { "name": "onPostClosed",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -744,7 +750,7 @@
         "docs":
           { "summary": "A backend event that fires when a forum post is closed.",
             "description":
-              [ "The `onPostClosed()` event handler runs when an existing forum post in your site is closed. ",
+              [ "The `onPostClosed()` event handler runs when an existing forum post in your site is closed.",
                 " When a forum post is closed, members can't comment on the post.",
                 " The received `ClosedPost` object contains information about the post that was closed.",
                 "",
@@ -900,7 +906,8 @@
         "extra":
           {  } },
       { "name": "onPostMoved",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -914,7 +921,7 @@
         "docs":
           { "summary": "A backend event that fires when a forum post is moved.",
             "description":
-              [ "The `onPostMoved()` event handler runs when an existing forum post in your site is moved ",
+              [ "The `onPostMoved()` event handler runs when an existing forum post in your site is moved",
                 " to a different category. The received `MovedPost` object contains information about the post that was moved.",
                 "",
                 "> **Note:** Backend events are **not** fired when previewing your site." ],
@@ -938,7 +945,8 @@
         "extra":
           {  } },
       { "name": "onPostOpened",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -952,7 +960,7 @@
         "docs":
           { "summary": "A backend event that fires when a forum post is opened.",
             "description":
-              [ "The `onPostOpened()` event handler runs when an existing forum post in your site is opened. ",
+              [ "The `onPostOpened()` event handler runs when an existing forum post in your site is opened.",
                 " When a forum post is open, members can comment on the post.",
                 " The received `OpenedPost` object contains information about the post that was opened.",
                 "",
@@ -1015,7 +1023,8 @@
         "extra":
           {  } },
       { "name": "onPostReported",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -1029,7 +1038,7 @@
         "docs":
           { "summary": "A backend event that fires when a forum post is reported.",
             "description":
-              [ "The `onPostReported()` event handler runs when a site visitor reports a post on your site. ",
+              [ "The `onPostReported()` event handler runs when a site visitor reports a post on your site.",
                 " The received `ReportedPost` object contains information about the post that was reported.",
                 "",
                 "> **Note:** Backend events are **not** fired when previewing your site." ],
@@ -1243,7 +1252,7 @@
               "doc": "Type of header background.\nOne of the following:\n\n + `\"IMAGE\"`: Category header background is an image.\n + `\"COLOR\"`: Category header background is a color.\n\n\nThe default value is `\"COLOR\"`." },
             { "name": "headerImage",
               "type": "string",
-              "doc": "Category header background [image source](https://www.wix.com/corvid/reference/$w/image/src). Applicable only if `headerType` is an image." },
+              "doc": "Category header background [image source](https://www.wix.com/velo/reference/$w/image/src). Applicable only if `headerType` is an image." },
             { "name": "headerImageOverlayColor",
               "type": "wix-forum-backend.Events.Color",
               "doc": "Forum category header image overlay color. Applicable only when `headerType` is `\"IMAGE\"`." },
@@ -1279,10 +1288,11 @@
               "doc": "Date and time the category was last updated." },
             { "name": "categoryType",
               "type": "string",
-              "doc": "Type of category. \nOne of the following:\n\n\n + `\"DISCUSSION\"`: Conversational discussion with other members.\n + `\"QUESTION\"`: Specific question with answers from the community." } ],
+              "doc": "Type of category.\nOne of the following:\n\n\n + `\"DISCUSSION\"`: Conversational discussion with other members.\n + `\"QUESTION\"`: Specific question with answers from the community." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ClosedPost",
         "locations":
           [ { "lineno": 393,
@@ -1667,13 +1677,14 @@
               "doc": "URL-friendly name of the post that is unique across the forum." },
             { "name": "postType",
               "type": "string",
-              "doc": "Type of post. \nOne of the following:\n\n\n + `\"DISCUSSION\"`: Conversational discussion with other members.\n + `\"QUESTION\"`: Specific question with answers from the community." },
+              "doc": "Type of post.\nOne of the following:\n\n\n + `\"DISCUSSION\"`: Conversational discussion with other members.\n + `\"QUESTION\"`: Specific question with answers from the community." },
             { "name": "bestAnswerCommentId",
               "type": "string",
               "doc": "ID of comment marked as best answer to the post question. Applicable only for posts with a `postType` of `\"QUESTION\"`." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ReportedComment",
         "locations":
           [ { "lineno": 694,

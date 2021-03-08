@@ -1,7 +1,6 @@
 { "name": "wix-realtime-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "publisher.js" },
@@ -56,8 +55,7 @@
         {  } },
   "properties":
     [ { "name": "permissionsRouter",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "wix-realtime-backend.PermissionsRouter",
@@ -252,8 +250,7 @@
         "extra":
           {  } },
       { "name": "realtime_check_permission",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "channel",
@@ -662,4 +659,4 @@
   "relatedContent":
     [ { "icon": "example",
         "text": "Real time notifications for real estate",
-        "url": "https://www.wix.com/corvid/example/real-time-notifications-for-real-estate" } ] }
+        "url": "https://www.wix.com/velo/example/real-time-notifications-for-real-estate" } ] }

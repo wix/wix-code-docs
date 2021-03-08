@@ -10,7 +10,7 @@
   "docs":
     { "summary": "Provides functionality for all elements that can be hidden or collapsed.",
       "description":
-        [ "The `HiddenCollapsedMixin` [mixin](https://support.wix.com/en/article/corvid-about-mixins) provides properties and functions that elements can inherit and use.",
+        [ "The `HiddenCollapsedMixin` [mixin](https://support.wix.com/en/article/velo-about-mixins) provides properties and functions that elements can inherit and use.",
           " ",
           " > **Note:** Mixins are not elements. You cannot add mixins to a page in the Editor like other `$w` elements, and mixins are not meant to be used directly ",
           " in your code." ],

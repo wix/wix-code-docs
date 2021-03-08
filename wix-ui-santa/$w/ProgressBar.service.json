@@ -73,9 +73,9 @@
         "set": true,
         "type": "number",
         "locations":
-          [ { "lineno": 138,
+          [ { "lineno": 142,
               "filename": "ProgressBar.js" },
-            { "lineno": 166,
+            { "lineno": 171,
               "filename": "ProgressBar.js" } ],
         "docs":
           { "summary": "Sets or gets a progress bar's target value.",
@@ -117,7 +117,7 @@
         "locations":
           [ { "lineno": 70,
               "filename": "ProgressBar.js" },
-            { "lineno": 100,
+            { "lineno": 102,
               "filename": "ProgressBar.js" } ],
         "docs":
           { "summary": "Sets or gets a progress bar's value.",

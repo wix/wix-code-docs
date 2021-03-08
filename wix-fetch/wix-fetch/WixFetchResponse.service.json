@@ -1,8 +1,7 @@
 { "name": "WixFetchResponse",
   "memberOf": "wix-fetch",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 71,
       "filename": "index.js" },
@@ -71,8 +70,7 @@
         "extra":
           {  } },
       { "name": "headers",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "Object",

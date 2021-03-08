@@ -8,7 +8,7 @@
   "docs":
     { "summary": "The results of an aggregation, containing the aggregated values.",
       "description":
-        [ "When you execute an aggregation with the [`run()`](https://www.wix.com/corvid/reference/wix-data/wixdataaggregate/run) function, it returns",
+        [ "When you execute an aggregation with the [`run()`](https://www.wix.com/velo/reference/wix-data/wixdataaggregate/run) function, it returns",
           " a Promise that resolves to a `WixDataAggregateResult` object, which contains",
           " the aggregated values." ],
       "links": [],

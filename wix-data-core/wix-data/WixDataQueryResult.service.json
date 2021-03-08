@@ -3,7 +3,7 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 510,
+    { "lineno": 482,
       "filename": "query.es6" },
   "docs":
     { "summary": "The results of a data query, containing the retrieved items.",
@@ -23,7 +23,7 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 648,
+          [ { "lineno": 620,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the index of the current results page number.",
@@ -69,7 +69,7 @@
             "typeParams":
               [ "Object" ] },
         "locations":
-          [ { "lineno": 537,
+          [ { "lineno": 509,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the items that match the query.",
@@ -167,7 +167,7 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 560,
+          [ { "lineno": 532,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the number of items in the current results page.",
@@ -206,7 +206,7 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 610,
+          [ { "lineno": 582,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the query page size.",
@@ -245,7 +245,7 @@
         "set": false,
         "type": "boolean",
         "locations":
-          [ { "lineno": 673,
+          [ { "lineno": 645,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Indicates if referenced items have been trimmed from the results.",
@@ -286,7 +286,7 @@
         "set": false,
         "type": "wix-data.WixDataQuery",
         "locations":
-          [ { "lineno": 596,
+          [ { "lineno": 568,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the query used to get the current results.",
@@ -320,7 +320,7 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 579,
+          [ { "lineno": 551,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the total number of items that match the query.",
@@ -357,7 +357,7 @@
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 629,
+          [ { "lineno": 601,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Returns the total number of pages the query produced.",
@@ -399,7 +399,7 @@
           { "type": "boolean",
             "doc": "`true` if there are more results." },
         "locations":
-          [ { "lineno": 771,
+          [ { "lineno": 743,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Indicates if the query has more results.",
@@ -442,7 +442,7 @@
           { "type": "boolean",
             "doc": "`true` if there are previous results." },
         "locations":
-          [ { "lineno": 789,
+          [ { "lineno": 761,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Indicates the query has previous results.",
@@ -468,7 +468,7 @@
                   [ "wix-data.WixDataQueryResult" ] },
             "doc": "Fulfilled - A query result object with the next page of query results.\nRejected - The errors that caused the rejection." },
         "locations":
-          [ { "lineno": 694,
+          [ { "lineno": 666,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Retrieves the next page of query results.",
@@ -541,7 +541,7 @@
                   [ "wix-data.WixDataQueryResult" ] },
             "doc": "Fulfilled - A query result object with the previous page of query results.\nRejected - The errors that caused the rejection." },
         "locations":
-          [ { "lineno": 731,
+          [ { "lineno": 703,
               "filename": "query.es6" } ],
         "docs":
           { "summary": "Retrieves the previous page of query results.",
@@ -589,8 +589,8 @@
     {  },
   "FAQs":
     [ { "title": "I know my query should be returning more results. Where are they?",
-        "markdown": "By default queries return 50 items at a time. To retrieve more items, you can page through the query's results using the [`hasNext()`](https://www.wix.com/code/reference/wix-data.WixDataQueryResult.html#hasNext) and [`next()`](https://www.wix.com/code/reference/wix-data.WixDataQueryResult.html#next) functions. You can also use the [`limit()`](https://www.wix.com/code/reference/wix-data.WixDataQuery.html#limit) function when creating your query to increase the number of items returned at a time." },
+        "markdown": "By default queries return 50 items at a time. To retrieve more items, you can page through the query's results using the [`hasNext()`](https://www.wix.com/velo/reference/wix-data.WixDataQueryResult.html#hasNext) and [`next()`](https://www.wix.com/velo/reference/wix-data.WixDataQueryResult.html#next) functions. You can also use the [`limit()`](https://www.wix.com/velo/reference/wix-data.WixDataQuery.html#limit) function when creating your query to increase the number of items returned at a time." },
       { "title": "How do I populate a repeater with query result data?",
-        "markdown": "Set the repeater's data to the query result's [`items`](https://www.wix.com/code/reference/wix-data.WixDataQueryResult.html#items) using the [`data`](https://www.wix.com/code/reference/$w.Repeater.html#data) property. This triggers the [`onItemReady()`](https://www.wix.com/code/reference/$w.Repeater.html#onItemReady) event handler where you define how the query data is shown in page elements." },
+        "markdown": "Set the repeater's data to the query result's [`items`](https://www.wix.com/velo/reference/wix-data.WixDataQueryResult.html#items) using the [`data`](https://www.wix.com/velo/reference/$w.Repeater.html#data) property. This triggers the [`onItemReady()`](https://www.wix.com/velo/reference/$w.Repeater.html#onItemReady) event handler where you define how the query data is shown in page elements." },
       { "title": "How do I get the rest of the referenced items when the query returns with 'partialIncludes: true'?",
-        "markdown": "If you have more than 50 referenced items for a particular item, you need to use the [`queryReferenced()`](https://www.wix.com/code/reference/wix-data.html#queryReferenced) function to get the full list of referenced items." } ] }
+        "markdown": "If you have more than 50 referenced items for a particular item, you need to use the [`queryReferenced()`](https://www.wix.com/velo/reference/wix-data.html#queryReferenced) function to get the full list of referenced items." } ] }

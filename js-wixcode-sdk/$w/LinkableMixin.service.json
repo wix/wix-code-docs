@@ -12,7 +12,7 @@
           "",
           " **About Mixins**",
           "",
-          " [Mixins](https://support.wix.com/en/article/corvid-about-mixins) provide functionality that other elements can inherit and use. ",
+          " [Mixins](https://support.wix.com/en/article/velo-about-mixins) provide functionality that other elements can inherit and use. ",
           " ",
           " Mixins are not elements. You cannot add mixins to a page in the Editor like other `$w` elements, and mixins are not meant to be used directly ",
           " in your code. ",
@@ -70,7 +70,7 @@
                 "",
                 " Note that Wix URLs do not contain spaces. A page which has spaces in its",
                 " name has its spaces replaced with dashes (`-`). Similarly,",
-                " a [dynamic page URL](https://support.wix.com/en/article/wix-code-about-setting-up-dynamic-page-urls) which ",
+                " a [dynamic page URL](https://support.wix.com/en/article/creating-a-unique-dynamic-page-url) which ",
                 " contains the value of a field in your collection with spaces",
                 " has its spaces replaced with dashes (`-`)." ],
             "links":

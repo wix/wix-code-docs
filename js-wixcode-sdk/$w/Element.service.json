@@ -14,7 +14,7 @@
           "",
           " **About Mixins**",
           "",
-          " [Mixins](https://support.wix.com/en/article/corvid-about-mixins) provide functionality that other elements can inherit and use. ",
+          " [Mixins](https://support.wix.com/en/article/velo-about-mixins) provide functionality that other elements can inherit and use. ",
           " ",
           " Mixins are not elements. You cannot add mixins to a page in the Editor like other `$w` elements, and mixins are not meant to be used directly ",
           " in your code. ",
@@ -87,7 +87,7 @@
           [ { "lineno": 98,
               "filename": "Element.es6" } ],
         "docs":
-          { "summary": "Adds an event handler that runs when the mouse pointer is moved\n onto the element.\n\n> **Deprecation note:** The $w parameter of event handlers is being deprecated. To get\n a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function\n and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see\n [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers).\n\n You can also [define an event handler using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events).",
+          { "summary": "Adds an event handler that runs when the mouse pointer is moved\n onto the element.\n\n> **Deprecation note:** The $w parameter of event handlers is being deprecated. To get\n a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function\n and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see\n [here](https://www.wix.com/velo/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers).\n\n You can also [define an event handler using the Properties and Events panel](https://support.wix.com/en/article/velo-reacting-to-user-actions-using-events).",
             "links": [],
             "examples":
               [ { "title": "Get the mouse event info when the mouse enters an element",
@@ -122,7 +122,7 @@
           [ { "lineno": 137,
               "filename": "Element.es6" } ],
         "docs":
-          { "summary": "Adds an event handler that runs when the mouse pointer is moved\n off of the element.\n\n > **Deprecation note:** The $w parameter of event handlers is being deprecated. To get\n a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function\n and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see\n [here](https://www.wix.com/code/home/forum/wix-tips-and-updates/removal-of-the-w-parameter-from-event-handlers).\n\n You can also [define an event handler using the Properties and Events panel](https://support.wix.com/en/article/corvid-reacting-to-user-actions-using-events).",
+          { "summary": "Adds an event handler that runs when the mouse pointer is moved\n off of the element.\n\n > **Deprecation note:** The $w parameter of event handlers is being deprecated. To get\n a scoped selector for working with elements in repeater items, use the [$w.at()]($w.html#at) function\n and pass it the context property of the event parameter: `$item = $w.at(event.context)`. To learn more, see\n [here](https://www.wix.com/velo/forum/tips-tutorials-examples/removal-of-the-w-parameter-from-event-handlers).\n\n You can also [define an event handler using the Properties and Events panel](https://support.wix.com/en/article/velo-reacting-to-user-actions-using-events).",
             "links": [],
             "examples":
               [ { "title": "Get the mouse event info when the mouse exits an element",

@@ -1,7 +1,6 @@
 { "name": "wix-users",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "users.js" },
@@ -106,7 +105,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the token has been applied." },
         "locations":
-          [ { "lineno": 470,
+          [ { "lineno": 476,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Logs the current user into the site using the given session token.",
@@ -451,7 +450,7 @@
         "ret":
           { "type": "wix-users.PolicyDetails" },
         "locations":
-          [ { "lineno": 516,
+          [ { "lineno": 522,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Gets the user's consent policy regarding allowed cookies and third-party data transfer, such as for GDPR or CCPA purposes.",
@@ -520,7 +519,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the user has been logged in.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 451,
+          [ { "lineno": 457,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Logs a user in based on email and password.",
@@ -613,7 +612,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 621,
+          [ { "lineno": 627,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Sets the function that runs when a user's consent policy was changed using [`setConsentPolicy()`](#setConsentPolicy) or if it was reset using [`resetConsentPolicy()`](#resetConsentPolicy).",
@@ -760,8 +759,7 @@
         "extra":
           {  } },
       { "name": "promptLogin",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "options",
@@ -863,7 +861,7 @@
                   [ "wix-users.RegistrationResult" ] },
             "doc": "Fulfilled - When the user has been registered.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 411,
+          [ { "lineno": 417,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Registers a new site member.",
@@ -966,7 +964,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the reset is complete.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 542,
+          [ { "lineno": 548,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Removes the current policy from the user's browser and resets the user's \n consent policy to the default policy for the site.",
@@ -1021,7 +1019,7 @@
                   [ "wix-users.PolicyDetails" ] },
             "doc": "Fulfilled - All the details of the user's consent policy, including if the the current policy is the default site policy and the policy's allowed cookies.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 569,
+          [ { "lineno": 575,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Sets the current user's consent policy regarding allowed cookies and data transfer \n to third parties, such as for GDPR or CCPA purposes.",
@@ -1103,7 +1101,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 604,
+          [ { "lineno": 610,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Function that runs when a user's consent policy was changed using [`setConsentPolicy()`](#setConsentPolicy).",
@@ -1136,7 +1134,7 @@
   "messages":
     [ { "name": "ConsentPolicyChangedEvent",
         "locations":
-          [ { "lineno": 612,
+          [ { "lineno": 618,
               "filename": "users.js" } ],
         "docs":
           { "summary": "The event that occurred when the consent policy changed.",
@@ -1208,7 +1206,7 @@
         "labels": [] },
       { "name": "Policy",
         "locations":
-          [ { "lineno": 662,
+          [ { "lineno": 668,
               "filename": "users.js" } ],
         "docs":
           { "summary": "The current user's  consent policy settings.",
@@ -1264,7 +1262,7 @@
         "labels": [] },
       { "name": "PolicyDetails",
         "locations":
-          [ { "lineno": 649,
+          [ { "lineno": 655,
               "filename": "users.js" } ],
         "docs":
           { "summary": "The complete details of the current user's consent policy.",
@@ -1303,13 +1301,18 @@
         "members":
           [ { "name": "contactInfo",
               "type": "wix-crm.ContactInfo",
-              "doc": "Contact information." } ],
+              "doc": "Contact information.",
+              "optional": true },
+            { "name": "privacyStatus",
+              "type": "string",
+              "doc": "Sets the [privacy status](https://support.wix.com/en/article/member-privacy-settings-for-groups) of a new member upon registration. \nOne of: \n\n + `\"PUBLIC\"`: Sets the new member status to public. A member whose status is public is a member of the site's community.\n + `\"PRIVATE\"`: Sets the new member status to private. A member whose status is private is not a member of the site's community. The default is set to private.",
+              "optional": true } ],
         "extra":
           {  },
         "labels": [] },
       { "name": "RegistrationResult",
         "locations":
-          [ { "lineno": 398,
+          [ { "lineno": 404,
               "filename": "users.js" } ],
         "docs":
           { "summary": "An object that contains information about the results of a site registration.",
@@ -1388,15 +1391,15 @@
         "url": "https://support.wix.com/en/article/wix-code-tutorial-creating-a-custom-registration-form-with-code" },
       { "icon": "example",
         "text": "Members Area",
-        "url": "https://www.wix.com/corvid/example/members-area" } ],
+        "url": "https://www.wix.com/velo/example/members-area" } ],
   "FAQs":
     [ { "title": "What's the difference between wix-users and wix-crm?",
         "markdown": "The Users API contains functionality for working with users who are logged-in members. The CRM API contains functionality for working with your site's contacts. Note that all members are also contacts, but contacts are not necessarily members." },
       { "title": "How do I create a custom member registration form?",
         "markdown": "Follow [this tutorial](https://support.wix.com/en/article/wix-code-tutorial-creating-a-custom-registration-form-with-code) to create a custom member registration form." },
       { "title": "How do I send an email to a user who is not the currently logged-in user?",
-        "markdown": "Using the [`emailUser()`](https://www.wix.com/code/reference/wix-users.html#emailUser) function of [`wix-users`](https://www.wix.com/code/reference/wix-users.html) you can only send emails to the currently logged-in user. However, from the backend, using the [`emailUser()`](https://www.wix.com/code/reference/wix-users-backend.html#emailUser) function of [`wix-users-backend`](https://www.wix.com/code/reference/wix-users-backend.html) you can send emails to any site member." },
+        "markdown": "Using the [`emailUser()`](https://www.wix.com/velo/reference/wix-users.html#emailUser) function of [`wix-users`](https://www.wix.com/velo/reference/wix-users.html) you can only send emails to the currently logged-in user. However, from the backend, using the [`emailUser()`](https://www.wix.com/velo/reference/wix-users-backend.html#emailUser) function of [`wix-users-backend`](https://www.wix.com/velo/reference/wix-users-backend.html) you can send emails to any site member." },
       { "title": "How can I get the current user's name?",
-        "markdown": "Use the [`currentUser`](https://www.wix.com/code/reference/wix-users.html#currentUser) property to get the current user's `id`. Then query the Members/PrivateMembersData collection for the item with that `_id`.\n\n```javascript\n\nwixData.query(\"Members/PrivateMembersData\") \\\n  .eq(\"_id\", wixUsers.currentUser.id) \\\n  .find() \\\n  .then( (results) => { \\\n    lastName = results.items[0].lastName; \\\n  } );\n\n``` " },
+        "markdown": "Use the [`currentUser`](https://www.wix.com/velo/reference/wix-users.html#currentUser) property to get the current user's `id`. Then query the Members/PrivateMembersData collection for the item with that `_id`.\n\n```javascript\n\nwixData.query(\"Members/PrivateMembersData\") \\\n  .eq(\"_id\", wixUsers.currentUser.id) \\\n  .find() \\\n  .then( (results) => { \\\n    lastName = results.items[0].lastName; \\\n  } );\n\n``` " },
       { "title": "Why is the wix-users API not functioning properly when I test my code in preview?",
         "markdown": "The wix-users API is only partially functional when previewing your site. You need to view a published version of your site to see its full functionality." } ] }
