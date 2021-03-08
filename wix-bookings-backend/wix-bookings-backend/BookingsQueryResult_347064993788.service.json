@@ -1,0 +1,234 @@
+{ "name": "BookingsQueryResult_347064993788",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 2758,
+      "filename": "shared.js" },
+  "docs":
+    { "summary": "The results of a bookingsRc query, containing the retrieved items.",
+      "description":
+        [ "When you execute a query with the [`find()`](wix-bookings-backend.BookingsQueryBuilder.html#find)",
+          "function, it returns a Promise that resolves to a `BookingsQueryResult` object.",
+          "This object contains the items that match the query, information about the",
+          "query itself, and functions for paging through the query results." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "currentPage",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 2859,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Returns the index of the current results page number.",
+            "description":
+              [ "The `currentPage` is a zero-based index of the current page of results.",
+                "",
+                "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions.",
+                "",
+                "The `currentPage` property returns `undefined` if the query returned no results." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "items",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type":
+          { "name": "Array",
+            "typeParams":
+              [ "wix-bookings-backend.Session_255663383937" ] },
+        "locations":
+          [ { "lineno": 2768,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Returns the items that match the query.",
+            "description":
+              [ "The current page of items retrieved by the query.",
+                "",
+                "Slots on the calendar.",
+                "",
+                "",
+                "> **Note:** When no items match the query, the items array is empty.",
+                "",
+                "To paginate your query results, use the `BookingsQueryResult` pagination properties and functions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "length",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 2784,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Returns the number of items in the current results page.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "pageSize",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 2835,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Returns the query page size.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "query",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-bookings-backend.BookingsQueryBuilder_70970842132",
+        "locations":
+          [ { "lineno": 2806,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Contains functionality for refining a bookingsRc query.",
+            "description":
+              [ "The `BookingsQueryBuilder` functions enable you to run, sort, filter, and control",
+                "which results a query returns.",
+                "",
+                "Typically, you build a query using any of the bookingsRc query functions,",
+                "refine the query by chaining `BookingsQueryBuilder` functions, and then execute the",
+                "query by chaining the [`find()`](#find) function.",
+                "",
+                "For example, the following code queries...:",
+                "",
+                "```javascript",
+                "import wixBookingsRcBackend from 'wix-bookingsRc-backend';",
+                "",
+                "wixBookingsRcBackend.queryBookingsRc()",
+                ".eq(\"<property1>\", \"<value1>\")",
+                ".ascending(\"<property2>\")",
+                ".limit(5)",
+                ".find()",
+                ".then( (results) => {",
+                "console.log(results.items);",
+                "} );",
+                "```" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "totalCount",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 2796,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Returns the total number of items that match the query.",
+            "description":
+              [ "The `totalCount` returns the total number of items that match the query,",
+                "not just the number of items in the current page." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "totalPages",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 2847,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Returns the total number of pages the query produced.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations":
+    [ { "name": "hasNext",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "boolean",
+            "doc": "`true` if there are more results." },
+        "locations":
+          [ { "lineno": 2917,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Indicates if the query has more results.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "hasPrev",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "boolean",
+            "doc": "`true` if there are previous results." },
+        "locations":
+          [ { "lineno": 2924,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Indicates if the query has previous results.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

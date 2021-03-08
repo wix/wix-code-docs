@@ -1,0 +1,118 @@
+{ "name": "servicesPolicy",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 125,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getGlobalPolicy",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.servicesPolicy.BusinessServicesPolicy_10291213478" ] },
+            "doc": "Fulfilled - Service policy." },
+        "locations":
+          [ { "lineno": 11,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesPolicyService_Get_getGlobalPolicy.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateGlobalPolicy",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "policy",
+              "type": "wix-bookings-backend.servicesPolicy.BusinessServicesPolicy_9457014989",
+              "doc": "Service policy." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 11,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesPolicyService_Update_updateGlobalPolicy.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "BusinessServicesPolicy_10291213478",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesPolicyService_Get_getGlobalPolicy.js" } ],
+        "docs":
+          { "summary": "Service policy.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "bookUpToXMinutesBefore",
+              "type": "number",
+              "doc": "Minimum amount of time to make a booking before the start of the booked item. For sessions, this is relative to the start time of the session. For schedules, this is relative to the start time of the first session, excluding past sessions. Defaults to 0." },
+            { "name": "cancelRescheduleUpToXMinutesBefore",
+              "type": "number",
+              "doc": "Minimum time that a booking can be canceled or rescheduled before the session starts. Defaults to 0." },
+            { "name": "futureBookingsPolicy",
+              "type": "wix-bookings-backend.FutureBookingPolicy_1015539681",
+              "doc": "An object specifying how far in advance a booking can be made." },
+            { "name": "waitingListPolicy",
+              "type": "wix-bookings-backend.WaitingListPolicy_4804204904",
+              "doc": "Waitlist policy for the service. Empty by default." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "BusinessServicesPolicy_9457014989",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesPolicyService_Update_updateGlobalPolicy.js" } ],
+        "docs":
+          { "summary": "Service policy.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "bookUpToXMinutesBefore",
+              "type": "number",
+              "doc": "Minimum amount of time to make a booking before the start of the booked item. For sessions, this is relative to the start time of the session. For schedules, this is relative to the start time of the first session, excluding past sessions. Defaults to 0.",
+              "optional": true },
+            { "name": "cancelRescheduleUpToXMinutesBefore",
+              "type": "number",
+              "doc": "Minimum time that a booking can be canceled or rescheduled before the session starts. Defaults to 0.",
+              "optional": true },
+            { "name": "futureBookingsPolicy",
+              "type": "wix-bookings-backend.FutureBookingPolicy_830162239",
+              "doc": "An object specifying how far in advance a booking can be made.",
+              "optional": true },
+            { "name": "waitingListPolicy",
+              "type": "wix-bookings-backend.WaitingListPolicy_4526138741",
+              "doc": "Waitlist policy for the service. Empty by default.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

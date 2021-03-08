@@ -1,0 +1,134 @@
+{ "name": "forms",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 113,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "createForm",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "formInfo",
+              "type": "wix-bookings-backend.Form_52457326391",
+              "doc": "The form to be created" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Form_58415165332" ] },
+            "doc": "Fulfilled - The requested form" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_FormsService_Create_createForm.js" } ],
+        "docs":
+          { "summary": "Creates a form.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "getBusinessForm",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Form_58415165332" ] },
+            "doc": "Fulfilled - The requested form" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_FormsService_Get_getBusinessForm.js" } ],
+        "docs":
+          { "summary": "Gets a form",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data or Read Bookings - Including Participants permissions scope" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "getForm",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "formId",
+              "type": "string",
+              "doc": "The Id of the form to get" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Form_58415165332" ] },
+            "doc": "Fulfilled - The requested form" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_FormsService_Get_getForm.js" } ],
+        "docs":
+          { "summary": "Gets a form",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data or Read Bookings - Including Participants permissions scope" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateForm",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "formInfo",
+              "type": "wix-bookings-backend.Form_52457326391",
+              "doc": "The form to be created" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.forms.UpdateFormResult_59466252497" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com_wixpress_bookings_services_api_v1_FormsService_Update_updateForm.js" } ],
+        "docs":
+          { "summary": "Updates a form.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "UpdateFormResult_59466252497",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_FormsService_Update_updateForm.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "form",
+              "type": "wix-bookings-backend.Form_58415165332",
+              "doc": "The requested form" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

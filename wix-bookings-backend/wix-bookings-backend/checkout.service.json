@@ -1,0 +1,109 @@
+{ "name": "checkout",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 53,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "getExistingSessionCheckoutOptions",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "sessionId",
+              "type": "string",
+              "doc": "Existing session ID." },
+            { "name": "checkoutOptions",
+              "type": "wix-bookings-backend.CheckoutOptionsRequest_246746251605" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.CheckoutOptions_56278073057" ] },
+            "doc": "Fulfilled - Checkout options." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_checkout_api_v1_CheckoutBackend_CheckoutOptions_getExistingSessionCheckoutOptions.js" } ],
+        "docs":
+          { "summary": "Calculates checkout options available to book and check out the given session/schedule.",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data, Read Bookings - Including Participants or Manage Bookings permission scope.",
+                "To calculate the Wix Paid Plans available for a site member using the `contactId` field, the Manage Bookings permission scope is required." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "getNewSessionCheckoutOptions",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "sessionInfo",
+              "type": "wix-bookings-backend.Session_225620643475",
+              "doc": "A session that will be created for this booking.\n schedule_id, schedule_owner_id, start, and rate are used to calculate the checkout options.\n Start is used to access the relevant paid plans." },
+            { "name": "checkoutOption",
+              "type": "wix-bookings-backend.CheckoutOptionsRequest_246746251605" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.CheckoutOptions_56278073057" ] },
+            "doc": "Fulfilled - Checkout options." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_checkout_api_v1_CheckoutBackend_CheckoutOptions_getNewSessionCheckoutOptions.js" } ],
+        "docs":
+          { "summary": "Calculates checkout options available to book and check out the given session/schedule.",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data, Read Bookings - Including Participants or Manage Bookings permission scope.",
+                "To calculate the Wix Paid Plans available for a site member using the `contactId` field, the Manage Bookings permission scope is required." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "getScheduleCheckoutOptions",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "scheduleId",
+              "type": "string",
+              "doc": "Existing schedule ID. Will be used to access service properties including payment options, rate, and first session start time that will be used to access relevant plans." },
+            { "name": "checkoutOptions",
+              "type": "wix-bookings-backend.CheckoutOptionsRequest_246746251605" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.CheckoutOptions_56278073057" ] },
+            "doc": "Fulfilled - Checkout options." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_checkout_api_v1_CheckoutBackend_CheckoutOptions_getScheduleCheckoutOptions.js" } ],
+        "docs":
+          { "summary": "Calculates checkout options available to book and check out the given session/schedule.",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data, Read Bookings - Including Participants or Manage Bookings permission scope.",
+                "To calculate the Wix Paid Plans available for a site member using the `contactId` field, the Manage Bookings permission scope is required." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

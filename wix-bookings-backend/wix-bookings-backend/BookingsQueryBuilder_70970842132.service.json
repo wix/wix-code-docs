@@ -1,0 +1,42 @@
+{ "name": "BookingsQueryBuilder_70970842132",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1760,
+      "filename": "shared.js" },
+  "docs":
+    { "summary": "Contains functionality for refining a bookingsRc query.",
+      "description":
+        [ "The `BookingsQueryBuilder` functions enable you to run, sort, filter, and control",
+          "which results a query returns.",
+          "",
+          "Typically, you build a query using any of the bookingsRc query functions,",
+          "refine the query by chaining `BookingsQueryBuilder` functions, and then execute the",
+          "query by chaining the [`find()`](#find) function.",
+          "",
+          "For example, the following code queries...:",
+          "",
+          "```javascript",
+          "import wixBookingsRcBackend from 'wix-bookingsRc-backend';",
+          "",
+          "wixBookingsRcBackend.queryBookingsRc()",
+          ".eq(\"<property1>\", \"<value1>\")",
+          ".ascending(\"<property2>\")",
+          ".limit(5)",
+          ".find()",
+          ".then( (results) => {",
+          "console.log(results.items);",
+          "} );",
+          "```" ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

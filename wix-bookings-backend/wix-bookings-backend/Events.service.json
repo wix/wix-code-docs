@@ -2,7 +2,8 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "changed" ],
+    [ "changed",
+      "removed" ],
   "location":
     { "lineno": 1,
       "filename": "bookingsEvents.js" },

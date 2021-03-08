@@ -1,0 +1,298 @@
+{ "name": "services",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 89,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "createService",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "serviceInfo",
+              "type": "wix-bookings-backend.Service_41674944276",
+              "doc": "The service entity to update." },
+            { "name": "schedulesInfo",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Schedule_206397206374" ] },
+              "doc": "List of schedules to be assigned for that service. Currently only a single schedule is allowed." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Service_56198764684" ] },
+            "doc": "Fulfilled - The updated service." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Create_createService.js" } ],
+        "docs":
+          { "summary": "Creates a service",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "deleteService",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "serviceId",
+              "type": "string",
+              "doc": "The Id of the service to delete" },
+            { "name": "preserveFutureSessionsWithParticipants",
+              "type": "boolean",
+              "doc": "Whether to preserve future sessions with participants. Optional, default is false." },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.ParticipantNotification_2585812620",
+              "doc": "Whether to notify participants about the change and an optional custom message" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "string" ] },
+            "doc": "Fulfilled - The Id of the deleted service" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Delete_deleteService.js" } ],
+        "docs":
+          { "summary": "Deletes a service",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "getService",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "serviceId",
+              "type": "string",
+              "doc": "Requested service Id" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Service_56198764684" ] },
+            "doc": "Fulfilled - The updated service." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Get_getService.js" } ],
+        "docs":
+          { "summary": "Retrieves a service by Id",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data or Read Bookings - Including Participants permissions scope" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "listServices",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "includeDeleted",
+              "type": "boolean",
+              "doc": "Optional. Default is false" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-bookings-backend.Service_56198764684" ] } ] },
+            "doc": "Fulfilled - List of all retrieved services" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_List_listServices.js" } ],
+        "docs":
+          { "summary": "Lists all services in the business",
+            "description":
+              [ "> **Permissions**",
+                "> This endpoint requires the Read Bookings - Public Data or Read Bookings - Including Participants permissions scope" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateService",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "serviceId",
+              "type": "string",
+              "doc": "Service ID." },
+            { "name": "serviceInfo",
+              "type": "wix-bookings-backend.Service_41674944276",
+              "doc": "The service entity to update." },
+            { "name": "schedulesActions",
+              "type": "wix-bookings-backend.services.BatchRequest_231081468228",
+              "doc": "Actions to perform on the service's schedules. Can contain schedules to create, update, and cancel." },
+            { "name": "participantsNotification",
+              "type": "wix-bookings-backend.ParticipantNotification_2585812620",
+              "doc": "Whether to notify participants about the change and an optional custom message" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.services.UpdateServiceResult_318819760092" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 44,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "summary": "Updated a service",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "BatchRequest_231081468228",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "summary": "Actions to perform on the service's schedules. Can contain schedules to create, update, and cancel.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "createRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.services.CreateScheduleRequest_207829528238" ] },
+              "doc": "Create multiple schedules.",
+              "optional": true },
+            { "name": "updateRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.services.UpdateScheduleRequest_217427245647" ] },
+              "doc": "Update multiple schedules. Not Supported yet.",
+              "optional": true },
+            { "name": "cancelRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.services.CancelScheduleRequest_9506145486" ] },
+              "doc": "Cancel multiple schedules.\nThe given schedules move to a CANCELLED status which means that all sessions up until\nthe cancellation point in time are kept, while removing all following sessions.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CancelScheduleRequest_9506145486",
+        "locations":
+          [ { "lineno": 12,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "scheduleId",
+              "type": "string",
+              "doc": "Schedule ID.",
+              "optional": true },
+            { "name": "from",
+              "type": "Date",
+              "doc": "Time to cancel the sessions from. Optional. If this field is empty, all of this schedule's sessions will be canceled.",
+              "optional": true },
+            { "name": "preserveFutureSessionsWithParticipants",
+              "type": "boolean",
+              "doc": "Whether to preserve future sessions with reservations. Defaults to false.",
+              "optional": true },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.ParticipantNotification_2585812620",
+              "doc": "Whether to notify participants about the change and an optional custom message",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CreateScheduleRequest_207829528238",
+        "locations":
+          [ { "lineno": 21,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "summary": "schedule",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "schedule",
+              "type": "wix-bookings-backend.Schedule_206397206374",
+              "doc": "Schedule.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateScheduleRequest_217427245647",
+        "locations":
+          [ { "lineno": 28,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "schedule",
+              "type": "wix-bookings-backend.Schedule_206397206374",
+              "doc": "Schedule.",
+              "optional": true },
+            { "name": "fieldMask",
+              "type": "wix-bookings-backend.FieldMask_4228111159",
+              "doc": "Field mask of fields to update.",
+              "optional": true },
+            { "name": "alignTimeExceptions",
+              "type": "boolean",
+              "doc": "Optional. Defaults to false. In case of updated intervals' start time, this field indicates whether to align those interval's time exceptions.",
+              "optional": true },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.ParticipantNotification_2585812620",
+              "doc": "Whether to notify participants about the change and an optional custom message",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateServiceResult_318819760092",
+        "locations":
+          [ { "lineno": 37,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "service",
+              "type": "wix-bookings-backend.Service_56198764684",
+              "doc": "The updated service." },
+            { "name": "schedulesActionsResult",
+              "type": "wix-bookings-backend.BatchResult_258097406884",
+              "doc": "Updated schedules." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
