@@ -1,0 +1,379 @@
+{ "name": "resources",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 65,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "ListResourcesRequest_25153110744",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_List_list.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "query",
+              "type": "wix-bookings-backend.Query_24513805503",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListResourcesResult_25551552001",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_List_listResources.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "resources",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Resource_23420910898" ] },
+              "doc": "List of resources matching the query object." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListResourcesResult_30553912175",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_List_list.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "resources",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Resource_23420910898" ] },
+              "doc": "List of resources matching the query object." },
+            { "name": "pagingMetadata",
+              "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryResourcesRequest_25330008275",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Query_query.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "query",
+              "type": "wix-bookings-backend.QueryV2_25356650774",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryResourcesResult_31384368715",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Query_query.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "resources",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Resource_23420910898" ] },
+              "doc": "List of resources matching the query object." },
+            { "name": "pagingMetadata",
+              "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Resource_12959995134",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Update_updateResource.js" } ],
+        "docs":
+          { "summary": "The updated resource.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Resource name.",
+              "optional": true },
+            { "name": "email",
+              "type": "string",
+              "doc": "Resource email address.",
+              "optional": true },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Resource phone number.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Resource description.",
+              "optional": true },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Resource tags. These are used to identify, group, and filter the different type of resources. For example, 'staff' or 'room'.",
+              "optional": true },
+            { "name": "images",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Image_3626650051" ] },
+              "doc": "Resource images.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Resource_13052683855",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Create_createResource.js" } ],
+        "docs":
+          { "summary": "Resource to create.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Resource name." },
+            { "name": "email",
+              "type": "string",
+              "doc": "Resource email address.",
+              "optional": true },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Resource phone number.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Resource description.",
+              "optional": true },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Resource tags. These are used to identify, group, and filter the different type of resources. For example, 'staff' or 'room'.",
+              "optional": true },
+            { "name": "images",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Image_3626650051" ] },
+              "doc": "Resource images.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Schedule_205564792705",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_UpdateSchedule_updateResourceSchedule.js" } ],
+        "docs":
+          { "summary": "The schedule to update",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "scheduleOwnerId",
+              "type": "string",
+              "doc": "ID of the schedule's owner entity. This may be a resource ID, a session ID, or a service ID.",
+              "optional": true },
+            { "name": "timeZone",
+              "type": "string",
+              "optional": true },
+            { "name": "title",
+              "type": "string",
+              "doc": "Default title for the schedule's sessions. Maximum length: 6000 characters.",
+              "optional": true },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Tags for grouping schedules. These tags are the default tags for the schedule's sessions.\nThe Wix Bookings app uses the following predefined tags to set schedule type: `\"INDIVIDUAL\"`, `\"GROUP\"`, and `\"COURSE\"`. Once the schedule type is set using these tags, you cannot update it. In addition to the app's tags, you can create and update your own tags.",
+              "optional": true },
+            { "name": "location",
+              "type": "wix-bookings-backend.Location_147848441914",
+              "doc": "Default location for the schedule's sessions.",
+              "optional": true },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "Maximum number of participants that can be added to the schedule's sessions. Default is 1.",
+              "optional": true },
+            { "name": "rate",
+              "type": "wix-bookings-backend.Rate_13652876269",
+              "doc": "Price options offered when booking this schedule's slots. Default is no rate.",
+              "optional": true },
+            { "name": "availability",
+              "type": "wix-bookings-backend.Availability_161223611200",
+              "doc": "An object describing how to calculate the schedule's availability.\nAn empty object indicates that the schedule is not available for booking.",
+              "optional": true },
+            { "name": "externalCalendarOverrides",
+              "type": "wix-bookings-backend.ExternalCalendarOverrides_672201097",
+              "doc": "Title and description values to override session defaults when syncing to an external calendar.\nLearn more about [syncing calendars](https://support.wix.com/en/article/wix-bookings-important-information-about-syncing-google-calendars-with-wix-bookings).",
+              "optional": true },
+            { "name": "calendarConference",
+              "type": "wix-bookings-backend.CalendarConference_22421061789",
+              "doc": "A conference created for the schedule. This is used when a participant is added to a schedule.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateScheduleRequest_213222639643",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_UpdateSchedule_updateSchedule.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "Resource id to update." },
+            { "name": "fieldmask",
+              "type": "wix-bookings-backend.FieldMask_4228111159",
+              "doc": "Fieldmask for schedule",
+              "optional": true },
+            { "name": "schedule",
+              "type": "wix-bookings-backend.Schedule_206489895095",
+              "doc": "The schedule to update",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateScheduleResult_249870541355",
+        "locations":
+          [ { "lineno": 20,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_UpdateSchedule_updateResourceSchedule.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "firstSessionStart",
+              "type": "Date",
+              "doc": "Start time of the first session in the schedule." },
+            { "name": "lastSessionEnd",
+              "type": "Date",
+              "doc": "End time of the last session in the schedule.\nSchedule's time zone in [Area/Location](https://en.wikipedia.org/wiki/Tz_database) format." },
+            { "name": "timeZone",
+              "type": "string" },
+            { "name": "title",
+              "type": "string",
+              "doc": "Default title for the schedule's sessions. Maximum length: 6000 characters." },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Tags for grouping schedules. These tags are the default tags for the schedule's sessions.\nThe Wix Bookings app uses the following predefined tags to set schedule type: `\"INDIVIDUAL\"`, `\"GROUP\"`, and `\"COURSE\"`. Once the schedule type is set using these tags, you cannot update it. In addition to the app's tags, you can create and update your own tags." },
+            { "name": "location",
+              "type": "wix-bookings-backend.Location_156608614652",
+              "doc": "Default location for the schedule's sessions." },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "Maximum number of participants that can be added to the schedule's sessions. Default is 1." },
+            { "name": "rate",
+              "type": "wix-bookings-backend.Rate",
+              "doc": "Price options offered when booking this schedule's slots. Default is no rate." },
+            { "name": "totalNumberOfParticipants",
+              "type": "number",
+              "doc": "Number of participants registered to sessions in this schedule, calculated as the sum of the party sizes." },
+            { "name": "participants",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Participant_16742085086" ] },
+              "doc": "Participants currently registered to sessions in this schedule.\nParticipants who are registered in the schedule are automatically registered to any session that is created for the schedule." },
+            { "name": "externalCalendarOverrides",
+              "type": "wix-bookings-backend.ExternalCalendarOverrides_857578539",
+              "doc": "Title and description values to override session defaults when syncing to an external calendar.\nLearn more about [syncing calendars](https://support.wix.com/en/article/wix-bookings-important-information-about-syncing-google-calendars-with-wix-bookings)." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Schedule status.\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"CANCELLED\"`" },
+            { "name": "created",
+              "type": "Date",
+              "doc": "Schedule creation date." },
+            { "name": "updated",
+              "type": "Date",
+              "doc": "Schedule last update date." },
+            { "name": "version",
+              "type": "number",
+              "doc": "Schedule version number, updated each time the schedule is updated." },
+            { "name": "inheritedFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Fields which were inherited from the Business Info page under Settings in the Dashboard." },
+            { "name": "calendarConference",
+              "type": "wix-bookings-backend.CalendarConference_23255260278",
+              "doc": "A conference created for the schedule. This is used when a participant is added to a schedule." },
+            { "name": "_id",
+              "type": "string",
+              "doc": "Schedule ID." },
+            { "name": "scheduleOwnerId",
+              "type": "string",
+              "doc": "ID of the schedule's owner entity. This may be a resource ID, a session ID, or a service ID." },
+            { "name": "availability",
+              "type": "wix-bookings-backend.Availability_174000749873",
+              "doc": "An object describing how to calculate the schedule's availability.\nAn empty object indicates that the schedule is not available for booking." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateScheduleResult_252658930482",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_UpdateSchedule_updateSchedule.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "The resource id which was updated" },
+            { "name": "schedule",
+              "type": "wix-bookings-backend.Schedule_252114210686",
+              "doc": "The updated schedule" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

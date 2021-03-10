@@ -1,0 +1,35 @@
+{ "name": "forms",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 101,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "UpdateFormResult_59466252497",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_FormsService_Update_updateForm.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "form",
+              "type": "wix-bookings-backend.Form_58415165332",
+              "doc": "The requested form" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

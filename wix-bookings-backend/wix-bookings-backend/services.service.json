@@ -1,0 +1,181 @@
+{ "name": "services",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 77,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "BatchRequest_231081468228",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "summary": "Actions to perform on the service's schedules. Can contain schedules to create, update, and cancel.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "createRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.services.CreateScheduleRequest_207829528238" ] },
+              "doc": "Create multiple schedules.",
+              "optional": true },
+            { "name": "updateRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.services.UpdateScheduleRequest_217427245647" ] },
+              "doc": "Update multiple schedules. Not Supported yet.",
+              "optional": true },
+            { "name": "cancelRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.services.CancelScheduleRequest_9506145486" ] },
+              "doc": "Cancel multiple schedules.\nThe given schedules move to a CANCELLED status which means that all sessions up until\nthe cancellation point in time are kept, while removing all following sessions.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "BatchResult_258097406884",
+        "locations":
+          [ { "lineno": 12,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "summary": "Updated schedules.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "created",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Schedule_252114210686" ] },
+              "doc": "Created schedules." },
+            { "name": "updated",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Schedule_252114210686" ] },
+              "doc": "Updated schedules." },
+            { "name": "cancelled",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Schedule_252114210686" ] },
+              "doc": "Cancelled schedules." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CancelScheduleRequest_9506145486",
+        "locations":
+          [ { "lineno": 21,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "scheduleId",
+              "type": "string",
+              "doc": "Schedule ID.",
+              "optional": true },
+            { "name": "from",
+              "type": "Date",
+              "doc": "Time to cancel the sessions from. Optional. If this field is empty, all of this schedule's sessions will be canceled.",
+              "optional": true },
+            { "name": "preserveFutureSessionsWithParticipants",
+              "type": "boolean",
+              "doc": "Whether to preserve future sessions with reservations. Defaults to false.",
+              "optional": true },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.ParticipantNotificationInfo",
+              "doc": "Whether to notify participants about the change and an optional custom message",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CreateScheduleRequest_207829528238",
+        "locations":
+          [ { "lineno": 30,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "summary": "schedule",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "schedule",
+              "type": "wix-bookings-backend.Schedule_206397206374",
+              "doc": "Schedule.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateScheduleRequest_217427245647",
+        "locations":
+          [ { "lineno": 37,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "schedule",
+              "type": "wix-bookings-backend.Schedule_206397206374",
+              "doc": "Schedule.",
+              "optional": true },
+            { "name": "fieldMask",
+              "type": "wix-bookings-backend.FieldMask_4228111159",
+              "doc": "Field mask of fields to update.",
+              "optional": true },
+            { "name": "alignTimeExceptions",
+              "type": "boolean",
+              "doc": "Optional. Defaults to false. In case of updated intervals' start time, this field indicates whether to align those interval's time exceptions.",
+              "optional": true },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.ParticipantNotificationInfo",
+              "doc": "Whether to notify participants about the change and an optional custom message",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateServiceResult_318819760092",
+        "locations":
+          [ { "lineno": 46,
+              "filename": "com_wixpress_bookings_services_api_v1_ServicesService_Update_updateService.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "service",
+              "type": "wix-bookings-backend.Service_56198764684",
+              "doc": "The updated service." },
+            { "name": "schedulesActionsResult",
+              "type": "wix-bookings-backend.services.BatchResult_258097406884",
+              "doc": "Updated schedules." } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

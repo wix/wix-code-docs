@@ -1,0 +1,109 @@
+{ "name": "categories",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 89,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Category_6280222546",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_CategoriesService_Update_updateCategory.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Category name.",
+              "optional": true },
+            { "name": "customProperties",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Custom properties that can be associated with the category.",
+              "optional": true },
+            { "name": "sortOrder",
+              "type": "number",
+              "doc": "Sorting order of the category for Wix Bookings UI.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Category_6372911267",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_CategoriesService_Create_createCategory.js" } ],
+        "docs":
+          { "summary": "Category information.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Category name." },
+            { "name": "customProperties",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Custom properties that can be associated with the category.",
+              "optional": true },
+            { "name": "sortOrder",
+              "type": "number",
+              "doc": "Sorting order of the category for Wix Bookings UI.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "DeleteCategoryResult_1266751001",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_CategoriesService_Delete_deleteCategory.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Deleted Category ID." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListCategoryRequest_7787735246",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_api_v1_CategoriesService_List_listCategories.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "includeDeleted",
+              "type": "boolean",
+              "doc": "Whether deleted categories are included. Default is false.",
+              "optional": true },
+            { "name": "categoryIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Category IDs.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

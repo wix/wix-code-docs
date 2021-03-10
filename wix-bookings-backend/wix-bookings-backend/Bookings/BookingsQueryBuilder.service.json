@@ -1,7 +1,8 @@
 { "name": "BookingsQueryBuilder",
   "memberOf": "wix-bookings-backend.Bookings",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "removed" ],
   "location":
     { "lineno": 1,
       "filename": "WixBookingsQueryBuilder.js" },

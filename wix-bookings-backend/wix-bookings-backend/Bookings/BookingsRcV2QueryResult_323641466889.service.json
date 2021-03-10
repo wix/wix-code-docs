@@ -1,0 +1,259 @@
+{ "name": "BookingsRcV2QueryResult_323641466889",
+  "memberOf": "wix-bookings-backend.bookings",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 999,
+      "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" },
+  "docs":
+    { "summary": "The results of a bookingsRcV2 query, containing the retrieved items.",
+      "description":
+        [ "When you execute a query with the [`find()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#find)",
+          "function, it returns a Promise that resolves to a `BookingsRcV2QueryResult` object.",
+          "This object contains the items that match the query, information about the",
+          "query itself, and functions for paging through the query results." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "currentPage",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 1099,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Returns the index of the current results page number.",
+            "description":
+              [ "The `currentPage` is a zero-based index of the current page of results.",
+                "",
+                "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions.",
+                "",
+                "The `currentPage` property returns `undefined` if the query returned no results." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "items",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type":
+          { "name": "Array",
+            "typeParams":
+              [ "wix-bookings-backend.Booking" ] },
+        "locations":
+          [ { "lineno": 1009,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Returns the items that match the query.",
+            "description":
+              [ "The current page of items retrieved by the query.",
+                "",
+                "",
+                "",
+                "> **Note:** When no items match the query, the items array is empty.",
+                "",
+                "To paginate your query results, use the `BookingsRcV2QueryResult` pagination properties and functions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "length",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 1024,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Returns the number of items in the current results page.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "pageSize",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 1075,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Returns the query page size.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "query",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-bookings-backend.bookings.BookingsRcV2QueryBuilder_56496348945",
+        "locations":
+          [ { "lineno": 1046,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Contains functionality for refining a bookingsRcV2 query.",
+            "description":
+              [ "The `BookingsRcV2QueryBuilder` functions enable you to run, sort, filter, and control",
+                "which results a query returns.",
+                "",
+                "Typically, you build a query using any of the bookingsRcV2 query functions,",
+                "refine the query by chaining `BookingsRcV2QueryBuilder` functions, and then execute the",
+                "query by chaining the [`find()`](#find) function.",
+                "",
+                "For example, the following code queries...:",
+                "",
+                "```javascript",
+                "import wixBookingsRcV2Backend from 'wix-bookingsRcV2-backend';",
+                "",
+                "wixBookingsRcV2Backend.queryBookingsRcV2()",
+                ".eq(\"<property1>\", \"<value1>\")",
+                ".ascending(\"<property2>\")",
+                ".limit(5)",
+                ".find()",
+                ".then( (results) => {",
+                "console.log(results.items);",
+                "} );",
+                "```" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "totalCount",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 1036,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Returns the total number of items that match the query.",
+            "description":
+              [ "The `totalCount` returns the total number of items that match the query,",
+                "not just the number of items in the current page." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "totalPages",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 1087,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Returns the total number of pages the query produced.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations":
+    [ { "name": "next",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.bookings.BookingsRcV2QueryResult_323641466889" ] },
+            "doc": "Fulfilled - The results of a bookingsRcV2 query, containing the retrieved items.\nWhen you execute a query with the [`find()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#find)\nfunction, it returns a Promise that resolves to a `BookingsRcV2QueryResult` object.\nThis object contains the items that match the query, information about the\nquery itself, and functions for paging through the query results." },
+        "locations":
+          [ { "lineno": 1115,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Retrieves the next page of query results.",
+            "description":
+              [ "The `next()` function retrieves the next page of query results.",
+                "",
+                "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions.",
+                "",
+                "If items are added or removed between calls to `next()` the values returned",
+                "by `BookingsRcV2QueryResult` may change." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "prev",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.bookings.BookingsRcV2QueryResult_323641466889" ] },
+            "doc": "Fulfilled - The results of a bookingsRcV2 query, containing the retrieved items.\nWhen you execute a query with the [`find()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#find)\nfunction, it returns a Promise that resolves to a `BookingsRcV2QueryResult` object.\nThis object contains the items that match the query, information about the\nquery itself, and functions for paging through the query results." },
+        "locations":
+          [ { "lineno": 1136,
+              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+        "docs":
+          { "summary": "Retrieves the previous page of query results.",
+            "description":
+              [ "The `prev()` function retrieves the previous page of query results.",
+                "",
+                "The page size is defined by the [`limit()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions.",
+                "",
+                "If items are added or removed between calls to `prev()` the values returned",
+                "by `BookingsRcV2QueryResult` may change." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

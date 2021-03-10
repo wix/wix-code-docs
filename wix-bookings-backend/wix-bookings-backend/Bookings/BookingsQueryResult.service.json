@@ -1,7 +1,8 @@
 { "name": "BookingsQueryResult",
   "memberOf": "wix-bookings-backend.Bookings",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "removed" ],
   "location":
     { "lineno": 2,
       "filename": "WixBookingsQueryResult.js" },

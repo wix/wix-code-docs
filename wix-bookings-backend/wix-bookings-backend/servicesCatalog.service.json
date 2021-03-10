@@ -1,0 +1,86 @@
+{ "name": "servicesCatalog",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 125,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "ListServicesResult_436674522865",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_ListByResourceSlug_listByResourceSlug.js" } ],
+        "docs":
+          { "summary": "A list of catalog service response.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "services",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.GetServiceResult_421521026639" ] } },
+            { "name": "pagingMetadata",
+              "type": "wix-bookings-backend.PagingMetadataV2_5481679798" },
+            { "name": "responseType",
+              "type": "string",
+              "doc": "One of:\n + `\"CONSISTENT\"`\n + `\"EVENTUALLY_CONSISTENT\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryServicesRequest_26560827571",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_Query_query.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "query",
+              "type": "wix-bookings-backend.QueryV2_25356650774",
+              "doc": "Default paging - limit: 25, offset: 0",
+              "optional": true },
+            { "name": "includeDeleted",
+              "type": "boolean",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryServicesResult_436687389677",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "com_wixpress_bookings_services_catalog_api_v1_service_ServicesCatalog_Query_query.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "services",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.GetServiceResult_421521026639" ] } },
+            { "name": "pagingMetadata",
+              "type": "wix-bookings-backend.PagingMetadataV2_5481679798" },
+            { "name": "responseType",
+              "type": "string",
+              "doc": "One of:\n + `\"CONSISTENT\"`\n + `\"EVENTUALLY_CONSISTENT\"`" } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }

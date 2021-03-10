@@ -1,0 +1,52 @@
+{ "name": "availability",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 17,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages":
+    [ { "name": "IsAvailableRequest_Slot_13509445101",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_availability_api_v1_Availability_IsAvailable_checkTimeslotAvailability.js" } ],
+        "docs":
+          { "summary": "The ID of the time slot whose availability is being checked.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "startDate",
+              "type": "Date",
+              "doc": "Slot start time.",
+              "optional": true },
+            { "name": "endDate",
+              "type": "Date",
+              "doc": "Slot end time.",
+              "optional": true },
+            { "name": "scheduleId",
+              "type": "string",
+              "doc": "The ID of the schedule that the slot belongs to.",
+              "optional": true },
+            { "name": "requiredResourceSheduleIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "The schedule IDs of the required resources for which the availability will be checked. Returns true if at least 1 of resources' schedules has availability.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] } ],
+  "extra":
+    {  } }
