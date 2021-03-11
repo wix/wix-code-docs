@@ -1,8 +1,7 @@
 { "name": "waitingList",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 29,
       "filename": "index.js" },
@@ -144,8 +143,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "RegisterRequest_FlowControlSettings_4715659461",
         "locations":
           [ { "lineno": 9,

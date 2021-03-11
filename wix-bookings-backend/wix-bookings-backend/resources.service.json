@@ -15,7 +15,7 @@
   "operations":
     [ { "name": "createResource",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceInfo",
@@ -46,20 +46,20 @@
                 "1. Create the resource using `createResource()` including schedule information. If the resource uses the default business hours, get the business resource's schedule ID  and include it in the linkedSchedules array in the availability object in the schedule parameters.",
                 "1. If the resource has its own schedule, create recurring sessions of type `\"AVAILABILITY\"` using `createSession()` with the `scheduleId` returned from `createResource()`.",
                 "<!--END:ONLY:VELO-->",
-                ">**Note:** A resource can only have one schedule.",
-                "<!-- Todo:",
-                "Check if we need to list the minimum for fields for the sessionInfo.",
-                "schedule info object should only include wht is needed",
-                "-->" ],
+                ">**Note:** A resource can only have one schedule." ],
             "links": [],
-            "examples": [],
+            "examples":
+              [ { "title": "Create a resource",
+                  "body":
+                    [ "create resource" ],
+                  "extra":
+                    { "description": "<!-- Todo:\nCheck if we need to list the minimum for fields for the sessionInfo.\nschedule info object should only include wht is needed\n-->" } } ],
             "extra":
               {  } },
         "extra":
           {  } },
       { "name": "deleteResource",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -91,8 +91,7 @@
         "extra":
           {  } },
       { "name": "updateResource",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -150,8 +149,7 @@
         "extra":
           {  } },
       { "name": "updateResourceSchedule",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -239,8 +237,7 @@
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "QueryResourcesRequest_25330008275",
         "locations":
           [ { "lineno": 1,
@@ -277,8 +274,7 @@
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Resource_12959995134",
         "locations":
           [ { "lineno": 1,
@@ -367,8 +363,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Resource_13052683855",
         "locations":
           [ { "lineno": 1,
@@ -455,8 +450,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Schedule_205564792705",
         "locations":
           [ { "lineno": 1,
@@ -569,8 +563,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "UpdateScheduleRequest_213222639643",
         "locations":
           [ { "lineno": 1,
@@ -757,8 +750,7 @@
               "doc": "An object describing how to calculate the schedule's availability.\nAn empty object indicates that the schedule is not available for booking." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "UpdateScheduleResult_252658930482",
         "locations":
           [ { "lineno": 9,

@@ -1,8 +1,7 @@
 { "name": "schedules",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 41,
       "filename": "index.js" },
@@ -14,8 +13,7 @@
   "properties": [],
   "operations":
     [ { "name": "querySessions",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -61,8 +59,7 @@
         "extra":
           {  } },
       { "name": "updateSession",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -126,8 +123,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "CreateSessionResult_258115196402",
         "locations":
           [ { "lineno": 9,
@@ -143,8 +139,7 @@
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "DeleteSessionRequest_5772496212",
         "locations":
           [ { "lineno": 1,
@@ -249,8 +244,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ListSessionsRequest_9558471744",
         "locations":
           [ { "lineno": 1,
@@ -294,8 +288,7 @@
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListSlotsRequest_23531210904",
         "locations":
           [ { "lineno": 1,
@@ -332,8 +325,7 @@
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Participant_14025359616",
         "locations":
           [ { "lineno": 1,
@@ -487,8 +479,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "UpdateSessionRequest_241476392166",
         "locations":
           [ { "lineno": 36,
@@ -517,8 +508,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "UpdateSessionResult_256943726943",
         "locations":
           [ { "lineno": 45,
@@ -534,7 +524,6 @@
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
