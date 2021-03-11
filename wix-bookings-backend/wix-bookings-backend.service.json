@@ -1,6 +1,7 @@
 { "name": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -54,6 +55,23 @@
               "filename": "bookingsEvents.js" } ],
         "docs":
           { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "resources",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "wix-bookings-backend.Resources",
+        "locations":
+          [ { "lineno": 77,
+              "filename": "index.js" } ],
+        "docs":
+          { "summary": "The Bookings API provides functionality for updating and managing bookings created in the Wix Bookings app.",
+            "links": [],
             "examples": [],
             "extra":
               {  } },
@@ -823,6 +841,68 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "Image",
+        "locations":
+          [ { "lineno": 488,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Wix Media image ID." },
+            { "name": "url",
+              "type": "string",
+              "doc": "Image URL." },
+            { "name": "height",
+              "type": "number",
+              "doc": "Original image height." },
+            { "name": "width",
+              "type": "number",
+              "doc": "Original image width." },
+            { "name": "altText",
+              "type": "string",
+              "doc": "Image alt text." },
+            { "name": "urlExpirationDate",
+              "type": "Date",
+              "doc": "Image URL expiration date." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
+      { "name": "ImageInfo",
+        "locations":
+          [ { "lineno": 480,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Wix Media image ID.",
+              "optional": true },
+            { "name": "url",
+              "type": "string",
+              "doc": "Image URL.",
+              "optional": true },
+            { "name": "altText",
+              "type": "string",
+              "doc": "Image alt text.",
+              "optional": true },
+            { "name": "urlExpirationDate",
+              "type": "Date",
+              "doc": "Image URL expiration date.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "IsAvailableResult_6686246600",
         "locations":
           [ { "lineno": 266,
@@ -1281,6 +1361,31 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "RateInfo",
+        "locations":
+          [ { "lineno": 498,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "The price options offered for the session.  Defaults to the schedule rate.",
+            "description":
+              [ "If the session is a recurring session, the value is inherited from the schedule and cannot be overridden." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "labeledPriceOptions",
+              "type": "Object",
+              "doc": "Set of key-value pairs.Mapping between a named price option, for example, adult or child prices, and the price, currency, and down payment amount.",
+              "optional": true },
+            { "name": "priceText",
+              "type": "string",
+              "doc": "Textual price information used when **Price Per Session** is set to **Custom Price** in the app's service details page.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Rate_13652876269",
         "locations":
           [ { "lineno": 328,
@@ -1571,7 +1676,7 @@
         "labels": [] },
       { "name": "TimePeriod_38785543152",
         "locations":
-          [ { "lineno": 451,
+          [ { "lineno": 450,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "A span of time that the business is open.",
@@ -1602,7 +1707,7 @@
         "extra":
           {  },
         "labels":
-          [ "removed" ] },
+          [ "new" ] },
       { "name": "WixPayDetails",
         "locations":
           [ { "lineno": 246,

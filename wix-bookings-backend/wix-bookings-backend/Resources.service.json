@@ -1,0 +1,35 @@
+{ "name": "Resources",
+  "memberOf": "wix-bookings-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 58,
+      "filename": "index.js" },
+  "docs":
+    { "summary": "The Resources API provides functionality for creating, managing, and querying resources.",
+      "description":
+        [ "The Resources API provides functionality for creating, managing, and querying resources.",
+          "",
+          "A resource is a business asset that can be booked or assigned to a session. Resources include staff, rooms, and equipment. Each resource owns a schedule which defines the resource's availability. Resources have basic contact details and images.",
+          "",
+          "Resources have tags that you can use for grouping. For example, add a `room` tag for classroom resources and an `equipment` tag for resources like computers and projectors.",
+          "There are two tags that are used by the Wix Bookings app: `staff` and `business`. Resources with the `staff` tag appear in the Bookings app's **Staff** page. ",
+          "The `business` resources owns a schedule that contains the operating hours of the business. This schedule is also be used to creating new resources with business’s operating hours as the resource availability.",
+          "",
+          "",
+          "To use the Resources API, import `resources` from the `wix-bookings-backend` module:",
+          "",
+          "```javascript",
+          "import { resources } from \"wix-bookings-backend\";",
+          "```" ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations": [],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }
