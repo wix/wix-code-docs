@@ -1,8 +1,7 @@
 { "name": "availability",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 17,
       "filename": "index.js" },

@@ -1,10 +1,11 @@
-{ "name": "BookingsRcV2QueryResult_323641466889",
-  "memberOf": "wix-bookings-backend.bookings",
+{ "name": "BookingsRcV2QueryResult_272632601899",
+  "memberOf": "wix-bookings-backend.schedules",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "new" ],
   "location":
-    { "lineno": 999,
-      "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" },
+    { "lineno": 998,
+      "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" },
   "docs":
     { "summary": "The results of a bookingsRcV2 query, containing the retrieved items.",
       "description":
@@ -20,11 +21,13 @@
     [ { "name": "currentPage",
         "labels": [],
         "get": true,
-        "set": false,
+        "set": true,
         "type": "number",
         "locations":
           [ { "lineno": 1099,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1099,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Returns the index of the current results page number.",
             "description":
@@ -45,19 +48,22 @@
       { "name": "items",
         "labels": [],
         "get": true,
-        "set": false,
+        "set": true,
         "type":
           { "name": "Array",
             "typeParams":
-              [ "wix-bookings-backend.Booking" ] },
+              [ "wix-bookings-backend.Session_255663383937:updateSession1" ] },
         "locations":
-          [ { "lineno": 1009,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+          [ { "lineno": 1008,
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1008,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Returns the items that match the query.",
             "description":
               [ "The current page of items retrieved by the query.",
                 "",
+                "Sessions on the calendar.",
                 "",
                 "",
                 "> **Note:** When no items match the query, the items array is empty.",
@@ -72,11 +78,13 @@
       { "name": "length",
         "labels": [],
         "get": true,
-        "set": false,
+        "set": true,
         "type": "number",
         "locations":
           [ { "lineno": 1024,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1024,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Returns the number of items in the current results page.",
             "description":
@@ -93,11 +101,13 @@
       { "name": "pageSize",
         "labels": [],
         "get": true,
-        "set": false,
+        "set": true,
         "type": "number",
         "locations":
           [ { "lineno": 1075,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1075,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Returns the query page size.",
             "description":
@@ -114,11 +124,13 @@
       { "name": "query",
         "labels": [],
         "get": true,
-        "set": false,
-        "type": "wix-bookings-backend.bookings.BookingsRcV2QueryBuilder_56496348945",
+        "set": true,
+        "type": "wix-bookings-backend.schedules.BookingsRcV2QueryBuilder_3247033335",
         "locations":
           [ { "lineno": 1046,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1046,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Contains functionality for refining a bookingsRcV2 query.",
             "description":
@@ -152,11 +164,13 @@
       { "name": "totalCount",
         "labels": [],
         "get": true,
-        "set": false,
+        "set": true,
         "type": "number",
         "locations":
           [ { "lineno": 1036,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1036,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Returns the total number of items that match the query.",
             "description":
@@ -171,11 +185,13 @@
       { "name": "totalPages",
         "labels": [],
         "get": true,
-        "set": false,
+        "set": true,
         "type": "number",
         "locations":
           [ { "lineno": 1087,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1087,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Returns the total number of pages the query produced.",
             "description":
@@ -198,11 +214,13 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-bookings-backend.bookings.BookingsRcV2QueryResult_323641466889" ] },
+                  [ "wix-bookings-backend.schedules.BookingsRcV2QueryResult_272632601899" ] },
             "doc": "Fulfilled - The results of a bookingsRcV2 query, containing the retrieved items.\nWhen you execute a query with the [`find()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#find)\nfunction, it returns a Promise that resolves to a `BookingsRcV2QueryResult` object.\nThis object contains the items that match the query, information about the\nquery itself, and functions for paging through the query results." },
         "locations":
           [ { "lineno": 1115,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1115,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Retrieves the next page of query results.",
             "description":
@@ -229,11 +247,13 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-bookings-backend.bookings.BookingsRcV2QueryResult_323641466889" ] },
+                  [ "wix-bookings-backend.schedules.BookingsRcV2QueryResult_272632601899" ] },
             "doc": "Fulfilled - The results of a bookingsRcV2 query, containing the retrieved items.\nWhen you execute a query with the [`find()`](wix-bookings-backend.BookingsRcV2QueryBuilder.html#find)\nfunction, it returns a Promise that resolves to a `BookingsRcV2QueryResult` object.\nThis object contains the items that match the query, information about the\nquery itself, and functions for paging through the query results." },
         "locations":
           [ { "lineno": 1136,
-              "filename": "com_wix_bookings_api_v1_BookingsReader_Query_queryBookings.js" } ],
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1136,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
         "docs":
           { "summary": "Retrieves the previous page of query results.",
             "description":

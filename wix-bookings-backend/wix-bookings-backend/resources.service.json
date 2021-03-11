@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 65,
       "filename": "index.js" },
@@ -12,7 +12,176 @@
       "extra":
         {  } },
   "properties": [],
-  "operations": [],
+  "operations":
+    [ { "name": "createResource",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceInfo",
+              "type": "wix-bookings-backend.resources.Resource_13052683855:createResource",
+              "doc": "Resource to create." },
+            { "name": "schedulesInfo",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Schedule_206489895095" ] },
+              "doc": "List of schedules to be assigned for the created resource. Currently only a single schedule is allowed.\n If provided, any schedules in the resource entity will be ignored." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Resource_23420910898:createResource" ] },
+            "doc": "Fulfilled - Updated Resource" },
+        "locations":
+          [ { "lineno": 13,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Create_createResource.js" } ],
+        "docs":
+          { "summary": "Creates a resource.",
+            "description":
+              [ "<!--ONLY:VELO-->",
+                "The `createResource()` function returns a Promise that resolves to a resource object when a resource is created.<!--END:ONLY:VELO-->",
+                "Resources are created with a schedule. The schedule and its sessions determine the resource's availability. The schedule must contain start date in the `availability.start` property. If the resource is available during the business's default hours, the business's schedule is added as a linked schedule in the resource's schedule. If the resource has its own custom hours, create recurring sessions using the resource's `scheduleId` and set the session type to `\"AVAILABILITY\"`. Recurring sessions are used to define resource availability. Do not use availability constraints for resource schedules.",
+                "<!--ONLY:VELO--> The sequence for creating a resource is as follows:",
+                "1. Create the resource using `createResource()` including schedule information. If the resource uses the default business hours, get the business resource's schedule ID  and include it in the linkedSchedules array in the availability object in the schedule parameters.",
+                "1. If the resource has its own schedule, create recurring sessions of type `\"AVAILABILITY\"` using `createSession()` with the `scheduleId` returned from `createResource()`.",
+                "<!--END:ONLY:VELO-->",
+                ">**Note:** A resource can only have one schedule.",
+                "<!-- Todo:",
+                "Check if we need to list the minimum for fields for the sessionInfo.",
+                "schedule info object should only include wht is needed",
+                "-->" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "deleteResource",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "ID of the resource to delete." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "string" ] },
+            "doc": "Fulfilled - Deleted resource id" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Delete_deleteResource.js" } ],
+        "docs":
+          { "summary": "Deletes a resource.",
+            "description":
+              [ "<!--ONLY:VELO--> The `deleteResource()` function returns a promise that resolved when a resource is deleted.<!--END:ONLY:VELO-->",
+                "Deleting a resource updates its `status` to `\"DELETED\"` and updates its schedule to `\"CANCELED\"`.",
+                "You can not delete a resource if it has booked sessions.",
+                "<!--TODO:",
+                "What happens if the schedule has bookings (cancel session has the option to update the customer)",
+                "What happens if the sessions have bookings - can delete if has sessions.",
+                "-->" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateResource",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Resource ID." },
+            { "name": "resource",
+              "type": "wix-bookings-backend.resources.Resource_12959995134:updateResource",
+              "doc": "The updated resource." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Resource_23420910898:createResource" ] },
+            "doc": "Fulfilled - Updated Resource" },
+        "locations":
+          [ { "lineno": 13,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Update_updateResource.js" } ],
+        "docs":
+          { "summary": "Updates a resource.",
+            "description":
+              [ "<!--ONLY:VELO-->",
+                "The `updateResource()` function returns a promise that resolved to a resource object when a resource is updated.<!--END:ONLY:VELO-->",
+                "Use this function to update resource information, and add, delete, and update the resource's schedules.",
+                "> **Note:** A resource can only have one schedule.",
+                "",
+                "## Updating resources from default business hours to custom hours",
+                "",
+                "<!--ONLY:REST",
+                "+ Update the resource's schedule to remove the business's scheduleId from the `availability.likedSchedules` array.",
+                "+ Create a set of recurring sessions of type `\"AVAILABILITY\"` to define the resource's new hours.",
+                "<!--END:ONLY:REST-->",
+                "",
+                "<!--ONLY:VELO-->",
+                "+ Update the resource's schedule to remove the business's scheduleId from the `availability.likedSchedules` array.",
+                "+ Use [`createSession()`](wix-bookings-backend/schedules-obj/createsession) to create a set of recurring sessions of type `\"AVAILABILITY\"` to define the resource's new hours.",
+                "<!--END:ONLY:VELO-->",
+                "",
+                "## Updating resources from custom hours to default business hours",
+                "<!--ONLY:REST",
+                "+ Delete the resource's recurring sessions of type `\"AVAILABILITY\"`",
+                "+ Update the resource's schedule to add the business's scheduleId to the `availability.likedSchedules` array.",
+                "<!--END:ONLY:REST-->",
+                "",
+                "<!--ONLY:VELO-->",
+                "+ Use [`deleteSession()`](wix-bookings-backend/schedules-obj/deletesession) to delete the recurring sessions of type `\"AVAILABILITY\"`",
+                "+ Update the resource's schedule to add the business's scheduleId to the `availability.likedSchedules` array.",
+                "<!--END:ONLY:VELO-->",
+                "<!--TODO: link to update schedule for explanation of the schedule side)-->",
+                "",
+                ">**Note:** When updating a resource's schedule you cannot change the the resource tag used by the Wix Bookings app. Tags used by the app have the values `\"INDIVIDUAL\"`, `\"GROUP\"`, and `\"COURSE”`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateResourceSchedule",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "Resource id to update." },
+            { "name": "id",
+              "type": "string",
+              "doc": "Schedule ID." },
+            { "name": "schedule",
+              "type": "wix-bookings-backend.resources.Schedule_205564792705:updateResourceSchedule",
+              "doc": "The schedule to update" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.resources.UpdateScheduleResult_249870541355:updateResourceSchedule" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 54,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_UpdateSchedule_updateResourceSchedule.js" } ],
+        "docs":
+          { "summary": "Updates a resource's schedule",
+            "description":
+              [ ">**Note:** When updating a resource's schedule you cannot change the the resource tag used by the Wix Bookings app. Tags used by the app have the values `\"INDIVIDUAL\"`, `\"GROUP\"`, and `\"COURSE”`." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
   "callbacks": [],
   "messages":
     [ { "name": "ListResourcesRequest_25153110744",
@@ -64,13 +233,14 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Resource_23420910898" ] },
+                    [ "wix-bookings-backend.Resource_23420910898:createResource" ] },
               "doc": "List of resources matching the query object." },
             { "name": "pagingMetadata",
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "QueryResourcesRequest_25330008275",
         "locations":
           [ { "lineno": 1,
@@ -101,13 +271,14 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Resource_23420910898" ] },
+                    [ "wix-bookings-backend.Resource_23420910898:createResource" ] },
               "doc": "List of resources matching the query object." },
             { "name": "pagingMetadata",
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Resource_12959995134",
         "locations":
           [ { "lineno": 1,
@@ -151,7 +322,53 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Resource_12959995134:updateResource",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Update_updateResource.js" } ],
+        "docs":
+          { "summary": "The updated resource.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Resource name.",
+              "optional": true },
+            { "name": "email",
+              "type": "string",
+              "doc": "Resource email address.",
+              "optional": true },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Resource phone number.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Resource description.",
+              "optional": true },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Resource tags. These are used to identify, group, and filter the different type of resources. For example, 'staff' or 'room'.",
+              "optional": true },
+            { "name": "images",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Image_3626650051:createResource" ] },
+              "doc": "Resource images.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Resource_13052683855",
         "locations":
           [ { "lineno": 1,
@@ -194,7 +411,52 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Resource_13052683855:createResource",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_Create_createResource.js" } ],
+        "docs":
+          { "summary": "Resource to create.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Resource name." },
+            { "name": "email",
+              "type": "string",
+              "doc": "Resource email address.",
+              "optional": true },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Resource phone number.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Resource description.",
+              "optional": true },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Resource tags. These are used to identify, group, and filter the different type of resources. For example, 'staff' or 'room'.",
+              "optional": true },
+            { "name": "images",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Image_3626650051:createResource" ] },
+              "doc": "Resource images.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Schedule_205564792705",
         "locations":
           [ { "lineno": 1,
@@ -250,7 +512,65 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Schedule_205564792705:updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_UpdateSchedule_updateResourceSchedule.js" } ],
+        "docs":
+          { "summary": "The schedule to update",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "scheduleOwnerId",
+              "type": "string",
+              "doc": "ID of the schedule's owner entity. This may be a resource ID, a session ID, or a service ID.",
+              "optional": true },
+            { "name": "timeZone",
+              "type": "string",
+              "optional": true },
+            { "name": "title",
+              "type": "string",
+              "doc": "Default title for the schedule's sessions. Maximum length: 6000 characters.",
+              "optional": true },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Tags for grouping schedules. These tags are the default tags for the schedule's sessions.\nThe Wix Bookings app uses the following predefined tags to set schedule type: `\"INDIVIDUAL\"`, `\"GROUP\"`, and `\"COURSE\"`. Once the schedule type is set using these tags, you cannot update it. In addition to the app's tags, you can create and update your own tags.",
+              "optional": true },
+            { "name": "location",
+              "type": "wix-bookings-backend.Location_147848441914:updateResourceSchedule",
+              "doc": "Default location for the schedule's sessions.",
+              "optional": true },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "Maximum number of participants that can be added to the schedule's sessions. Default is 1.",
+              "optional": true },
+            { "name": "rate",
+              "type": "wix-bookings-backend.Rate_13652876269:updateResourceSchedule",
+              "doc": "Price options offered when booking this schedule's slots. Default is no rate.",
+              "optional": true },
+            { "name": "availability",
+              "type": "wix-bookings-backend.Availability_161223611200:updateResourceSchedule",
+              "doc": "An object describing how to calculate the schedule's availability.\nAn empty object indicates that the schedule is not available for booking.",
+              "optional": true },
+            { "name": "externalCalendarOverrides",
+              "type": "wix-bookings-backend.ExternalCalendarOverrides_672201097:updateResourceSchedule",
+              "doc": "Title and description values to override session defaults when syncing to an external calendar.\nLearn more about [syncing calendars](https://support.wix.com/en/article/wix-bookings-important-information-about-syncing-google-calendars-with-wix-bookings).",
+              "optional": true },
+            { "name": "calendarConference",
+              "type": "wix-bookings-backend.CalendarConference_22421061789:updateResourceSchedule",
+              "doc": "A conference created for the schedule. This is used when a participant is added to a schedule.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "UpdateScheduleRequest_213222639643",
         "locations":
           [ { "lineno": 1,
@@ -355,7 +675,90 @@
               "doc": "An object describing how to calculate the schedule's availability.\nAn empty object indicates that the schedule is not available for booking." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "UpdateScheduleResult_249870541355:updateResourceSchedule",
+        "locations":
+          [ { "lineno": 20,
+              "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_UpdateSchedule_updateResourceSchedule.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "firstSessionStart",
+              "type": "Date",
+              "doc": "Start time of the first session in the schedule." },
+            { "name": "lastSessionEnd",
+              "type": "Date",
+              "doc": "End time of the last session in the schedule.\nSchedule's time zone in [Area/Location](https://en.wikipedia.org/wiki/Tz_database) format." },
+            { "name": "timeZone",
+              "type": "string" },
+            { "name": "title",
+              "type": "string",
+              "doc": "Default title for the schedule's sessions. Maximum length: 6000 characters." },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Tags for grouping schedules. These tags are the default tags for the schedule's sessions.\nThe Wix Bookings app uses the following predefined tags to set schedule type: `\"INDIVIDUAL\"`, `\"GROUP\"`, and `\"COURSE\"`. Once the schedule type is set using these tags, you cannot update it. In addition to the app's tags, you can create and update your own tags." },
+            { "name": "location",
+              "type": "wix-bookings-backend.Location_156608614652:updateResourceSchedule12",
+              "doc": "Default location for the schedule's sessions." },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "Maximum number of participants that can be added to the schedule's sessions. Default is 1." },
+            { "name": "rate",
+              "type": "wix-bookings-backend.Rate",
+              "doc": "Price options offered when booking this schedule's slots. Default is no rate." },
+            { "name": "totalNumberOfParticipants",
+              "type": "number",
+              "doc": "Number of participants registered to sessions in this schedule, calculated as the sum of the party sizes." },
+            { "name": "participants",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Participant_16742085086:updateResourceSchedule" ] },
+              "doc": "Participants currently registered to sessions in this schedule.\nParticipants who are registered in the schedule are automatically registered to any session that is created for the schedule." },
+            { "name": "externalCalendarOverrides",
+              "type": "wix-bookings-backend.ExternalCalendarOverrides_857578539:updateResourceSchedule1",
+              "doc": "Title and description values to override session defaults when syncing to an external calendar.\nLearn more about [syncing calendars](https://support.wix.com/en/article/wix-bookings-important-information-about-syncing-google-calendars-with-wix-bookings)." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Schedule status.\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"CANCELLED\"`" },
+            { "name": "created",
+              "type": "Date",
+              "doc": "Schedule creation date." },
+            { "name": "updated",
+              "type": "Date",
+              "doc": "Schedule last update date." },
+            { "name": "version",
+              "type": "number",
+              "doc": "Schedule version number, updated each time the schedule is updated." },
+            { "name": "inheritedFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Fields which were inherited from the Business Info page under Settings in the Dashboard." },
+            { "name": "calendarConference",
+              "type": "wix-bookings-backend.CalendarConference_23255260278:updateResourceSchedule1",
+              "doc": "A conference created for the schedule. This is used when a participant is added to a schedule." },
+            { "name": "_id",
+              "type": "string",
+              "doc": "Schedule ID." },
+            { "name": "scheduleOwnerId",
+              "type": "string",
+              "doc": "ID of the schedule's owner entity. This may be a resource ID, a session ID, or a service ID." },
+            { "name": "availability",
+              "type": "wix-bookings-backend.Availability_174000749873:updateResourceSchedule1",
+              "doc": "An object describing how to calculate the schedule's availability.\nAn empty object indicates that the schedule is not available for booking." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "UpdateScheduleResult_252658930482",
         "locations":
           [ { "lineno": 9,

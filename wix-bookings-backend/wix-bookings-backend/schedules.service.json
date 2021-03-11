@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 41,
       "filename": "index.js" },
@@ -12,7 +12,97 @@
       "extra":
         {  } },
   "properties": [],
-  "operations": [],
+  "operations":
+    [ { "name": "querySessions",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "wix-bookings-backend.schedules.BookingsRcV2QueryBuilder_3247033335",
+            "doc": "Contains functionality for refining a bookingsRcV2 query.\nThe `BookingsRcV2QueryBuilder` functions enable you to run, sort, filter, and control\nwhich results a query returns.\n\nTypically, you build a query using any of the bookingsRcV2 query functions,\nrefine the query by chaining `BookingsRcV2QueryBuilder` functions, and then execute the\nquery by chaining the [`find()`](#find) function.\n\nFor example, the following code queries...:\n\n```javascript\nimport wixBookingsRcV2Backend from 'wix-bookingsRcV2-backend';\n\nwixBookingsRcV2Backend.queryBookingsRcV2()\n  .eq(\"<property1>\", \"<value1>\")\n  .ascending(\"<property2>\")\n  .limit(5)\n  .find()\n  .then( (results) => {\n    console.log(results.items);\n  } );\n```" },
+        "locations":
+          [ { "lineno": 1171,
+              "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
+            { "lineno": 1171,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" } ],
+        "docs":
+          { "summary": "Returns sessions from the business calendar.",
+            "description":
+              [ "Query object support:",
+                "- **filter**: supports",
+                "- `from`: query range start time. Required. Optional when `recurringSessions` is true.",
+                "- `to`: query range end time. Required. Optional when `recurringSessions` is true.",
+                "- `scheduleIds`: filter by list of schedule ids. Up to 100 values are allowed. Required when `recurringSessions` is true.",
+                "- `scheduleId`: deprecated, use `scheduleIds` instead.",
+                "- `tags`: filter by list of tags. Ignored when `recurringSessions` is true.",
+                "- `type`: filter by session type",
+                "- `hasCalendarConference`: filter sessions that have calendar conference created",
+                "- `intervalIds`: filter by list of interval ids. Ignored when `recurringSessions` is true.",
+                "- `recurringSessionIds`: filter by a list of recurring session ids. Ignored when `recurringSessions` is true.",
+                "- `scheduleOwnerIds`: the response will contain sessions with the given scheduleOwnerIds and sessions with affectedSchedules with the given scheduleOwnerIds.",
+                "- `transparency`: when applied, the `scheduleOwnerIds` filter is required. In case the transparency = BUSY, the response will contain sessions with the given scheduleOwnerIds and sessions with affectedSchedules with the given scheduleOwnerIds where the owner's transparency is BUSY.",
+                "When transparency = FREE, the response will contain only sessions and affectedSchedules with the given scheduleOwnerIds when the owner's transparency is FREE.",
+                "- `contactIds`: The response contains sessions with participants with the given contactIds.",
+                "- `recurringSessions`: When set to 'true', only recurring sessions are returned. When this field is specified, the following applies:",
+                "- `location.locationType`: Filter by `session.location.location_type`. Supports multiple values. Possible values are `OWNER_BUSINESS`, `OWNER_CUSTOM` and `CUSTOM`. Optional. Currently not supported for recurring sessions.",
+                "- `location.businessLocation.id`: Filter by `session.location.business_location.id`. Supports multiple values. Optional. Currently not supported for recurring sessions.",
+                "- **fields**: supported.",
+                "- **paging**: Paging is supported using the page token. For paging the results, i.e. with a page size of 10, set the `query.paging.limit` to a value of `10`.",
+                "The response will contain a value in the `nextPageToken` field. Pass this value in the `pageToken` field in the following calls and leave the `query` field empty.",
+                "- **fieldsets**: not supported.",
+                "",
+                "> **Permissions**",
+                "> This endpoint requires the Read Bookings Calendar, the Read Bookings Calendar - Including Participants, the Read Bookings - Including Participants or the Manage Bookings permission." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateSession",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "sessionId",
+              "type": "string",
+              "doc": "Session ID." },
+            { "name": "sessionInfo",
+              "type": "wix-bookings-backend.Session_225620643475:updateSession",
+              "doc": "Session." },
+            { "name": "updateSessionOptions",
+              "type": "wix-bookings-backend.schedules.FieldMask_8457178585:updateSession",
+              "doc": "List of fields that do not inherit values from the schedule when they are empty. Not supported for recurring sessions." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Session_255663383937:updateSession1" ] },
+            "doc": "Fulfilled - Session." },
+        "locations":
+          [ { "lineno": 9,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_UpdateSession_updateSession.js" } ],
+        "docs":
+          { "summary": "Updates a session.",
+            "description":
+              [ "<!--ONLY:VELO-->",
+                "The `updateSession()` function returns a Promise that resolves when the session has been updated.",
+                "<!--END:ONLY:VELO-->",
+                "The property values specified replace the existing values. If a property is not specified in the request it will remain unchanged.",
+                "Array properties, if specified, overwrite the existing array and all of its elements.",
+                "The `participants` array cannot be updated.",
+                "Use the participantNotification property to send an email to the participants notifying them of the change.",
+                "<!--ONLY:REST",
+                "> **Permissions**",
+                "> This endpoint requires the Manage Bookings permissions scope",
+                "<!--END:ONLY:REST-->" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
   "callbacks": [],
   "messages":
     [ { "name": "CreateSessionRequest_233485006195",
@@ -27,7 +117,7 @@
               {  } },
         "members":
           [ { "name": "session",
-              "type": "wix-bookings-backend.Session_225620643475",
+              "type": "wix-bookings-backend.Session_225620643475:updateSession",
               "doc": "Session.",
               "optional": true },
             { "name": "deleted",
@@ -36,7 +126,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "CreateSessionResult_258115196402",
         "locations":
           [ { "lineno": 9,
@@ -48,11 +139,12 @@
               {  } },
         "members":
           [ { "name": "session",
-              "type": "wix-bookings-backend.Session_255663383937",
+              "type": "wix-bookings-backend.Session_255663383937:updateSession1",
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "DeleteSessionRequest_5772496212",
         "locations":
           [ { "lineno": 1,
@@ -131,7 +223,34 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "FieldMask_8457178585:updateSession",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "com_wix_bookings_schedules_api_v1_Schedules_UpdateSession_updateSession.js" } ],
+        "docs":
+          { "summary": "List of fields that do not inherit values from the schedule when they are empty. Not supported for recurring sessions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "clearInheritedFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "The set of field mask paths.",
+              "optional": true },
+            { "name": "participantNotification",
+              "type": "wix-bookings-backend.ParticipantNotificationInfo",
+              "doc": "Whether to notify participants about the change, and an optional custom message.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ListSessionsRequest_9558471744",
         "locations":
           [ { "lineno": 1,
@@ -171,11 +290,12 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Session_255663383937" ] },
+                    [ "wix-bookings-backend.Session_255663383937:updateSession1" ] },
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListSlotsRequest_23531210904",
         "locations":
           [ { "lineno": 1,
@@ -206,13 +326,14 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Session_255663383937" ] },
+                    [ "wix-bookings-backend.Session_255663383937:updateSession1" ] },
               "doc": "Slots on the calendar." },
             { "name": "pagingMetadata",
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Participant_14025359616",
         "locations":
           [ { "lineno": 1,
@@ -298,16 +419,16 @@
               "doc": "Original start date and time of the session in Unix epoch time format.",
               "optional": true },
             { "name": "start",
-              "type": "wix-bookings-backend.CalendarDateTime_2270289792",
+              "type": "wix-bookings-backend.CalendarDateTime_2270289792:updateSession",
               "doc": "An object specifying the start date and time of the session.\nIf the session is a recurring session, `start` must contain a local date/time." },
             { "name": "end",
-              "type": "wix-bookings-backend.CalendarDateTime_2270289792",
+              "type": "wix-bookings-backend.CalendarDateTime_2270289792:updateSession",
               "doc": "An object specifying the start date and time of the session.\nIf the session is a recurring session, `start` must contain a local date/time." },
             { "name": "affectedSchedules",
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.LinkedSchedule_7939545343" ] },
+                    [ "wix-bookings-backend.LinkedSchedule_7939545343:updateResourceSchedule" ] },
               "doc": "An object specifying a list of linked schedules and the way each schedule's availability is affected by the session. For example, the schedule of an instructor is linked to the schedule of the class that they instruct.\nIf the session is a recurring session, the value is inherited from the schedule but can still be overridden.",
               "optional": true },
             { "name": "title",
@@ -322,7 +443,7 @@
               "doc": "Tags for the session. Optional. Defaults to the schedule's tags.\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session.",
               "optional": true },
             { "name": "location",
-              "type": "wix-bookings-backend.Location_147848441914",
+              "type": "wix-bookings-backend.Location_147848441914:updateResourceSchedule",
               "doc": "An object describing the location where the session takes place.\nDefaults to the schedule location.\nFor single sessions, `session.location.businessLocation` can only be provided for locations that are defined in the schedule using `schedule.location` or `schedule.availability.locations`.",
               "optional": true },
             { "name": "capacity",
@@ -330,7 +451,7 @@
               "doc": "Maximum number of participants that can be added to the session. Defaults to the schedule capacity.\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session.",
               "optional": true },
             { "name": "rate",
-              "type": "wix-bookings-backend.Rate_13652876269",
+              "type": "wix-bookings-backend.Rate_13652876269:updateResourceSchedule",
               "doc": "The price options offered for the session.  Defaults to the schedule rate.\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session.",
               "optional": true },
             { "name": "timeReservedAfter",
@@ -345,11 +466,11 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Participant_14857773285" ] },
+                    [ "wix-bookings-backend.Participant_14857773285:updateSession" ] },
               "doc": "List of participants booked for the session.\nThe list includes participants who have registered for this specific session, and participants who have registered for a schedule that includes this session.\nIf the session is a recurring session, this field must be empty.",
               "optional": true },
             { "name": "externalCalendarOverrides",
-              "type": "wix-bookings-backend.ExternalCalendarOverrides_672201097",
+              "type": "wix-bookings-backend.ExternalCalendarOverrides_672201097:updateResourceSchedule",
               "doc": "Title and description values to override session defaults when syncing to an external calendar.\nLearn more about [syncing calendars](https://support.wix.com/en/article/wix-bookings-important-information-about-syncing-google-calendars-with-wix-bookings).\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session.",
               "optional": true },
             { "name": "type",
@@ -357,7 +478,7 @@
               "doc": "Session type.\nOne of:\n + `\"UNDEFINED\"`\n + `\"EVENT\"`\n + `\"WORKING_HOURS\"`\n + `\"TIME_AVAILABILITY\"`\n + `\"AVAILABILITY\"`",
               "optional": true },
             { "name": "calendarConference",
-              "type": "wix-bookings-backend.CalendarConference_22421061789",
+              "type": "wix-bookings-backend.CalendarConference_22421061789:updateResourceSchedule",
               "doc": "A conference created for the session according to the details set in the schedule's conference provider information.\nIf the session is a recurring session, this field is inherited from the schedule.",
               "optional": true },
             { "name": "recurrence",
@@ -366,7 +487,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "UpdateSessionRequest_241476392166",
         "locations":
           [ { "lineno": 36,
@@ -378,7 +500,7 @@
               {  } },
         "members":
           [ { "name": "session",
-              "type": "wix-bookings-backend.Session_225620643475",
+              "type": "wix-bookings-backend.Session_225620643475:updateSession",
               "doc": "Session.",
               "optional": true },
             { "name": "updated",
@@ -395,7 +517,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "UpdateSessionResult_256943726943",
         "locations":
           [ { "lineno": 45,
@@ -407,10 +530,11 @@
               {  } },
         "members":
           [ { "name": "session",
-              "type": "wix-bookings-backend.Session_255663383937",
+              "type": "wix-bookings-backend.Session_255663383937:updateSession1",
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }

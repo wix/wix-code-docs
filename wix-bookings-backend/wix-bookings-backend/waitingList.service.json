@@ -2,7 +2,7 @@
   "memberOf": "wix-bookings-backend",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 29,
       "filename": "index.js" },
@@ -131,11 +131,11 @@
               {  } },
         "members":
           [ { "name": "presentedStartTime",
-              "type": "wix-bookings-backend.LocalDateTime_957146317",
+              "type": "wix-bookings-backend.LocalDateTime_957146317:updateSession",
               "doc": "Service start time as presented to the user. For validation - Optional.",
               "optional": true },
             { "name": "presentedEndTime",
-              "type": "wix-bookings-backend.LocalDateTime_957146317",
+              "type": "wix-bookings-backend.LocalDateTime_957146317:updateSession",
               "doc": "Service start time as presented to the user. For validation - Optional.",
               "optional": true },
             { "name": "flowControlSettings",
@@ -144,7 +144,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "RegisterRequest_FlowControlSettings_4715659461",
         "locations":
           [ { "lineno": 9,
