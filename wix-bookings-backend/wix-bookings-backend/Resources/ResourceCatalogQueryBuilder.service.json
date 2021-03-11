@@ -1,8 +1,7 @@
 { "name": "ResourceCatalogQueryBuilder",
   "memberOf": "wix-bookings-backend.Resources",
   "mixes": [],
-  "labels":
-    [ "new" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "ResourceCatalogQueryBuilder.js" },

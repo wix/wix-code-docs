@@ -1,7 +1,6 @@
 { "name": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -61,13 +60,12 @@
         "extra":
           {  } },
       { "name": "resources",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "wix-bookings-backend.Resources",
         "locations":
-          [ { "lineno": 77,
+          [ { "lineno": 76,
               "filename": "index.js" } ],
         "docs":
           { "summary": "The Bookings API provides functionality for updating and managing bookings created in the Wix Bookings app.",
@@ -871,8 +869,7 @@
               "doc": "Image URL expiration date." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ImageInfo",
         "locations":
           [ { "lineno": 480,
@@ -901,8 +898,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "IsAvailableResult_6686246600",
         "locations":
           [ { "lineno": 266,
@@ -1384,8 +1380,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Rate_13652876269",
         "locations":
           [ { "lineno": 328,
@@ -1706,8 +1701,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "WixPayDetails",
         "locations":
           [ { "lineno": 246,
