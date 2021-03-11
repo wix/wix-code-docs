@@ -14,8 +14,7 @@
   "properties": [],
   "operations":
     [ { "name": "createResource",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceInfo",
@@ -59,7 +58,8 @@
         "extra":
           {  } },
       { "name": "deleteResource",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -85,7 +85,12 @@
                 "What happens if the sessions have bookings - can delete if has sessions.",
                 "-->" ],
             "links": [],
-            "examples": [],
+            "examples":
+              [ { "title": "Delete a resource",
+                  "body":
+                    [ "Delete Resource" ],
+                  "extra":
+                    {  } } ],
             "extra":
               {  } },
         "extra":
