@@ -1,7 +1,8 @@
 { "name": "BookingsQueryResult",
   "memberOf": "wix-bookings-backend.Bookings",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 2,
       "filename": "WixBookingsQueryResult.js" },
@@ -18,7 +19,8 @@
         {  } },
   "properties":
     [ { "name": "currentPage",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "number",
@@ -45,7 +47,7 @@
                     {  } },
                 { "title": "Perform a query and get the current page index of the query result",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "",
@@ -64,7 +66,8 @@
         "extra":
           {  } },
       { "name": "items",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type":
@@ -89,7 +92,7 @@
             "examples":
               [ { "title": "Perform a query and get the booking items from the result",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "bookings.queryBookings()",
@@ -298,7 +301,8 @@
         "extra":
           {  } },
       { "name": "length",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "number",
@@ -321,7 +325,7 @@
                     {  } },
                 { "title": "Perform a query and get the length of the result",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "",
@@ -340,7 +344,8 @@
         "extra":
           {  } },
       { "name": "pageSize",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "number",
@@ -362,7 +367,7 @@
                     {  } },
                 { "title": "Perform a query and get the page size of the query result",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "",
@@ -381,7 +386,8 @@
         "extra":
           {  } },
       { "name": "query",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "wix-bookings-backend.Bookings.BookingsQueryBuilder",
@@ -401,7 +407,7 @@
                     {  } },
                 { "title": "Perform a query and get the query that produced the result",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "",
@@ -426,7 +432,8 @@
         "extra":
           {  } },
       { "name": "totalCount",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "number",
@@ -447,7 +454,7 @@
                     {  } },
                 { "title": "Perform a query and get the number of items in the result",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "",
@@ -466,7 +473,8 @@
         "extra":
           {  } },
       { "name": "totalPages",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "number",
@@ -489,7 +497,7 @@
                     {  } },
                 { "title": "Perform a query and get the total number of pages in the query result",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "",
@@ -509,7 +517,8 @@
           {  } } ],
   "operations":
     [ { "name": "hasNext",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -529,7 +538,7 @@
                     {  } },
                 { "title": "Iterate through all pages of query results",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "async function retrieveAllItems() {",
                       "  let allItems = [];",
@@ -576,7 +585,8 @@
         "extra":
           {  } },
       { "name": "next",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -625,7 +635,7 @@
                     {  } },
                 { "title": "Iterate through all pages of query results",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "async function retrieveAllItems() {",
                       "  let allItems = [];",
