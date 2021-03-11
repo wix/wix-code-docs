@@ -1,8 +1,7 @@
 { "name": "Resources",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 58,
       "filename": "index.js" },
