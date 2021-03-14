@@ -1,7 +1,8 @@
 { "name": "Resources",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 58,
       "filename": "index.js" },
@@ -27,7 +28,55 @@
         {  } },
   "properties": [],
   "operations":
-    [ { "name": "queryResourceCatalog",
+    [ { "name": "deleteResource",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "ID of the resource to delete." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "string" ] },
+            "doc": "Fulfilled - Deleted resource id" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "deleteResource.js" } ],
+        "docs":
+          { "summary": "Deletes a resource.",
+            "description":
+              [ "< !--ONLY: VELO -> The`deleteResource()` function returns a promise that is resolved when a resource is deleted.< !--END: ONLY: VELO-- >",
+                "Deleting a resource updates its `status` to `\"DELETED\"` and updates its schedule to `\"CANCELED\"`.",
+                "You can not delete a resource if it has booked sessions. ",
+                "The Bookings app creates an resource with a name and a tag of \"business\". This resource is used for the business's schedule and working hours and cannot be deleted." ],
+            "links": [],
+            "examples":
+              [ { "title": "Delete a resource",
+                  "body":
+                    [ "import { resources } from \"wix-bookings-backend\";",
+                      "",
+                      "export function myDeleteResource(resourceId) {",
+                      "  return resources",
+                      "      .deleteResource(resourceId)",
+                      "      .then((deletedResource) => {",
+                      "          return deletedResource;",
+                      "      })",
+                      "      .catch((error) => {",
+                      "          return error;",
+                      "      });",
+                      "    ",
+                      "  // Returns a string containing the deleted resource ID.",
+                      "  // e.g.  \"3f9215e0-7e96-417f-9c16-628e71c77311\"" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "queryResourceCatalog",
         "labels": [],
         "nameParams": [],
         "params": [],
