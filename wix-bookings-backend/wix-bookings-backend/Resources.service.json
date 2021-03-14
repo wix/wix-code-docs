@@ -30,7 +30,7 @@
   "operations":
     [ { "name": "queryResourceCatalog",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params": [],
         "ret":
@@ -75,8 +75,7 @@
                 "|Property|Filters|Description|",
                 "|--|--|--|",
                 "|`_id`|[`eq()`](wix-bookings-backend/resources/resourcecatalogquerybuilder/eq)| Query for a specific booking. <br/>  `eq(\"_id\",\"46ce4cd4-46ff-4aa7-9cc0-02fd4f0f3209\")`|",
-                "|`slugs.name` | [`eq()`](wix-bookings-backend/resources/resourcecatalogquerybuilder/eq), [`hasSome()`](wix-bookings-backend/resources/resourcecatalogquerybuilder/hasSome)| Bookings made by the specified contact ID. `eq(\"contactId\",\"8711a950-74cc-4608-80fb-8f09df9cbbf4\")`|",
-                "|`sessionId`| [`eq()`](wix-bookings-backend/resources/bookingsquerybuilder/eq), [`hasSome()`](wix-bookings-backend/bookings/bookingsquerybuilder/hassome)|Bookings made to a given session ",
+                "|`slugs.name` | [`eq()`](wix-bookings-backend/resources/resourcecatalogquerybuilder/eq), [`hasSome()`](wix-bookings-backend/resources/resourcecatalogquerybuilder/hasSome)| Bookings made by the specified contact ID. `eq(\"slugs.name\",\"john-smith\")`|",
                 "",
                 "<!--END:ONLY:VELO-->   ",
                 "<!--ONLY:REST",
