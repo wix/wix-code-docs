@@ -14,8 +14,8 @@
           "A resource is a business asset that can be booked or assigned to a session. Resources include staff, rooms, and equipment. Each resource owns a schedule which defines the resource's availability. Resources have basic contact details and images.",
           "Resources have tags that you can use for grouping. For example, add a `room` tag for classroom resources and an `equipment` tag for resources like computers and projectors.",
           "There are two tags that are used by the Wix Bookings app: `staff` and `business`. Resources with the `staff` tag appear in the Bookings app's **Staff** page. ",
-          "The `business` resources owns a schedule that contains the operating hours of the business. This schedule is also be used to creating new resources with business’s operating hours as the resource availability.",
           "",
+          "The Bookings app creates a resource named \"business\" with a tag value of \"business\". This  resources owns a schedule that contains the operating hours of the business. This schedule is also be used when creating new resources with the business’s operating hours as the resource's availability.",
           "",
           "To use the Resources API, import `resources` from the `wix-bookings-backend` module:",
           "",
@@ -50,9 +50,8 @@
             "description":
               [ "The`deleteResource()` function returns a promise that is resolved when a resource is deleted.",
                 "Deleting a resource updates its `status` to `\"DELETED\"` and updates its schedule to `\"CANCELED\"`.",
-                "You can not delete a resource if it has booked sessions. ",
                 "",
-                "The Bookings app creates an resource with a name and a tag of \"business\". This resource is used for the business's schedule and working hours and cannot be deleted." ],
+                "You can not delete a resource if it has booked sessions. The Bookings app creates an resource with a name and a tag of \"business\". This resource is used for the business's schedule and working hours and cannot be deleted." ],
             "links": [],
             "examples":
               [ { "title": "Delete a resource",

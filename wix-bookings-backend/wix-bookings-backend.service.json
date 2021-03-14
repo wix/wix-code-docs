@@ -65,7 +65,7 @@
         "set": false,
         "type": "wix-bookings-backend.Resources",
         "locations":
-          [ { "lineno": 76,
+          [ { "lineno": 77,
               "filename": "index.js" } ],
         "docs":
           { "summary": "The Bookings API provides functionality for updating and managing bookings created in the Wix Bookings app.",
