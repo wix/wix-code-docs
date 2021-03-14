@@ -51,6 +51,7 @@
               [ "The`deleteResource()` function returns a promise that is resolved when a resource is deleted.",
                 "Deleting a resource updates its `status` to `\"DELETED\"` and updates its schedule to `\"CANCELED\"`.",
                 "You can not delete a resource if it has booked sessions. ",
+                "",
                 "The Bookings app creates an resource with a name and a tag of \"business\". This resource is used for the business's schedule and working hours and cannot be deleted." ],
             "links": [],
             "examples":
