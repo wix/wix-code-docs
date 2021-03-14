@@ -1,7 +1,8 @@
 { "name": "HiddenMixin",
   "memberOf": "$w",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 11,
       "filename": "HiddenMixin.es6" },
@@ -273,7 +274,8 @@
         "extra":
           {  } },
       { "name": "show",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "effectName",
@@ -319,7 +321,7 @@
                 " optional `effectOptions` object.",
                 "",
                 " This table shows the possible `effectName` values",
-                " and their corresponding names in the Velo editor:",
+                " and their corresponding names in the editor:",
                 "",
                 " | Effect Name Value    | Velo Editor Animation Name |",
                 " | -------------------- | -------------------------- |",
