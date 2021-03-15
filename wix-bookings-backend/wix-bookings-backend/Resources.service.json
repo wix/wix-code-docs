@@ -1,7 +1,8 @@
 { "name": "Resources",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 58,
       "filename": "index.js" },
@@ -28,7 +29,8 @@
   "properties": [],
   "operations":
     [ { "name": "createResource",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceInfo",
@@ -52,7 +54,7 @@
         "docs":
           { "summary": "Creates a resource.",
             "description":
-              [ "<!--ONLY:VELO ",
+              [ "<!--ONLY:VELO-->",
                 " The `createResource()` function returns a Promise that resolves to a resource object when a resource is created.<!--END:ONLY:VELO-->",
                 " Resources are created with a schedule. The schedule and its sessions determine the resource's availability. The schedule must contain start date in the `availability.start` property. If the resource is available during the business's default hours, the business's schedule is added as a linked schedule in the resource's schedule. If the resource has its own custom hours, create recurring sessions using the resource's `scheduleId` and set the session type to `\"AVAILABILITY\"`. Recurring sessions are used to define resource availability. Do not use availability constraints for resource schedules. ",
                 " <!--ONLY:VELO--> The sequence for creating a resource is as follows:",
