@@ -1,8 +1,7 @@
 { "name": "Events",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "bookingsEvents.js" },
@@ -723,8 +722,7 @@
         "extra":
           {  } },
       { "name": "onBookingScheduleUpdated",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -926,8 +924,7 @@
         "extra":
           {  } },
       { "name": "onBookingUpdated",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "event",
