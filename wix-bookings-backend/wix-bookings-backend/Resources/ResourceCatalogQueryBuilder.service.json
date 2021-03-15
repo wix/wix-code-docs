@@ -1,7 +1,8 @@
 { "name": "ResourceCatalogQueryBuilder",
   "memberOf": "wix-bookings-backend.Resources",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "ResourceCatalogQueryBuilder.js" },
@@ -253,7 +254,8 @@
         "extra":
           {  } },
       { "name": "find",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "options",
@@ -282,11 +284,11 @@
             "examples":
               [ { "title": "Perform a find on a query",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "",
-                      "bookings.queryBookings()",
+                      "resources.queryResourceCatalog()",
                       "  .find()",
                       "  .then((results) => {",
                       "    if (results.items.length > 0) {",
@@ -311,14 +313,14 @@
                     {  } },
                 { "title": "Perform a find on a query using options",
                   "body":
-                    [ "import { bookings } from \"wix-bookings-backend\";",
+                    [ "import { resources } from \"wix-bookings-backend\";",
                       "",
                       "// ...",
                       "const options = {",
-                      "  \"suppressAuth\": true",
+                      "  \"includeDeleted\": true",
                       "};",
                       "",
-                      "bookings.queryBookings()",
+                      "resources.queryResourceCatalog()",
                       "  .find(options)",
                       "  .then((results) => {",
                       "    if (results.items.length > 0) {",
