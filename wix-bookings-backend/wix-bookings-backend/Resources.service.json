@@ -1,7 +1,8 @@
 { "name": "Resources",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 58,
       "filename": "index.js" },
@@ -27,7 +28,48 @@
         {  } },
   "properties": [],
   "operations":
-    [ { "name": "deleteResource",
+    [ { "name": "createResource",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceInfo",
+              "type": "wix-bookings-backend.resources.Resource_13052683855:createResource",
+              "doc": "Resource to create." },
+            { "name": "schedulesInfo",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Schedule_206489895095" ] },
+              "doc": "List of schedules to be assigned for the created resource. Currently only a single schedule is allowed.\n If provided, any schedules in the resource entity will be ignored." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Resource_23420910898:createResource" ] },
+            "doc": "Fulfilled - Updated Resource" },
+        "locations":
+          [ { "lineno": 18,
+              "filename": "resources.js" } ],
+        "docs":
+          { "summary": "Creates a resource.",
+            "description":
+              [ "<!--ONLY:VELO ",
+                " The `createResource()` function returns a Promise that resolves to a resource object when a resource is created.<!--END:ONLY:VELO-->",
+                " Resources are created with a schedule. The schedule and its sessions determine the resource's availability. The schedule must contain start date in the `availability.start` property. If the resource is available during the business's default hours, the business's schedule is added as a linked schedule in the resource's schedule. If the resource has its own custom hours, create recurring sessions using the resource's `scheduleId` and set the session type to `\"AVAILABILITY\"`. Recurring sessions are used to define resource availability. Do not use availability constraints for resource schedules. ",
+                " <!--ONLY:VELO--> The sequence for creating a resource is as follows:",
+                "  1. Create the resource using `createResource()` including schedule information. If the resource uses the default business hours, get the business resource's schedule ID  and include it in the linkedSchedules array in the availability object in the schedule parameters.",
+                "  1. If the resource has its own schedule, create recurring sessions of type `\"AVAILABILITY\"` using `createSession()` with the `scheduleId` returned from `createResource()`.",
+                " <!--END:ONLY:VELO-->",
+                " >**Note:** A resource can only have one schedule.",
+                " <!--ONLY:VELO-->" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "deleteResource",
         "labels": [],
         "nameParams": [],
         "params":
@@ -42,7 +84,7 @@
             "doc": "Fulfilled - Deleted resource id" },
         "locations":
           [ { "lineno": 1,
-              "filename": "deleteResource.js" } ],
+              "filename": "resources.js" } ],
         "docs":
           { "summary": "Deletes a resource.",
             "description":
