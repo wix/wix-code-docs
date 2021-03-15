@@ -37,7 +37,7 @@
                   [ "wix-billing-backend.Invoices.Response" ] },
             "doc": "Fulfilled - When the payment is added to the invoice." },
         "locations":
-          [ { "lineno": 243,
+          [ { "lineno": 247,
               "filename": "invoices.js" } ],
         "docs":
           { "summary": "Adds a payment to the invoice and reports the payment to the payment provider.",
@@ -271,7 +271,7 @@
               "type": "wix-billing-backend.Invoices.IdAndVersion",
               "doc": "ID and version of the invoice." },
             { "name": "options",
-              "type": "wix-users-backend.Invoices.WixInvoicesOptions",
+              "type": "wix-billing-backend.Invoices.AuthOptions",
               "doc": "An object with the following boolean property: suppressAuth.",
               "optional": true } ],
         "ret":
@@ -287,7 +287,11 @@
           { "summary": "Creates a link that can be used by a customer to preview the invoice.",
             "description":
               [ "The `createInvoicePreviewUrl()` function returns a Promise that resolves",
-                " to a temporary link to a preview of the invoice with the specified ID." ],
+                " to a temporary link to a preview of the invoice with the specified ID.",
+                "",
+                "By default, `createInvoicePreviewUrl()` can be called by site contributors only.",
+                "You can allow customers to generate the invoice preview link,",
+                "set `suppressAuth` in the `options` argument to `true`." ],
             "links": [],
             "examples":
               [ { "title": "Create invoice preview link",
@@ -736,7 +740,7 @@
   "messages":
     [ { "name": "Address",
         "locations":
-          [ { "lineno": 42,
+          [ { "lineno": 39,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains address information.",
@@ -1047,9 +1051,26 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "AuthOptions",
+        "locations":
+          [ { "lineno": 19,
+              "filename": "quotes-common-types.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "Prevents permission checks from running for the operation." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "CalculatedTax",
         "locations":
-          [ { "lineno": 254,
+          [ { "lineno": 251,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains calculated tax information.",
@@ -1224,7 +1245,7 @@
         "labels": [] },
       { "name": "Customer",
         "locations":
-          [ { "lineno": 78,
+          [ { "lineno": 75,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains customer information.",
@@ -1558,7 +1579,7 @@
         "labels": [] },
       { "name": "Discount",
         "locations":
-          [ { "lineno": 229,
+          [ { "lineno": 226,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains discount information.",
@@ -1743,7 +1764,7 @@
         "labels": [] },
       { "name": "EmailInfo",
         "locations":
-          [ { "lineno": 315,
+          [ { "lineno": 312,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains information used to send an invoice to a customer.",
@@ -1799,7 +1820,7 @@
         "labels": [] },
       { "name": "IdAndVersion",
         "locations":
-          [ { "lineno": 11,
+          [ { "lineno": 10,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains ID and version information.",
@@ -2900,7 +2921,7 @@
         "labels": [] },
       { "name": "ItemizedFee",
         "locations":
-          [ { "lineno": 207,
+          [ { "lineno": 204,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains itemized fee information.",
@@ -3066,7 +3087,7 @@
         "labels": [] },
       { "name": "LineItem",
         "locations":
-          [ { "lineno": 112,
+          [ { "lineno": 109,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains line item information.",
@@ -3377,7 +3398,7 @@
         "labels": [] },
       { "name": "LineItemTax",
         "locations":
-          [ { "lineno": 135,
+          [ { "lineno": 132,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains tax information for a line item.",
@@ -3675,7 +3696,7 @@
         "labels": [] },
       { "name": "Locale",
         "locations":
-          [ { "lineno": 161,
+          [ { "lineno": 158,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains locale information.",
@@ -3838,7 +3859,7 @@
         "labels": [] },
       { "name": "MetaData",
         "locations":
-          [ { "lineno": 277,
+          [ { "lineno": 274,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains metadata information.",
@@ -4319,7 +4340,7 @@
         "labels": [] },
       { "name": "Response",
         "locations":
-          [ { "lineno": 297,
+          [ { "lineno": 294,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains response information.",
@@ -4501,7 +4522,7 @@
         "labels": [] },
       { "name": "StreetAddress",
         "locations":
-          [ { "lineno": 334,
+          [ { "lineno": 331,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains street address information.",
@@ -4788,7 +4809,7 @@
         "labels": [] },
       { "name": "TotalPrice",
         "locations":
-          [ { "lineno": 188,
+          [ { "lineno": 185,
               "filename": "quotes-common-types.js" } ],
         "docs":
           { "summary": "An object that contains price totals.",
@@ -4980,6 +5001,6 @@
         "extra":
           {  },
         "labels":
-          [ "new" ] } ],
+          [ "removed" ] } ],
   "extra":
     {  } }
