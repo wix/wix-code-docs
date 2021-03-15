@@ -1,7 +1,8 @@
 { "name": "bookings",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -536,7 +537,8 @@
         "extra":
           {  } },
       { "name": "setBookingAsPaid",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
@@ -556,7 +558,7 @@
             "description":
               [ "<!--ONLY:VELO-->",
                 "The `setBookingAsPaid()` function returns a Promise that resolves when the booking is set as fully paid.",
-                "<!--END:ONLY:VELO-->    //",
+                "<!--END:ONLY:VELO-->    ",
                 "When the business has received full payment from the customer, the booking can be marked as fully paid.",
                 "",
                 "When a booking is set as paid, the following events occur:",

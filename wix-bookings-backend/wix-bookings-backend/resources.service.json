@@ -1,8 +1,7 @@
 { "name": "resources",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 65,
       "filename": "index.js" },
@@ -58,8 +57,7 @@
         "extra":
           {  } },
       { "name": "deleteResource",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
