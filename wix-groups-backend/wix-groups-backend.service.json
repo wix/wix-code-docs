@@ -1,0 +1,3005 @@
+{ "name": "wix-groups-backend",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 1,
+      "filename": "index.js" },
+  "docs":
+    { "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties": [],
+  "operations":
+    [ { "name": "addGroupMembers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID to add members to." },
+            { "name": "siteMemberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Site member IDs to add to group." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ { "name": "Array",
+                      "typeParams":
+                        [ "wix-groups-backend.GroupMember_12244579166" ] } ] },
+            "doc": "Fulfilled - Added group members." },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_AddGroupMembers_addGroupMembers.js" } ],
+        "docs":
+          { "summary": "Add site members to a specific group.",
+            "description":
+              [ "Group managers and group admins always have access to this functionality. In some cases, site owners will allow site members to use this functionality as well." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function addGroupMembers() {",
+                      "  const groupId = \"a string\";",
+                      "  const siteMemberIds = [\"a string\"];",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .addGroupMembers(groupId, siteMemberIds, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "approveGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupRequestIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Group request IDs to approve." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.ApproveGroupRequestsResult_65949274695" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_ApproveGroupRequests_approveGroupRequests.js" } ],
+        "docs":
+          { "summary": "Approves group requests.",
+            "description":
+              [ "Group managers have access to this functionality." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function approveGroupRequests() {",
+                      "  const groupRequestIds = [\"a string\"];",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .approveGroupRequests(groupRequestIds, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "approveJoinGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "siteMemberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Site member IDs to approve." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.ApproveJoinGroupRequestsResult_15727179317" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_ApproveJoinGroupRequests_approveJoinGroupRequests.js" } ],
+        "docs":
+          { "summary": "Approves pending join group requests.",
+            "description":
+              [ "Group managers always have access to this functionality. In some cases, site owners will allow group members to use this functionality as well." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function approveJoinGroupRequests() {",
+                      "  const groupId = \"a string\";",
+                      "  const siteMemberIds = [\"a string\"];",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .approveJoinGroupRequests(groupId, siteMemberIds, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "assignRole",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "siteMemberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Group member IDs for this role." },
+            { "name": "value",
+              "type": "string",
+              "doc": "Group member role\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin\nOne of:\n + `\"UNKNOWN_ROLE\"`\n + `\"MEMBER\"`\n + `\"ADMIN\"`" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.AssignRoleResult_12214521400" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 9,
+              "filename": "wix_social_groups_api_v2_GroupRolesService_AssignRole_assignRole.js" } ],
+        "docs":
+          { "summary": "Assigns a specific group role to group members (relevant for existing group members only).",
+            "description":
+              [ "Can be used only by a group admin or a groups manager." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function assignRole() {",
+                      "  const groupId = \"a string\";",
+                      "  const siteMemberIds = [\"a string\"];",
+                      "  const value = \"UNKNOWN_ROLE\";",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .assignRole(groupId, siteMemberIds, value, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "cancelGroupRequest",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupRequestId",
+              "type": "string",
+              "doc": "Group Request ID to cancel." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.CancelGroupRequestResult_67925702128" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 9,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_CancelGroupRequest_cancelGroupRequest.js" } ],
+        "docs":
+          { "summary": "Cancels a group request.",
+            "description":
+              [ "Group managers always have access to this functionality. Site members can cancel their own group requests.",
+                "This endpoint doesn't support server signing." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function cancelGroupRequest() {",
+                      "  const groupRequestId = \"a string\";",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .cancelGroupRequest(groupRequestId, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "cancelJoinGroupRequest",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.CancelJoinGroupRequestResult_11904316671" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_CancelJoinGroupRequest_cancelJoinGroupRequest.js" } ],
+        "docs":
+          { "summary": "Cancels a join group request.",
+            "description":
+              [ "A site member can cancel only their own pending Join group requests." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function cancelJoinGroupRequest() {",
+                      "  const groupId = \"a string\";",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .cancelJoinGroupRequest(groupId, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "createGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "createGroupRequest",
+              "type": "wix-groups-backend.CreateGroupRequest_36182278271" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.CreateGroupResult_52630794003" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 35,
+              "filename": "wix_social_groups_api_v2_GroupsService_CreateGroup_createGroup.js" } ],
+        "docs":
+          { "summary": "Creates a group.",
+            "description":
+              [ "Group managers always have access to this functionality. In some cases, site owners will allow site members to use this functionality as well.",
+                "Specify a `creatorId` to set the group's creator, who will be added as a group admin." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function createGroup() {",
+                      "  const createGroupRequest = {",
+                      "    group: {",
+                      "      slug: \"a string\",",
+                      "      privacyLevel: \"UNKNOWN\",",
+                      "      title: \"a string\",",
+                      "      description: \"a string\",",
+                      "      teaser: \"a string\",",
+                      "      details: {",
+                      "        logo: {",
+                      "          mediaId: \"a string\",",
+                      "          width: 42,",
+                      "          height: 42",
+                      "        },",
+                      "        membersTitle: \"a string\"",
+                      "      },",
+                      "      settings: {",
+                      "        membersPermittedToInvite: true,",
+                      "        membersPermittedToApprove: true,",
+                      "        memberWelcomePostEnabled: true,",
+                      "        groupDetailsChangedPostEnabled: true,",
+                      "        showMemberList: true",
+                      "      }",
+                      "    },",
+                      "    creatorId: \"a string\"",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .createGroup(createGroupRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "deleteGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "deleteGroupRequest",
+              "type": "wix-groups-backend.DeleteGroupRequest_1518823018" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.DeleteGroupResult_54557130594" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 13,
+              "filename": "wix_social_groups_api_v2_GroupsService_DeleteGroup_deleteGroup.js" } ],
+        "docs":
+          { "summary": "Deletes a group.",
+            "description":
+              [ "Group managers and group admins have access to this functionality.",
+                "The group will no longer be accessible in the live site or the Wix business manager." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function deleteGroup() {",
+                      "  const deleteGroupRequest = {",
+                      "    groupId: \"a string\"",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .deleteGroup(deleteGroupRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "getGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "getGroupRequest",
+              "type": "wix-groups-backend.GetGroupRequest_1519498649" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.GetGroupResult_54578075155" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 13,
+              "filename": "wix_social_groups_api_v2_GroupsService_GetGroup_getGroup.js" } ],
+        "docs":
+          { "summary": "Retrieves a group by ID.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function getGroup() {",
+                      "  const getGroupRequest = {",
+                      "    groupId: \"a string\"",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .getGroup(getGroupRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "getGroupBySlug",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "getGroupBySlugRequest",
+              "type": "wix-groups-backend.GetGroupBySlugRequest_714772046" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.GetGroupBySlugResult_54360887505" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 13,
+              "filename": "wix_social_groups_api_v2_GroupsService_GetGroupBySlug_getGroupBySlug.js" } ],
+        "docs":
+          { "summary": "Retrieves a group by slug.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function getGroupBySlug() {",
+                      "  const getGroupBySlugRequest = {",
+                      "    slug: \"a string\"",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .getGroupBySlug(getGroupBySlugRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "joinGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID to join." },
+            { "name": "membershipQuestionAnswers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Answer_8656700528" ] },
+              "doc": "Answers to membership questions. They can be empty, but join group request will fail if answer to required question is omitted." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.JoinResult_14425067409" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_JoinGroup_joinGroup.js" } ],
+        "docs":
+          { "summary": "Join a specific group.",
+            "description":
+              [ "Site owner can use it for groups with any privacy level and automatically receives `ADMIN` group role. A site member can use it only for public groups.",
+                "This endpoint doesn't support server signing." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function joinGroup() {",
+                      "  const groupId = \"a string\";",
+                      "  const membershipQuestionAnswers = [",
+                      "    {",
+                      "      questionId: \"a string\",",
+                      "      answerText: \"a string\"",
+                      "    }",
+                      "  ];",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .joinGroup(groupId, membershipQuestionAnswers, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "leaveGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID to leave." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_LeaveGroup_leaveGroup.js" } ],
+        "docs":
+          { "summary": "Leave a group.",
+            "description":
+              [ "This endpoint doesn't support server signing." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function leaveGroup() {",
+                      "  const groupId = \"a string\";",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .leaveGroup(groupId, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listGroupMembers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "limit",
+              "type": "number" },
+            { "name": "offset",
+              "type": "number" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.ListGroupMembersResult_13227103137" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListGroupMembers_listGroupMembers.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 group members, given the provided paging.",
+            "description":
+              [ "Groups mangers can retrieve group members of any group." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function listGroupMembers() {",
+                      "  const groupId = \"a string\";",
+                      "  const limit = 42;",
+                      "  const offset = 42;",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .listGroupMembers(groupId, limit, offset, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "limit",
+              "type": "number" },
+            { "name": "offset",
+              "type": "number" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.ListGroupRequestsResult_71492744524" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_ListGroupRequests_listGroupRequests.js" } ],
+        "docs":
+          { "summary": "Lists group requests across the site.",
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function listGroupRequests() {",
+                      "  const limit = 42;",
+                      "  const offset = 42;",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .listGroupRequests(limit, offset, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listGroups",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listGroupsRequest",
+              "type": "wix-groups-backend.ListGroupsRequest_991897308" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.ListGroupsResult_55645003794" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 15,
+              "filename": "wix_social_groups_api_v2_GroupsService_ListGroups_listGroups.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 groups across the site.",
+            "description":
+              [ "Groups managers can see all existing groups." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function listGroups() {",
+                      "  const listGroupsRequest = {",
+                      "    limit: 42,",
+                      "    offset: 42",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .listGroups(listGroupsRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listJoinGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "limit",
+              "type": "number" },
+            { "name": "offset",
+              "type": "number" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.ListJoinGroupRequestsResult_15742354622" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_ListJoinGroupRequests_listJoinGroupRequests.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 join group requests, given the provided paging.",
+            "description":
+              [ "Group managers always have access to this functionality (site members can access their own join group requests in the site)." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function listJoinGroupRequests() {",
+                      "  const groupId = \"a string\";",
+                      "  const limit = 42;",
+                      "  const offset = 42;",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .listJoinGroupRequests(groupId, limit, offset, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "listMemberships",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "listMembershipsRequest",
+              "type": "wix-groups-backend.ListMembershipsRequest_5142378487" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.ListMembershipsResult_21791660184" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 16,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListMemberships_listMemberships.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 members and their membership status, given the provided paging.",
+            "description":
+              [ "Groups mangers can see all memberships for any group." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function listMemberships() {",
+                      "  const listMembershipsRequest = {",
+                      "    siteMemberId: \"a string\",",
+                      "    limit: 42,",
+                      "    offset: 42",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .listMemberships(listMembershipsRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryGroupMembers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "query",
+              "type": "wix-groups-backend.Query_24513805503" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.QueryGroupMembersResult_14010200785" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryGroupMembers_queryGroupMembers.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 group members, given the provided paging, sorting and filtering.",
+            "description":
+              [ "Groups mangers can retrieve group members of any group.",
+                "",
+                "Supported fields for filtering:",
+                "- `role`",
+                "",
+                "Supported fields for sorting:",
+                "- `joinedOn`" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function queryGroupMembers() {",
+                      "  const groupId = \"a string\";",
+                      "  const query = {",
+                      "    filter: {",
+                      "      kind: {",
+                      "        nullValue: \"NULL_VALUE\"",
+                      "      }",
+                      "    },",
+                      "    sort: [",
+                      "      {",
+                      "        fieldName: \"a string\",",
+                      "        order: \"ASC\"",
+                      "      }",
+                      "    ],",
+                      "    paging: {",
+                      "      limit: 42,",
+                      "      offset: 42",
+                      "    },",
+                      "    fields: [\"a string\"],",
+                      "    fieldsets: [\"a string\"]",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .queryGroupMembers(groupId, query, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "query",
+              "type": "wix-groups-backend.Query_24513805503" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.QueryGroupRequestsResult_74293935132" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_QueryGroupRequests_queryGroupRequests.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of groups requests across the site.",
+            "description":
+              [ "Supported fields for filtering:",
+                "- `status`",
+                "",
+                "Supported fields for sorting:",
+                "- `createdDate`" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function queryGroupRequests() {",
+                      "  const query = {",
+                      "    filter: {",
+                      "      kind: {",
+                      "        nullValue: \"NULL_VALUE\"",
+                      "      }",
+                      "    },",
+                      "    sort: [",
+                      "      {",
+                      "        fieldName: \"a string\",",
+                      "        order: \"ASC\"",
+                      "      }",
+                      "    ],",
+                      "    paging: {",
+                      "      limit: 42,",
+                      "      offset: 42",
+                      "    },",
+                      "    fields: [\"a string\"],",
+                      "    fieldsets: [\"a string\"]",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .queryGroupRequests(query, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryGroups",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "queryGroupsRequest",
+              "type": "wix-groups-backend.QueryGroupsRequest_26476133799" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.QueryGroupsResult_57826059074" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 14,
+              "filename": "wix_social_groups_api_v2_GroupsService_QueryGroups_queryGroups.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 groups across a site.",
+            "description":
+              [ "Groups managers can see all groups.",
+                "",
+                "Supported fields for filtering:",
+                "- `title`",
+                "",
+                "Supported fields for sorting:",
+                "- `title`",
+                "- `createdDate`",
+                "- `membersCount`",
+                "- `recentActivityDate`" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function queryGroups() {",
+                      "  const queryGroupsRequest = {",
+                      "    query: {",
+                      "      filter: {",
+                      "        kind: {",
+                      "          nullValue: \"NULL_VALUE\"",
+                      "        }",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      paging: {",
+                      "        limit: 42,",
+                      "        offset: 42",
+                      "      },",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"a string\"]",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .queryGroups(queryGroupsRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryJoinGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "query",
+              "type": "wix-groups-backend.Query_24513805503" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.QueryJoinGroupRequestsResult_16507216782" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_QueryJoinGroupRequests_queryJoinGroupRequests.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 join group requests, given the provided paging and filtering.",
+            "description":
+              [ "Group managers always have access to this functionality (site members can access their own join group requests in the site).",
+                "",
+                "Supported fields for filtering:",
+                "- `status`",
+                "",
+                "No supported fields for sorting" ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function queryJoinGroupRequests() {",
+                      "  const groupId = \"a string\";",
+                      "  const query = {",
+                      "    filter: {",
+                      "      kind: {",
+                      "        nullValue: \"NULL_VALUE\"",
+                      "      }",
+                      "    },",
+                      "    sort: [",
+                      "      {",
+                      "        fieldName: \"a string\",",
+                      "        order: \"ASC\"",
+                      "      }",
+                      "    ],",
+                      "    paging: {",
+                      "      limit: 42,",
+                      "      offset: 42",
+                      "    },",
+                      "    fields: [\"a string\"],",
+                      "    fieldsets: [\"a string\"]",
+                      "  };",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .queryJoinGroupRequests(groupId, query, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "queryMemberships",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "queryMembershipsRequest",
+              "type": "wix-groups-backend.QueryMembershipsRequest_26914058458" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.QueryMembershipsResult_19184522088" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 15,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "summary": "Retrieves a list of up to 100 members and their membership status, given the provided paging and filtering.",
+            "description":
+              [ "Groups mangers can see all memberships for any group.",
+                "",
+                "Supported fields for filtering:",
+                "- `role`",
+                "- `status`",
+                "",
+                "No supported fields for sorting." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function queryMemberships() {",
+                      "  const queryMembershipsRequest = {",
+                      "    siteMemberId: \"a string\",",
+                      "    query: {",
+                      "      filter: {",
+                      "        kind: {",
+                      "          nullValue: \"NULL_VALUE\"",
+                      "        }",
+                      "      },",
+                      "      sort: [",
+                      "        {",
+                      "          fieldName: \"a string\",",
+                      "          order: \"ASC\"",
+                      "        }",
+                      "      ],",
+                      "      paging: {",
+                      "        limit: 42,",
+                      "        offset: 42",
+                      "      },",
+                      "      fields: [\"a string\"],",
+                      "      fieldsets: [\"a string\"]",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .queryMemberships(queryMembershipsRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "rejectGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "rejections",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.RejectGroupRequestsRequest_Rejection_4742782634" ] },
+              "doc": "Rejection data." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.RejectGroupRequestsResult_66039603187" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 14,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_RejectGroupRequests_rejectGroupRequests.js" } ],
+        "docs":
+          { "summary": "Rejects group requests.",
+            "description":
+              [ "Group managers have access to this functionality." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function rejectGroupRequests() {",
+                      "  const rejections = [",
+                      "    {",
+                      "      groupRequestId: \"a string\",",
+                      "      reason: \"a string\"",
+                      "    }",
+                      "  ];",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .rejectGroupRequests(rejections, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "rejectJoinGroupRequests",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "rejections",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.RejectJoinGroupRequestsRequest_Rejection_3296440251" ] },
+              "doc": "Rejection data." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.RejectJoinGroupRequestsResult_14836649441" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 13,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_RejectJoinGroupRequests_rejectJoinGroupRequests.js" } ],
+        "docs":
+          { "summary": "Rejects pending join group requests.",
+            "description":
+              [ "Group managers always have access to this functionality. In some cases, site owners will allow group members to use this functionality as well." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function rejectJoinGroupRequests() {",
+                      "  const groupId = \"a string\";",
+                      "  const rejections = [",
+                      "    {",
+                      "      reason: \"a string\"",
+                      "    }",
+                      "  ];",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .rejectJoinGroupRequests(groupId, rejections, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "removeGroupMembers",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Group ID to remove members from." },
+            { "name": "siteMemberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Site member IDs to remove from the group." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "void" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_RemoveGroupMembers_removeGroupMembers.js" } ],
+        "docs":
+          { "summary": "Removes site members from a specific group.",
+            "description":
+              [ "Group managers and group admins have access to this functionality." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function removeGroupMembers() {",
+                      "  const groupId = \"a string\";",
+                      "  const siteMemberIds = [\"a string\"];",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .removeGroupMembers(groupId, siteMemberIds, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "submitJoinGroupRequest",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "membershipQuestionAnswers",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Answer_8656700528" ] },
+              "doc": "Answers to membership questions. They can be empty, but submit join group request will fail if an answer to a required question is omitted." },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.SubmitJoinGroupRequestResult_10271776097" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_SubmitJoinGroupRequest_submitJoinGroupRequest.js" } ],
+        "docs":
+          { "summary": "Submits a join group request.",
+            "description":
+              [ "Relevant only for private groups." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function submitJoinGroupRequest() {",
+                      "  const groupId = \"a string\";",
+                      "  const membershipQuestionAnswers = [",
+                      "    {",
+                      "      questionId: \"a string\",",
+                      "      answerText: \"a string\"",
+                      "    }",
+                      "  ];",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .submitJoinGroupRequest(groupId, membershipQuestionAnswers, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "unassignRole",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "siteMemberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Group member IDs to unassign from this role." },
+            { "name": "value",
+              "type": "string",
+              "doc": "Group member role\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin\nOne of:\n + `\"UNKNOWN_ROLE\"`\n + `\"MEMBER\"`\n + `\"ADMIN\"`" },
+            { "name": "options",
+              "type": "wix-groups-backend.Options_936495653",
+              "doc": "Authorization options." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.UnassignRoleResult_11419062047" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 9,
+              "filename": "wix_social_groups_api_v2_GroupRolesService_UnassignRole_unassignRole.js" } ],
+        "docs":
+          { "summary": "Unassigns a specific group role from group members (currently relevant only for group admins - members can't be unassigned).",
+            "description":
+              [ "Can be used only by a group admin or a groups manager." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function unassignRole() {",
+                      "  const groupId = \"a string\";",
+                      "  const siteMemberIds = [\"a string\"];",
+                      "  const value = \"UNKNOWN_ROLE\";",
+                      "  const options = {",
+                      "    suppressAuth: true",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .unassignRole(groupId, siteMemberIds, value, options)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } },
+      { "name": "updateGroup",
+        "labels": [],
+        "nameParams": [],
+        "params":
+          [ { "name": "updateGroupRequest",
+              "type": "wix-groups-backend.UpdateGroupRequest_34526926558" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-groups-backend.UpdateGroupResult_54305550784" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 35,
+              "filename": "wix_social_groups_api_v2_GroupsService_UpdateGroup_updateGroup.js" } ],
+        "docs":
+          { "summary": "Updates a group.",
+            "description":
+              [ "Group managers and group admins have access to this functionality.",
+                "",
+                "When `group.privacyLevel` is updated from `PRIVATE` to `PUBLIC`, all pending group join requests are automatically approved.",
+                "",
+                "When `group.privacyLevel` is updated from `PRIVATE` to `SECRET`, all pending group join requests are automatically rejected." ],
+            "links": [],
+            "examples":
+              [ { "title": "basic usage",
+                  "body":
+                    [ "import wixGroupsBackend from \"wix-groups-backend\";",
+                      "",
+                      "export function updateGroup() {",
+                      "  const updateGroupRequest = {",
+                      "    group: {",
+                      "      _id: \"a string\",",
+                      "      slug: \"a string\",",
+                      "      privacyLevel: \"UNKNOWN\",",
+                      "      title: \"a string\",",
+                      "      description: \"a string\",",
+                      "      teaser: \"a string\",",
+                      "      details: {",
+                      "        logo: {",
+                      "          mediaId: \"a string\",",
+                      "          width: 42,",
+                      "          height: 42",
+                      "        },",
+                      "        membersTitle: \"a string\"",
+                      "      },",
+                      "      settings: {",
+                      "        membersPermittedToInvite: true,",
+                      "        membersPermittedToApprove: true,",
+                      "        memberWelcomePostEnabled: true,",
+                      "        groupDetailsChangedPostEnabled: true,",
+                      "        showMemberList: true",
+                      "      }",
+                      "    }",
+                      "  };",
+                      "",
+                      "  return wixGroupsBackend",
+                      "    .updateGroup(updateGroupRequest)",
+                      "    .then((response) => {",
+                      "      console.log(response);",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          { "customLabels":
+              [ { "id": "maturity-beta" } ] } } ],
+  "callbacks": [],
+  "messages":
+    [ { "name": "Answer_8656700528",
+        "locations":
+          [ { "lineno": 60,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "User provided answer to the question identified by question id.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "questionId",
+              "type": "string",
+              "optional": true },
+            { "name": "answerText",
+              "type": "string",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ApproveGroupRequestsResult_65949274695",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_ApproveGroupRequests_approveGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupRequest",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.GroupRequest_66855240995" ] },
+              "doc": "Approved group requests." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ApproveJoinGroupRequestsResult_15727179317",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_ApproveJoinGroupRequests_approveJoinGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.JoinGroupRequest_11622644917" ] },
+              "doc": "Approved join group requests." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "AssignRoleResult_12214521400",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRolesService_AssignRole_assignRole.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "siteMemberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Group member IDs assigned to this role." },
+            { "name": "role",
+              "type": "wix-groups-backend.GroupRole_6888303931",
+              "doc": "Unassigned role." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CancelGroupRequestResult_67925702128",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_CancelGroupRequest_cancelGroupRequest.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupRequest",
+              "type": "wix-groups-backend.GroupRequest_66855240995",
+              "doc": "Site owners may choose to require that site members request approval when creating groups (available in the Wix Business Manager under Groups Application Settings).\nWhen approval is required, only a groups manager can approve a request to create a new group.\nWhen a group request is approved, the new group is added to the groups lists in the Wix UI." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CancelJoinGroupRequestResult_11904316671",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_CancelJoinGroupRequest_cancelJoinGroupRequest.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequest",
+              "type": "wix-groups-backend.JoinGroupRequest_11622644917",
+              "doc": "To join a private group, a site member must submit a join group request, which can be approved or rejected by a group admin or a groups manager.\nWhen a join group request is approved, the site member becomes a group member." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CreateGroupRequest_36182278271",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_CreateGroup_createGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group_35126223356",
+              "doc": "Group to create.",
+              "optional": true },
+            { "name": "creatorId",
+              "type": "string",
+              "doc": "Site member ID of group admin.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "CreateGroupResult_52630794003",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupsService_CreateGroup_createGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group_54125857287",
+              "doc": "Requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "DeleteGroupRequest_1518823018",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_DeleteGroup_deleteGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "ID of group to delete." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "DeleteGroupResult_54557130594",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_GroupsService_DeleteGroup_deleteGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group_54125857287",
+              "doc": "Requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetGroupBySlugRequest_714772046",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_GetGroupBySlug_getGroupBySlug.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "slug",
+              "type": "string",
+              "doc": "Slug (part of a group's URL, e.g., 'https:/example.com/groups/{slug}'). Pass only the slug. Case-sensitive." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetGroupBySlugResult_54360887505",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_GroupsService_GetGroupBySlug_getGroupBySlug.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group_54125857287",
+              "doc": "Requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetGroupRequest_1519498649",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_GetGroup_getGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "ID of requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GetGroupResult_54578075155",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_GroupsService_GetGroup_getGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group_54125857287",
+              "doc": "Requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupDetails_Logo_5793469391",
+        "locations":
+          [ { "lineno": 104,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group logo. You cannot upload your own logo.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "mediaId",
+              "type": "string",
+              "doc": "Logo image ID (for internal use).",
+              "optional": true },
+            { "name": "width",
+              "type": "number",
+              "doc": "Logo image width.",
+              "optional": true },
+            { "name": "height",
+              "type": "number",
+              "doc": "Logo image height.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupDetails_Logo_6071535554",
+        "locations":
+          [ { "lineno": 95,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group logo. You cannot upload your own logo.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "mediaId",
+              "type": "string",
+              "doc": "Logo image ID (for internal use)." },
+            { "name": "width",
+              "type": "number",
+              "doc": "Logo image width." },
+            { "name": "height",
+              "type": "number",
+              "doc": "Logo image height." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupMember_12244579166",
+        "locations":
+          [ { "lineno": 113,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Added group member.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "siteMemberId",
+              "type": "string",
+              "doc": "Site Member ID of Group Member" },
+            { "name": "role",
+              "type": "wix-groups-backend.GroupRole_6888303931",
+              "doc": "Group member role. When membership status is not `JOINED`, this is empty." },
+            { "name": "joinedDate",
+              "type": "Date",
+              "doc": "Date and time the group Member joined the group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRequest_66855240995",
+        "locations":
+          [ { "lineno": 122,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Site owners may choose to require that site members request approval when creating groups (available in the Wix Business Manager under Groups Application Settings).",
+            "description":
+              [ "When approval is required, only a groups manager can approve a request to create a new group.",
+                "When a group request is approved, the new group is added to the groups lists in the Wix UI." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group request ID" },
+            { "name": "group",
+              "type": "wix-groups-backend.Group_54125857287",
+              "doc": "Group requested for creation." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Status of group request.\n- `PENDING` - Pending group request.\n- `APPROVED` - Approved group request.\n- `REJECTED` - Rejected group request.\n- `CANCELLED` - Cancelled group request.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"PENDING\"`\n + `\"APPROVED\"`\n + `\"REJECTED\"`\n + `\"CANCELLED\"`" },
+            { "name": "requestDetails",
+              "type": "wix-groups-backend.RequestDetails_5545773411",
+              "doc": "Group request details" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "GroupRole_6888303931",
+        "locations":
+          [ { "lineno": 144,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group member role. When membership status is not `JOINED`, this is empty.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "value",
+              "type": "string",
+              "doc": "Group member role\n- `MEMBER` - Regular group member\n- `ADMIN` - Group admin\nOne of:\n + `\"UNKNOWN_ROLE\"`\n + `\"MEMBER\"`\n + `\"ADMIN\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_35126223356",
+        "locations":
+          [ { "lineno": 14,
+              "filename": "wix_social_groups_api_v2_GroupsService_CreateGroup_createGroup.js" } ],
+        "docs":
+          { "summary": "Group to create.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug').",
+              "optional": true },
+            { "name": "privacyLevel",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`",
+              "optional": true },
+            { "name": "title",
+              "type": "string",
+              "doc": "Group title.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format.",
+              "optional": true },
+            { "name": "teaser",
+              "type": "string",
+              "doc": "Group teaser.",
+              "optional": true },
+            { "name": "details",
+              "type": "wix-groups-backend.Group_GroupDetails_8917005494",
+              "doc": "Group details.",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_4333265825",
+              "doc": "Group settings.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_36051325746",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_UpdateGroup_updateGroup.js" } ],
+        "docs":
+          { "summary": "Group to update.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug').",
+              "optional": true },
+            { "name": "privacyLevel",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`",
+              "optional": true },
+            { "name": "title",
+              "type": "string",
+              "doc": "Group title.",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format.",
+              "optional": true },
+            { "name": "teaser",
+              "type": "string",
+              "doc": "Group teaser.",
+              "optional": true },
+            { "name": "details",
+              "type": "wix-groups-backend.Group_GroupDetails_8917005494",
+              "doc": "Group details.",
+              "optional": true },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_4333265825",
+              "doc": "Group settings.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_54125857287",
+        "locations":
+          [ { "lineno": 68,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Requested group.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Group ID." },
+            { "name": "slug",
+              "type": "string",
+              "doc": "A unique part of a group's URL (e.g., 'https:/example.com/groups/slug')." },
+            { "name": "privacyLevel",
+              "type": "string",
+              "doc": "Group privacy level.\n- `PUBLIC` - Anyone can see group in groups list and its content. Anyone can join group.\n- `PRIVATE` - Anyone can see group in groups list, but only group members can see its content. In order to join group, a group join request should be submitted.\n- `SECRET` - Only group members and a groups manager can see group in group list. New group members can only be added by other group members.\nOne of:\n + `\"UNKNOWN\"`\n + `\"PUBLIC\"`\n + `\"PRIVATE\"`\n + `\"SECRET\"`" },
+            { "name": "title",
+              "type": "string",
+              "doc": "Group title." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Group description in DraftJS format." },
+            { "name": "teaser",
+              "type": "string",
+              "doc": "Group teaser." },
+            { "name": "details",
+              "type": "wix-groups-backend.Group_GroupDetails_9380449099",
+              "doc": "Group details." },
+            { "name": "settings",
+              "type": "wix-groups-backend.Group_GroupSettings_4796709430",
+              "doc": "Group settings." },
+            { "name": "membersCount",
+              "type": "number",
+              "doc": "Total count of current group members." },
+            { "name": "createdBy",
+              "type": "wix-groups-backend.Identity_9006190580",
+              "doc": "Group creator." },
+            { "name": "_createdDate",
+              "type": "Date",
+              "doc": "Date and time the group was created." },
+            { "name": "_updatedDate",
+              "type": "Date",
+              "doc": "Date and time the group was last updated." },
+            { "name": "recentActivityDate",
+              "type": "Date",
+              "doc": "Date and time the group was last active (e.g., last post or comment)." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_GroupDetails_8917005494",
+        "locations":
+          [ { "lineno": 165,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "logo",
+              "type": "wix-groups-backend.GroupDetails_Logo_5793469391",
+              "doc": "Group logo. You cannot upload your own logo.",
+              "optional": true },
+            { "name": "membersTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students').",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_GroupDetails_9380449099",
+        "locations":
+          [ { "lineno": 157,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group details.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "logo",
+              "type": "wix-groups-backend.GroupDetails_Logo_6071535554",
+              "doc": "Group logo. You cannot upload your own logo." },
+            { "name": "membersTitle",
+              "type": "string",
+              "doc": "What group members are called (e.g., 'Coworkers', 'Friends', 'Students')." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_GroupSettings_4333265825",
+        "locations":
+          [ { "lineno": 184,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group settings.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "membersPermittedToInvite",
+              "type": "boolean",
+              "doc": "Whether all group members are permitted to add/invite new group members to group with any privacy level. When `false`, member additions/invitations are limited to group admins. Defaults to true.",
+              "optional": true },
+            { "name": "membersPermittedToApprove",
+              "type": "boolean",
+              "doc": "Whether all group members are permitted to approve join group requests. When `false`, member approval is limited to the group admins.",
+              "optional": true },
+            { "name": "memberWelcomePostEnabled",
+              "type": "boolean",
+              "doc": "Whether to create a daily post about new members.",
+              "optional": true },
+            { "name": "groupDetailsChangedPostEnabled",
+              "type": "boolean",
+              "doc": "Whether to create a post when group details are changed.",
+              "optional": true },
+            { "name": "showMemberList",
+              "type": "boolean",
+              "doc": "Whether all group members can view the group member list.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Group_GroupSettings_4796709430",
+        "locations":
+          [ { "lineno": 173,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group settings.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "membersPermittedToInvite",
+              "type": "boolean",
+              "doc": "Whether all group members are permitted to add/invite new group members to group with any privacy level. When `false`, member additions/invitations are limited to group admins. Defaults to true." },
+            { "name": "membersPermittedToApprove",
+              "type": "boolean",
+              "doc": "Whether all group members are permitted to approve join group requests. When `false`, member approval is limited to the group admins." },
+            { "name": "memberWelcomePostEnabled",
+              "type": "boolean",
+              "doc": "Whether to create a daily post about new members." },
+            { "name": "groupDetailsChangedPostEnabled",
+              "type": "boolean",
+              "doc": "Whether to create a post when group details are changed." },
+            { "name": "showMemberList",
+              "type": "boolean",
+              "doc": "Whether all group members can view the group member list." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Identity_9006190580",
+        "locations":
+          [ { "lineno": 195,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group creator.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Site member ID of the group creator." },
+            { "name": "identityType",
+              "type": "string",
+              "doc": "One of:\n + `\"USER\"`\n + `\"MEMBER\"`" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "JoinGroupRequest_11622644917",
+        "locations":
+          [ { "lineno": 205,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "To join a private group, a site member must submit a join group request, which can be approved or rejected by a group admin or a groups manager.",
+            "description":
+              [ "When a join group request is approved, the site member becomes a group member." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "siteMemberId",
+              "type": "string",
+              "doc": "Site member ID of requester" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Join group request status.\n- `PENDING` - Pending join group request.\n- `APPROVED` - Approved join group request.\n- `REJECTED` - Rejected join group request.\n- `CANCELLED` - Cancelled join group request.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"PENDING\"`\n + `\"APPROVED\"`\n + `\"REJECTED\"`\n + `\"CANCELLED\"`" },
+            { "name": "requestDetails",
+              "type": "wix-groups-backend.RequestDetails_5545773411",
+              "doc": "Join group request details." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "JoinResult_14425067409",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_JoinGroup_joinGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "member",
+              "type": "wix-groups-backend.GroupMember_12244579166",
+              "doc": "Added group member." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListGroupMembersResult_13227103137",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListGroupMembers_listGroupMembers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "members",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.GroupMember_12244579166" ] },
+              "doc": "Group members." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListGroupRequestsResult_71492744524",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_ListGroupRequests_listGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.GroupRequest_66855240995" ] },
+              "doc": "Group requests." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListGroupsRequest_991897308",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_ListGroups_listGroups.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListGroupsResult_55645003794",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupsService_ListGroups_listGroups.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groups",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Group_54125857287" ] },
+              "doc": "Groups." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListJoinGroupRequestsResult_15742354622",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_ListJoinGroupRequests_listJoinGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.JoinGroupRequest_11622644917" ] },
+              "doc": "Join group requests." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListMembershipsRequest_5142378487",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListMemberships_listMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "siteMemberId",
+              "type": "string",
+              "doc": "Site member ID." },
+            { "name": "limit",
+              "type": "number",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "ListMembershipsResult_21791660184",
+        "locations":
+          [ { "lineno": 9,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_ListMemberships_listMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "memberships",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Membership_17075797469" ] },
+              "doc": "Site member's memberships." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Membership_17075797469",
+        "locations":
+          [ { "lineno": 225,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Site member ID." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Membership status with Group\n- `JOINED` - Site member is a group member.\n- `PENDING` - Site member has join group request with `PENDING` status for this group.\nOne of:\n + `\"UNKNOWN_STATUS\"`\n + `\"JOINED\"`\n + `\"PENDING\"`" },
+            { "name": "role",
+              "type": "wix-groups-backend.GroupRole_6888303931",
+              "doc": "Group member role. When membership status is not `JOINED`, this is empty." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Options_936495653",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Authorization options.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "suppressAuth",
+              "type": "boolean",
+              "doc": "When `true`, prevents permission checks from running for the operation.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "PagingMetadata_1238886334",
+        "locations":
+          [ { "lineno": 31,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "count",
+              "type": "number",
+              "doc": "The number of items returned in this response" },
+            { "name": "offset",
+              "type": "number",
+              "doc": "The offset which was requested" },
+            { "name": "total",
+              "type": "number",
+              "doc": "The total number of items that match the query" },
+            { "name": "tooManyToCount",
+              "type": "boolean",
+              "doc": "A flag that indicates the server failed to calculate 'total' field" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Paging_1617727965",
+        "locations":
+          [ { "lineno": 23,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Limit number of results",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "limit",
+              "type": "number",
+              "doc": "The number of items to load",
+              "optional": true },
+            { "name": "offset",
+              "type": "number",
+              "doc": "number of items to skip in the current sort order",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryGroupMembersResult_14010200785",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryGroupMembers_queryGroupMembers.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "members",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.GroupMember_12244579166" ] },
+              "doc": "Group members." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryGroupRequestsResult_74293935132",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_QueryGroupRequests_queryGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.GroupRequest_66855240995" ] },
+              "doc": "Group requests." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryGroupsRequest_26476133799",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupsService_QueryGroups_queryGroups.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "query",
+              "type": "wix-groups-backend.Query_24513805503",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryGroupsResult_57826059074",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_GroupsService_QueryGroups_queryGroups.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groups",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Group_54125857287" ] },
+              "doc": "Groups." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryJoinGroupRequestsResult_16507216782",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_QueryJoinGroupRequests_queryJoinGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.JoinGroupRequest_11622644917" ] },
+              "doc": "Join group requests." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryMembershipsRequest_26914058458",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "siteMemberId",
+              "type": "string",
+              "doc": "Site member ID." },
+            { "name": "query",
+              "type": "wix-groups-backend.Query_24513805503",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "QueryMembershipsResult_19184522088",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupMembersService_QueryMemberships_queryMemberships.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "memberships",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Membership_17075797469" ] },
+              "doc": "Site member's memberships." },
+            { "name": "metadata",
+              "type": "wix-groups-backend.PagingMetadata_1238886334" } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Query_24513805503",
+        "locations":
+          [ { "lineno": 40,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "filter",
+              "type": "wix-groups-backend.Value_11948408011",
+              "doc": "A filter object. See documentation [here](https://bo.wix.com/wix-docs/rnd/platformization-guidelines/api-query-language#platformization-guidelines_api-query-language_defining-in-protobuf)",
+              "optional": true },
+            { "name": "sort",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Sorting_7874645153" ] },
+              "doc": "Sort object in the form [{\"fieldName\":\"sortField1\"},{\"fieldName\":\"sortField2\",\"direction\":\"DESC\"}]",
+              "optional": true },
+            { "name": "paging",
+              "type": "wix-groups-backend.Paging_1617727965",
+              "doc": "Limit number of results",
+              "optional": true },
+            { "name": "fields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Projection on the result object - list of specific field names to return. If fieldsets are also specified, return the union of fieldsets and fields",
+              "optional": true },
+            { "name": "fieldsets",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Projection on the result object - list of named projections. E.g. \"basic\" will return id and name fields. Specifying multiple fieldsets will return the union of fields from all. Specifying fieldsets and fields will also return the union of fields.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RejectGroupRequestsRequest_Rejection_4742782634",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_RejectGroupRequests_rejectGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupRequestId",
+              "type": "string",
+              "doc": "Group request IDs to reject.",
+              "optional": true },
+            { "name": "reason",
+              "type": "string",
+              "doc": "Rejection reason. Free text that will be displayed to the creator of the rejected group request (max 1,000 characters).",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RejectGroupRequestsResult_66039603187",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "wix_social_groups_api_v2_GroupRequestsService_RejectGroupRequests_rejectGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupRequest",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.GroupRequest_66855240995" ] },
+              "doc": "Rejected group requests." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RejectJoinGroupRequestsRequest_Rejection_3296440251",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_RejectJoinGroupRequests_rejectJoinGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "reason",
+              "type": "string",
+              "doc": "Rejection reason. Free text that will be displayed to the rejected site member (max 1,000 characters).",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RejectJoinGroupRequestsResult_14836649441",
+        "locations":
+          [ { "lineno": 7,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_RejectJoinGroupRequests_rejectJoinGroupRequests.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequests",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.JoinGroupRequest_11622644917" ] },
+              "doc": "Rejected join group requests." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "RequestDetails_5545773411",
+        "locations":
+          [ { "lineno": 239,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "Group request details",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "rejectionReason",
+              "type": "string",
+              "doc": "Group request rejection reason." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Sorting_7874645153",
+        "locations":
+          [ { "lineno": 50,
+              "filename": "shared.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "fieldName",
+              "type": "string",
+              "doc": "Name of the field to sort by",
+              "optional": true },
+            { "name": "order",
+              "type": "string",
+              "doc": "Sort order (ASC/DESC). Defaults to ASC\nOne of:\n + `\"ASC\"`\n + `\"DESC\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "SubmitJoinGroupRequestResult_10271776097",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_JoinGroupRequestsService_SubmitJoinGroupRequest_submitJoinGroupRequest.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "joinGroupRequest",
+              "type": "wix-groups-backend.JoinGroupRequest_11622644917",
+              "doc": "To join a private group, a site member must submit a join group request, which can be approved or rejected by a group admin or a groups manager.\nWhen a join group request is approved, the site member becomes a group member." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UnassignRoleResult_11419062047",
+        "locations":
+          [ { "lineno": 1,
+              "filename": "wix_social_groups_api_v2_GroupRolesService_UnassignRole_unassignRole.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "groupId",
+              "type": "string",
+              "doc": "Relevant group." },
+            { "name": "siteMemberIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Group member IDs unassigned from this role." },
+            { "name": "role",
+              "type": "wix-groups-backend.GroupRole_6888303931",
+              "doc": "Unassigned role." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateGroupRequest_34526926558",
+        "locations":
+          [ { "lineno": 23,
+              "filename": "wix_social_groups_api_v2_GroupsService_UpdateGroup_updateGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group_36051325746",
+              "doc": "Group to update.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "UpdateGroupResult_54305550784",
+        "locations":
+          [ { "lineno": 29,
+              "filename": "wix_social_groups_api_v2_GroupsService_UpdateGroup_updateGroup.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "group",
+              "type": "wix-groups-backend.Group_54125857287",
+              "doc": "Requested group." } ],
+        "extra":
+          {  },
+        "labels": [] },
+      { "name": "Value_11948408011",
+        "locations":
+          [ { "lineno": 8,
+              "filename": "shared.js" } ],
+        "docs":
+          { "summary": "A filter object. See documentation [here](https://bo.wix.com/wix-docs/rnd/platformization-guidelines/api-query-language#platformization-guidelines_api-query-language_defining-in-protobuf)",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "nullValue",
+              "type": "string",
+              "doc": "Represents a null value.\nOne of:\n + `\"NULL_VALUE\"`",
+              "optional": true },
+            { "name": "numberValue",
+              "type": "number",
+              "doc": "Represents a double value.",
+              "optional": true },
+            { "name": "stringValue",
+              "type": "string",
+              "doc": "Represents a string value.",
+              "optional": true },
+            { "name": "boolValue",
+              "type": "boolean",
+              "doc": "Represents a boolean value.",
+              "optional": true },
+            { "name": "structValue",
+              "type": "Object",
+              "doc": "Represents a structured value.",
+              "optional": true },
+            { "name": "listValue",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-groups-backend.Value_11948408011" ] },
+              "doc": "Represents a repeated `Value`.",
+              "optional": true } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "kind",
+                  "members":
+                    [ "boolValue",
+                      "listValue",
+                      "nullValue",
+                      "numberValue",
+                      "stringValue",
+                      "structValue" ] } ] },
+        "labels": [] } ],
+  "extra":
+    {  } }
