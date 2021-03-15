@@ -1,8 +1,7 @@
 { "name": "bookings",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -537,8 +536,7 @@
         "extra":
           {  } },
       { "name": "setBookingAsPaid",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
@@ -955,8 +953,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "CancelBookingResult",
         "locations":
           [ { "lineno": 28,
@@ -1086,8 +1083,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FlowControlSettingsInfo1",
         "locations":
           [ { "lineno": 15,

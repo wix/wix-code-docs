@@ -31,7 +31,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-bookings-backend.Resource_23420910898:1createResource" ] },
+                  [ "wix-bookings-backend.Resource" ] },
             "doc": "Fulfilled - Updated Resource" },
         "locations":
           [ { "lineno": 13,
@@ -60,8 +60,7 @@
         "extra":
           {  } },
       { "name": "deleteResource",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -93,8 +92,7 @@
         "extra":
           {  } },
       { "name": "queryResources",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -142,7 +140,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-bookings-backend.Resource_23420910898:1createResource" ] },
+                  [ "wix-bookings-backend.Resource" ] },
             "doc": "Fulfilled - Updated Resource" },
         "locations":
           [ { "lineno": 13,
@@ -250,8 +248,7 @@
               "doc": "List of resources matching the query object." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListResourcesResult_30553912175",
         "locations":
           [ { "lineno": 7,
@@ -266,7 +263,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Resource_23420910898:1createResource" ] },
+                    [ "wix-bookings-backend.Resource" ] },
               "doc": "List of resources matching the query object." },
             { "name": "pagingMetadata",
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
@@ -304,7 +301,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Resource_23420910898:1createResource" ] },
+                    [ "wix-bookings-backend.Resource" ] },
               "doc": "List of resources matching the query object." },
             { "name": "pagingMetadata",
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
@@ -354,8 +351,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Resource_12959995134",
         "locations":
           [ { "lineno": 1,
@@ -444,8 +440,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Resource_13052683855",
         "locations":
           [ { "lineno": 1,
@@ -833,8 +828,7 @@
               "doc": "An object describing how to calculate the schedule's availability.\nAn empty object indicates that the schedule is not available for booking." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "UpdateScheduleResult_252658930482",
         "locations":
           [ { "lineno": 9,

@@ -51,7 +51,7 @@
         "type":
           { "name": "Array",
             "typeParams":
-              [ "wix-bookings-backend.Resource_23420910898:1createResource" ] },
+              [ "wix-bookings-backend.Resource" ] },
         "locations":
           [ { "lineno": 1008,
               "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_List_queryResources.js" } ],

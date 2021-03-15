@@ -1,8 +1,7 @@
 { "name": "schedules",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 41,
       "filename": "index.js" },
@@ -60,8 +59,7 @@
         "extra":
           {  } },
       { "name": "updateSession",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -141,8 +139,7 @@
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "DeleteSessionRequest_5772496212",
         "locations":
           [ { "lineno": 1,
@@ -291,8 +288,7 @@
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListSlotsRequest_23531210904",
         "locations":
           [ { "lineno": 1,
@@ -329,8 +325,7 @@
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Participant_14025359616",
         "locations":
           [ { "lineno": 1,
@@ -529,7 +524,6 @@
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
