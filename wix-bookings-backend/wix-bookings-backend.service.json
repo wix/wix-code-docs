@@ -120,8 +120,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ActionLabels_12067555988",
         "locations":
           [ { "lineno": 1306,
@@ -144,8 +143,7 @@
               "doc": "Call to Action (CTA) text to display in Wix Bookings UI for requesting booking approval." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "AdditionalLabel_14205803591",
         "locations":
           [ { "lineno": 1332,
@@ -168,8 +166,7 @@
                   "members":
                     [ "linkLabel",
                       "textLabel" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "AdditionalLabel_14761935917",
         "locations":
           [ { "lineno": 1324,
@@ -192,8 +189,7 @@
                   "members":
                     [ "linkLabel",
                       "textLabel" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Address",
         "locations":
           [ { "lineno": 4,
@@ -289,8 +285,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "AddressFields_38664065604",
         "locations":
           [ { "lineno": 1340,
@@ -316,8 +311,7 @@
               "doc": "Customer's name." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "AddressLocation",
         "locations":
           [ { "lineno": 29,
@@ -408,8 +402,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "AddressLocation_5651435130:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1782,
@@ -429,8 +422,7 @@
               "doc": "Longitude" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Address_30702269075",
         "locations":
           [ { "lineno": 70,
@@ -523,8 +515,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Address_31907222448:updateResourceSchedule123",
         "locations":
           [ { "lineno": 1760,
@@ -562,8 +553,7 @@
               "doc": "coordinates of the physical address" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Address_47367399060:updateResourceSchedule",
         "locations":
           [ { "lineno": 1164,
@@ -632,8 +622,7 @@
                   "members":
                     [ "addressLine",
                       "streetAddress" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Address_49221173480:updateResourceSchedule12",
         "locations":
           [ { "lineno": 1183,
@@ -692,8 +681,7 @@
                   "members":
                     [ "addressLine",
                       "streetAddress" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Attendance",
         "locations":
           [ { "lineno": 1,
@@ -713,7 +701,8 @@
               "doc": "Number of attendees that attended the session. This can be more than 1 if `formInfo.paymentSelection.numberOfParticipants` for the booking is greater than 1." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "AttendanceInfo",
         "locations":
           [ { "lineno": 1,
@@ -733,8 +722,7 @@
               "doc": "The number of attendees that attended the session. This can be greater than 1 when the booking is made for a group of people." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "AvailabilityConstraints_1966120690:updateResourceSchedule",
         "locations":
           [ { "lineno": 700,
@@ -759,8 +747,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "AvailabilityConstraints_2998985814:updateResourceSchedule1",
         "locations":
           [ { "lineno": 689,
@@ -786,8 +773,7 @@
               "doc": "An object defining the time between available slots' start times.  For example, a slot with slots_split_interval=5 can start every 5 minutes. The default is the slot duration." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Availability_161223611200:updateResourceSchedule",
         "locations":
           [ { "lineno": 671,
@@ -833,8 +819,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Availability_174000749873:updateResourceSchedule1",
         "locations":
           [ { "lineno": 653,
@@ -874,14 +859,11 @@
               "doc": "Not supported yet.\n Whether the schedule's slots are only available at the schedule's default location, as set in `schedule.location`. If set to `false`, the `locations` array is used to set the possible locations of the schedule's sessions.\n Default is `true`." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Balance",
         "locations":
           [ { "lineno": 9,
-              "filename": "shared-autogen.js" },
-            { "lineno": 9,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "The final price, currency, down payment, and amount received.",
             "links": [],
@@ -897,8 +879,7 @@
               "doc": "The current total amount paid." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "BookRequest_274786552891",
         "locations":
           [ { "lineno": 17,
@@ -952,8 +933,7 @@
                     [ "bySessionId",
                       "createSession",
                       "scheduleId" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BookRequest_FlowControlSettings_1821316675",
         "locations":
           [ { "lineno": 36,
@@ -983,14 +963,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BookedEntity",
         "locations":
           [ { "lineno": 50,
-              "filename": "shared-autogen.js" },
-            { "lineno": 17,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "An object describing the entity that was booked.",
             "links": [],
@@ -1036,8 +1013,7 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "BookedEntity_203589619014",
         "locations":
           [ { "lineno": 66,
@@ -1087,14 +1063,11 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BookedResource",
         "locations":
           [ { "lineno": 82,
-              "filename": "shared-autogen.js" },
-            { "lineno": 33,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
             "examples": [],
@@ -1112,14 +1085,11 @@
               "doc": "The resource's email at the time of booking." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Booking",
         "locations":
           [ { "lineno": 90,
-              "filename": "shared-autogen.js" },
-            { "lineno": 41,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
             "examples": [],
@@ -1162,8 +1132,7 @@
               "type": "Date" } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "BookingPolicy_10910809566",
         "locations":
           [ { "lineno": 1360,
@@ -1213,8 +1182,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BookingPolicy_12393829102",
         "locations":
           [ { "lineno": 1375,
@@ -1255,14 +1223,11 @@
               "doc": "Bookings approval policy for the service. Empty by default." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BookingSource",
         "locations":
           [ { "lineno": 146,
-              "filename": "shared-autogen.js" },
-            { "lineno": 63,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "An object describing the platform and application that made the booking.",
             "links": [],
@@ -1284,8 +1249,7 @@
               "doc": "The name of the application that created this booking, as saved in Wix-dev-center at the time of booking." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "BookingSource_11223060951",
         "locations":
           [ { "lineno": 166,
@@ -1310,8 +1274,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Booking_371474855211",
         "locations":
           [ { "lineno": 118,
@@ -1356,8 +1319,7 @@
               "doc": "An object describing the platform and application that made the booking." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BookingsApprovalPolicy_1556748634",
         "locations":
           [ { "lineno": 1398,
@@ -1377,8 +1339,7 @@
               "doc": "Whether the booking requests affect the session or slot availability. For example, 3 booking requests for a 10-person session will cause the session to have 7 available spots, before the requests are approved." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BookingsApprovalPolicy_1742126076",
         "locations":
           [ { "lineno": 1390,
@@ -1400,8 +1361,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BusinessLocation",
         "locations":
           [ { "lineno": 368,
@@ -1460,7 +1420,8 @@
               "doc": "Whether the location is archived. Archived locations are locations that are no longer in use and can not be updated or used for new services." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "BusinessSchedule",
         "locations":
           [ { "lineno": 399,
@@ -1489,7 +1450,8 @@
               "doc": "Exceptions to the business's regular hours." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "BusinessSchedule_46474402208",
         "locations":
           [ { "lineno": 390,
@@ -1552,8 +1514,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BusinessSchedule_47401289418:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1889,
@@ -1582,8 +1543,7 @@
               "doc": "Exceptions to the business's regular hours." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "BySessionId_3461046880",
         "locations":
           [ { "lineno": 186,
@@ -1608,8 +1568,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CalendarConference_22421061789:updateResourceSchedule",
         "locations":
           [ { "lineno": 710,
@@ -1661,8 +1620,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CalendarConference_23255260278:updateResourceSchedule1",
         "locations":
           [ { "lineno": 730,
@@ -1705,8 +1663,7 @@
               "doc": "Account owner id in vc service" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CalendarDateTime_2270289792:updateSession",
         "locations":
           [ { "lineno": 750,
@@ -1734,8 +1691,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CalendarDateTime_3011799560:updateSession1",
         "locations":
           [ { "lineno": 763,
@@ -1760,8 +1716,7 @@
               "doc": "The time zone." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Category_11590250251",
         "locations":
           [ { "lineno": 1406,
@@ -1790,8 +1745,7 @@
               "doc": "Sorting order of the category for Wix Bookings UI." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CheckoutOptionsRequest_246746251605",
         "locations":
           [ { "lineno": 500,
@@ -1833,8 +1787,7 @@
                     [ "createSession",
                       "scheduleId",
                       "sessionId" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CheckoutOptions_56278073057",
         "locations":
           [ { "lineno": 492,
@@ -1854,14 +1807,11 @@
               "doc": "Paid plans available for checkout." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ContactDetails",
         "locations":
           [ { "lineno": 194,
-              "filename": "shared-autogen.js" },
-            { "lineno": 79,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "The contact details of the user making the booking.",
             "links": [],
@@ -1895,8 +1845,7 @@
               "doc": "Custom [address](https://www.wix.com/velo/reference/$w/addressinput/value), used when location_type is `\"OWNER_CUSTOM\"`." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ContactDetailsInfo",
         "locations":
           [ { "lineno": 94,
@@ -1942,7 +1891,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ContactDetails_70830063299",
         "locations":
           [ { "lineno": 208,
@@ -1988,8 +1938,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ContactDetails_73425347487",
         "locations":
           [ { "lineno": 222,
@@ -2027,14 +1976,11 @@
               "doc": "Contact country in [ISO 3166-1 alpha-2 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CouponDetails",
         "locations":
           [ { "lineno": 236,
-              "filename": "shared-autogen.js" },
-            { "lineno": 108,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "Coupon details, if a coupon was used to pay for the booking.",
             "links": [],
@@ -2056,8 +2002,7 @@
               "doc": "Coupon ID." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "CursorPaging_3235073023",
         "locations":
           [ { "lineno": 2002,
@@ -2079,8 +2024,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Cursors_3337235656",
         "locations":
           [ { "lineno": 2010,
@@ -2100,8 +2044,7 @@
               "doc": "Cursor pointing to previous result page" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CustomFormField",
         "locations":
           [ { "lineno": 136,
@@ -2126,7 +2069,8 @@
               "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "CustomFormFieldInfo",
         "locations":
           [ { "lineno": 148,
@@ -2151,7 +2095,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ExternalCalendarOverrides_672201097:updateResourceSchedule",
         "locations":
           [ { "lineno": 776,
@@ -2176,8 +2121,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ExternalCalendarOverrides_857578539:updateResourceSchedule1",
         "locations":
           [ { "lineno": 786,
@@ -2200,8 +2144,7 @@
               "doc": "Synced description of the external calendar event." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FieldMask_4228111159",
         "locations":
           [ { "lineno": 1980,
@@ -2222,8 +2165,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Form",
         "locations":
           [ { "lineno": 118,
@@ -2253,7 +2195,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "FormField_28233079378",
         "locations":
           [ { "lineno": 1463,
@@ -2286,8 +2229,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FormField_32338928719",
         "locations":
           [ { "lineno": 1449,
@@ -2319,8 +2261,7 @@
               "doc": "Additional labels applied to this field." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FormField_FieldConstraints_3468779142",
         "locations":
           [ { "lineno": 1483,
@@ -2338,8 +2279,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FormField_FieldConstraints_3561467863",
         "locations":
           [ { "lineno": 1476,
@@ -2356,14 +2296,11 @@
               "doc": "Whether customer's input in this field is required." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FormInfo",
         "locations":
           [ { "lineno": 246,
-              "filename": "shared-autogen.js" },
-            { "lineno": 127,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service.",
             "links": [],
@@ -2389,8 +2326,7 @@
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "FormInfo_88699268303",
         "locations":
           [ { "lineno": 255,
@@ -2428,8 +2364,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FormInfo_94654372795",
         "locations":
           [ { "lineno": 267,
@@ -2461,8 +2396,7 @@
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FormInfo_CustomFormField",
         "locations":
           [ { "lineno": 148,
@@ -2513,8 +2447,7 @@
               "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FormInfo_CustomFormField_7366759000:updateCustomerInfo",
         "locations":
           [ { "lineno": 290,
@@ -2539,8 +2472,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Form_52457326391",
         "locations":
           [ { "lineno": 1435,
@@ -2584,8 +2516,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Form_58415165332",
         "locations":
           [ { "lineno": 1420,
@@ -2629,8 +2560,7 @@
               "doc": "Custom fields which can be added to the form." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Form_CustomFormField",
         "locations":
           [ { "lineno": 136,
@@ -2676,8 +2606,7 @@
               "doc": "How far in advance, in minutes, a session can be booked. Defaults to 10,080 minutes (3 days)." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "FutureBookingPolicy_830162239",
         "locations":
           [ { "lineno": 1490,
@@ -2699,8 +2628,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "GetServiceResult_421521026639",
         "locations":
           [ { "lineno": 1676,
@@ -2756,8 +2684,7 @@
               "doc": "The slug is the remainder of the URI which can be used to access the service's page and service's booking page in Wix Bookings." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Header_2062052936",
         "locations":
           [ { "lineno": 1515,
@@ -2783,8 +2710,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Header_2340119099",
         "locations":
           [ { "lineno": 1506,
@@ -2807,8 +2733,7 @@
               "doc": "Whether the form description should be displayed in the Wix Bookings UI." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Image",
         "locations":
           [ { "lineno": 488,
@@ -2839,7 +2764,8 @@
               "doc": "Image URL expiration date." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ImageInfo",
         "locations":
           [ { "lineno": 480,
@@ -2868,7 +2794,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Image_3626650051:createResource",
         "locations":
           [ { "lineno": 2018,
@@ -2897,8 +2824,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Image_7707870310:createResource1",
         "locations":
           [ { "lineno": 2027,
@@ -2929,8 +2855,7 @@
               "doc": "Image URL expiration date (when relevant). Optional" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "InvoiceDetails",
         "locations":
           [ { "lineno": 301,
@@ -2959,14 +2884,11 @@
               "doc": "use UTC midnight date to set the issue date according to the site time zone" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "IsAvailableResult_6686246600",
         "locations":
           [ { "lineno": 484,
-              "filename": "shared-autogen.js" },
-            { "lineno": 266,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
             "examples": [],
@@ -2984,8 +2906,7 @@
               "doc": "The current number of booked participants." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "LinkLabel_2157014269",
         "locations":
           [ { "lineno": 1531,
@@ -3006,8 +2927,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "LinkLabel_2342391711",
         "locations":
           [ { "lineno": 1524,
@@ -3026,8 +2946,7 @@
               "doc": "Returned URL." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "LinkedSchedule_10367513828:updateResourceSchedule1",
         "locations":
           [ { "lineno": 808,
@@ -3049,8 +2968,7 @@
               "doc": "Owner ID, of the linked schedule." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "LinkedSchedule_7939545343:updateResourceSchedule",
         "locations":
           [ { "lineno": 796,
@@ -3071,8 +2989,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ListServicesBySlugRequest_28829455335",
         "locations":
           [ { "lineno": 1697,
@@ -3094,8 +3011,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ListServicesResult_437290305555",
         "locations":
           [ { "lineno": 1705,
@@ -3119,8 +3035,7 @@
                     [ "wix-bookings-backend.GetServiceResult_421521026639" ] } } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "LocalDateTime_493702712:updateSession1",
         "locations":
           [ { "lineno": 832,
@@ -3149,8 +3064,7 @@
               "doc": "Minute, from 0-59." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "LocalDateTime_957146317:updateSession",
         "locations":
           [ { "lineno": 821,
@@ -3184,14 +3098,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Location",
         "locations":
           [ { "lineno": 543,
-              "filename": "shared-autogen.js" },
-            { "lineno": 274,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "The location of the session.",
             "links": [],
@@ -3207,8 +3118,7 @@
               "doc": "Custom [address](https://www.wix.com/velo/reference/$w/addressinput/value), used when location_type is `\"OWNER_CUSTOM\"`." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Location_103381755471",
         "locations":
           [ { "lineno": 290,
@@ -3299,8 +3209,7 @@
               "doc": "Boolean that states if the location is archived.\nArchived location can't be updated." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Location_147848441914:updateResourceSchedule",
         "locations":
           [ { "lineno": 558,
@@ -3329,8 +3238,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Location_156608614652:updateResourceSchedule12",
         "locations":
           [ { "lineno": 580,
@@ -3353,8 +3261,7 @@
               "doc": "Not supported yet.\n Valid only when location_type is `OWNER_BUSINESS`.\n If the location_type is `OWNER_BUSINESS`, then the default value is the default business location.\n `business_location.id` is required.\n Supported read-only fields: name, description, time zone, email, phone, address." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Location_99881894064",
         "locations":
           [ { "lineno": 403,
@@ -3481,8 +3388,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "MediaItem_5422486810",
         "locations":
           [ { "lineno": 1556,
@@ -3502,8 +3408,7 @@
               [ { "name": "item",
                   "members":
                     [ "image" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "MediaItem_9689084511",
         "locations":
           [ { "lineno": 1563,
@@ -3523,8 +3428,7 @@
               [ { "name": "item",
                   "members":
                     [ "image" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Media_13250985321",
         "locations":
           [ { "lineno": 1547,
@@ -3548,8 +3452,7 @@
               "type": "wix-bookings-backend.MediaItem_9689084511" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Media_8706321457",
         "locations":
           [ { "lineno": 1538,
@@ -3576,14 +3479,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "OnlineConference",
         "locations":
           [ { "lineno": 320,
-              "filename": "shared-autogen.js" },
-            { "lineno": 159,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "Online conference information.",
             "links": [],
@@ -3605,8 +3505,7 @@
               "doc": "Online conference description." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "PageUrl_5174563244",
         "locations":
           [ { "lineno": 2038,
@@ -3626,8 +3525,7 @@
               "doc": "The path to that page - e.g /product-page/a-product" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PagingMetadataV2_5481679798",
         "locations":
           [ { "lineno": 2054,
@@ -3655,8 +3553,7 @@
               "doc": "Cursors to navigate through result pages. Returned if cursor paging was used" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Paging_1617727965",
         "locations":
           [ { "lineno": 2046,
@@ -3678,8 +3575,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaidPlan",
         "locations":
           [ { "lineno": 600,
@@ -3702,8 +3598,7 @@
               "doc": "The ID of the pricing plan." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaidPlanDetails",
         "locations":
           [ { "lineno": 330,
@@ -3726,8 +3621,7 @@
               "doc": "The transaction ID created in the Pricing Plans service when the member redeemed a benefit to pay for this booking." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaidPlan_11584964510",
         "locations":
           [ { "lineno": 609,
@@ -3753,8 +3647,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaidPlans_22068549729",
         "locations":
           [ { "lineno": 514,
@@ -3777,8 +3670,7 @@
               "doc": "Other plans available for checkout." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaidPlans_Plan_19703544209",
         "locations":
           [ { "lineno": 522,
@@ -3804,14 +3696,11 @@
               "type": "Date" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ParticipantNotificationInfo",
         "locations":
           [ { "lineno": 878,
-              "filename": "shared-autogen.js" },
-            { "lineno": 358,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "Whether to notify the participants about the booking confirmation, and an optional custom message.",
             "links": [],
@@ -3870,8 +3759,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Participant_16742085086:updateResourceSchedule",
         "locations":
           [ { "lineno": 860,
@@ -3908,14 +3796,11 @@
               "doc": "Whether the participant was inherited from the schedule, as opposed to being booked directly to the session." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaymentDetails",
         "locations":
           [ { "lineno": 339,
-              "filename": "shared-autogen.js" },
-            { "lineno": 177,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "Payment Details.",
             "links": [],
@@ -3952,8 +3837,7 @@
               "doc": "The invoice details of the booking. Not supported yet." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "PaymentDetails_93106850965",
         "locations":
           [ { "lineno": 375,
@@ -3994,8 +3878,7 @@
               "doc": "The invoice details of the booking. Not supported yet." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaymentOptions_3053001567",
         "locations":
           [ { "lineno": 1579,
@@ -4025,8 +3908,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaymentOptions_3423756451",
         "locations":
           [ { "lineno": 1570,
@@ -4051,14 +3933,11 @@
               "doc": "Whether a booking made for the service can be paid using Wix Pricing Plans." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "PaymentSelection",
         "locations":
           [ { "lineno": 418,
-              "filename": "shared-autogen.js" },
-            { "lineno": 200,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
             "examples": [],
@@ -4075,8 +3954,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "PaymentSelectionInfo",
         "locations":
           [ { "lineno": 207,
@@ -4097,7 +3975,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "PaymentSelection_2751667753:setBookingAsPaid",
         "locations":
           [ { "lineno": 411,
@@ -4116,8 +3995,7 @@
               "doc": "The number of participants for this rate." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Payments_29838105767",
         "locations":
           [ { "lineno": 534,
@@ -4137,14 +4015,11 @@
               "type": "wix-bookings-backend.PaymentOptions_3423756451" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Price",
         "locations":
           [ { "lineno": 618,
-              "filename": "shared-autogen.js" },
-            { "lineno": 323,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type object",
             "links": [],
@@ -4163,14 +4038,11 @@
               "doc": "The amount of a down payment or deposit as part of the transaction." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Price_7237915081",
         "locations":
           [ { "lineno": 627,
-              "filename": "shared-autogen.js" },
-            { "lineno": 332,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "`key` of type string, `value` of type object",
             "links": [],
@@ -4192,8 +4064,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "PricingPlan",
         "locations":
           [ { "lineno": 314,
@@ -4216,7 +4087,8 @@
               "doc": "ID of the pricing plan." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "PricingPlanDetails",
         "locations":
           [ { "lineno": 168,
@@ -4239,7 +4111,8 @@
               "doc": "Transaction ID created in the Pricing Plans service when the member redeemed a benefit to pay for this booking." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "PricingPlan_7145275343",
         "locations":
           [ { "lineno": 1716,
@@ -4265,8 +4138,7 @@
               "doc": "Visibility" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "QueryV2_25356650774",
         "locations":
           [ { "lineno": 2074,
@@ -4316,8 +4188,7 @@
                   "members":
                     [ "cursorPaging",
                       "paging" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Query_24513805503",
         "locations":
           [ { "lineno": 2064,
@@ -4359,14 +4230,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Rate",
         "locations":
           [ { "lineno": 636,
-              "filename": "shared-autogen.js" },
-            { "lineno": 341,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "The price options offered to book this session at the time of booking.",
             "links": [],
@@ -4382,8 +4250,7 @@
               "doc": "Textual price information used when **Price Per Session** is set to **Custom Price** in the app's service details page." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "RateInfo",
         "locations":
           [ { "lineno": 498,
@@ -4407,7 +4274,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Rate_13652876269",
         "locations":
           [ { "lineno": 328,
@@ -4456,14 +4324,11 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "RescheduleRequest_6918542709",
         "locations":
           [ { "lineno": 425,
-              "filename": "shared-autogen.js" },
-            { "lineno": 214,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
             "examples": [],
@@ -4484,9 +4349,7 @@
       { "name": "RescheduleRequest_FlowControlSettings_1362659582",
         "locations":
           [ { "lineno": 432,
-              "filename": "shared-autogen.js" },
-            { "lineno": 221,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "Sets the reschedule flow behavior, some behaviors required permissions.",
             "links": [],
@@ -4550,8 +4413,7 @@
               "doc": "Resource status. Default is `CREATED`.\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"DELETED\"`\n + `\"UPDATED\"`" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Schedule_206397206374",
         "locations":
           [ { "lineno": 946,
@@ -4611,8 +4473,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Schedule_206489895095",
         "locations":
           [ { "lineno": 926,
@@ -4671,8 +4532,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Schedule_252114210686",
         "locations":
           [ { "lineno": 886,
@@ -4754,8 +4614,7 @@
               "doc": "A conference created for the session according to the details set in the schedule's conference provider information.\nIf the session is a recurring session, this field is inherited from the schedule." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SeoSchema_3785484598",
         "locations":
           [ { "lineno": 1250,
@@ -4776,8 +4635,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SeoSchema_4434305645",
         "locations":
           [ { "lineno": 1257,
@@ -4797,8 +4655,7 @@
               "doc": "SEO tags information." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SeoSchema_Tag_5847212284",
         "locations":
           [ { "lineno": 1264,
@@ -4835,8 +4692,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SeoSchema_Tag_6403344610",
         "locations":
           [ { "lineno": 1275,
@@ -4867,8 +4723,7 @@
               "doc": "Whether the tag is disabled." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ServiceInfo_14147780616",
         "locations":
           [ { "lineno": 1626,
@@ -4898,8 +4753,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "ServiceInfo_19063199364",
         "locations":
           [ { "lineno": 1636,
@@ -4925,8 +4779,7 @@
               "doc": "Images associated with the service. Optional. Not supported yet." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Service_41674944276",
         "locations":
           [ { "lineno": 1589,
@@ -4976,8 +4829,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Service_56198764684",
         "locations":
           [ { "lineno": 1604,
@@ -5030,8 +4882,7 @@
               "doc": "Whether a conference is to be generated for the service." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Session_225620643475:updateSession",
         "locations":
           [ { "lineno": 966,
@@ -5121,8 +4972,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Session_255663383937:updateSession1",
         "locations":
           [ { "lineno": 1037,
@@ -5222,8 +5072,7 @@
               "doc": "An object containing the session and schedule versions." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Session_Version_1635489576:updateSession12",
         "locations":
           [ { "lineno": 1130,
@@ -5243,14 +5092,11 @@
               "doc": "Session version number, updated each time the session is updated." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SetOfSessions",
         "locations":
           [ { "lineno": 440,
-              "filename": "shared-autogen.js" },
-            { "lineno": 229,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "First start and last end time of the booked sessions.",
             "links": [],
@@ -5266,14 +5112,11 @@
               "doc": "The end time of the last session." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "SingleSession",
         "locations":
           [ { "lineno": 448,
-              "filename": "shared-autogen.js" },
-            { "lineno": 237,
-              "filename": "shared.js" } ],
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "summary": "Start and end time of the booked sessions.",
             "links": [],
@@ -5291,8 +5134,7 @@
               "doc": "The end time of the session." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Slug_4035264831",
         "locations":
           [ { "lineno": 1730,
@@ -5311,8 +5153,7 @@
               "type": "Date" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Sorting_7874645153",
         "locations":
           [ { "lineno": 2086,
@@ -5333,8 +5174,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SpecialHourPeriod",
         "locations":
           [ { "lineno": 410,
@@ -5360,7 +5200,8 @@
               "doc": "Comment." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "SpecialHourPeriod_8149530360",
         "locations":
           [ { "lineno": 411,
@@ -5419,8 +5260,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SpecialHourPeriod_8520285244:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1910,
@@ -5444,8 +5284,7 @@
               "type": "string" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "SplitInterval_425847646:updateResourceSchedule",
         "locations":
           [ { "lineno": 1138,
@@ -5465,8 +5304,7 @@
               "doc": "Number of minutes between available slots' start times when `same_as_duration` is `false`." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "StreetAddress",
         "locations":
           [ { "lineno": 20,
@@ -5517,8 +5355,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "StreetAddressInfo",
         "locations":
           [ { "lineno": 61,
@@ -5597,8 +5434,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "StreetAddress_7490590980:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1869,
@@ -5621,8 +5457,7 @@
               "doc": "apartment number" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Subdivision",
         "locations":
           [ { "lineno": 37,
@@ -5662,8 +5497,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Subdivision_4638463697:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1243,
@@ -5682,8 +5516,7 @@
               "doc": "Subdivision full name." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TextLabel_5030317322",
         "locations":
           [ { "lineno": 1652,
@@ -5700,8 +5533,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TextLabel_5123006043",
         "locations":
           [ { "lineno": 1646,
@@ -5717,8 +5549,7 @@
               "doc": "Additional label applied to this text-only field." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TimePeriod",
         "locations":
           [ { "lineno": 420,
@@ -5747,7 +5578,8 @@
               "doc": "Time in 24hr [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "TimePeriod_38785543152",
         "locations":
           [ { "lineno": 450,
@@ -5780,7 +5612,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "TimePeriod_38785543152:updateResourceSchedule",
         "locations":
           [ { "lineno": 1920,
@@ -5813,8 +5646,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "TimePeriod_39156298036:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1950,
@@ -5843,8 +5675,7 @@
               "doc": "Time in 24hr ISO 8601 extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "URLs_6208289563",
         "locations":
           [ { "lineno": 1738,
@@ -5864,8 +5695,7 @@
               "doc": "The URL for the service page" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Value_11948408011",
         "locations":
           [ { "lineno": 1987,
@@ -5914,8 +5744,7 @@
                       "numberValue",
                       "stringValue",
                       "structValue" ] } ] },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "WaitingListPolicy_4526138741",
         "locations":
           [ { "lineno": 1658,
@@ -5941,8 +5770,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "WaitingListPolicy_4804204904",
         "locations":
           [ { "lineno": 1667,
@@ -5965,8 +5793,7 @@
               "doc": "Amount of time a participant is given to book, once notified that a spot is available. Defaults to 10 minutes." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "WixPayDetails",
         "locations":
           [ { "lineno": 246,
@@ -5997,7 +5824,8 @@
               "doc": "Payment vendor name. The company processing the payment, such as Pay Pal or a credit card company. `\"inPerson\"` is used for cash payments." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "WixPayDetails_17951508165:setBookingAsPaid",
         "locations":
           [ { "lineno": 457,
@@ -6028,7 +5856,6 @@
               "doc": "Payment vendor name." } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] } ],
+        "labels": [] } ],
   "extra":
     {  } }
