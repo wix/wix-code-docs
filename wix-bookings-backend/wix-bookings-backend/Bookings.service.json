@@ -558,7 +558,7 @@
             "description":
               [ "<!--ONLY:VELO-->",
                 "The `setBookingAsPaid()` function returns a Promise that resolves when the booking is set as fully paid.",
-                "<!--END:ONLY:VELO-->    ",
+                "<!--END:ONLY:VELO-->    //",
                 "When the business has received full payment from the customer, the booking can be marked as fully paid.",
                 "",
                 "When a booking is set as paid, the following events occur:",
@@ -950,12 +950,13 @@
               "doc": "An optional token that will be used to authorize the request\n\n\n If null, authorization will be determined based on the request context\n\n\n Token can be retrieved by calling GenerateAuthorizationToken",
               "optional": true },
             { "name": "flowControlSettings",
-              "type": "wix-bookings-backend.bookings.FlowControlSettingsInfo1",
+              "type": "wix-bookings-backend.bookings.FlowControlSettingsInfo",
               "doc": "Sets the cancel booking flow behavior.",
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "CancelBookingResult",
         "locations":
           [ { "lineno": 28,
@@ -1068,6 +1069,25 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "FlowControlSettingsInfo",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "com_wix_bookings_api_v1_Bookings_Cancel_cancelBooking.js" } ],
+        "docs":
+          { "summary": "Sets the cancel booking flow behavior.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "ignoreCancellationPolicy",
+              "type": "boolean",
+              "doc": "Whether to ignore the service's cancellation policy.\n<!--ONLY:REST\n Requires BOOKINGS.IGNORE_BOOKING_POLICY permission.\n<!--END:ONLY:REST-->       \n<!--ONLY:VELO-->\n Requires \"Manage Wix Bookings App\" and \"Manage Bookings' Calendar\" [roles](https://support.wix.com/en/article/roles-permissions-overview#bookings-admin).\n<!--END:ONLY:VELO-->",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "FlowControlSettingsInfo1",
         "locations":
           [ { "lineno": 15,
@@ -1085,7 +1105,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "FormInfo_73301236448:updateCustomerInfo",
         "locations":
           [ { "lineno": 15,

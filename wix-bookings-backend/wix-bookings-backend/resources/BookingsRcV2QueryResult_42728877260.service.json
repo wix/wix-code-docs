@@ -1,7 +1,8 @@
 { "name": "BookingsRcV2QueryResult_42728877260",
   "memberOf": "wix-bookings-backend.resources",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 998,
       "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_List_queryResources.js" },
@@ -43,13 +44,14 @@
         "extra":
           {  } },
       { "name": "items",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type":
           { "name": "Array",
             "typeParams":
-              [ "wix-bookings-backend.Resource_23420910898:createResource" ] },
+              [ "wix-bookings-backend.Resource_23420910898:1createResource" ] },
         "locations":
           [ { "lineno": 1008,
               "filename": "com_wixpress_bookings_resources_core_api_v1_resource_ResourcesService_List_queryResources.js" } ],

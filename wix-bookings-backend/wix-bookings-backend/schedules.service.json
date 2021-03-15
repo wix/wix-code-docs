@@ -1,7 +1,8 @@
 { "name": "schedules",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 41,
       "filename": "index.js" },
@@ -59,7 +60,8 @@
         "extra":
           {  } },
       { "name": "updateSession",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "sessionId",
@@ -75,7 +77,7 @@
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-bookings-backend.Session_255663383937:updateSession1" ] },
+                  [ "wix-bookings-backend.Session_255663383937:1updateSession" ] },
             "doc": "Fulfilled - Session." },
         "locations":
           [ { "lineno": 9,
@@ -135,11 +137,12 @@
               {  } },
         "members":
           [ { "name": "session",
-              "type": "wix-bookings-backend.Session_255663383937:updateSession1",
+              "type": "wix-bookings-backend.Session_255663383937:1updateSession",
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "DeleteSessionRequest_5772496212",
         "locations":
           [ { "lineno": 1,
@@ -284,11 +287,12 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Session_255663383937:updateSession1" ] },
+                    [ "wix-bookings-backend.Session_255663383937:1updateSession" ] },
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ListSlotsRequest_23531210904",
         "locations":
           [ { "lineno": 1,
@@ -319,13 +323,14 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Session_255663383937:updateSession1" ] },
+                    [ "wix-bookings-backend.Session_255663383937:1updateSession" ] },
               "doc": "Slots on the calendar." },
             { "name": "pagingMetadata",
               "type": "wix-bookings-backend.PagingMetadataV2_5481679798" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Participant_14025359616",
         "locations":
           [ { "lineno": 1,
@@ -520,10 +525,11 @@
               {  } },
         "members":
           [ { "name": "session",
-              "type": "wix-bookings-backend.Session_255663383937:updateSession1",
+              "type": "wix-bookings-backend.Session_255663383937:1updateSession",
               "doc": "Session." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "changed" ] } ],
   "extra":
     {  } }

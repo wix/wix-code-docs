@@ -1,7 +1,8 @@
 { "name": "BookingsRcV2QueryResult_272632601899",
   "memberOf": "wix-bookings-backend.schedules",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 998,
       "filename": "com_wix_bookings_schedules_api_v1_Schedules_QuerySessions_querySessions.js" },
@@ -45,13 +46,14 @@
         "extra":
           {  } },
       { "name": "items",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
           { "name": "Array",
             "typeParams":
-              [ "wix-bookings-backend.Session_255663383937:updateSession1" ] },
+              [ "wix-bookings-backend.Session_255663383937:1updateSession" ] },
         "locations":
           [ { "lineno": 1008,
               "filename": "com_wix_bookings_calendar_api_v1_CalendarService_ListSessions_querySessions.js" },
