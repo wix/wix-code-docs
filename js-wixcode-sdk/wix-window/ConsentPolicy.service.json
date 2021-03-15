@@ -3,7 +3,7 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 1374,
+    { "lineno": 1507,
       "filename": "window.es6" },
   "docs":
     { "summary": "The ConsentPolicy API is used to perform actions related to the user's allowed cookies and third-party data transfer, such as for GDPR or CCPA purposes.",
@@ -32,7 +32,7 @@
         "ret":
           { "type": "wix-window.ConsentPolicy.PolicyDetails" },
         "locations":
-          [ { "lineno": 1413,
+          [ { "lineno": 1546,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets the user's consent policy regarding allowed cookies and third-party data transfer, such as for GDPR or CCPA purposes.",
@@ -80,7 +80,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 1474,
+          [ { "lineno": 1607,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Sets the function that runs when a user's consent policy was changed using [`setConsentPolicy()`](#setConsentPolicy) or if it was reset using [`resetConsentPolicy()`](#resetConsentPolicy).",
@@ -120,7 +120,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the reset is complete.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 1426,
+          [ { "lineno": 1559,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Removes the current policy from the user's browser and resets the user's consent policy to the default policy for the site.",
@@ -162,7 +162,7 @@
                   [ "wix-window.ConsentPolicy.PolicyDetails" ] },
             "doc": "Fulfilled - All the details of the user's consent policy, including if the the current policy is the default site policy and the policy's allowed cookies.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 1439,
+          [ { "lineno": 1572,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Sets the current user's consent policy regarding allowed cookies and data transfer to third parties, such as for GDPR or CCPA purposes.",
@@ -233,7 +233,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 1459,
+          [ { "lineno": 1592,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Function that runs when a user's consent policy was changed using [`setConsentPolicy()`](#setConsentPolicy).",
@@ -246,7 +246,7 @@
   "messages":
     [ { "name": "ConsentPolicyChangedEvent",
         "locations":
-          [ { "lineno": 1466,
+          [ { "lineno": 1599,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "The event that occurred when the consent policy changed.",
@@ -273,7 +273,7 @@
         "labels": [] },
       { "name": "Policy",
         "locations":
-          [ { "lineno": 1505,
+          [ { "lineno": 1638,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "The current user's consent policy settings.",
@@ -328,7 +328,7 @@
         "labels": [] },
       { "name": "PolicyDetails",
         "locations":
-          [ { "lineno": 1493,
+          [ { "lineno": 1626,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "The complete details of the current user's consent policy.",

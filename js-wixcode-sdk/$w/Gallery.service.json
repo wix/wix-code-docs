@@ -214,7 +214,10 @@
                       "/* currentItem:",
                       " * {",
                       " *   \"type\":\"Image\",",
+                      " *   \"alt\":\"A beautiful view\",",
                       " *   \"title\":\"A View\",",
+                      " *   \"height\":2448,",
+                      " *   \"width\":3264,",
                       " *   \"src\":\"wix:image://v1/99bc1c6f66444769b531221214c885ac.jpeg/A%20View.jpeg#originWidth=3264&originHeight=2448\"",
                       " * }",
                       " *" ],
@@ -352,6 +355,7 @@
                   "body":
                     [ "$w(\"#myGallery\").items = [{",
                       "  \"type\": \"image\",",
+                      "  \"alt\": \"A beautiful view\",",
                       "  \"title\": \"A View\",",
                       "  \"src\": \"wix:image://v1/99bc1c6f66444769b531221214c885ac.jpeg/A%20View.jpeg#originWidth=3264&originHeight=2448\"",
                       "}, {",
@@ -559,6 +563,7 @@
                   "body":
                     [ "$w(\"#myGallery\").items = [{",
                       "  \"type\": \"image\",",
+                      "  \"alt\": \"A beautiful view\",",
                       "  \"title\": \"A View\",",
                       "  \"src\": \"wix:image://v1/99bc1c6f66444769b531221214c885ac.jpeg/A%20View.jpeg#originWidth=3264&originHeight=2448\"",
                       "}, {",
@@ -612,6 +617,7 @@
                   "body":
                     [ "$w(\"#myGallery\").items = [{",
                       "  \"type\": \"image\",",
+                      "  \"alt\": \"A beautiful view\",",
                       "  \"title\": \"A View\",",
                       "  \"src\": \"wix:image://v1/99bc1c6f66444769b531221214c885ac.jpeg/A%20View.jpeg#originWidth=3264&originHeight=2448\"",
                       "}, {",

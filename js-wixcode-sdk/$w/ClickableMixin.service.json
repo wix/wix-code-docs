@@ -52,7 +52,7 @@
           { "type": "$w.Element",
             "doc": "The element to which the event handler was added." },
         "locations":
-          [ { "lineno": 66,
+          [ { "lineno": 63,
               "filename": "ClickableMixin.es6" } ],
         "docs":
           { "summary": "Adds an event handler that runs when the element is clicked.",

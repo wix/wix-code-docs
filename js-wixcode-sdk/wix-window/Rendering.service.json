@@ -1,9 +1,10 @@
 { "name": "Rendering",
   "memberOf": "wix-window",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
-    { "lineno": 283,
+    { "lineno": 414,
       "filename": "window.es6" },
   "docs":
     { "summary": "The Rendering API is used to control when code is run as a page is being loaded.",
@@ -32,7 +33,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 200,
+          [ { "lineno": 207,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets the current environment the rendering process is running in.",
@@ -78,18 +79,19 @@
         "extra":
           {  } },
       { "name": "renderCycle",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type": "number",
         "locations":
-          [ { "lineno": 186,
+          [ { "lineno": 192,
               "filename": "window.es6" } ],
         "docs":
-          { "summary": "**Deprecated:** Gets the current cycle in the rendering process.",
+          { "summary": "**Deprecated:**  The `renderCycle` property is no longer reliable. It will continue to work.",
             "description":
-              [ "> **Deprecation note:** The `renderCycle` property no longer works as expected.",
-                " It will always return `1`." ],
+              [ "Gets the current cycle in the rendering process. This deprecated property will continue to work, but the `renderCycle` property no longer works as expected.",
+                "It always returns `1`." ],
             "links": [],
             "examples": [],
             "extra":
@@ -97,7 +99,8 @@
         "extra":
           {  } },
       { "name": "warmupData",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type":
@@ -106,15 +109,12 @@
             "string",
             "Object" ],
         "locations":
-          [ { "lineno": 231,
+          [ { "lineno": 239,
               "filename": "window.es6" } ],
         "docs":
-          { "summary": "**Deprecated:** Gets data sent from server-side code to client-side code.",
+          { "summary": "**Deprecated:** This version of the `warmupData` property is not reliable. It will continue to work, but a newer version is available at [`wix-window.warmupData`](wix-window.html#warmupData).",
             "description":
-              [ "> **Deprecation note:** The `warmupData` property can no longer be used in a reliable",
-                " manner.",
-                "",
-                " When possible, the rendering process is split in two in order to",
+              [ "When possible, the rendering process is split in two in order to",
                 " improve performance. The first cycle in the process happens server-side",
                 " and the second cycle happens client-side. When not possible, all rendering",
                 " happens client-side.",

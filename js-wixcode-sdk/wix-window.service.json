@@ -3,7 +3,7 @@
   "labels":
     [ "changed" ],
   "location":
-    { "lineno": 14,
+    { "lineno": 15,
       "filename": "window.es6" },
   "docs":
     { "summary": "The wix-window module contains functionality that pertains to the\n current browser window.",
@@ -26,7 +26,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 303,
+          [ { "lineno": 438,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets the locale of the site visitor's browser.",
@@ -61,12 +61,12 @@
           {  } },
       { "name": "consentPolicy",
         "labels":
-          [ "removed" ],
+          [ "new" ],
         "get": true,
         "set": false,
         "type": "wix-window.ConsentPolicy",
         "locations":
-          [ { "lineno": 1391,
+          [ { "lineno": 1524,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "The ConsentPolicy API is used to perform actions related to the user's allowed cookies and third-party data transfer, such as for GDPR or CCPA purposes.",
@@ -94,7 +94,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 351,
+          [ { "lineno": 486,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets what kind of device is being used to view the page.",
@@ -125,7 +125,7 @@
         "set": false,
         "type": "wix-window.Lightbox",
         "locations":
-          [ { "lineno": 279,
+          [ { "lineno": 414,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "A [lightbox](https://support.wix.com/en/article/about-lightboxes) pops up on your site to grab your visitor's attention.",
@@ -162,7 +162,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 371,
+          [ { "lineno": 506,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets the locale of the current environment.",
@@ -204,7 +204,7 @@
         "set": false,
         "type": "wix-window.Multilingual",
         "locations":
-          [ { "lineno": 1233,
+          [ { "lineno": 1370,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "The Multilingual API is used when working with the languages in a multilingual site.",
@@ -232,7 +232,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 1391,
+          [ { "lineno": 1453,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets the HTTP referrer header field.",
@@ -284,10 +284,10 @@
         "set": false,
         "type": "wix-window.Rendering",
         "locations":
-          [ { "lineno": 238,
+          [ { "lineno": 373,
               "filename": "window.es6" } ],
         "docs":
-          { "summary": "The [Rendering API](wix-window.html#rendering-obj) is used to control when code is run as a page is being loaded.",
+          { "summary": "The Rendering API is used to control when code is run as a page is being loaded.",
             "description":
               [ "When possible, the rendering process that runs when your page loads is",
                 " split in two in order to improve performance. The first cycle in the process",
@@ -314,7 +314,7 @@
         "set": false,
         "type": "string",
         "locations":
-          [ { "lineno": 330,
+          [ { "lineno": 465,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets which mode the site is currently being viewed in.",
@@ -337,6 +337,46 @@
             "extra":
               {  } },
         "extra":
+          {  } },
+      { "name": "warmupData",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "wix-window.WarmupData",
+        "locations":
+          [ { "lineno": 228,
+              "filename": "window.es6" } ],
+        "docs":
+          { "summary": "The warmupData API is used to control when code is run while a page is being loaded.",
+            "description":
+              [ "When possible, the [rendering process](https://support.wix.com/en/article/velo-about-the-page-rendering-process) that runs when your page loads is",
+                " split in two in order to improve performance. When not",
+                " possible, all rendering happens client-side.",
+                "",
+                " Because rendering can occur twice, once in the backend code and once in the client-side code, ",
+                " it is preferred to perform time-consuming tasks only once, such as querying ",
+                " collections or working with the results of network requests from external sites. ",
+                " It is best to perform these operations in the backend code if possible.   ",
+                "   ",
+                " It is important to note that it is possible for the client-side code to either render before the backend code or",
+                " to provide the only rendering that occurs. In",
+                " these cases, requesting the warmup data in the client-side code returns `undefined`. The client-side code must ",
+                " check for this scenario and provide a fallback alternative for getting the data. ",
+                "",
+                " Use the `warmupData` API and the `Rendering` API `env` property to track when and where your code is running. ",
+                " This lets you selectively run parts of your code in certain conditions.",
+                "",
+                " To use the `warmupData` API, import `warmupData` from the `wix-window` module:",
+                "",
+                "   ```javascript",
+                "   import { warmupData } from 'wix-window';",
+                "   ```" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
           {  } } ],
   "operations":
     [ { "name": "copyToClipboard",
@@ -353,7 +393,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the copy is complete or the site visitor closes the modal popup." },
         "locations":
-          [ { "lineno": 465,
+          [ { "lineno": 600,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Copies text to the site visitor's clipboard.",
@@ -403,7 +443,7 @@
                   [ "wix-window.WindowSizeInfo" ] },
             "doc": "Fulfilled - An object containing information about the window's size, the document's size, and the current scroll position." },
         "locations":
-          [ { "lineno": 442,
+          [ { "lineno": 577,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Returns information about the window.",
@@ -435,8 +475,7 @@
         "extra":
           {  } },
       { "name": "getCurrentGeolocation",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -446,7 +485,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - The coordinates and timestamp of the current location.\nRejected - The user blocked the geolocation popup." },
         "locations":
-          [ { "lineno": 644,
+          [ { "lineno": 779,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Returns the current geolocation of the user.",
@@ -509,7 +548,7 @@
           { "type": "Object",
             "doc": "The data returned by the router." },
         "locations":
-          [ { "lineno": 618,
+          [ { "lineno": 753,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Returns the data that a router passed to the page in its response.",
@@ -556,7 +595,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - The returned data from the lightbox.\nRejected - The error that caused the rejection." },
         "locations":
-          [ { "lineno": 686,
+          [ { "lineno": 823,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Opens a lightbox and optionally passes it the given data.",
@@ -701,7 +740,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the modal window is closed.\nRejected - The error that caused the rejection." },
         "locations":
-          [ { "lineno": 1065,
+          [ { "lineno": 1202,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Opens a modal window that displays the specified web page.",
@@ -767,7 +806,7 @@
                   [ "Object" ] },
             "doc": "Fulfilled - The data returned from the modal window.\nRejected - The error that caused the rejection." },
         "locations":
-          [ { "lineno": 1121,
+          [ { "lineno": 1258,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Sends a message to the page's parent.",
@@ -850,7 +889,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the scroll is complete." },
         "locations":
-          [ { "lineno": 574,
+          [ { "lineno": 709,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Scrolls the page by a given number of pixels.",
@@ -909,7 +948,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the scroll is complete." },
         "locations":
-          [ { "lineno": 515,
+          [ { "lineno": 650,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Scrolls the page to a specific location inside the vertical [gridlines] (https://support.wix.com/en/article/wix-editor-editor-gridlines).",
@@ -986,7 +1025,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 983,
+          [ { "lineno": 1120,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Sends a tracking event to external analytics tools.",
@@ -1076,7 +1115,7 @@
   "messages":
     [ { "name": "OpenModalOptions",
         "locations":
-          [ { "lineno": 1056,
+          [ { "lineno": 1193,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when opening a modal window.",
@@ -1109,7 +1148,7 @@
         "labels": [] },
       { "name": "ScrollToOptions",
         "locations":
-          [ { "lineno": 507,
+          [ { "lineno": 642,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used for providing options for the `scrollTo()` method.",
@@ -1136,7 +1175,7 @@
         "labels": [] },
       { "name": "WindowSizeInfo",
         "locations":
-          [ { "lineno": 324,
+          [ { "lineno": 459,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object returned by the `getBoundingRect()` function that contains information about the window's size, the document's size, and the current scroll position.",

@@ -36,7 +36,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 189,
+          [ { "lineno": 188,
               "filename": "Storage.es6" } ],
         "docs":
           { "summary": "Removes **all** items from local, session, or memory storage.",
@@ -90,8 +90,6 @@
               "filename": "Storage.es6" } ],
         "docs":
           { "summary": "Gets an item from local, session, or memory storage.",
-            "description":
-              [ "If an item does not exist, `getItem()` resolves to null." ],
             "links":
               [ "[setItem( )](#setItem)" ],
             "examples":
@@ -136,7 +134,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 171,
+          [ { "lineno": 170,
               "filename": "Storage.es6" } ],
         "docs":
           { "summary": "Removes an item from local, session, or memory storage.",
@@ -175,8 +173,7 @@
         "extra":
           {  } },
       { "name": "setItem",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "key",

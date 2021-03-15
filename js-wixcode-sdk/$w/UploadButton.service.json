@@ -530,7 +530,7 @@
         "labels": [] },
       { "name": "ValidityState",
         "locations":
-          [ { "lineno": 465,
+          [ { "lineno": 443,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "Contains detailed information about the validity states of a file to upload.",
