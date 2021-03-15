@@ -1,6 +1,7 @@
 { "name": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -67,6 +68,23 @@
         "locations":
           [ { "lineno": 77,
               "filename": "index.js" } ],
+        "docs":
+          { "summary": "The Bookings API provides functionality for updating and managing bookings created in the Wix Bookings app.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "schedules",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "wix-bookings-backend.Schedules",
+        "locations":
+          [ { "lineno": 67,
+              "filename": "schedules.js" } ],
         "docs":
           { "summary": "The Bookings API provides functionality for updating and managing bookings created in the Wix Bookings app.",
             "links": [],

@@ -1,7 +1,8 @@
 { "name": "Events",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "bookingsEvents.js" },
@@ -722,12 +723,13 @@
         "extra":
           {  } },
       { "name": "onBookingScheduleUpdated",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
               "type": "wix-bookings-backend.Events.BookingEvent",
-              "doc": "Information about an booking with an updated schedule." } ],
+              "doc": "Information about a booking with an updated schedule." } ],
         "ret":
           { "type": "void" },
         "locations":
@@ -924,7 +926,8 @@
         "extra":
           {  } },
       { "name": "onBookingUpdated",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "event",
@@ -940,7 +943,7 @@
             "description":
               [ "The `onBookingUpdated()` event handler runs when a booking's details are updated.",
                 "",
-                "The `event` object includes a `trigger` property that describes the action that triggered the event. The `trigger` value for this event is `\"OWNER_UPDATED_ATTENDANCE\"` when the business updates the booking's attendance information..",
+                "The `event` object includes a `trigger` property that describes the action that triggered the event. The `trigger` value for this event is `\"OWNER_UPDATED_ATTENDANCE\"` when the business updates the booking's attendance information.",
                 "",
                 "> **Note:** Backend events don't work when previewing your site." ],
             "links": [],
