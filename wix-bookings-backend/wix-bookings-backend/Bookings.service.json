@@ -1,7 +1,8 @@
 { "name": "bookings",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 5,
       "filename": "index.js" },
@@ -691,14 +692,15 @@
         "extra":
           {  } },
       { "name": "updateCustomerInfo",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "bookingId",
               "type": "string",
               "doc": "ID of the booking to be updated." },
             { "name": "formInfo",
-              "type": "wix-bookings-backend.bookings.FormInfo_73301236448:updateCustomerInfo",
+              "type": "wix-bookings-backend.bookings.FormInfo",
               "doc": "Updated form info and contact details" } ],
         "ret":
           { "type":
@@ -1103,6 +1105,43 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "FormInfo",
+        "locations":
+          [ { "lineno": 15,
+              "filename": "com_wix_bookings_api_v1_Bookings_UpdateCustomerInfo_updateCustomerInfo.js" } ],
+        "docs":
+          { "summary": "Updated form info and contact details",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "paymentSelection",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.PaymentSelection" ] },
+              "doc": "A list of rates and the number of participants for each rate.",
+              "optional": true },
+            { "name": "customFormFields",
+              "type": "Object",
+              "doc": "Set of key-value pairs. Other custom field values that were specified by the user. In the form of field_id to value mapping.\n Deprecated. Is being replaced with additional_fields.",
+              "optional": true },
+            { "name": "additionalFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.FormInfo_CustomFormField_7366759000:updateCustomerInfo" ] },
+              "doc": "Additional custom fields submitted with the form.",
+              "optional": true },
+            { "name": "contactDetails",
+              "type": "wix-bookings-backend.bookings.ContactDetails",
+              "doc": "The contact details of the user making the booking.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "FormInfo_73301236448:updateCustomerInfo",
         "locations":
           [ { "lineno": 15,
@@ -1138,7 +1177,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "QueryOptions_583539044:find",
         "locations":
           [ { "lineno": 1171,

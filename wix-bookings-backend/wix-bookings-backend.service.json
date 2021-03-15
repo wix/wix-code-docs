@@ -1773,7 +1773,7 @@
                     [ "wix-bookings-backend.BookedResource" ] },
               "doc": "A list of booked resources. Currently, only one is supported. The booked resource would be the staff-member giving the session." },
             { "name": "formInfo",
-              "type": "wix-bookings-backend.FormInfo",
+              "type": "wix-bookings-backend.Form",
               "doc": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service.",
               "optional": true },
             { "name": "paymentDetails",
@@ -1796,7 +1796,8 @@
               "type": "Date" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "BookingPolicy_10910809566",
         "locations":
           [ { "lineno": 1360,
@@ -3015,8 +3016,7 @@
               "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "CustomFormFieldInfo",
         "locations":
           [ { "lineno": 148,
@@ -3188,10 +3188,10 @@
         "labels": [] },
       { "name": "Form",
         "locations":
-          [ { "lineno": 118,
+          [ { "lineno": 246,
               "filename": "shared.js" } ],
         "docs":
-          { "summary": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up for the service.",
+          { "summary": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service.",
             "links": [],
             "examples": [],
             "extra":
@@ -3199,7 +3199,8 @@
         "members":
           [ { "name": "contactDetails",
               "type": "wix-bookings-backend.ContactDetails",
-              "doc": "Contact details of the user making the booking." },
+              "doc": "The contact details of the user making the booking.",
+              "optional": true },
             { "name": "paymentSelection",
               "type":
                 { "name": "Array",
@@ -3211,12 +3212,11 @@
                 { "name": "Array",
                   "typeParams":
                     [ "wix-bookings-backend.CustomFormField" ] },
-              "doc": "Additional custom fields submitted with the form.",
-              "optional": true } ],
+              "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
         "labels":
-          [ "removed" ] },
+          [ "new" ] },
       { "name": "FormField_28233079378",
         "locations":
           [ { "lineno": 1463,
@@ -3347,7 +3347,8 @@
         "extra":
           {  },
         "labels":
-          [ "changed" ] },
+          [ "changed",
+            "removed" ] },
       { "name": "FormInfo_88699268303",
         "locations":
           [ { "lineno": 255,
@@ -3417,8 +3418,7 @@
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "FormInfo_CustomFormField",
         "locations":
           [ { "lineno": 148,
@@ -3733,8 +3733,7 @@
               "doc": "The slug is the remainder of the URI which can be used to access the service's page and service's booking page in Wix Bookings." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "Header_2062052936",
         "locations":
           [ { "lineno": 1515,
@@ -5415,7 +5414,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.WixPayDetails_17951508165:setBookingAsPaid" ] },
+                    [ "wix-bookings-backend.WixPayDetails" ] },
               "doc": "In case of wix-pay service, holds all payment history for a booking." },
             { "name": "pricingPlanDetails",
               "type": "wix-bookings-backend.PaidPlanDetails",
@@ -5428,7 +5427,8 @@
               "doc": "The invoice details of the booking. Not supported yet." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "PaymentDetails_93106850965",
         "locations":
           [ { "lineno": 375,
@@ -5459,7 +5459,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.WixPayDetails_17951508165:setBookingAsPaid" ] },
+                    [ "wix-bookings-backend.WixPayDetails" ] },
               "doc": "In case of wix-pay service, holds all payment history for a booking." },
             { "name": "invoiceApplicable",
               "type": "boolean",
@@ -5469,7 +5469,8 @@
               "doc": "The invoice details of the booking. Not supported yet." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "PaymentOptions_3053001567",
         "locations":
           [ { "lineno": 1579,
@@ -5545,8 +5546,7 @@
               "doc": "The number of participants for this rate." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "PaymentSelectionInfo",
         "locations":
           [ { "lineno": 207,
@@ -5981,8 +5981,7 @@
               "doc": "Resource status. Default is `CREATED`.\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"DELETED\"`\n + `\"UPDATED\"`" } ],
         "extra":
           {  },
-        "labels":
-          [ "new" ] },
+        "labels": [] },
       { "name": "Resource_23420910898",
         "locations":
           [ { "lineno": 1286,
@@ -8092,7 +8091,7 @@
         "labels": [] },
       { "name": "WixPayDetails",
         "locations":
-          [ { "lineno": 246,
+          [ { "lineno": 457,
               "filename": "shared.js" } ],
         "docs":
           { "links": [],
@@ -8102,26 +8101,26 @@
         "members":
           [ { "name": "txId",
               "type": "string",
-              "doc": "Wix Pay payment transaction ID." },
+              "doc": "Cashier transaction Id" },
             { "name": "orderId",
               "type": "string",
-              "doc": "WixPay payment order ID." },
+              "doc": "Cashier order Id" },
             { "name": "orderAmount",
               "type": "string",
-              "doc": "Order amount was sent to the Wix Pay system." },
+              "doc": "The order amount we issued to Cashier." },
             { "name": "orderStatus",
               "type": "string",
-              "doc": "Order status.\n One of: \n + `\"CREATED\"`  The transaction has started.\n + `\"PENDING_MERCHANT\"` An online payment was made, but the owner did not set up the necessary details.\n + `\"COMPLETE\"`  The current part of the payment was completed.\n + `\"FAILED\"`  The Wix online payment system is unavailable or failed processing.\n + `\"DECLINED\"` The payment was declined.\n + `\"PENDING_MARK_AS_PAID\"` Offline transaction. The transaction will be complete when explicitly marked as paid.\n + `\"CANCELED\"` The transaction was canceled.\n +" },
+              "doc": "+ `CREATED`  The transaction has been started.\n + `PENDING_MERCHANT` An online payment was made, but the owner has not set up the necessary details.\n + `COMPLETE`  The current part of the payment was completed.\n + `FAILED`  The Wix online payment system is unavailable or failed processing.\n + `DECLINED` The payment was declined.\n + `PENDING_MARK_AS_PAID` Offline transaction. The transaction will be complete when explicitly marked as paid.\n + `CANCELED` The transaction was cancelled.\n Transaction status\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"PENDING_MERCHANT\"`\n + `\"COMPLETE\"`\n + `\"FAILED\"`\n + `\"DECLINED\"`\n + `\"PENDING_MARK_AS_PAID\"`\n + `\"CANCELED\"`" },
             { "name": "orderApprovalTime",
               "type": "Date",
-              "doc": "Date and time that the order was approved." },
+              "doc": "The date and time that the order was approved." },
             { "name": "paymentVendorName",
               "type": "string",
-              "doc": "Payment vendor name. The company processing the payment, such as Pay Pal or a credit card company. `\"inPerson\"` is used for cash payments." } ],
+              "doc": "Payment vendor name." } ],
         "extra":
           {  },
         "labels":
-          [ "removed" ] },
+          [ "new" ] },
       { "name": "WixPayDetails_17951508165:setBookingAsPaid",
         "locations":
           [ { "lineno": 457,
@@ -8152,6 +8151,7 @@
               "doc": "Payment vendor name." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }
