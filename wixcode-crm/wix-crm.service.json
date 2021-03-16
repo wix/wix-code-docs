@@ -1,6 +1,7 @@
 { "name": "wix-crm",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "crm.js" },
@@ -16,10 +17,41 @@
       "examples": [],
       "extra":
         {  } },
-  "properties": [],
+  "properties":
+    [ { "name": "contacts",
+        "labels":
+          [ "new" ],
+        "get": true,
+        "set": false,
+        "type": "wix-crm.Contacts",
+        "locations":
+          [ { "lineno": 6,
+              "filename": "contacts-index.js" } ],
+        "docs":
+          { "summary": "The Contacts API is used to manage a site's contacts.",
+            "description":
+              [ "When a visitor first interacts with your site in a number of ways —",
+                "such as submitting a contact form or subscribing to a newsletter —",
+                "they're added to your site's",
+                "[Contact List](https://www.wix.com/my-account/site-selector/?buttonText=Select%20Site&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fcontacts)",
+                "and their details are available through the Contacts API.",
+                "Here are some examples for how a visitor could be converted to a contact:",
+                "",
+                "- The visitor fills in a form with their contact details",
+                "- The visitor signs up as a site member",
+                "- A site contributor",
+                "  [imports a contact][https://support.wix.com/en/article/importing-contacts-by-uploading-a-csv-file-1066522]",
+                "  or [adds a contact manually][https://support.wix.com/en/article/manually-adding-contacts]" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
   "operations":
     [ { "name": "createContact",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "contactInfo",
@@ -35,9 +67,35 @@
           [ { "lineno": 43,
               "filename": "crm.js" } ],
         "docs":
-          { "summary": "Creates a new contact or updates an existing contact.",
+          { "summary": "_Deprecated. See description for migration instructions._\nThis function will continue to work, but a newer version is available at\n[`wix-crm.contacts.appendOrCreateContact()`](wix-crm/contacts-obj/appendorcreatecontact).",
             "description":
-              [ "The `createContact()` function returns a Promise that resolves to the newly",
+              [ "Creates a new contact or updates an existing contact.",
+                "",
+                "> #### Migration Instructions",
+                ">",
+                "> If this function is already in your code, it will continue to work.",
+                "> To stay compatible with future changes, migrate to",
+                "> [`wix-crm.contacts.appendOrCreateContact()`](wix-crm/contacts-obj/appendorcreatecontact).",
+                ">",
+                "> To migrate to the new function:",
+                ">",
+                "> 1. Add the new import statement:",
+                ">",
+                ">    ```javascript",
+                ">    import { contacts } from 'wix-crm'",
+                ">    ```",
+                ">",
+                "> 2. If you plan to migrate all contact functions that use `wixCrm`,",
+                ">    remove the original `import wixCrm` statement.",
+                ">",
+                "> 3. Look for any code that uses `wixCrm.createContact()`,",
+                ">    and replace it with with `contacts.appendOrCreateContact()`.",
+                ">    Update your code to work with the structure of the new `appendOrCreateContact()`",
+                ">    call and response properties.",
+                ">",
+                "> 4. Test your changes to make sure your code behaves as expected.",
+                "",
+                " The `createContact()` function returns a Promise that resolves to the newly",
                 " created or updated contact's ID when the contact has been created or updated.",
                 "",
                 " The passed `ContactInfo` object must contain at least one",
@@ -157,7 +215,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the email is sent.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 80,
+          [ { "lineno": 109,
               "filename": "crm.js" } ],
         "docs":
           { "summary": "Sends a Triggered Email to the current contact.",
