@@ -1,0 +1,503 @@
+{ "name": "ContactsQueryResult",
+  "memberOf": "wix-crm-backend.Contacts",
+  "mixes": [],
+  "labels":
+    [ "new" ],
+  "location":
+    { "lineno": 703,
+      "filename": "queryContacts.js" },
+  "docs":
+    { "summary": "The results of a contacts query, containing the retrieved items.",
+      "description":
+        [ "When you execute a query with the [`find()`](wix-crm-backend.ContactsQueryBuilder.html#find)",
+          "function, it returns a Promise that resolves to a `ContactsQueryResult` object.",
+          "This object contains the items that match the query, information about the",
+          "query itself, and functions for paging through the query results." ],
+      "links": [],
+      "examples": [],
+      "extra":
+        {  } },
+  "properties":
+    [ { "name": "currentPage",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 800,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Returns the index of the current results page number.",
+            "description":
+              [ "The `currentPage` is a zero-based index of the current page of results.",
+                "",
+                "The page size is defined by the [`limit()`](wix-crm-backend.ContactsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions.",
+                "",
+                "The `currentPage` property returns `undefined` if the query returned no results." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get current page index of a query result",
+                  "body":
+                    [ "let resultPage = results.currentPage; // 0" ],
+                  "extra":
+                    {  } },
+                { "title": "Perform a query and get the current page index of the query result",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export function getCurrentPage() {",
+                      "  return contacts.queryContacts()",
+                      "    .find()",
+                      "    .then((results) => {",
+                      "      return results.currentPage; // 0",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "items",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type":
+          { "name": "Array",
+            "typeParams":
+              [ "wix-crm-backend.Contacts.Contact" ] },
+        "locations":
+          [ { "lineno": 713,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Returns the items that match the query.",
+            "description":
+              [ "The current page of items retrieved by the query.",
+                "",
+                "List of contacts.",
+                "",
+                "",
+                "> **Note:** When no items match the query, the items array is empty.",
+                "",
+                "To paginate your query results, use the `ContactsQueryResult` pagination properties and functions." ],
+            "links": [],
+            "examples":
+              [ { "title": "Perform a query and get items in the returned page",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export function getQueryResultItems() {",
+                      "  return contacts.queryContacts()",
+                      "    .find()",
+                      "    .then((results) => {",
+                      "      if (results.items.length > 0) {",
+                      "        return results.items;",
+                      "      } else {",
+                      "        console.log('No items found');",
+                      "      }",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "length",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 730,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Returns the number of items in the current results page.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-crm-backend.ContactsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get the length of a query result",
+                  "body":
+                    [ "let resultLength = results.length; // 20" ],
+                  "extra":
+                    {  } },
+                { "title": "Perform a query and get the length of the result",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export function getPageLength() {",
+                      "  return contacts.queryContacts()",
+                      "    .find()",
+                      "    .then((results) => {",
+                      "      return results.length; // 20",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "pageSize",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 772,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Returns the query page size.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-crm-backend.ContactsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get the page size of a query result",
+                  "body":
+                    [ "let resultPageSize = results.pageSize; // 50" ],
+                  "extra":
+                    {  } },
+                { "title": "Perform a query and get the page size of the result",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export function getPageSize() {",
+                      "  return contacts.queryContacts()",
+                      "    .find()",
+                      "    .then((results) => {",
+                      "      return results.pageSize; // 50",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "query",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "wix-crm-backend.Contacts.ContactsQueryBuilder",
+        "locations":
+          [ { "lineno": 756,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Contains functionality for refining a contacts query.",
+            "description":
+              [ "The `ContactsQueryBuilder` functions enable you to run, sort, filter, and control",
+                "which results a query returns.",
+                "",
+                "Typically, you build a query using any of the contacts query functions,",
+                "refine the query by chaining `ContactsQueryBuilder` functions, and then execute the",
+                "query by chaining the [`find()`](#find) function." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get the query that produced the current result",
+                  "body":
+                    [ "let resultQuery = results.query;" ],
+                  "extra":
+                    {  } },
+                { "title": "Perform a query and get the query that produced the result",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export function getOriginalQuery() {",
+                      "  return contacts.queryContacts()",
+                      "    .find()",
+                      "    .then((results) => {",
+                      "      return results.query;",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "totalCount",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 744,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Returns the total number of items that match the query.",
+            "description":
+              [ "The `totalCount` returns the total number of items that match the query,",
+                "not just the number of items in the current page." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get the total number of items that match a query",
+                  "body":
+                    [ "let resultCount = results.totalCount; // 150" ],
+                  "extra":
+                    {  } },
+                { "title": "Perform a query and get the total number of matching items",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export function getTotalCount() {",
+                      "  return contacts.queryContacts()",
+                      "    .find()",
+                      "    .then((results) => {",
+                      "      return results.totalCount; // 150",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "totalPages",
+        "labels": [],
+        "get": true,
+        "set": false,
+        "type": "number",
+        "locations":
+          [ { "lineno": 786,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Returns the total number of pages the query produced.",
+            "description":
+              [ "The page size is defined by the [`limit()`](wix-crm-backend.ContactsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get the total number of pages in a query result",
+                  "body":
+                    [ "let resultPages = results.totalPages; // 3" ],
+                  "extra":
+                    {  } },
+                { "title": "Perform a query and get the total number of pages in the result",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export function getTotalPages() {",
+                      "  return contacts.queryContacts()",
+                      "    .find()",
+                      "    .then((results) => {",
+                      "      return results.totalPages; // 3",
+                      "    })",
+                      "    .catch((error) => {",
+                      "      console.error(error);",
+                      "    });",
+                      "}" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "operations":
+    [ { "name": "hasNext",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "boolean",
+            "doc": "`true` if there are more results." },
+        "locations":
+          [ { "lineno": 863,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Indicates if the query has more results.",
+            "links": [],
+            "examples":
+              [ { "title": "Get whether the query result object has more results",
+                  "body":
+                    [ "let hasNext = results.hasNext(); // true" ],
+                  "extra":
+                    {  } },
+                { "title": "Iterate through all pages of query results",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export async function retrieveAllItems() {",
+                      "  let allItems = [];",
+                      "",
+                      "  let results = await contacts.queryContacts()",
+                      "    .limit(1000)",
+                      "    .find();",
+                      "  allItems = allItems.concat(results.items);",
+                      "",
+                      "  while (results.hasNext()) {",
+                      "    results = await results.next();",
+                      "    allItems = allItems.concat(results.items);",
+                      "  }",
+                      "",
+                      "  return allItems;",
+                      "}",
+                      "" ],
+                  "extra":
+                    { "description": "This example demonstrates how to get all query results, bypassing the maximum limit of 1000." } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "hasPrev",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type": "boolean",
+            "doc": "`true` if there are previous results." },
+        "locations":
+          [ { "lineno": 872,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Indicates if the query has previous results.",
+            "links": [],
+            "examples":
+              [ { "title": "Get whether the query result object has previous results",
+                  "body":
+                    [ "let hasPrev = results.hasPrev(); // false" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "next",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-crm-backend.Contacts.ContactsQueryResult" ] },
+            "doc": "Fulfilled - The results of a contacts query, containing the retrieved items.\nWhen you execute a query with the [`find()`](wix-crm-backend.ContactsQueryBuilder.html#find)\nfunction, it returns a Promise that resolves to a `ContactsQueryResult` object.\nThis object contains the items that match the query, information about the\nquery itself, and functions for paging through the query results." },
+        "locations":
+          [ { "lineno": 818,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Retrieves the next page of query results.",
+            "description":
+              [ "The `next()` function retrieves the next page of query results.",
+                "",
+                "The page size is defined by the [`limit()`](wix-crm-backend.ContactsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions.",
+                "",
+                "If items are added or removed between calls to `next()` the values returned",
+                "by `ContactsQueryResult` may change." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get the next page of a query result",
+                  "body":
+                    [ "const nextPage = oldResults.next()",
+                      "  .then((results) => {",
+                      "    return results;",
+                      "  })",
+                      "  .catch((error) => {",
+                      "    console.error(error);",
+                      "  });" ],
+                  "extra":
+                    {  } },
+                { "title": "Iterate through all pages of query results",
+                  "body":
+                    [ "import { contacts } from 'wix-crm-backend';",
+                      "",
+                      "export async function retrieveAllItems() {",
+                      "  let allItems = [];",
+                      "",
+                      "  let results = await contacts.queryContacts()",
+                      "    .limit(1000)",
+                      "    .find();",
+                      "  allItems = allItems.concat(results.items);",
+                      "",
+                      "  while (results.hasNext()) {",
+                      "    results = await results.next();",
+                      "    allItems = allItems.concat(results.items);",
+                      "  }",
+                      "",
+                      "  return allItems;",
+                      "}",
+                      "" ],
+                  "extra":
+                    { "description": "This example demonstrates how to get all query results, bypassing the maximum limit of 1000." } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "prev",
+        "labels": [],
+        "nameParams": [],
+        "params": [],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-crm-backend.Contacts.ContactsQueryResult" ] },
+            "doc": "Fulfilled - The results of a contacts query, containing the retrieved items.\nWhen you execute a query with the [`find()`](wix-crm-backend.ContactsQueryBuilder.html#find)\nfunction, it returns a Promise that resolves to a `ContactsQueryResult` object.\nThis object contains the items that match the query, information about the\nquery itself, and functions for paging through the query results." },
+        "locations":
+          [ { "lineno": 841,
+              "filename": "queryContacts.js" } ],
+        "docs":
+          { "summary": "Retrieves the previous page of query results.",
+            "description":
+              [ "The `prev()` function retrieves the previous page of query results.",
+                "",
+                "The page size is defined by the [`limit()`](wix-crm-backend.ContactsQueryBuilder.html#limit)",
+                "function, can be retrieved using the [`pageSize`](#pageSize) property, and",
+                "navigating through pages is done with the [`prev()`](#prev) and",
+                "[`next()`](#next) functions.",
+                "",
+                "If items are added or removed between calls to `prev()` the values returned",
+                "by `ContactsQueryResult` may change." ],
+            "links": [],
+            "examples":
+              [ { "title": "Get the previous page of a query result",
+                  "body":
+                    [ "const previousPage = oldResults.prev()",
+                      "  .then((results) => {",
+                      "    return results;",
+                      "  })",
+                      "  .catch((error) => {",
+                      "    console.error(error);",
+                      "  });" ],
+                  "extra":
+                    {  } } ],
+            "extra":
+              {  } },
+        "extra":
+          {  } } ],
+  "callbacks": [],
+  "messages": [],
+  "extra":
+    {  } }

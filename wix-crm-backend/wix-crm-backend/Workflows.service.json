@@ -1,8 +1,7 @@
 { "name": "Workflows",
   "memberOf": "wix-crm-backend",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "workflows.js" },
@@ -525,8 +524,7 @@
         "extra":
           {  } },
       { "name": "listCards",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "workflowId",
@@ -1137,8 +1135,7 @@
               "doc": "ID of the phase which contains the card." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "CardList",
         "locations":
           [ { "lineno": 129,
@@ -1222,8 +1219,7 @@
               "doc": "Index of the current page. Indices are zero-based." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListCardOptions",
         "locations":
           [ { "lineno": 83,
@@ -1306,8 +1302,7 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "ListOptions",
         "locations":
           [ { "lineno": 72,
