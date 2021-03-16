@@ -29,15 +29,13 @@
           {  } } ],
   "operations":
     [ { "name": "activate",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
-          [ { "name": "id",
+          [ { "name": "localeId",
               "type": "string",
-              "doc": "The Locale ID, has format of IETF BCP 47 language tag" },
-            { "name": "locale",
-              "type": "wix-multilingual-backend.Locale_227900549199",
-              "doc": "The Locale" } ],
+              "doc": "The Locale ID, has format of IETF BCP 47 language tag" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -56,15 +54,10 @@
                     [ "import wixMultilingualBackend from \"wix-multilingual-backend\";",
                       "",
                       "export function activate() {",
-                      "  const id = \"a string\";",
-                      "  const locale = {",
-                      "    status: \"UNDEFINED_STATUS\",",
-                      "    flag: \"UNDEFINED_FLAG_CODE\",",
-                      "    format: \"a string\"",
-                      "  };",
+                      "  const localeId = \"a string\";",
                       "",
                       "  return wixMultilingualBackend",
-                      "    .activate(id, locale)",
+                      "    .activate(localeId)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -141,15 +134,13 @@
         "extra":
           {  } },
       { "name": "deactivate",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
-          [ { "name": "id",
+          [ { "name": "localeId",
               "type": "string",
-              "doc": "The Locale ID, has format of IETF BCP 47 language tag" },
-            { "name": "locale",
-              "type": "wix-multilingual-backend.Locale_227900549199",
-              "doc": "The Locale" } ],
+              "doc": "The Locale ID, has format of IETF BCP 47 language tag" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -168,15 +159,10 @@
                     [ "import wixMultilingualBackend from \"wix-multilingual-backend\";",
                       "",
                       "export function deactivate() {",
-                      "  const id = \"a string\";",
-                      "  const locale = {",
-                      "    status: \"UNDEFINED_STATUS\",",
-                      "    flag: \"UNDEFINED_FLAG_CODE\",",
-                      "    format: \"a string\"",
-                      "  };",
+                      "  const localeId = \"a string\";",
                       "",
                       "  return wixMultilingualBackend",
-                      "    .deactivate(id, locale)",
+                      "    .deactivate(localeId)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -191,8 +177,7 @@
         "extra":
           {  } },
       { "name": "list",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params": [],
         "ret":
@@ -231,15 +216,13 @@
         "extra":
           {  } },
       { "name": "remove",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
-          [ { "name": "id",
+          [ { "name": "localeId",
               "type": "string",
-              "doc": "The Locale ID, has format of IETF BCP 47 language tag" },
-            { "name": "locale",
-              "type": "wix-multilingual-backend.Locale_227900549199",
-              "doc": "The Locale" } ],
+              "doc": "The Locale ID, has format of IETF BCP 47 language tag" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -260,15 +243,10 @@
                     [ "import wixMultilingualBackend from \"wix-multilingual-backend\";",
                       "",
                       "export function remove() {",
-                      "  const id = \"a string\";",
-                      "  const locale = {",
-                      "    status: \"UNDEFINED_STATUS\",",
-                      "    flag: \"UNDEFINED_FLAG_CODE\",",
-                      "    format: \"a string\"",
-                      "  };",
+                      "  const localeId = \"a string\";",
                       "",
                       "  return wixMultilingualBackend",
-                      "    .remove(id, locale)",
+                      "    .remove(localeId)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -283,15 +261,13 @@
         "extra":
           {  } },
       { "name": "setDefault",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
-          [ { "name": "id",
+          [ { "name": "localeId",
               "type": "string",
-              "doc": "The Locale ID, has format of IETF BCP 47 language tag" },
-            { "name": "locale",
-              "type": "wix-multilingual-backend.Locale_227900549199",
-              "doc": "The Locale" } ],
+              "doc": "The Locale ID, has format of IETF BCP 47 language tag" } ],
         "ret":
           { "type":
               { "name": "Promise",
@@ -313,15 +289,10 @@
                     [ "import wixMultilingualBackend from \"wix-multilingual-backend\";",
                       "",
                       "export function setDefault() {",
-                      "  const id = \"a string\";",
-                      "  const locale = {",
-                      "    status: \"UNDEFINED_STATUS\",",
-                      "    flag: \"UNDEFINED_FLAG_CODE\",",
-                      "    format: \"a string\"",
-                      "  };",
+                      "  const localeId = \"a string\";",
                       "",
                       "  return wixMultilingualBackend",
-                      "    .setDefault(id, locale)",
+                      "    .setDefault(localeId)",
                       "    .then((response) => {",
                       "      console.log(response);",
                       "    })",
@@ -352,7 +323,7 @@
                   [ "void" ] },
             "doc": "" },
         "locations":
-          [ { "lineno": 1,
+          [ { "lineno": 263,
               "filename": "com_wixpress_multilingual_api_Locales_Update_update.js" } ],
         "docs":
           { "summary": "Updates a locale flag and text format",
@@ -407,7 +378,7 @@
       { "name": "Locale_227900549199",
         "locations":
           [ { "lineno": 1,
-              "filename": "shared.js" } ],
+              "filename": "com_wixpress_multilingual_api_Locales_Update_update.js" } ],
         "docs":
           { "summary": "The Locale",
             "links": [],
@@ -480,7 +451,7 @@
           [ "removed" ] },
       { "name": "Locale_792377915733",
         "locations":
-          [ { "lineno": 263,
+          [ { "lineno": 1,
               "filename": "shared.js" } ],
         "docs":
           { "summary": "Contains all the Locale's information",
