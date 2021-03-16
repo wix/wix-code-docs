@@ -3,7 +3,7 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 920,
+    { "lineno": 924,
       "filename": "window.es6" },
   "docs":
     { "summary": "Objects used when calling the [`trackEvent()`](wix-window.html#trackEvent) function.",
@@ -17,7 +17,7 @@
   "messages":
     [ { "name": "AddPaymentInfoEvent",
         "locations":
-          [ { "lineno": 925,
+          [ { "lineno": 929,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an AddPaymentInfo track event.",
@@ -50,7 +50,7 @@
         "labels": [] },
       { "name": "AddProductImpressionEvent",
         "locations":
-          [ { "lineno": 934,
+          [ { "lineno": 938,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an AddProductImpression track event.",
@@ -105,7 +105,7 @@
         "labels": [] },
       { "name": "AddProductImpressionEventContents",
         "locations":
-          [ { "lineno": 943,
+          [ { "lineno": 947,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an AddProductImpression track event.",
@@ -189,7 +189,7 @@
         "labels": [] },
       { "name": "AddToCartEvent",
         "locations":
-          [ { "lineno": 960,
+          [ { "lineno": 964,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an AddToCart track event.",
@@ -265,7 +265,7 @@
         "labels": [] },
       { "name": "CheckoutStepEvent",
         "locations":
-          [ { "lineno": 978,
+          [ { "lineno": 982,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an CheckoutStep track event.",
@@ -308,7 +308,7 @@
         "labels": [] },
       { "name": "ClickProductEvent",
         "locations":
-          [ { "lineno": 991,
+          [ { "lineno": 995,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending a ClickProduct track event.",
@@ -383,7 +383,7 @@
         "labels": [] },
       { "name": "CustomEvent",
         "locations":
-          [ { "lineno": 1009,
+          [ { "lineno": 1013,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending a CustomEvent track event.",
@@ -429,7 +429,7 @@
         "labels": [] },
       { "name": "InitiateCheckoutEvent",
         "locations":
-          [ { "lineno": 1021,
+          [ { "lineno": 1025,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an InitiateCheckout track event.",
@@ -482,7 +482,7 @@
         "labels": [] },
       { "name": "InitiateCheckoutEventContents",
         "locations":
-          [ { "lineno": 1030,
+          [ { "lineno": 1034,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an InitiateCheckout track event.",
@@ -560,7 +560,7 @@
         "labels": [] },
       { "name": "PurchaseEvent",
         "locations":
-          [ { "lineno": 1046,
+          [ { "lineno": 1050,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending a Purchase track event.",
@@ -635,7 +635,7 @@
         "labels": [] },
       { "name": "PurchaseEventContents",
         "locations":
-          [ { "lineno": 1061,
+          [ { "lineno": 1065,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an Purchase track event.",
@@ -707,7 +707,7 @@
         "labels": [] },
       { "name": "RemoveFromCartEvent",
         "locations":
-          [ { "lineno": 1076,
+          [ { "lineno": 1080,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending a RemoveFromCart track event.",
@@ -779,7 +779,7 @@
         "labels": [] },
       { "name": "StartPaymentEvent",
         "locations":
-          [ { "lineno": 1093,
+          [ { "lineno": 1097,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending an StartPayment track event.",
@@ -812,7 +812,7 @@
         "labels": [] },
       { "name": "ViewContentEvent",
         "locations":
-          [ { "lineno": 1102,
+          [ { "lineno": 1106,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "An object used when sending a ViewContent track event.",

@@ -1,8 +1,7 @@
 { "name": "Storage",
   "memberOf": "wix-storage",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 106,
       "filename": "Storage.es6" },
@@ -75,8 +74,7 @@
         "extra":
           {  } },
       { "name": "getItem",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "key",

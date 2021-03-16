@@ -1,10 +1,9 @@
 { "name": "Rendering",
   "memberOf": "wix-window",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
-    { "lineno": 414,
+    { "lineno": 418,
       "filename": "window.es6" },
   "docs":
     { "summary": "The Rendering API is used to control when code is run as a page is being loaded.",
@@ -79,8 +78,7 @@
         "extra":
           {  } },
       { "name": "renderCycle",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type": "number",
@@ -99,8 +97,7 @@
         "extra":
           {  } },
       { "name": "warmupData",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "get": true,
         "set": false,
         "type":

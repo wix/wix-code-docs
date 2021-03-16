@@ -2,7 +2,7 @@
   "memberOf": "wix-window",
   "mixes": [],
   "labels":
-    [ "new" ],
+    [ "changed" ],
   "location":
     { "lineno": 260,
       "filename": "window.es6" },
@@ -38,7 +38,8 @@
   "properties": [],
   "operations":
     [ { "name": "get",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "key",
@@ -48,7 +49,7 @@
           { "type": "string",
             "doc": "The data corresponding to the `key` that was set with the `warmupData.set()` function in the backend, or `undefined` if not yet set." },
         "locations":
-          [ { "lineno": 353,
+          [ { "lineno": 355,
               "filename": "window.es6" } ],
         "docs":
           { "summary": "Gets data from server-side code for use in client-side code.",
@@ -100,13 +101,14 @@
                       "  $w(\"#retrievedData\").text = JSON.stringify(data);",
                       "});" ],
                   "extra":
-                    { "description": "This example demonstrates how to use `warmupData` to optimize performance between backend and client-side page \n rendering.\n \n The example has a `getData()` function that performs the query. \n\n If this operation happens to be \n run in the backend code, the results are set for later client-side use. The `wixWindow.rendering.env` property\n indicates if the run is occurring on the server (`backend`) or on the client-side (`browser`). \n\n When rendering on the client-side, the client-side code checks if the query results already exist. If so, there is no need to perform the same query again. \n If not, the client-side code runs the query." } } ],
+                    { "description": "This example demonstrates how to use `warmupData` to optimize performance between backend and client-side page \n rendering.\n \n The example has a `getData()` function that performs the query. \n\n If this operation happens to be \n run in the backend code, the results are set for later client-side use. The `wixWindow.rendering.env` property\n indicates if the run is occurring on the server (`backend`) or on the client-side (`browser`). \n\n When rendering on the client-side, the client-side code checks if the query results already exist. If so, there is no need to perform the same query again. \n If not, the client-side code runs the query. \n\n Two text boxes are defined on the page: `#retrievedMsg` displays a message about where the rendering occurred and and `#retrievedData`, the query data results." } } ],
             "extra":
               {  } },
         "extra":
           {  } },
       { "name": "set",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "key",
@@ -167,7 +169,7 @@
                       "  $w(\"#retrievedData\").text = JSON.stringify(data);",
                       "});" ],
                   "extra":
-                    { "description": "This example demonstrates how to use `warmupData` to optimize performance between backend and client-side page \n rendering.\n \n The example has a `getData()` function that performs the query. \n\n If this operation happens to be \n run in the backend code, the results are set for later client-side use. The `wixWindow.rendering.env` property\n indicates if the run is occurring on the server (`backend`) or on the client-side (`browser`). \n\n When rendering on the client-side, the client-side code checks if the query results already exist. If so, there is no need to perform the same query again. \n If not, the client-side code runs the query." } } ],
+                    { "description": "This example demonstrates how to use `warmupData` to optimize performance between backend and client-side page \n rendering.\n \n The example has a `getData()` function that performs the query. \n\n If this operation happens to be \n run in the backend code, the results are set for later client-side use. The `wixWindow.rendering.env` property\n indicates if the run is occurring on the server (`backend`) or on the client-side (`browser`). \n\n When rendering on the client-side, the client-side code checks if the query results already exist. If so, there is no need to perform the same query again. \n If not, the client-side code runs the query. \n\n Two text boxes are defined on the page: `#retrievedMsg` displays a message about where the rendering occurred and and `#retrievedData`, the query data results." } } ],
             "extra":
               {  } },
         "extra":

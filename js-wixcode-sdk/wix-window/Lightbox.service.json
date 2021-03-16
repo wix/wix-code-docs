@@ -3,7 +3,7 @@
   "mixes": [],
   "labels": [],
   "location":
-    { "lineno": 397,
+    { "lineno": 401,
       "filename": "window.es6" },
   "docs":
     { "summary": "A [lightbox](https://support.wix.com/en/article/about-lightboxes) pops up on your site to grab your visitor's attention.",
