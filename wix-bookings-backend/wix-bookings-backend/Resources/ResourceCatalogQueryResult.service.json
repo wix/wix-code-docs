@@ -1,7 +1,8 @@
 { "name": "ResourceCatalogQueryResult",
   "memberOf": "wix-bookings-backend.Resources",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 2,
       "filename": "ResourceCatalogQueryResult.js" },
@@ -64,13 +65,14 @@
         "extra":
           {  } },
       { "name": "items",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type":
           { "name": "Array",
             "typeParams":
-              [ "wix-bookings-backend.Booking" ] },
+              [ "wix-bookings-backend.Resource" ] },
         "locations":
           [ { "lineno": 12,
               "filename": "ResourceCatalogQueryResult.js" } ],
