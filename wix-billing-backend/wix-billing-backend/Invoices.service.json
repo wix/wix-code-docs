@@ -296,7 +296,7 @@
                 "which must be used when calling `createInvoicePreviewUrl()`.",
                 "",
                 "By default, `createInvoicePreviewUrl()` can be called by site contributors only.",
-                "You can allow customers to generate the invoice preview link,",
+                "To allow customers to generate the invoice preview link,",
                 "set `suppressAuth` in the `options` argument to `true`." ],
             "links": [],
             "examples":
