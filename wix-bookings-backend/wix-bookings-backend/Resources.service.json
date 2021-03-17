@@ -236,7 +236,8 @@
         "extra":
           {  } },
       { "name": "updateResource",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -260,7 +261,7 @@
               [ "<!--ONLY:VELO-->",
                 "The `updateResource()` function returns a promise that resolves to a resource object when a resource is updated.",
                 "<!--END:ONLY:VELO-->",
-                "Use this function updates resource information. To update a resource's schedule use [`updateResourceSchedule()`](wix-bookings-backend/resources/updateresourceSchedule).",
+                "Use this function updates resource information. To update a resource's schedule use [`updateResourceSchedule()`](wix-bookings-backend/resource-obj/updateresourceSchedule).",
                 "",
                 "> **Note:** A resource can only have one schedule." ],
             "links": [],
@@ -270,8 +271,7 @@
         "extra":
           {  } },
       { "name": "updateResourceSchedule",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
