@@ -1,7 +1,8 @@
 { "name": "Resources",
   "memberOf": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 58,
       "filename": "index.js" },
@@ -28,24 +29,25 @@
   "properties": [],
   "operations":
     [ { "name": "createResource",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceInfo",
-              "type": "wix-bookings-backend.resources.Resource_13052683855:createResource",
+              "type": "wix-bookings-backend.resources.ResourceInfo",
               "doc": "Resource to create." },
             { "name": "schedulesInfo",
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Schedule_206489895095" ] },
-              "doc": "List of schedules to be assigned for the created resource. Currently only a single schedule is allowed.\n If provided, any schedules in the resource entity will be ignored." } ],
+                    [ "wix-bookings-backend.ScheduleInfo" ] },
+              "doc": "List of schedules to be assigned for the created resource. Currently only a single schedule is allowed. If provided, any additional schedules in the resource entity will be ignored." } ],
         "ret":
           { "type":
               { "name": "Promise",
                 "typeParams":
-                  [ "wix-bookings-backend.Resource_23420910898:createResource" ] },
-            "doc": "Fulfilled - Updated Resource" },
+                  [ "wix-bookings-backend.Resource" ] },
+            "doc": "Fulfilled - Resource" },
         "locations":
           [ { "lineno": 18,
               "filename": "resources.js" } ],
@@ -53,16 +55,64 @@
           { "summary": "Creates a resource.",
             "description":
               [ "<!--ONLY:VELO-->",
-                " The `createResource()` function returns a Promise that resolves to a resource object when a resource is created.<!--END:ONLY:VELO-->",
+                " The `createResource()` function returns a Promise that resolves to a resource object when a resource is created.",
+                "<!--END:ONLY:VELO-->",
                 " Resources are created with a schedule. The schedule and its sessions determine the resource's availability. The schedule must contain start date in the `availability.start` property. If the resource is available during the business's default hours, the business's schedule is added as a linked schedule in the resource's schedule. If the resource has its own custom hours, create recurring sessions using the resource's `scheduleId` and set the session type to `\"AVAILABILITY\"`. Recurring sessions are used to define resource availability. Do not use availability constraints for resource schedules. ",
                 " <!--ONLY:VELO--> The sequence for creating a resource is as follows:",
                 "  1. Create the resource using `createResource()` including schedule information. If the resource uses the default business hours, get the business resource's schedule ID  and include it in the linkedSchedules array in the availability object in the schedule parameters.",
                 "  1. If the resource has its own schedule, create recurring sessions of type `\"AVAILABILITY\"` using `createSession()` with the `scheduleId` returned from `createResource()`.",
                 " <!--END:ONLY:VELO-->",
-                " >**Note:** A resource can only have one schedule.",
-                " <!--ONLY:VELO-->" ],
+                " >**Note:** A resource can only have one schedule." ],
             "links": [],
-            "examples": [],
+            "examples":
+              [ { "title": "Create a resource with business hours",
+                  "body":
+                    [ "import { resources } from \"wix-bookings-backend\";",
+                      "",
+                      "export function getBusinessSchedule() {",
+                      "  return resources.queryResources()",
+                      "      .eq(\"slugs.name\", \"business\")",
+                      "      .find()",
+                      "      .then((results) => {",
+                      "          const businessResource = results._items[0].resource",
+                      "          return businessResource",
+                      "      });",
+                      "}" ],
+                  "extra":
+                    {  } },
+                { "title": "Create a resource with its own schedule",
+                  "body":
+                    [ "import { resources } from \"wix-bookings-backend\";",
+                      "",
+                      "",
+                      "export function createStaffWithItsSchedule(staffInfo) {",
+                      "   const resource = {",
+                      "      images: [],",
+                      "      ...staffInfo,",
+                      "      tags: ['staff'],",
+                      "  };",
+                      "  const schedules = [{",
+                      "      scheduleOwnerId: \"\",",
+                      "",
+                      "      firstSessionStart: '2021-01-01T06:00:00Z',",
+                      "      timeZone: 'America/New-',",
+                      "      tags: [],",
+                      "      availability: {",
+                      "          start: '2021-01-01T06:00:00Z',",
+                      "          linkedSchedules: []",
+                      "      }",
+                      "  }];",
+                      "",
+                      "  return resources.createResource(resource, schedules).then((resource) => {",
+                      "          console.log('New staff created: ', resource);",
+                      "          return resource;",
+                      "      })",
+                      "      .catch((e) => {",
+                      "          console.error('Fails to create resource: ', { e });",
+                      "      });",
+                      "}" ],
+                  "extra":
+                    { "description": "<!-- Todo:\nCheck if we need to list the minimum for fields for the sessionInfo.schedule info object should only include wht is needed\n    -->" } } ],
             "extra":
               {  } },
         "extra":
@@ -180,6 +230,102 @@
                 "> **Permissions**",
                 "> This endpoint requires the Read Bookings Calendar, Read Bookings - Public Data, Read Bookings - Including Participants or Manage Bookings permission scope.",
                 "<!--END:ONLY:REST-->" ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateResource",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "id",
+              "type": "string",
+              "doc": "Resource ID." },
+            { "name": "resource",
+              "type": "wix-bookings-backend.resources.Resource_12959995134:updateResource",
+              "doc": "The updated resource." } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.Resource" ] },
+            "doc": "Fulfilled - Updated Resource" },
+        "locations":
+          [ { "lineno": 44,
+              "filename": "resources.js" } ],
+        "docs":
+          { "summary": "Updates a resource.",
+            "description":
+              [ "<!--ONLY:VELO-->",
+                "The `updateResource()` function returns a promise that resolves to a resource object when a resource is updated.",
+                "<!--END:ONLY:VELO-->",
+                "Use this function updates resource information. To update a resource's schedule use [`updateResourceSchedule()`](wix-bookings-backend/resources/updateresourceSchedule).",
+                "",
+                "> **Note:** A resource can only have one schedule." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "extra":
+          {  } },
+      { "name": "updateResourceSchedule",
+        "labels":
+          [ "new" ],
+        "nameParams": [],
+        "params":
+          [ { "name": "resourceId",
+              "type": "string",
+              "doc": "Resource id to update." },
+            { "name": "id",
+              "type": "string",
+              "doc": "Schedule ID." },
+            { "name": "schedule",
+              "type": "wix-bookings-backend.resources.ScheduleInfo",
+              "doc": "The schedule to update" } ],
+        "ret":
+          { "type":
+              { "name": "Promise",
+                "typeParams":
+                  [ "wix-bookings-backend.resources.UpdateScheduleResult_249870541355:updateResourceSchedule" ] },
+            "doc": "" },
+        "locations":
+          [ { "lineno": 61,
+              "filename": "resources.js" } ],
+        "docs":
+          { "summary": "Updates a resource's schedule",
+            "description":
+              [ "<!--ONLY:VELO",
+                "The `updateResourceSchedule()` function returns a Promise that resolves when a resource's schedule has been updated.",
+                "USe this function to update the resource's schedule. To update other resource details  use [`updateResource()`](wix-bookings-backen/resources/updateresource)",
+                "<!--END:ONLY:VELO-->",
+                "",
+                "> **Note:** A resource can only have one schedule.",
+                "",
+                "## Update a resource's schedule to remove business hours and add custom hours.",
+                "",
+                "<!--ONLY:REST",
+                "+ Update the resource's schedule to remove the business's scheduleId from the `availability.likedSchedules` array.",
+                "+ Create a set of recurring sessions of type `\"AVAILABILITY\"` to define the resource's new hours.",
+                "<!--END:ONLY:REST-->",
+                "<!--ONLY:VELO-->",
+                "+ Update the resource's schedule to remove the business's scheduleId from the `availability.likedSchedules` array.",
+                "+ Use [`createSession()`](wix-bookings-backend/schedules/createsession) to create a set of recurring sessions of type `\"AVAILABILITY\"` to define the resource's new hours.",
+                "<!--END:ONLY:VELO-->",
+                "",
+                "## Update a resource's schedule to remove custom hours and add default business hours.",
+                "<!--ONLY:REST",
+                "+ Delete the resource's recurring sessions of type `\"AVAILABILITY\"`",
+                "+ Update the resource's schedule to add the business's scheduleId to the `availability.likedSchedules` array.",
+                "<!--END:ONLY:REST-->",
+                "<!--ONLY:VELO-->",
+                "+ Use [`deleteSession()`](wix-bookings-backend/schedules-obj/deletesession) to delete the recurring sessions of type `\"//AVAILABILITY\"`",
+                "+ Update the resource's schedule to add the business's scheduleId to the `availability.likedSchedules` array.",
+                "<!--END:ONLY:VELO-->",
+                "<!--TODO: link to update schedule for explanation of the schedule side)-->",
+                ">**Note:** When updating a resource's schedule you cannot change the resource tag used by the Wix Bookings app. Tags used by the app have the values `\"INDIVIDUAL\"`, `\"GROUP\"`, and `\"COURSE”`." ],
             "links": [],
             "examples": [],
             "extra":

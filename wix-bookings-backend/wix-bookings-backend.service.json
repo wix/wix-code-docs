@@ -403,6 +403,27 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "AddressLocation_5651435130:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1782,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "coordinates of the physical address",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "latitude",
+              "type": "number",
+              "doc": "Latitude" },
+            { "name": "longitude",
+              "type": "number",
+              "doc": "Longitude" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "AddressLocation_5651435130:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1782,
@@ -422,7 +443,8 @@
               "doc": "Longitude" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Address_30702269075",
         "locations":
           [ { "lineno": 70,
@@ -470,6 +492,53 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "Address_30702269075:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1746,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Address",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "country",
+              "type": "string",
+              "doc": "country code",
+              "optional": true },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "subdivision (usually state or region) code according to ISO 3166-2",
+              "optional": true },
+            { "name": "city",
+              "type": "string",
+              "doc": "city name",
+              "optional": true },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "zip/postal code",
+              "optional": true },
+            { "name": "streetAddress",
+              "type": "wix-bookings-backend.StreetAddress_7212524817:updateResourceSchedule",
+              "doc": "A break down of the street to number and street name",
+              "optional": true },
+            { "name": "formattedAddress",
+              "type": "string",
+              "doc": "A string containing the human-readable address of this location",
+              "optional": true },
+            { "name": "hint",
+              "type": "string",
+              "doc": "Free text for human-to-human textual orientation aid purposes",
+              "optional": true },
+            { "name": "geocode",
+              "type": "wix-bookings-backend.AddressLocation_5466057688:updateResourceSchedule",
+              "doc": "coordinates of the physical address",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Address_30702269075:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1746,
@@ -515,7 +584,47 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Address_31907222448:3updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1760,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Address",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "country",
+              "type": "string",
+              "doc": "country code" },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "subdivision (usually state or region) code according to ISO 3166-2" },
+            { "name": "city",
+              "type": "string",
+              "doc": "city name" },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "zip/postal code" },
+            { "name": "streetAddress",
+              "type": "wix-bookings-backend.StreetAddress_7490590980:1updateResourceSchedule",
+              "doc": "A break down of the street to number and street name" },
+            { "name": "formattedAddress",
+              "type": "string",
+              "doc": "A string containing the human-readable address of this location" },
+            { "name": "hint",
+              "type": "string",
+              "doc": "Free text for human-to-human textual orientation aid purposes" },
+            { "name": "geocode",
+              "type": "wix-bookings-backend.AddressLocation_5651435130:1updateResourceSchedule",
+              "doc": "coordinates of the physical address" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Address_31907222448:updateResourceSchedule123",
         "locations":
           [ { "lineno": 1760,
@@ -553,7 +662,8 @@
               "doc": "coordinates of the physical address" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Address_47367399060:updateResourceSchedule",
         "locations":
           [ { "lineno": 1164,
@@ -623,6 +733,66 @@
                     [ "addressLine",
                       "streetAddress" ] } ] },
         "labels": [] },
+      { "name": "Address_49221173480:2updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1183,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Custom address, used when location_type is `\"OWNER_CUSTOM\"`.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "country",
+              "type": "string",
+              "doc": "Country code." },
+            { "name": "subdivision",
+              "type": "string",
+              "doc": "Subdivision. Usually state, region, prefecture or province code, according to [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)." },
+            { "name": "city",
+              "type": "string",
+              "doc": "City name." },
+            { "name": "postalCode",
+              "type": "string",
+              "doc": "Zip/postal code." },
+            { "name": "streetAddress",
+              "type": "wix-bookings-backend.StreetAddress",
+              "doc": "Street name, number and apartment number.",
+              "optional": true },
+            { "name": "addressLine",
+              "type": "string",
+              "doc": "Main address line, usually street and number, as free text.",
+              "optional": true },
+            { "name": "addressLine2",
+              "type": "string",
+              "doc": "Free text providing more detailed address info. Usually contains Apt, Suite, and Floor." },
+            { "name": "formattedAddress",
+              "type": "string",
+              "doc": "A string containing the full address of this location." },
+            { "name": "hint",
+              "type": "string",
+              "doc": "Free text to help find the address." },
+            { "name": "geocode",
+              "type": "wix-bookings-backend.AddressLocation",
+              "doc": "Coordinates of the physical address." },
+            { "name": "countryFullname",
+              "type": "string",
+              "doc": "Country full name." },
+            { "name": "subdivisions",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Subdivision_4638463697:1updateResourceSchedule" ] },
+              "doc": "Multi-level subdivisions from top to bottom." } ],
+        "extra":
+          { "oneOfGroups":
+              [ { "name": "street",
+                  "members":
+                    [ "addressLine",
+                      "streetAddress" ] } ] },
+        "labels":
+          [ "new" ] },
       { "name": "Address_49221173480:updateResourceSchedule12",
         "locations":
           [ { "lineno": 1183,
@@ -681,7 +851,8 @@
                   "members":
                     [ "addressLine",
                       "streetAddress" ] } ] },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Attendance",
         "locations":
           [ { "lineno": 1,
@@ -748,6 +919,33 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "AvailabilityConstraints_2998985814:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 689,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Constraints for calculating the schedule's availability.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "slotDurations",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "number" ] },
+              "doc": "A list of duration options for slots, in minutes. Minimum value for a duration is 1.\nThe availability calculation generates slots with these durations, where there is no conflict with existing sessions or other availability constraints." },
+            { "name": "timeBetweenSlots",
+              "type": "number",
+              "doc": "The number of minutes between the `end` of one slot, and the `start` of the next. \nMinimum value is 0, maximum value is 120." },
+            { "name": "slotsSplitInterval",
+              "type": "wix-bookings-backend.SplitInterval_425847646:updateResourceSchedule",
+              "doc": "An object defining the time between available slots' start times.  For example, a slot with slots_split_interval=5 can start every 5 minutes. The default is the slot duration." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "AvailabilityConstraints_2998985814:updateResourceSchedule1",
         "locations":
           [ { "lineno": 689,
@@ -773,7 +971,8 @@
               "doc": "An object defining the time between available slots' start times.  For example, a slot with slots_split_interval=5 can start every 5 minutes. The default is the slot duration." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Availability_161223611200:updateResourceSchedule",
         "locations":
           [ { "lineno": 671,
@@ -820,6 +1019,47 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Availability_174000749873:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 653,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "An object describing how to calculate the schedule's availability.",
+            "description":
+              [ "An empty object indicates that the schedule is not available for booking." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "start",
+              "type": "Date",
+              "doc": "Date and time the schedule starts to be available for booking. For example, a schedule can become available at a future date." },
+            { "name": "end",
+              "type": "Date",
+              "doc": "Date and time the schedule stops being available for booking. No value indicates no end time." },
+            { "name": "linkedSchedules",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.LinkedSchedule_10367513828:1updateResourceSchedule" ] },
+              "doc": "Other schedules that impact the availability calculation. Relevant only when there are availability constraints." },
+            { "name": "constraints",
+              "type": "wix-bookings-backend.AvailabilityConstraints_2998985814:1updateResourceSchedule",
+              "doc": "Constraints for calculating the schedule's availability." },
+            { "name": "locations",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Location_156608614652:2updateResourceSchedule" ] },
+              "doc": "Not supported yet.\nA list of possible locations for the session when `use_default_location` is set to `false`. Slots are generated for each location. Only one of the possible locations can be chosen by the customer. \n\n **NOTE**: When using the `locations` parameter, the default location is not automatically included in the list." },
+            { "name": "useDefaultLocation",
+              "type": "boolean",
+              "doc": "Not supported yet.\n Whether the schedule's slots are only available at the schedule's default location, as set in `schedule.location`. If set to `false`, the `locations` array is used to set the possible locations of the schedule's sessions.\n Default is `true`." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Availability_174000749873:updateResourceSchedule1",
         "locations":
           [ { "lineno": 653,
@@ -859,7 +1099,8 @@
               "doc": "Not supported yet.\n Whether the schedule's slots are only available at the schedule's default location, as set in `schedule.location`. If set to `false`, the `locations` array is used to set the possible locations of the schedule's sessions.\n Default is `true`." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Balance",
         "locations":
           [ { "lineno": 9,
@@ -1043,7 +1284,7 @@
               "type": "string",
               "doc": "The session title at the time of booking." },
             { "name": "location",
-              "type": "wix-bookings-backend.Location_156608614652:updateResourceSchedule12",
+              "type": "wix-bookings-backend.Location_156608614652:2updateResourceSchedule",
               "doc": "The location of the session." },
             { "name": "rate",
               "type": "wix-bookings-backend.Rate",
@@ -1063,7 +1304,8 @@
                   "members":
                     [ "setOfSessions",
                       "singleSession" ] } ] },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "BookedResource",
         "locations":
           [ { "lineno": 82,
@@ -1109,7 +1351,7 @@
                     [ "wix-bookings-backend.BookedResource" ] },
               "doc": "A list of booked resources. Currently, only one is supported. The booked resource would be the staff-member giving the session." },
             { "name": "formInfo",
-              "type": "wix-bookings-backend.FormInfo",
+              "type": "wix-bookings-backend.Form",
               "doc": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service.",
               "optional": true },
             { "name": "paymentDetails",
@@ -1132,7 +1374,8 @@
               "type": "Date" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "BookingPolicy_10910809566",
         "locations":
           [ { "lineno": 1360,
@@ -1515,6 +1758,36 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "BusinessSchedule_47401289418:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1889,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.",
+            "description":
+              [ "TimePeriod indicates when the location is open. Each period represents a range of hours when the location is",
+                "open during the week. Limited to 100 time periods." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "periods",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.TimePeriod_39156298036:1updateResourceSchedule" ] },
+              "doc": "Times that this location is open. Each period represents a range of hours when the location is\nopen during the week. Limited to 100 time periods." },
+            { "name": "specialHourPeriod",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.SpecialHourPeriod_8520285244:1updateResourceSchedule" ] },
+              "doc": "Exceptions to the business's regular hours." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "BusinessSchedule_47401289418:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1889,
@@ -1543,7 +1816,8 @@
               "doc": "Exceptions to the business's regular hours." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "BySessionId_3461046880",
         "locations":
           [ { "lineno": 186,
@@ -1621,6 +1895,50 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "CalendarConference_23255260278:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 730,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "A conference created for the session according to the details set in the schedule's conference provider information.",
+            "description":
+              [ "If the session is a recurring session, this field is inherited from the schedule." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Wix Calendar conference ID." },
+            { "name": "externalId",
+              "type": "string",
+              "doc": "Conference meeting ID in the provider's conferencing system." },
+            { "name": "providerId",
+              "type": "string",
+              "doc": "Conference provider ID." },
+            { "name": "hostUrl",
+              "type": "string",
+              "doc": "URL used by the host to start the conference." },
+            { "name": "guestUrl",
+              "type": "string",
+              "doc": "URL used by a guest to join the conference." },
+            { "name": "password",
+              "type": "string",
+              "doc": "Password to join the conference." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Conference description." },
+            { "name": "conferenceType",
+              "type": "string",
+              "doc": "Conference type.\nOne of:\n + `\"UNDEFINED\"`\n + `\"ONLINE_MEETING_PROVIDER\"`\n + `\"CUSTOM\"`" },
+            { "name": "accountOwnerId",
+              "type": "string",
+              "doc": "Account owner id in vc service" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "CalendarConference_23255260278:updateResourceSchedule1",
         "locations":
           [ { "lineno": 730,
@@ -1663,7 +1981,8 @@
               "doc": "Account owner id in vc service" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "CalendarDateTime_2270289792:updateSession",
         "locations":
           [ { "lineno": 750,
@@ -1692,6 +2011,32 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "CalendarDateTime_3011799560:1updateSession",
+        "locations":
+          [ { "lineno": 763,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "An object specifying the start date and time of the session.",
+            "description":
+              [ "If the session is a recurring session, `start` must contain a local date/time." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "timestamp",
+              "type": "Date",
+              "doc": "Unix epoch time.\nRequired if `local_date_time` is not specified.\nIf `local_date_time` is specified, `timestamp` is calculated \nas `local_date_time` for the business's timezone in epoch format." },
+            { "name": "localDateTime",
+              "type": "wix-bookings-backend.LocalDateTime_493702712:1updateSession",
+              "doc": "An object containing the local date and time, with no time zone." },
+            { "name": "timeZone",
+              "type": "string",
+              "doc": "The time zone." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "CalendarDateTime_3011799560:updateSession1",
         "locations":
           [ { "lineno": 763,
@@ -1716,7 +2061,8 @@
               "doc": "The time zone." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Category_11590250251",
         "locations":
           [ { "lineno": 1406,
@@ -1966,7 +2312,7 @@
               "type": "string",
               "doc": "Contact phone number." },
             { "name": "fullAddress",
-              "type": "wix-bookings-backend.Address_49221173480:updateResourceSchedule12",
+              "type": "wix-bookings-backend.Address_49221173480:2updateResourceSchedule",
               "doc": "Custom address, used when location_type is `\"OWNER_CUSTOM\"`." },
             { "name": "timeZone",
               "type": "string",
@@ -1976,7 +2322,8 @@
               "doc": "Contact country in [ISO 3166-1 alpha-2 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "CouponDetails",
         "locations":
           [ { "lineno": 236,
@@ -2047,8 +2394,8 @@
         "labels": [] },
       { "name": "CustomFormField",
         "locations":
-          [ { "lineno": 136,
-              "filename": "shared.js" } ],
+          [ { "lineno": 278,
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
             "examples": [],
@@ -2057,20 +2404,20 @@
         "members":
           [ { "name": "_id",
               "type": "string",
-              "doc": "ID of the form field as defined in the form." },
+              "doc": "The ID of the form field as defined in the form." },
             { "name": "value",
               "type": "string",
-              "doc": "Value that was submitted for this field." },
+              "doc": "The value that was submitted for this field." },
             { "name": "label",
               "type": "string",
-              "doc": "Form field's label at the time of submission." },
+              "doc": "The form field's label, as set by the owner, at the time of submission." },
             { "name": "valueType",
               "type": "string",
               "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`" } ],
         "extra":
           {  },
         "labels":
-          [ "removed" ] },
+          [ "new" ] },
       { "name": "CustomFormFieldInfo",
         "locations":
           [ { "lineno": 148,
@@ -2122,6 +2469,30 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "ExternalCalendarOverrides_857578539:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 786,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Title and description values to override session defaults when syncing to an external calendar.",
+            "description":
+              [ "Learn more about [syncing calendars](https://support.wix.com/en/article/wix-bookings-important-information-about-syncing-google-calendars-with-wix-bookings).",
+                "The value is inherited from the schedule and can be overridden unless the session is a recurring session." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "title",
+              "type": "string",
+              "doc": "Synced title of the external calendar event." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Synced description of the external calendar event." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ExternalCalendarOverrides_857578539:updateResourceSchedule1",
         "locations":
           [ { "lineno": 786,
@@ -2144,7 +2515,8 @@
               "doc": "Synced description of the external calendar event." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "FieldMask_4228111159",
         "locations":
           [ { "lineno": 1980,
@@ -2168,10 +2540,10 @@
         "labels": [] },
       { "name": "Form",
         "locations":
-          [ { "lineno": 118,
-              "filename": "shared.js" } ],
+          [ { "lineno": 246,
+              "filename": "shared-autogen.js" } ],
         "docs":
-          { "summary": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up for the service.",
+          { "summary": "Form information submitted when booking. FormInfo contains contact details, participants, and other form fields, set up by the owner for the service.",
             "links": [],
             "examples": [],
             "extra":
@@ -2179,7 +2551,8 @@
         "members":
           [ { "name": "contactDetails",
               "type": "wix-bookings-backend.ContactDetails",
-              "doc": "Contact details of the user making the booking." },
+              "doc": "The contact details of the user making the booking.",
+              "optional": true },
             { "name": "paymentSelection",
               "type":
                 { "name": "Array",
@@ -2191,12 +2564,11 @@
                 { "name": "Array",
                   "typeParams":
                     [ "wix-bookings-backend.CustomFormField" ] },
-              "doc": "Additional custom fields submitted with the form.",
-              "optional": true } ],
+              "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
         "labels":
-          [ "removed" ] },
+          [ "new" ] },
       { "name": "FormField_28233079378",
         "locations":
           [ { "lineno": 1463,
@@ -2326,7 +2698,8 @@
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "FormInfo_88699268303",
         "locations":
           [ { "lineno": 255,
@@ -2383,7 +2756,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.PaymentSelection_2751667753:setBookingAsPaid" ] },
+                    [ "wix-bookings-backend.PaymentSelection" ] },
               "doc": "A list of rates and the number of participants for each rate." },
             { "name": "customFormFields",
               "type": "Object",
@@ -2392,11 +2765,12 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.FormInfo_CustomFormField_10170446978:setBookingAsPaid1" ] },
+                    [ "wix-bookings-backend.CustomFormField" ] },
               "doc": "Additional custom fields submitted with the form." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "FormInfo_CustomFormField",
         "locations":
           [ { "lineno": 148,
@@ -2447,7 +2821,8 @@
               "doc": "One of:\n + `\"SHORT_TEXT\"`\n + `\"LONG_TEXT\"`\n + `\"CHECK_BOX\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "FormInfo_CustomFormField_7366759000:updateCustomerInfo",
         "locations":
           [ { "lineno": 290,
@@ -2653,7 +3028,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.ResourceInfo" ] },
+                    [ "wix-bookings-backend.Resource" ] },
               "doc": "Resources associated with this service (e.g., the staff member teaching a class)." },
             { "name": "form",
               "type": "wix-bookings-backend.Form_58415165332",
@@ -2684,7 +3059,8 @@
               "doc": "The slug is the remainder of the URI which can be used to access the service's page and service's booking page in Wix Bookings." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Header_2062052936",
         "locations":
           [ { "lineno": 1515,
@@ -2825,6 +3201,38 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Image_7707870310:1createResource",
+        "locations":
+          [ { "lineno": 2027,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "WixMedia image ID." },
+            { "name": "url",
+              "type": "string",
+              "doc": "Image URL." },
+            { "name": "height",
+              "type": "number",
+              "doc": "Original image height." },
+            { "name": "width",
+              "type": "number",
+              "doc": "Original image width." },
+            { "name": "altText",
+              "type": "string",
+              "doc": "Image alt text. Optional." },
+            { "name": "urlExpirationDate",
+              "type": "Date",
+              "doc": "Image URL expiration date (when relevant). Optional" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Image_7707870310:createResource1",
         "locations":
           [ { "lineno": 2027,
@@ -2855,7 +3263,8 @@
               "doc": "Image URL expiration date (when relevant). Optional" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "InvoiceDetails",
         "locations":
           [ { "lineno": 301,
@@ -2947,6 +3356,29 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "LinkedSchedule_10367513828:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 808,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "scheduleId",
+              "type": "string",
+              "doc": "Schedule ID." },
+            { "name": "transparency",
+              "type": "string",
+              "doc": "Sets a linked schedule's availability between the start and end of the session. Default is `\"BUSY\"`.\nIf set to `\"BUSY\"`, the schedule cannot have any available slots during the session. If set to `\"FREE\"`, the schedule can have available slots during the session.\nOne of:\n + `\"UNDEFINED\"`\n + `\"FREE\"`\n + `\"BUSY\"`" },
+            { "name": "scheduleOwnerId",
+              "type": "string",
+              "doc": "Owner ID, of the linked schedule." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "LinkedSchedule_10367513828:updateResourceSchedule1",
         "locations":
           [ { "lineno": 808,
@@ -2968,7 +3400,8 @@
               "doc": "Owner ID, of the linked schedule." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "LinkedSchedule_7939545343:updateResourceSchedule",
         "locations":
           [ { "lineno": 796,
@@ -3036,6 +3469,36 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "LocalDateTime_493702712:1updateSession",
+        "locations":
+          [ { "lineno": 832,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "An object containing the local date and time, with no time zone.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "year",
+              "type": "number",
+              "doc": "Year. 4-digit format." },
+            { "name": "monthOfYear",
+              "type": "number",
+              "doc": "Month number, from 1-12." },
+            { "name": "dayOfMonth",
+              "type": "number",
+              "doc": "Day in the month, from 1-31." },
+            { "name": "hourOfDay",
+              "type": "number",
+              "doc": "Hour of the day, in 24-hour format, from 0-23." },
+            { "name": "minutesOfHour",
+              "type": "number",
+              "doc": "Minute, from 0-59." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "LocalDateTime_493702712:updateSession1",
         "locations":
           [ { "lineno": 832,
@@ -3064,7 +3527,8 @@
               "doc": "Minute, from 0-59." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "LocalDateTime_957146317:updateSession",
         "locations":
           [ { "lineno": 821,
@@ -3149,6 +3613,68 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "Location_106510226219:3updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1822,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Not supported yet.",
+            "description":
+              [ "Valid only when location_type is `OWNER_BUSINESS`.",
+                "If the location_type is `OWNER_BUSINESS`, then the default value is the default business location.",
+                "`business_location.id` is required.",
+                "Supported read-only fields: name, description, time zone, email, phone, address." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "The ID of the location" },
+            { "name": "name",
+              "type": "string",
+              "doc": "Display name of the location" },
+            { "name": "description",
+              "type": "string",
+              "doc": "Free text to better describe the location" },
+            { "name": "default",
+              "type": "boolean",
+              "doc": "Boolean that states the default location.\nThere can one default location per site, and changes on it affect on the Site Properties.\nThe default location can't be deleted and can be only marked through SetDefaultLocation api" },
+            { "name": "status",
+              "type": "string",
+              "doc": "Status of the location. Active by default\nOne of:\n + `\"ACTIVE\"`\n + `\"IN_ACTIVE\"`" },
+            { "name": "locationType",
+              "type": "string",
+              "doc": "Type of the location\nOne of:\n + `\"UNKNOWN\"`\n + `\"BRANCH\"`\n + `\"OFFICES\"`\n + `\"RECEPTION\"`\n + `\"HEADQUARTERS\"`" },
+            { "name": "fax",
+              "type": "string",
+              "doc": "Fax number" },
+            { "name": "timeZone",
+              "type": "string",
+              "doc": "Time zone" },
+            { "name": "email",
+              "type": "string",
+              "doc": "Email address" },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Phone number" },
+            { "name": "address",
+              "type": "wix-bookings-backend.Address_31907222448:3updateResourceSchedule",
+              "doc": "Address" },
+            { "name": "businessSchedule",
+              "type": "wix-bookings-backend.BusinessSchedule_47401289418:1updateResourceSchedule",
+              "doc": "Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.\nTimePeriod indicates when the location is open. Each period represents a range of hours when the location is\nopen during the week. Limited to 100 time periods." },
+            { "name": "revision",
+              "type": "string",
+              "doc": "Location revision, represent the number of changes on the location" },
+            { "name": "archived",
+              "type": "boolean",
+              "doc": "Boolean that states if the location is archived.\nArchived location can't be updated." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Location_106510226219:updateResourceSchedule123",
         "locations":
           [ { "lineno": 1822,
@@ -3209,7 +3735,8 @@
               "doc": "Boolean that states if the location is archived.\nArchived location can't be updated." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Location_147848441914:updateResourceSchedule",
         "locations":
           [ { "lineno": 558,
@@ -3233,12 +3760,37 @@
               "doc": "Custom address, used when location_type is `\"OWNER_CUSTOM\"`.",
               "optional": true },
             { "name": "businessLocation",
-              "type": "wix-bookings-backend.Location_99881894064:updateResourceSchedule1",
+              "type": "wix-bookings-backend.Location_99881894064:1updateResourceSchedule",
               "doc": "Not supported yet.\n Valid only when location_type is `OWNER_BUSINESS`.\n If the location_type is `OWNER_BUSINESS`, then the default value is the default business location.\n `business_location.id` is required.\n Supported read-only fields: name, description, time zone, email, phone, address.",
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
+      { "name": "Location_156608614652:2updateResourceSchedule",
+        "locations":
+          [ { "lineno": 580,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "The location of the session.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "locationType",
+              "type": "string",
+              "doc": "+ `OWNER_BUSINESS` The business address as set in the site’s general settings.\n + `OWNER_CUSTOM` The address as set when creating the service.\n + `CUSTOM` The address set for the individual session.\nOne of:\n + `\"UNDEFINED\"`\n + `\"OWNER_BUSINESS\"`\n + `\"OWNER_CUSTOM\"`\n + `\"CUSTOM\"`" },
+            { "name": "customAddress",
+              "type": "wix-bookings-backend.Address_49221173480:2updateResourceSchedule",
+              "doc": "Custom address, used when location_type is `\"OWNER_CUSTOM\"`." },
+            { "name": "businessLocation",
+              "type": "wix-bookings-backend.Location_106510226219:3updateResourceSchedule",
+              "doc": "Not supported yet.\n Valid only when location_type is `OWNER_BUSINESS`.\n If the location_type is `OWNER_BUSINESS`, then the default value is the default business location.\n `business_location.id` is required.\n Supported read-only fields: name, description, time zone, email, phone, address." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Location_156608614652:updateResourceSchedule12",
         "locations":
           [ { "lineno": 580,
@@ -3261,7 +3813,8 @@
               "doc": "Not supported yet.\n Valid only when location_type is `OWNER_BUSINESS`.\n If the location_type is `OWNER_BUSINESS`, then the default value is the default business location.\n `business_location.id` is required.\n Supported read-only fields: name, description, time zone, email, phone, address." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Location_99881894064",
         "locations":
           [ { "lineno": 403,
@@ -3326,6 +3879,70 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "Location_99881894064:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1790,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Not supported yet.",
+            "description":
+              [ "Valid only when location_type is `OWNER_BUSINESS`.",
+                "If the location_type is `OWNER_BUSINESS`, then the default value is the default business location.",
+                "`business_location.id` is required.",
+                "Supported read-only fields: name, description, time zone, email, phone, address." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "name",
+              "type": "string",
+              "doc": "Display name of the location",
+              "optional": true },
+            { "name": "description",
+              "type": "string",
+              "doc": "Free text to better describe the location",
+              "optional": true },
+            { "name": "status",
+              "type": "string",
+              "doc": "Status of the location. Active by default\nOne of:\n + `\"ACTIVE\"`\n + `\"IN_ACTIVE\"`",
+              "optional": true },
+            { "name": "locationType",
+              "type": "string",
+              "doc": "Type of the location\nOne of:\n + `\"UNKNOWN\"`\n + `\"BRANCH\"`\n + `\"OFFICES\"`\n + `\"RECEPTION\"`\n + `\"HEADQUARTERS\"`",
+              "optional": true },
+            { "name": "fax",
+              "type": "string",
+              "doc": "Fax number",
+              "optional": true },
+            { "name": "timeZone",
+              "type": "string",
+              "doc": "Time zone",
+              "optional": true },
+            { "name": "email",
+              "type": "string",
+              "doc": "Email address",
+              "optional": true },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Phone number",
+              "optional": true },
+            { "name": "address",
+              "type": "wix-bookings-backend.Address_30702269075:1updateResourceSchedule",
+              "doc": "Address",
+              "optional": true },
+            { "name": "businessSchedule",
+              "type": "wix-bookings-backend.BusinessSchedule_46474402208:updateResourceSchedule",
+              "doc": "Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.\nTimePeriod indicates when the location is open. Each period represents a range of hours when the location is\nopen during the week. Limited to 100 time periods.",
+              "optional": true },
+            { "name": "revision",
+              "type": "string",
+              "doc": "Location revision, represent the number of changes on the location",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Location_99881894064:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1790,
@@ -3388,7 +4005,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "MediaItem_5422486810",
         "locations":
           [ { "lineno": 1556,
@@ -3420,7 +4038,7 @@
               {  } },
         "members":
           [ { "name": "image",
-              "type": "wix-bookings-backend.Image_7707870310:createResource1",
+              "type": "wix-bookings-backend.Image_7707870310:1createResource",
               "doc": "Image metadata.",
               "optional": true } ],
         "extra":
@@ -3428,7 +4046,8 @@
               [ { "name": "item",
                   "members":
                     [ "image" ] } ] },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Media_13250985321",
         "locations":
           [ { "lineno": 1547,
@@ -3824,7 +4443,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.WixPayDetails_17951508165:setBookingAsPaid" ] },
+                    [ "wix-bookings-backend.WixPayDetails" ] },
               "doc": "In case of wix-pay service, holds all payment history for a booking." },
             { "name": "pricingPlanDetails",
               "type": "wix-bookings-backend.PaidPlanDetails",
@@ -3837,7 +4456,8 @@
               "doc": "The invoice details of the booking. Not supported yet." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "PaymentDetails_93106850965",
         "locations":
           [ { "lineno": 375,
@@ -3868,7 +4488,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.WixPayDetails_17951508165:setBookingAsPaid" ] },
+                    [ "wix-bookings-backend.WixPayDetails" ] },
               "doc": "In case of wix-pay service, holds all payment history for a booking." },
             { "name": "invoiceApplicable",
               "type": "boolean",
@@ -3878,7 +4498,8 @@
               "doc": "The invoice details of the booking. Not supported yet." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "PaymentOptions_3053001567",
         "locations":
           [ { "lineno": 1579,
@@ -3936,7 +4557,9 @@
         "labels": [] },
       { "name": "PaymentSelection",
         "locations":
-          [ { "lineno": 418,
+          [ { "lineno": 411,
+              "filename": "shared-autogen.js" },
+            { "lineno": 418,
               "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
@@ -3946,15 +4569,14 @@
         "members":
           [ { "name": "rateLabel",
               "type": "string",
-              "doc": "The label corresponding to the booking rate. Default is free/custom.",
-              "optional": true },
+              "doc": "The label corresponding to the booking rate. Default is free/custom." },
             { "name": "numberOfParticipants",
               "type": "number",
-              "doc": "The number of participants for this rate.",
-              "optional": true } ],
+              "doc": "The number of participants for this rate." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "PaymentSelectionInfo",
         "locations":
           [ { "lineno": 207,
@@ -3995,7 +4617,8 @@
               "doc": "The number of participants for this rate." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Payments_29838105767",
         "locations":
           [ { "lineno": 534,
@@ -4364,6 +4987,57 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Resource",
+        "locations":
+          [ { "lineno": 1286,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Updated Resource",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Resource ID." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Resource name." },
+            { "name": "email",
+              "type": "string",
+              "doc": "Resource email address." },
+            { "name": "phone",
+              "type": "string",
+              "doc": "Resource phone number." },
+            { "name": "description",
+              "type": "string",
+              "doc": "Resource description." },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Resource tags. Tags are used to identify, group, and filter the different type of resources. For example, 'staff' or 'room'." },
+            { "name": "images",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Image_7707870310:1createResource" ] },
+              "doc": "Resource images." },
+            { "name": "scheduleIds",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "List of the schedule IDs that are owned by this resource." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Resource status. Default is `CREATED`.\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"DELETED\"`\n + `\"UPDATED\"`" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "ResourceInfo",
         "locations":
           [ { "lineno": 1286,
@@ -4413,7 +5087,8 @@
               "doc": "Resource status. Default is `CREATED`.\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"DELETED\"`\n + `\"UPDATED\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Schedule_206397206374",
         "locations":
           [ { "lineno": 946,
@@ -4568,7 +5243,7 @@
                     [ "string" ] },
               "doc": "Tags for grouping schedules. These tags are the default tags for the schedule's sessions.\nThe Wix Bookings app uses the following predefined tags to set schedule type: `\"INDIVIDUAL\"`, `\"GROUP\"`, and `\"COURSE\"`. Once the schedule type is set using these tags, you cannot update it. In addition to the app's tags, you can create and update your own tags." },
             { "name": "location",
-              "type": "wix-bookings-backend.Location_156608614652:updateResourceSchedule12",
+              "type": "wix-bookings-backend.Location_156608614652:2updateResourceSchedule",
               "doc": "An object describing the location where the session takes place.\nDefaults to the schedule location.\nFor single sessions, `session.location.businessLocation` can only be provided for locations that are defined in the schedule using `schedule.location` or `schedule.availability.locations`." },
             { "name": "capacity",
               "type": "number",
@@ -4577,7 +5252,7 @@
               "type": "wix-bookings-backend.Rate",
               "doc": "The price options offered for the session.  Defaults to the schedule rate.\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session." },
             { "name": "availability",
-              "type": "wix-bookings-backend.Availability_174000749873:updateResourceSchedule1",
+              "type": "wix-bookings-backend.Availability_174000749873:1updateResourceSchedule",
               "doc": "An object describing how to calculate the schedule's availability.\nAn empty object indicates that the schedule is not available for booking." },
             { "name": "totalNumberOfParticipants",
               "type": "number",
@@ -4589,7 +5264,7 @@
                     [ "wix-bookings-backend.Participant_16742085086:updateResourceSchedule" ] },
               "doc": "Participants currently registered to sessions in this schedule.\nParticipants who are registered in the schedule are automatically registered to any session that is created for the schedule." },
             { "name": "externalCalendarOverrides",
-              "type": "wix-bookings-backend.ExternalCalendarOverrides_857578539:updateResourceSchedule1",
+              "type": "wix-bookings-backend.ExternalCalendarOverrides_857578539:1updateResourceSchedule",
               "doc": "Title and description values to override session defaults when syncing to an external calendar.\nLearn more about [syncing calendars](https://support.wix.com/en/article/wix-bookings-important-information-about-syncing-google-calendars-with-wix-bookings).\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session." },
             { "name": "status",
               "type": "string",
@@ -4610,11 +5285,12 @@
                     [ "string" ] },
               "doc": "Fields which were inherited from the Business Info page under Settings in the Dashboard." },
             { "name": "calendarConference",
-              "type": "wix-bookings-backend.CalendarConference_23255260278:updateResourceSchedule1",
+              "type": "wix-bookings-backend.CalendarConference_23255260278:1updateResourceSchedule",
               "doc": "A conference created for the session according to the details set in the schedule's conference provider information.\nIf the session is a recurring session, this field is inherited from the schedule." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "SeoSchema_3785484598",
         "locations":
           [ { "lineno": 1250,
@@ -4973,6 +5649,107 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Session_255663383937:1updateSession",
+        "locations":
+          [ { "lineno": 1037,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "_id",
+              "type": "string",
+              "doc": "Session ID." },
+            { "name": "scheduleId",
+              "type": "string",
+              "doc": "Schedule ID that the session belongs to." },
+            { "name": "scheduleOwnerId",
+              "type": "string",
+              "doc": "Owner ID of the schedule that the session belongs to." },
+            { "name": "originalStart",
+              "type": "Date",
+              "doc": "Original start date and time of the session in Unix epoch time format." },
+            { "name": "start",
+              "type": "wix-bookings-backend.CalendarDateTime_3011799560:1updateSession",
+              "doc": "An object specifying the start date and time of the session.\nIf the session is a recurring session, `start` must contain a local date/time." },
+            { "name": "end",
+              "type": "wix-bookings-backend.CalendarDateTime_3011799560:1updateSession",
+              "doc": "An object specifying the start date and time of the session.\nIf the session is a recurring session, `start` must contain a local date/time." },
+            { "name": "affectedSchedules",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.LinkedSchedule_10367513828:1updateResourceSchedule" ] },
+              "doc": "An object specifying a list of linked schedules and the way each schedule's availability is affected by the session. For example, the schedule of an instructor is linked to the schedule of the class that they instruct.\nIf the session is a recurring session, the value is inherited from the schedule but can still be overridden." },
+            { "name": "title",
+              "type": "string",
+              "doc": "Session title. The default value is the schedule title.\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session." },
+            { "name": "tags",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "Tags for the session. Optional. Defaults to the schedule's tags.\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session." },
+            { "name": "location",
+              "type": "wix-bookings-backend.Location_156608614652:2updateResourceSchedule",
+              "doc": "An object describing the location where the session takes place.\nDefaults to the schedule location.\nFor single sessions, `session.location.businessLocation` can only be provided for locations that are defined in the schedule using `schedule.location` or `schedule.availability.locations`." },
+            { "name": "capacity",
+              "type": "number",
+              "doc": "Maximum number of participants that can be added to the session. Defaults to the schedule capacity.\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session." },
+            { "name": "rate",
+              "type": "wix-bookings-backend.Rate",
+              "doc": "The price options offered for the session.  Defaults to the schedule rate.\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session." },
+            { "name": "timeReservedAfter",
+              "type": "number",
+              "doc": "Time reserved after the session end time, derived from the schedule availability constraints and the time between slots. Read-only.\nIf the session is a recurring session, this field must be empty." },
+            { "name": "notes",
+              "type": "string",
+              "doc": "Additional information about the session.\nIf the session is a recurring session, this field must be empty." },
+            { "name": "totalNumberOfParticipants",
+              "type": "number",
+              "doc": "The number of participants booked for the session. Read-only.\nCalculated as the sum of the party sizes." },
+            { "name": "participants",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.Participant_16742085086:updateResourceSchedule" ] },
+              "doc": "List of participants booked for the session.\nThe list includes participants who have registered for this specific session, and participants who have registered for a schedule that includes this session.\nIf the session is a recurring session, this field must be empty." },
+            { "name": "inheritedFields",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "string" ] },
+              "doc": "A list of properties for which values were inherited from the schedule.\nThis does not include participants that were inherited from the schedule." },
+            { "name": "externalCalendarOverrides",
+              "type": "wix-bookings-backend.ExternalCalendarOverrides_857578539:1updateResourceSchedule",
+              "doc": "Title and description values to override session defaults when syncing to an external calendar.\nLearn more about [syncing calendars](https://support.wix.com/en/article/wix-bookings-important-information-about-syncing-google-calendars-with-wix-bookings).\nThe value is inherited from the schedule and can be overridden unless the session is a recurring session." },
+            { "name": "status",
+              "type": "string",
+              "doc": "Session status.\n Possible values are:\n `\"CONFIRMED\"`: Default value.\n `\"CANCELLED\"`: \n    * The session was generated from a recurring session and then deleted.\n    * The session was created as a single session and then deleted.\n    * The session is a recurring session and was deleted.\nOne of:\n + `\"UNDEFINED\"`\n + `\"CONFIRMED\"`\n + `\"CANCELLED\"`" },
+            { "name": "recurringSessionId",
+              "type": "string",
+              "doc": "Recurring session ID, if the session is a recurring session." },
+            { "name": "type",
+              "type": "string",
+              "doc": "Session type.\nOne of:\n + `\"UNDEFINED\"`\n + `\"EVENT\"`\n + `\"WORKING_HOURS\"`\n + `\"TIME_AVAILABILITY\"`\n + `\"AVAILABILITY\"`" },
+            { "name": "calendarConference",
+              "type": "wix-bookings-backend.CalendarConference_23255260278:1updateResourceSchedule",
+              "doc": "A conference created for the session according to the details set in the schedule's conference provider information.\nIf the session is a recurring session, this field is inherited from the schedule." },
+            { "name": "recurrence",
+              "type": "string",
+              "doc": "A string representing a recurrence rule (RRULE) for a recurring session, as defined in [RFC5545](https://icalendar.org/iCalendar-RFC-5545/3-3-10-recurrence-rule.html).\nIf the session is an instance of a recurrence pattern, the instanceOfRecurrence property will be contain the recurrence rule and this property will be empty.\nThe RRULE defines a rule for repeating a session.\nSupported parameters are:\n\n|Keyword|Description|Supported values|\n|--|--|---|\n|`FREQ`|The frequency at which the session is recurs. Required.|`WEEKLY`|\n|`INTERVAL`|How often, in terms of `FREQ`, the session recurs. Default is 1. Optional.|\n|`UNTIL`|The UTC end date and time of the recurrence. Optional.|\n|`BYDAY`|Days of the week when the event should recur. Required.|`MO`, `TU`, `WE`, `TH`, `FR`, `SA`, `SU`|\n\n\n For example, repeat every second week on a Monday until January 7, 2022 at 8 a.m.:\n`FREQ=WEEKLY;INTERVAL=2;BYDAY=MO;UNTIL=20220107T080000Z`\n\n <!--ORIGINAL COMMENTS:\n  `FREQ` — The frequency with which the session should be repeated (such as DAILY or WEEKLY).  \n Supported `WEEKLY` value is supported.\n  INTERVAL — Works together with FREQ to specify how often the session should be repeated. For example, FREQ=WEEKLY;INTERVAL=2 means once every two weeks. Optional. Default value is 1.\n  COUNT — The number of times this event should be repeated. Not yet supported.\n  UNTIL — The UTC date & time until which the session should be repeated. This parameter is optional. When it is not specified, the event repeats forever.\n          The format is a short ISO date, followed by 'T' and a short time with seconds and without milliseconds, terminated by the UTC designator 'Z'. For example, until Jan. 19th 2018 at 7:00 AM: 'UNTIL=20180119T070000Z'.\n  BYDAY - The days of the week when the event should be repeated. Currently, only a single day is supported. This parameter is mandatory.\n       Possible values are: MO, TU, WE, TH, FR, SA, SU\n       Note that DTSTART and DTEND lines are not allowed in this field; session start and end times are specified in the start and end fields.\n       **Example**: FREQ=WEEKLY;INTERVAL=2;BYDAY=MO;UNTIL=20200427T070000Z\nORIGINAL COMMENTS-->" },
+            { "name": "instanceOfRecurrence",
+              "type": "string",
+              "doc": "A string representing a recurrence rule (RRULE) if the session is an instance of a recurrence pattern.\nIs empty when the session defines the recurrence pattern (in which case, `recurrence` field is non-empty) and if the session is not part of any recurrence pattern.\nIf the session is a recurring session, the recurrence property will be contain the recurrence rule and this property will be empty." },
+            { "name": "version",
+              "type": "wix-bookings-backend.Session_Version_1635489576:updateSession",
+              "doc": "An object containing the session and schedule versions." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Session_255663383937:updateSession1",
         "locations":
           [ { "lineno": 1037,
@@ -5072,7 +5849,29 @@
               "doc": "An object containing the session and schedule versions." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
+      { "name": "Session_Version_1635489576:updateSession",
+        "locations":
+          [ { "lineno": 1130,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "An object containing the session and schedule versions.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "scheduleVersion",
+              "type": "number",
+              "doc": "Schedule version number, updated each time the schedule is updated." },
+            { "name": "sessionVersion",
+              "type": "number",
+              "doc": "Session version number, updated each time the session is updated." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Session_Version_1635489576:updateSession12",
         "locations":
           [ { "lineno": 1130,
@@ -5092,7 +5891,8 @@
               "doc": "Session version number, updated each time the session is updated." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "SetOfSessions",
         "locations":
           [ { "lineno": 440,
@@ -5261,6 +6061,31 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "SpecialHourPeriod_8520285244:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1910,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Set of time periods when a location's operational hours differ from its normal business hours.",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "startDate",
+              "type": "string",
+              "doc": "Date and Time in 24hr iso-8601 Coordinated universal time (UTC)" },
+            { "name": "endDate",
+              "type": "string",
+              "doc": "Date and Time in 24hr iso-8601 Coordinated universal time (UTC)" },
+            { "name": "isClosed",
+              "type": "boolean" },
+            { "name": "comment",
+              "type": "string" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "SpecialHourPeriod_8520285244:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1910,
@@ -5284,7 +6109,8 @@
               "type": "string" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "SplitInterval_425847646:updateResourceSchedule",
         "locations":
           [ { "lineno": 1138,
@@ -5435,6 +6261,30 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "StreetAddress_7490590980:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1869,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "A break down of the street to number and street name",
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "number",
+              "type": "string",
+              "doc": "street number" },
+            { "name": "name",
+              "type": "string",
+              "doc": "street name" },
+            { "name": "apt",
+              "type": "string",
+              "doc": "apartment number" } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "StreetAddress_7490590980:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1869,
@@ -5457,7 +6307,8 @@
               "doc": "apartment number" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Subdivision",
         "locations":
           [ { "lineno": 37,
@@ -5498,6 +6349,26 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "Subdivision_4638463697:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1243,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "code",
+              "type": "string",
+              "doc": "Subdivision code. Usually state, region, prefecture or province code, according to [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)." },
+            { "name": "name",
+              "type": "string",
+              "doc": "Subdivision full name." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "Subdivision_4638463697:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1243,
@@ -5516,7 +6387,8 @@
               "doc": "Subdivision full name." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "TextLabel_5030317322",
         "locations":
           [ { "lineno": 1652,
@@ -5647,6 +6519,36 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "TimePeriod_39156298036:1updateResourceSchedule",
+        "locations":
+          [ { "lineno": 1950,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "A span of time that the business is open,",
+            "description":
+              [ "starting on the specified open day/time and closing on the specified close day/time.",
+                "Closing time must occur after the opening time, for example later in the same day, or on a subsequent day." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "openDay",
+              "type": "string",
+              "doc": "Day of the week this period starts on.\nOne of:\n + `\"MONDAY\"`\n + `\"TUESDAY\"`\n + `\"WEDNESDAY\"`\n + `\"THURSDAY\"`\n + `\"FRIDAY\"`\n + `\"SATURDAY\"`\n + `\"SUNDAY\"`" },
+            { "name": "openTime",
+              "type": "string",
+              "doc": "Time in 24hr ISO 8601 extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field." },
+            { "name": "closeDay",
+              "type": "string",
+              "doc": "Day of the week this period ends on.\nOne of:\n + `\"MONDAY\"`\n + `\"TUESDAY\"`\n + `\"WEDNESDAY\"`\n + `\"THURSDAY\"`\n + `\"FRIDAY\"`\n + `\"SATURDAY\"`\n + `\"SUNDAY\"`" },
+            { "name": "closeTime",
+              "type": "string",
+              "doc": "Time in 24hr ISO 8601 extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field." } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "TimePeriod_39156298036:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1950,
@@ -5675,7 +6577,8 @@
               "doc": "Time in 24hr ISO 8601 extended format (hh:mm). Valid values are 00:00-24:00, where 24:00 represents\nmidnight at the end of the specified day field." } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "URLs_6208289563",
         "locations":
           [ { "lineno": 1738,
@@ -5796,8 +6699,8 @@
         "labels": [] },
       { "name": "WixPayDetails",
         "locations":
-          [ { "lineno": 246,
-              "filename": "shared.js" } ],
+          [ { "lineno": 457,
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
             "examples": [],
@@ -5806,26 +6709,26 @@
         "members":
           [ { "name": "txId",
               "type": "string",
-              "doc": "Wix Pay payment transaction ID." },
+              "doc": "Cashier transaction Id" },
             { "name": "orderId",
               "type": "string",
-              "doc": "WixPay payment order ID." },
+              "doc": "Cashier order Id" },
             { "name": "orderAmount",
               "type": "string",
-              "doc": "Order amount was sent to the Wix Pay system." },
+              "doc": "The order amount we issued to Cashier." },
             { "name": "orderStatus",
               "type": "string",
-              "doc": "Order status.\n One of: \n + `\"CREATED\"`  The transaction has started.\n + `\"PENDING_MERCHANT\"` An online payment was made, but the owner did not set up the necessary details.\n + `\"COMPLETE\"`  The current part of the payment was completed.\n + `\"FAILED\"`  The Wix online payment system is unavailable or failed processing.\n + `\"DECLINED\"` The payment was declined.\n + `\"PENDING_MARK_AS_PAID\"` Offline transaction. The transaction will be complete when explicitly marked as paid.\n + `\"CANCELED\"` The transaction was canceled.\n +" },
+              "doc": "+ `CREATED`  The transaction has been started.\n + `PENDING_MERCHANT` An online payment was made, but the owner has not set up the necessary details.\n + `COMPLETE`  The current part of the payment was completed.\n + `FAILED`  The Wix online payment system is unavailable or failed processing.\n + `DECLINED` The payment was declined.\n + `PENDING_MARK_AS_PAID` Offline transaction. The transaction will be complete when explicitly marked as paid.\n + `CANCELED` The transaction was cancelled.\n Transaction status\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"PENDING_MERCHANT\"`\n + `\"COMPLETE\"`\n + `\"FAILED\"`\n + `\"DECLINED\"`\n + `\"PENDING_MARK_AS_PAID\"`\n + `\"CANCELED\"`" },
             { "name": "orderApprovalTime",
               "type": "Date",
-              "doc": "Date and time that the order was approved." },
+              "doc": "The date and time that the order was approved." },
             { "name": "paymentVendorName",
               "type": "string",
-              "doc": "Payment vendor name. The company processing the payment, such as Pay Pal or a credit card company. `\"inPerson\"` is used for cash payments." } ],
+              "doc": "Payment vendor name." } ],
         "extra":
           {  },
         "labels":
-          [ "removed" ] },
+          [ "new" ] },
       { "name": "WixPayDetails_17951508165:setBookingAsPaid",
         "locations":
           [ { "lineno": 457,
@@ -5856,6 +6759,7 @@
               "doc": "Payment vendor name." } ],
         "extra":
           {  },
-        "labels": [] } ],
+        "labels":
+          [ "removed" ] } ],
   "extra":
     {  } }
