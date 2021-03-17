@@ -236,8 +236,7 @@
         "extra":
           {  } },
       { "name": "updateResource",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -271,7 +270,8 @@
         "extra":
           {  } },
       { "name": "updateResourceSchedule",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -295,7 +295,7 @@
         "docs":
           { "summary": "Updates a resource's schedule",
             "description":
-              [ "<!--ONLY:VELO->",
+              [ "<!--ONLY:VELO-->",
                 "The `updateResourceSchedule()` function returns a Promise that resolves when a resource's schedule has been updated.",
                 "USe this function to update the resource's schedule. To update other resource details  use [`updateResource()`](wix-bookings-backen/resource-obj/updateresource)",
                 "<!--END:ONLY:VELO-->",
