@@ -29,8 +29,7 @@
   "properties": [],
   "operations":
     [ { "name": "createResource",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceInfo",
@@ -237,8 +236,7 @@
         "extra":
           {  } },
       { "name": "updateResource",
-        "labels":
-          [ "new" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "id",
@@ -273,7 +271,7 @@
           {  } },
       { "name": "updateResourceSchedule",
         "labels":
-          [ "new" ],
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
@@ -297,9 +295,9 @@
         "docs":
           { "summary": "Updates a resource's schedule",
             "description":
-              [ "<!--ONLY:VELO",
+              [ "<!--ONLY:VELO->",
                 "The `updateResourceSchedule()` function returns a Promise that resolves when a resource's schedule has been updated.",
-                "USe this function to update the resource's schedule. To update other resource details  use [`updateResource()`](wix-bookings-backen/resources/updateresource)",
+                "USe this function to update the resource's schedule. To update other resource details  use [`updateResource()`](wix-bookings-backen/resource-obj/updateresource)",
                 "<!--END:ONLY:VELO-->",
                 "",
                 "> **Note:** A resource can only have one schedule.",
