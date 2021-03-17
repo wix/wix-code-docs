@@ -1,6 +1,7 @@
 { "name": "wix-bookings-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "index.js" },
@@ -992,7 +993,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.LinkedSchedule_7939545343:updateResourceSchedule" ] },
+                    [ "wix-bookings-backend.LinkedResourceScheduleInfo" ] },
               "doc": "Other schedules that impact the availability calculation. Relevant only when there are availability constraints.",
               "optional": true },
             { "name": "constraints",
@@ -1012,7 +1013,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Availability_174000749873:1updateResourceSchedule",
         "locations":
           [ { "lineno": 653,
@@ -1656,6 +1658,38 @@
           {  },
         "labels":
           [ "removed" ] },
+      { "name": "BusinessResourceScheduleInfo",
+        "locations":
+          [ { "lineno": 1878,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "summary": "Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.",
+            "description":
+              [ "TimePeriod indicates when the location is open. Each period represents a range of hours when the location is",
+                "open during the week. Limited to 100 time periods." ],
+            "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "periods",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.TimePeriod_38785543152:updateResourceSchedule" ] },
+              "doc": "Times that this location is open. Each period represents a range of hours when the location is\nopen during the week. Limited to 100 time periods.",
+              "optional": true },
+            { "name": "specialHourPeriod",
+              "type":
+                { "name": "Array",
+                  "typeParams":
+                    [ "wix-bookings-backend.SpecialHourPeriod_8149530360:updateResourceSchedule" ] },
+              "doc": "Exceptions to the business's regular hours.",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "BusinessSchedule",
         "locations":
           [ { "lineno": 399,
@@ -1748,7 +1782,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "BusinessSchedule_47401289418:1updateResourceSchedule",
         "locations":
           [ { "lineno": 1889,
@@ -3094,8 +3129,8 @@
         "labels": [] },
       { "name": "Image",
         "locations":
-          [ { "lineno": 488,
-              "filename": "shared.js" } ],
+          [ { "lineno": 2027,
+              "filename": "shared-autogen.js" } ],
         "docs":
           { "links": [],
             "examples": [],
@@ -3104,7 +3139,7 @@
         "members":
           [ { "name": "_id",
               "type": "string",
-              "doc": "Wix Media image ID." },
+              "doc": "WixMedia image ID." },
             { "name": "url",
               "type": "string",
               "doc": "Image URL." },
@@ -3116,14 +3151,14 @@
               "doc": "Original image width." },
             { "name": "altText",
               "type": "string",
-              "doc": "Image alt text." },
+              "doc": "Image alt text. Optional." },
             { "name": "urlExpirationDate",
               "type": "Date",
-              "doc": "Image URL expiration date." } ],
+              "doc": "Image URL expiration date (when relevant). Optional" } ],
         "extra":
           {  },
         "labels":
-          [ "removed" ] },
+          [ "new" ] },
       { "name": "ImageInfo",
         "locations":
           [ { "lineno": 480,
@@ -3213,7 +3248,8 @@
               "doc": "Image URL expiration date (when relevant). Optional" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "Image_7707870310:createResource1",
         "locations":
           [ { "lineno": 2027,
@@ -3337,6 +3373,28 @@
         "extra":
           {  },
         "labels": [] },
+      { "name": "LinkedResourceScheduleInfo",
+        "locations":
+          [ { "lineno": 796,
+              "filename": "shared-autogen.js" } ],
+        "docs":
+          { "links": [],
+            "examples": [],
+            "extra":
+              {  } },
+        "members":
+          [ { "name": "scheduleId",
+              "type": "string",
+              "doc": "Schedule ID.",
+              "optional": true },
+            { "name": "transparency",
+              "type": "string",
+              "doc": "Sets a linked schedule's availability between the start and end of the session. Default is `\"BUSY\"`.\nIf set to `\"BUSY\"`, the schedule cannot have any available slots during the session. If set to `\"FREE\"`, the schedule can have available slots during the session.\nOne of:\n + `\"UNDEFINED\"`\n + `\"FREE\"`\n + `\"BUSY\"`",
+              "optional": true } ],
+        "extra":
+          {  },
+        "labels":
+          [ "new" ] },
       { "name": "LinkedSchedule_10367513828:1updateResourceSchedule",
         "locations":
           [ { "lineno": 808,
@@ -3402,7 +3460,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "removed" ] },
       { "name": "ListServicesBySlugRequest_28829455335",
         "locations":
           [ { "lineno": 1697,
@@ -3908,7 +3967,7 @@
               "doc": "Address",
               "optional": true },
             { "name": "businessSchedule",
-              "type": "wix-bookings-backend.BusinessSchedule_46474402208:updateResourceSchedule",
+              "type": "wix-bookings-backend.BusinessResourceScheduleInfo",
               "doc": "Represents the time periods that this location is open for business. Holds a collection of TimePeriod instances.\nTimePeriod indicates when the location is open. Each period represents a range of hours when the location is\nopen during the week. Limited to 100 time periods.",
               "optional": true },
             { "name": "revision",
@@ -3917,7 +3976,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Location_99881894064:updateResourceSchedule1",
         "locations":
           [ { "lineno": 1790,
@@ -4013,7 +4073,7 @@
               {  } },
         "members":
           [ { "name": "image",
-              "type": "wix-bookings-backend.Image_7707870310:1createResource",
+              "type": "wix-bookings-backend.Image",
               "doc": "Image metadata.",
               "optional": true } ],
         "extra":
@@ -4021,7 +4081,8 @@
               [ { "name": "item",
                   "members":
                     [ "image" ] } ] },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Media_13250985321",
         "locations":
           [ { "lineno": 1547,
@@ -4994,7 +5055,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.Image_7707870310:1createResource" ] },
+                    [ "wix-bookings-backend.Image" ] },
               "doc": "Resource images." },
             { "name": "scheduleIds",
               "type":
@@ -5007,7 +5068,8 @@
               "doc": "Resource status. Default is `CREATED`.\nOne of:\n + `\"UNDEFINED\"`\n + `\"CREATED\"`\n + `\"DELETED\"`\n + `\"UPDATED\"`" } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "ResourceInfo",
         "locations":
           [ { "lineno": 1286,
@@ -5558,7 +5620,7 @@
               "type":
                 { "name": "Array",
                   "typeParams":
-                    [ "wix-bookings-backend.LinkedSchedule_7939545343:updateResourceSchedule" ] },
+                    [ "wix-bookings-backend.LinkedResourceScheduleInfo" ] },
               "doc": "An object specifying a list of linked schedules and the way each schedule's availability is affected by the session. For example, the schedule of an instructor is linked to the schedule of the class that they instruct.\nIf the session is a recurring session, the value is inherited from the schedule but can still be overridden.",
               "optional": true },
             { "name": "title",
@@ -5617,7 +5679,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "Session_255663383937:1updateSession",
         "locations":
           [ { "lineno": 1037,

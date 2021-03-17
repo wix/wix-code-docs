@@ -244,7 +244,7 @@
               "type": "string",
               "doc": "Resource ID." },
             { "name": "resource",
-              "type": "wix-bookings-backend.resources.Resource_12959995134:updateResource",
+              "type": "wix-bookings-backend.resources.UpdateResourceInfo",
               "doc": "The updated resource." } ],
         "ret":
           { "type":
@@ -272,8 +272,7 @@
         "extra":
           {  } },
       { "name": "updateResourceSchedule",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "resourceId",
